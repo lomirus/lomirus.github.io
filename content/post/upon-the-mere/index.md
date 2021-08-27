@@ -5,6 +5,7 @@ lastmod: 2021-06-06T18:25:17+08:00
 image: "cover.jpg"
 description: "It's a long dream, I've had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn."
 categories: ["Literature", "English"]
+slug: "upon-the-mere"
 ---
 
 * This is a fiction that was written as my assignment of the Comprehensive English during my freshman in CQUPT.

@@ -6,6 +6,7 @@ image: "cover.png"
 description: "WSL 2 + Windows Terminal + VSCode"
 categories: ["Code"]
 tags: ["WSL2", "Windows Terminal", "VSCode", "Linux"]
+slug: "wsl2"
 ---
 
 ## 起因

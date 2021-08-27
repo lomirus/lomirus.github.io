@@ -6,6 +6,7 @@ image: "cover.png"
 description: "学习 Vue 与 Vite 项目搭建的踩坑记录"
 categories: ["Code"]
 tags: ["Vue", "Vite"]
+slug: "vue-vite-start"
 ---
 
 # 学习 Vue 与 Vite 项目搭建的踩坑记录

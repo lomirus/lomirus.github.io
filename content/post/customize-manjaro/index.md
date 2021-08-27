@@ -6,6 +6,7 @@ image: "cover.jpg"
 description: "Since I cannot stand the Windows, I embraced the Linux. "
 categories: ["Code", "English"]
 tags: ["Linux", "Manjaro", "Gnome"]
+slug: "customize-manjaro"
 ---
 
 When I started to write the article, I haven't install the Chinese Input Method, and therefore I just completed it in English.

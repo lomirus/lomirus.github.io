@@ -5,6 +5,7 @@ lastmod: 2021-08-26T18:25:17+08:00
 image: "cover.png"
 description: "做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~"
 categories: ["日本語", "Game"]
+slug: "sekiro-dictation"
 tags: ["隻狼"]
 ---
 
