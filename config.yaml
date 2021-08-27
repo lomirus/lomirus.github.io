@@ -50,8 +50,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
-        provider: disqus
+        enabled: false
+        provider: utterances
 
         disqusjs:
             shortname:
@@ -61,9 +61,9 @@ params:
             adminLabel:
 
         utterances:
-            repo:
+            repo: lomirus/lomirus.github.io
             issueTerm: pathname
-            label:
+            label: utterances
 
         remark42:
             host:
