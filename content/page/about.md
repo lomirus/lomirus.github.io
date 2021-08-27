@@ -1,33 +1,31 @@
 ---
 title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+description: We shall meet in the place where there is no darkness.
+date: '2021-08-27'
 aliases:
   - about-us
   - about-hugo
   - contact
 license: CC BY-NC-ND
-lastmod: '2020-10-09'
+lastmod: '2021-08-27'
 menu:
     main: 
         weight: -90
         pre: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+代码（菜），语言（只会中文），历史（控制台上的P社玩家），游戏（Pixel/Plot/RPG/Soul-like/AC），荒谬/自由/存在主义（中二病）
 
-Hugo makes use of a variety of open source projects including:
+# Socials
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+* [Github](https://github.com/lomirus)
+* [Bilibili](https://space.bilibili.com/27590260)
+* <lomirus@qq.com>
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+# TodoList
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+* 做一款独立游戏
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+# Blogroll
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+* [辇道增七的小站](https://wuhaoda.life/)
