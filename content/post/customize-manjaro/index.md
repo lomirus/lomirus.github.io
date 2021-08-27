@@ -31,7 +31,7 @@ sudo nano /etc/pacman.d/mirrorlist
 ```
 Delete other unnecessary mirrors and add:
 ```
-Server = http://mirrors.redrock.team/manjaro/
+Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 ```
 
 ### Set the keyboard shortcuts
