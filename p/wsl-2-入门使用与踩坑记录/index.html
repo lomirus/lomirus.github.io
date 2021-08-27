@@ -1,0 +1,269 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="WSL 2 + Windows Terminal + VSCode"><title>WSL 2 入门使用与踩坑记录</title>
+<link rel=canonical href=https://lomirus.github.io/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="WSL 2 入门使用与踩坑记录">
+<meta property="og:description" content="WSL 2 + Windows Terminal + VSCode">
+<meta property="og:url" content="https://lomirus.github.io/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">
+<meta property="og:site_name" content="Lomirus' Site">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="WSL2"><meta property="article:tag" content="Windows Terminal"><meta property="article:tag" content="VSCode"><meta property="article:tag" content="Linux"><meta property="article:published_time" content="2021-05-28T00:00:00+08:00"><meta property="article:modified_time" content="2021-06-02T18:25:17+08:00"><meta property="og:image" content="https://lomirus.github.io/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover.png">
+<meta name=twitter:title content="WSL 2 入门使用与踩坑记录">
+<meta name=twitter:description content="WSL 2 + Windows Terminal + VSCode"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://lomirus.github.io/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover.png">
+<link rel="shortcut icon" href=/img/favicon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://lomirus.github.io class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/>
+<img src=/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover_hu942fe59d1722165a0491fd14e8631074_1587106_800x0_resize_box_3.png srcset="/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover_hu942fe59d1722165a0491fd14e8631074_1587106_800x0_resize_box_3.png 800w, /p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover_hu942fe59d1722165a0491fd14e8631074_1587106_1600x0_resize_box_3.png 1600w" width=800 height=364 loading=lazy alt="Featured image of post WSL 2 入门使用与踩坑记录">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/code/>
+Code
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/>WSL 2 入门使用与踩坑记录</a>
+</h2>
+<h3 class=article-subtitle>
+WSL 2 + Windows Terminal + VSCode
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>May 28, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+2 min read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=起因>起因</h2>
+<p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。</p>
+<p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：</p>
+<ul>
+<li>CMD: 费拉不堪</li>
+<li>Powershell：费拉不堪</li>
+<li>Gitbash: 费拉不堪</li>
+</ul>
+<p>由于 Windows 上的 shell 人均费拉不堪，所以问了一位后端朋(dà)友(lǎo)有没有什么推荐：</p>
+<p><figure>
+<a href=https://z3.ax1x.com/2021/05/28/2FXjHS.jpg>
+<img src=https://z3.ax1x.com/2021/05/28/2FXjHS.jpg loading=lazy alt=2FXjHS.jpg>
+</a>
+<figcaption>2FXjHS.jpg</figcaption>
+</figure></p>
+<p>结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。</p>
+<p>然后最终选定了 WSL 2 + Windows Terminal + VSCode.</p>
+<h2 id=安装>安装</h2>
+<p>如果 Windows 10 OS Version 大于 20262，可通过 <code>wsl --install</code> 安装。</p>
+<p>虽然我有加入 Windows Insider 计划，不过系统还是用的 Stable，所以没有采取上述简化方式进行安装，而是采用的以下内容。</p>
+<p>首先，以管理员权限打开 Powershell 并输入以下命令：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=n>dism</span><span class=p>.</span><span class=n>exe</span> <span class=p>/</span><span class=n>online</span> <span class=p>/</span><span class=nb>enable-feature</span> <span class=p>/</span><span class=n>featurename</span><span class=err>:</span><span class=nb>Microsoft-Windows</span><span class=n>-Subsystem-Linux</span> <span class=p>/</span><span class=n>all</span> <span class=p>/</span><span class=n>norestart</span>
+</code></pre></div><p>输入以下命令启用“虚拟机平台”功能，然后重启：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=n>dism</span><span class=p>.</span><span class=n>exe</span> <span class=p>/</span><span class=n>online</span> <span class=p>/</span><span class=nb>enable-feature</span> <span class=p>/</span><span class=n>featurename</span><span class=err>:</span><span class=n>VirtualMachinePlatform</span> <span class=p>/</span><span class=n>all</span> <span class=p>/</span><span class=n>norestart</span>
+</code></pre></div><p>然后下载<a class=link href=https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi target=_blank rel=noopener>适用于 x64 计算机的 WSL2 Linux 内核更新包</a>并安装，以将 WSL 1 更新至 WSL 2。</p>
+<p>安装好后设置 WSL 2 为默认版本：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=n>wsl</span> <span class=p>-</span><span class=n>-set-default-version</span> <span class=n>2</span>
+</code></pre></div><p>打开<a class=link href=https://aka.ms/wslstore target=_blank rel=noopener>Microsoft Store</a>，随便选择一种发行版并安装。这里我选的是大众喜闻乐见的 Ubuntu。安装完后启动，执行一些配置就 OK 了。</p>
+<p>最后可以查看一下已安装的 WSL 发行版的版本信息：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=n>wsl</span> <span class=p>-</span><span class=n>-list</span> <span class=p>-</span><span class=n>-verbose</span>
+</code></pre></div><p>顺便说一下，安装新的发行版的操作并不会使你旧的发行版被替换掉。如果你之前安装过 WSL 1 的 Linux 发行版，而又不想将其保留，也可以将其删除掉。比如，如果我想将之前的安装的 WSL 1 Debian 删除掉，可执行以下命令：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=n>wsl</span> <span class=p>-</span><span class=n>-unregister</span> <span class=n>debian</span>
+</code></pre></div><p>其余操作可以使用 <code>wsl -h</code> 或查看<a class=link href=https://docs.microsoft.com/zh-cn/windows/wsl/install-win10 target=_blank rel=noopener>官方文档</a>。</p>
+<h2 id=网络代理>网络代理</h2>
+<p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 <code>127.0.0.1</code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 <code>~/.bashrc</code> 添加如下内容：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=nv>hostip</span><span class=o>=</span><span class=k>$(</span>cat /etc/resolv.conf <span class=p>|</span> grep nameserver <span class=p>|</span> awk <span class=s1>&#39;{ print $2 }&#39;</span><span class=k>)</span>
+<span class=nv>port</span><span class=o>=</span><span class=m>7890</span> <span class=c1># 此处端口可根据个人情况进行更改</span>
+
+<span class=nv>PROXY_HTTP</span><span class=o>=</span><span class=s2>&#34;http://</span><span class=si>${</span><span class=nv>hostip</span><span class=si>}</span><span class=s2>:</span><span class=si>${</span><span class=nv>port</span><span class=si>}</span><span class=s2>&#34;</span>
+
+<span class=nb>export</span> <span class=nv>http_proxy</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>PROXY_HTTP</span><span class=si>}</span><span class=s2>&#34;</span>
+<span class=nb>export</span> <span class=nv>HTTP_PROXY</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>PROXY_HTTP</span><span class=si>}</span><span class=s2>&#34;</span>
+
+<span class=nb>export</span> <span class=nv>https_proxy</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>PROXY_HTTP</span><span class=si>}</span><span class=s2>&#34;</span>
+<span class=nb>export</span> <span class=nv>HTTPS_proxy</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>PROXY_HTTP</span><span class=si>}</span><span class=s2>&#34;</span>
+</code></pre></div><p>参考文章：<a class=link href=https://zinglix.xyz/2020/04/18/wsl2-proxy/ target=_blank rel=noopener>WSL2 中访问宿主机 Windows 的代理</a></p>
+<h2 id=环境变量>环境变量</h2>
+<p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。</p>
+<p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建<code>/etc/wsl.conf</code>：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>touch /etc/wsl.conf
+</code></pre></div><p>然后修改其内容为：</p>
+<pre><code>[interop]
+appendWindowsPath = false
+</code></pre><h2 id=常用软件的安装>常用软件的安装</h2>
+<p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。</p>
+<p>首先更新软件源：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo apt update
+</code></pre></div><p>然后安装：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># python</span>
+sudo apt install python3
+ln -s /usr/bin/python3 /usr/bin/python
+
+<span class=c1>## node/npm</span>
+sudo apt install nodejs
+sudo apt install npm
+
+<span class=c1>## yarn</span>
+sudo npm install -g yarn
+
+<span class=c1>## deno</span>
+sudo apt install unzip
+curl -fsSL https://deno.land/x/install/install.sh <span class=p>|</span> sh
+
+<span class=c1>## rust</span>
+curl --proto <span class=s1>&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class=p>|</span> sh
+<span class=c1># 建议选择 `default toolchain` 为 `nightly`</span>
+</code></pre></div><h2 id=其他坑先占位>其他坑（先占位）</h2>
+<p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。</p>
+<p>更新：解决方案：卸载 VirtualBox, 安装VMWare.</p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/wsl2/>WSL2</a>
+<a href=/tags/windows-terminal/>Windows Terminal</a>
+<a href=/tags/vscode/>VSCode</a>
+<a href=/tags/linux/>Linux</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+Last updated on Jun 02, 2021 18:25 +0800
+</span>
+</section></footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/customize-the-manjaro-with-gnome/>
+<div class=article-image>
+<img src=/p/customize-the-manjaro-with-gnome/cover.d0f75435dcd75756729c5cf853adcada_hu81f578c0819d5c459ae1161b90d3bf82_144962_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-0PdUNdzXV1ZynFz4U63K2g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Customize the Manjaro with Gnome</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/vue-vite-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8/>
+<div class=article-image>
+<img src=/p/vue-vite-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8/cover.6f81209e9443e07b7281d637767c0a11_hu04a4e276885eb709cbeaf2dacb0788b9_351809_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key data-hash="md5-b4EgnpRD4HtygdY3dnwKEQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Vue & Vite 项目搭建入门</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/>
+<div class=article-image>
+<img src=/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover.c5d2c67f829f3c79343413ee11d249bd_hu344cc44c010eb8a4625e74adaa2a9ef7_57613_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key data-hash="md5-xdLGf4KfPHk0NBPuEdJJvQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//hugo-theme-stack.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 Lomirus' Site
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#起因>起因</a></li>
+<li><a href=#安装>安装</a></li>
+<li><a href=#网络代理>网络代理</a></li>
+<li><a href=#环境变量>环境变量</a></li>
+<li><a href=#常用软件的安装>常用软件的安装</a></li>
+<li><a href=#其他坑先占位>其他坑（先占位）</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。"><title>TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage</title>
+<link rel=canonical href=https://lomirus.github.io/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage">
+<meta property="og:description" content="好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。">
+<meta property="og:url" content="https://lomirus.github.io/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/">
+<meta property="og:site_name" content="Lomirus' Site">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-04-14T00:00:00+08:00"><meta property="article:modified_time" content="2021-05-15T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover.png">
+<meta name=twitter:title content="TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage">
+<meta name=twitter:description content="好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://lomirus.github.io/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover.png">
+<link rel="shortcut icon" href=/img/favicon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://lomirus.github.io class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/>
+<img src=/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover_hu344cc44c010eb8a4625e74adaa2a9ef7_57613_800x0_resize_box_3.png srcset="/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover_hu344cc44c010eb8a4625e74adaa2a9ef7_57613_800x0_resize_box_3.png 800w, /p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/cover_hu344cc44c010eb8a4625e74adaa2a9ef7_57613_1600x0_resize_box_3.png 1600w" width=800 height=311 loading=lazy alt="Featured image of post TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/code/>
+Code
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/typescript-webpack-babel-eslint-react-not-such-a-beautiful-marriage/>TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage</a>
+</h2>
+<h3 class=article-subtitle>
+好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 14, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+3 min read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<p>好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题<del>抄袭</del>引用改编自著名博文<a class=link href=https://medium.com/dailyjs/typescript-babel-ce24f724398 target=_blank rel=noopener>TypeScript with Babel: A Beautiful Marriage</a>）</p>
+<h2 id=origin>Origin</h2>
+<p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。</p>
+<p>对于题目中的五个工具，除去 ESlint之外，其实其他的都多多少少用过一段时间。特别是 Webpack Babel React 这三个，用的时间也算是比较久了。TypeScript 倒是用过，但是感觉 JS 加上类型限制后写起来就不那么自由了，所以尝试用它写了一个模块之后就将它卸载了。但是这些这个工具终究还是太常用，早晚逃不了还是得学，所以就试着用它们做个简单的小项目练练手。毕竟当初我学 Webpack 时也是学得很憋屈，一直不知道这玩意儿打个包为啥还非得用 js 文件做入口，直到后来学了 React 才豁然开朗，所以我至今认为如果是要做跑在浏览器的网页而且不用什么框架的话 Webpack 还真没什么卵用。当然，有了之后自然用处就大了。</p>
+<p>不过说了这么多好像有点跑题，先回到正题：让我们来讨论一下究竟怎么把这五个架子给支楞到一块儿去。</p>
+<h2 id=introductions-of-the-packages>Introductions of the packages</h2>
+<p>这种东西还用得着在这介绍？官网文档，维基百科，请~</p>
+<h2 id=tsc-or-babel-its-a-question>TSC or Babel, it&rsquo;s a question.</h2>
+<p>老实说，单是在两个之间进行选择就够让我想半天了。但是实际上，摆在我面前的包括但不限于：<code>ts-loader</code>,<code>awesome-typescript-loader</code>, <code>babel-loader</code>等一堆loaders/packages。而且由于我开始参考了过时的中文文档，所以先下载了<code>awesome-typescript-loader</code>，后来才意识到被坑（😅）。而在剩余的两者之间，参考<a class=link href=https://medium.com/dailyjs/typescript-babel-ce24f724398 target=_blank rel=noopener>TypeScript with Babel: A Beautiful Marriage</a>后，决定选择了后者。</p>
+<p>安装好之后，我又顺着我的思路捋了一遍，发现整个过程中编译是<code>babel</code>做的，根本没用到<code>typescript</code>什么事儿呀。我于是就想，把它卸载之后会怎么样呢？接着神奇的现象发生了，我卸载了<code>typescipt</code>，删除了它的配置文件<code>tsconfig.json</code>，结果发现我的用<code>typescript</code>写的项目居然还能正常编译并运行（谢谢有被震惊到）。我就想既然如此那我还用ts干啥呀，赶紧卸了得了，可别再让我见着你了（😅）。</p>
+<h2 id=anti-human-eslint>Anti-human ESLint</h2>
+<p>听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。</p>
+<p>安装过程中被问了几个问题，回答之后他给我推荐了几个插件。行，听您的。选择 YES，进行安装。看起来一切顺利，然后&mldr;果不其然，报错了。报啥呢：</p>
+<pre><code>Oops! Something went wrong! :(
+
+ESLint: 7.24.0
+
+Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file 
+itself may not follow your linting rules.
+Error: Failed to load plugin '@typescript-eslint' declared in 'BaseConfig': Cannot find module 'typescript'
+</code></pre><p>我心想，这不废话嘛，我又没安装 typescipt 您能到哪儿找模块去？不过话又说回来，刚才，它倒是的确问过我这么一句：</p>
+<pre><code>Does your project use TypeScript? · No / Yes
+</code></pre><p>唔，我要用 TypeScript 倒是没错，不过这和我安没安装 TypeScript 的 package 也没什么必然的联系吧。</p>
+<p>然后经过摸滚带爬的上下求索，终于意识到 typescript 貌似还是有点儿用的，再加上后面用到的 <code>@types/react</code>，<code>@types/react-dom</code>，感觉是在类型推断和自动补全方面有些作用（应该）</p>
+<h2 id=module-or-commonjs-its-a-question>Module or CommonJS, it&rsquo;s a question.</h2>
+<p>刚才 ESLint 问我用的是 <code>Module</code> 还是 <code>CommonJS</code>，秉着“啥新用啥，用嘛嘛新”的原则，我当然选择的ES6的<code>Module</code>。</p>
+<p>然后由于我的<code>webpack.config.js</code>用到了<code>module.exports = {}</code>，所以 ESLint报错了。</p>
+<pre><code>'require' is not defined. eslint(no-undef)
+'module' is not defined. eslint(no-undef)
+</code></pre><p>好，那我改。</p>
+<p>我把 <code>module.exports</code>改成了<code>export default</code>，把<code>require</code>改成了<code>import</code>。结果又报错了：</p>
+<pre><code>SyntaxError: Cannot use import statement outside a module
+</code></pre><p>好，那我改。
+我在<code>package.json</code>里加了句 <code>"type": "module"</code>。结果又报错了：</p>
+<pre><code>ReferenceError: __dirname is not defined
+</code></pre><p><code>__dirname</code> 用不了可不行，那还是再改回来吧。
+好，那我改。
+于是回到了原点：</p>
+<pre><code>'require' is not defined. eslint(no-undef)
+'module' is not defined. eslint(no-undef)
+</code></pre><p>（闹着玩是吧？😅）</p>
+<p>然后在<code>.eslintrc.js</code>的<code>"env"</code>中加了行<code>"node": true</code>，行，终于，不报错了。</p>
+<h2 id=eslint-comes-again>ESLint Comes Again</h2>
+<p><code>App.js</code>里有这么一段：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=kr>const</span> <span class=nx>Box</span> <span class=o>=</span> <span class=p>({</span> <span class=nx>title</span><span class=p>,</span> <span class=nx>children</span> <span class=p>})</span> <span class=o>=&gt;</span> <span class=p>(</span>
+    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;{</span><span class=nx>title</span><span class=p>}&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
+        <span class=p>{</span><span class=nx>children</span><span class=p>}</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>)</span>
+</code></pre></div><p>ESLint报错：</p>
+<pre><code>Missing return type on function. eslint(@typescript-eslint/explicit-module-boundary-types)
+</code></pre><p>接着修改代码为：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=c1>// has imported ReactElement...
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>Box</span> <span class=o>=</span> <span class=p>({</span> <span class=nx>title</span><span class=p>,</span> <span class=nx>children</span> <span class=p>})</span><span class=o>:</span> <span class=nx>ReactElement</span> <span class=o>=&gt;</span> <span class=p>(</span>
+    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;{</span><span class=nx>title</span><span class=p>}&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
+        <span class=p>{</span><span class=nx>children</span><span class=p>}</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>)</span>
+</code></pre></div><p>ESLint报错：</p>
+<pre><code>Object pattern argument should be typed. eslint(@typescript-eslint/explicit-module-boundary-types)
+'title' is missing in props validation eslint(react/prop-types)
+Binding element 'children' implicitly has an 'any' type. ts(7031)
+</code></pre><p>接着修改代码为：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=c1>// has imported ReactElement...
+</span><span class=c1></span><span class=kr>type</span> <span class=nx>BoxProps</span> <span class=o>=</span> <span class=p>{</span>
+    <span class=nx>title</span>: <span class=kt>string</span><span class=p>,</span>
+    <span class=nx>children</span>: <span class=kt>ReactElement</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>Box</span> <span class=o>=</span> <span class=p>({</span> <span class=nx>title</span><span class=p>,</span> <span class=nx>children</span> <span class=p>}</span><span class=o>:</span> <span class=nx>BoxProps</span><span class=p>)</span><span class=o>:</span> <span class=nx>ReactElement</span> <span class=o>=&gt;</span> <span class=p>(</span>
+    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;{</span><span class=nx>title</span><span class=p>}&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
+        <span class=p>{</span><span class=nx>children</span><span class=p>}</span>
+    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>)</span>
+</code></pre></div><p>ESLint在这块儿倒是不报错了，不过当其他地方调用<code>Box</code>又报错了：</p>
+<pre><code>This JSX tag's 'children' prop expects a single child of type 'ReactElement&lt;any, string | JSXElementConstructor&lt;any&gt;&gt;', but multiple children were provided.
+</code></pre><p>查了下资料，发现除了<code>ReactElement</code>之外原来还有<code>ReactNode</code>和<code>JSX.Element</code>（参考 <a class=link href=https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement target=_blank rel=noopener>When to use JSX.Element vs ReactNode vs ReactElement?</a>）。</p>
+<p>简单总结下，原因：拉胯TS的历史遗留问题；解决方法：将<code>children</code>类型改成<code>ReactNode</code></p>
+<h2 id=react-jsx><code>react-jsx</code></h2>
+<p>在上面的 StackOverflow 里看到了 <code>create-react-app</code>，这才想到可以去参考一下它的代码，话不多说，开始安装。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>npm init -y
+npm install create-react-app
+npx create-react-app ts --template typescript
+</code></pre></div><p>进去之后发现他在<code>tsconfig.json</code>里的<code>"compilerOptions"</code>写有<code>"jsx": "react-jsx"</code>，而我之前一直都是用的<code>"jsx": "react"</code>。好奇他们之间的差别，所以去 TypeScript官网文档查了下<a class=link href=https://www.typescriptlang.org/tsconfig/#jsx target=_blank rel=noopener>资料</a>：</p>
+<blockquote>
+<p>Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.</p>
+<ul>
+<li>react: Emit .js files with JSX changed to the equivalent React.createElement calls</li>
+<li>react-jsx: Emit .js files with the JSX changed to _jsx calls</li>
+<li>react-jsxdev: Emit .js files with the JSX to _jsx calls</li>
+<li>preserve: Emit .jsx files with the JSX unchanged</li>
+<li>react-native: Emit .js files with the JSX unchanged</li>
+</ul>
+</blockquote>
+<p>Umm，说实话没看懂，继续往下滑，发现一个<a class=link href=https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html target=_blank rel=noopener>链接</a>，点进去，读了下，发现<code>react-jsx</code>相对<code>react</code>有许多优点，例如：</p>
+<blockquote>
+<ul>
+<li>With the new transform, you can <strong>use JSX without importing React</strong>.</li>
+<li>Depending on your setup, its compiled output may <strong>slightly improve the bundle size</strong>.</li>
+<li>It will enable future improvements that <strong>reduce the number of concepts</strong> you need to learn React.</li>
+</ul>
+</blockquote>
+<p>继续秉承着“啥新用啥”的信条，我便将<code>tsconfig.json</code>里的<code>"jsx": "react-jsx"</code>改成了<code>"jsx": "react"</code>。但是过了会儿突然想起来我使用的<code>babel-loader</code>编译的，所以写在<code>tsconfig.json</code>里其实并没有什么卵用&mldr;</p>
+<p>所以应该修改<code>babel.config.js</code>的<code>module.exports</code>，添加以下属性：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=p>{</span>
+    <span class=s2>&#34;presets&#34;</span><span class=o>:</span> <span class=p>[</span>
+    	<span class=c1>// ...
+</span><span class=c1></span>        <span class=p>[</span>
+            <span class=s2>&#34;@babel/preset-react&#34;</span><span class=p>,</span> <span class=p>{</span>
+            	<span class=c1>// ...
+</span><span class=c1></span>                <span class=s2>&#34;runtime&#34;</span><span class=o>:</span> <span class=s2>&#34;automatic&#34;</span>
+            <span class=p>}</span>
+        <span class=p>]</span>
+    <span class=p>]</span>
+<span class=p>}</span>
+</code></pre></div><p>不过单单这么改还是会报错，这是因为 ESLint 的缘故，实际上代码是可以正常编译的。不过 ESLint 总是报错看着很不爽呀，说实话我都想把它给卸载了。但是转念又想到将来团队协作肯定是要用到的，只好再硬着头皮继续写了。</p>
+<p>修改 ESLint 配置文件：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span>  <span class=s2>&#34;rules&#34;</span><span class=o>:</span> <span class=p>{</span>
+    <span class=c1>// ...
+</span><span class=c1></span>    <span class=s2>&#34;react/jsx-uses-react&#34;</span><span class=o>:</span> <span class=s2>&#34;off&#34;</span><span class=p>,</span>
+    <span class=s2>&#34;react/react-in-jsx-scope&#34;</span><span class=o>:</span> <span class=s2>&#34;off&#34;</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+Last updated on May 15, 2021 00:00 +0800
+</span>
+</section></footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/customize-the-manjaro-with-gnome/>
+<div class=article-image>
+<img src=/p/customize-the-manjaro-with-gnome/cover.d0f75435dcd75756729c5cf853adcada_hu81f578c0819d5c459ae1161b90d3bf82_144962_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-0PdUNdzXV1ZynFz4U63K2g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Customize the Manjaro with Gnome</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/>
+<div class=article-image>
+<img src=/p/wsl-2-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key data-hash="md5-y2lElhgAz5XmcVT8m030Sw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>WSL 2 入门使用与踩坑记录</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/vue-vite-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8/>
+<div class=article-image>
+<img src=/p/vue-vite-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E5%85%A5%E9%97%A8/cover.6f81209e9443e07b7281d637767c0a11_hu04a4e276885eb709cbeaf2dacb0788b9_351809_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key data-hash="md5-b4EgnpRD4HtygdY3dnwKEQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Vue & Vite 项目搭建入门</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//hugo-theme-stack.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 Lomirus' Site
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#origin>Origin</a></li>
+<li><a href=#introductions-of-the-packages>Introductions of the packages</a></li>
+<li><a href=#tsc-or-babel-its-a-question>TSC or Babel, it&rsquo;s a question.</a></li>
+<li><a href=#anti-human-eslint>Anti-human ESLint</a></li>
+<li><a href=#module-or-commonjs-its-a-question>Module or CommonJS, it&rsquo;s a question.</a></li>
+<li><a href=#eslint-comes-again>ESLint Comes Again</a></li>
+<li><a href=#react-jsx><code>react-jsx</code></a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
