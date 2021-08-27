@@ -1,7 +1,7 @@
 ---
 title: "TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage"
 date: 2021-04-14T00:00:00+08:00
-lastmod: 2021-04-14T18:25:17+08:00
+lastmod: 2021-05-15T00:00:00+08:00
 image: "cover.png"
 description: "好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。"
 categories: ["Code"]
