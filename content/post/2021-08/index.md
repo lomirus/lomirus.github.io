@@ -2,7 +2,7 @@
 title: "Some Impressions (2021-08)"
 date: 2021-08-05T18:25:17+08:00
 lastmod: 2021-08-24T18:25:17+08:00
-categories: ["反思", "杂文"]
+categories: ["随笔，及其他"]
 ---
 
 ## 一

@@ -4,7 +4,7 @@ date: 2021-03-31T18:25:17+08:00
 lastmod: 2021-06-06T18:25:17+08:00
 image: "cover.jpg"
 description: "It's a long dream, I've had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn."
-categories: ["文学", "English"]
+categories: ["Literature", "English"]
 ---
 
 * This is a fiction that was written as my assignment of the Comprehensive English during my freshman in CQUPT.
