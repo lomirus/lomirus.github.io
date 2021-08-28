@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lomirus' Site</title><link>https://lomirus.github.io/post/</link><description>Recent content in Posts on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>《只狼：影逝二度》名场面日语台词听写练习</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>零 做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lomirus' Site</title><link>https://lomirus.github.io/post/</link><description>Recent content in Posts on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Aug 2021 12:42:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>缘起：自动生成狗狗表情包 前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。
+废案：爬取QQ历史头像 一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐的经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？
+关于这个思路，我一开始想到的是利用“获取QQ头像”的接口进行轮询，计算当前头像哈希值并与上一次获取到的头像的哈希值作比较，若不同则保存下载。但是轮询的时间间隔实在不太好设定。因为头像的更新时间并不固定，可能一天更新数次，也可能数天更新一次。如果设定轮询间隔时间过短，会导致服务器压力过大，严重的话说不定腾讯会直接把我给 ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头像大概率是有遗漏的。
+考虑到更新头像终究是由人类来完成的，因此也需要考虑到利用一些社会工程学信息以对程序进行优化。比如在深夜凌晨的时候，可以适时停止爬虫以降低负载。但是考虑到这个作息规律&amp;hellip;咳咳&amp;hellip;还是算了吧，毕竟昨晚凌晨还刚刚看到钰姐又换了新头像来着。
+（那既然我能发现别人在熬夜内卷，那岂不是说明我也是在熬夜摸鱼?）
+（啊这，好像有道理诶😥）
+又考虑到人类是一种优柔寡断的生物，所以每次换完头像后的一段时间内，都有较高的概率再次换个头像。因此在侦测到头像更新后，可以调高在未来一段短时间内的轮询频率。但是这也不能排除在提高轮询频率之前的遗漏情况。
+况且，这个解决方案所收集到的表情包数量还是及其有限的，如果想要收集到足够数量的头像，估计早过 deadline 了。
+综上所述，这个方案还是被 pass 掉了。
+预备：从 Selenium 到 Puppeteer 上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。
+在知乎上搜索“狗狗表情包”关键字，回答数量最多的问题下也不过只有十几个回答。Pass。
+找到一些表情包网站，搜索关键字，质量过低。Pass。
+百度图片搜索关键字，结果还行，然而对百度没什么好感，有谷歌我还用什么百度。Pass。
+于是将目标锁定到了 Google Images.
+预调试阶段，利用 devtools 的 network 栏发现虽然图片是动态加载，但是并没有使用 Fetch/XHR，而是在发送了一些 Other 类的 imgevent 请求，具体原理我也不清楚。因此这里也不能用普通的 Request 解决了。之前记得听说过一种叫做 Chrome headless 的东西，搜索之后发现了 Selenium，遂开始准备学习 Selenium 进行爬虫。不过文章写到这儿的时候又发现了 Google 搞了个 Puppeteer 东西，貌似对 NodeJS 更加易用一些，然后便又转战 Google Puppeteer 了。
+Puppeteer 的官方介绍：
+Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol.</description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>零 做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~
 永真 - 出场 忍びよ、目覚めて下さい。貴方の、主の為に。
 弦一郎 - 芦苇原 久しな、御子よ。（おじゅうん？）の（ぼうぜん？）以来か。
 久しいな、御子よ。叔父上（おじじょう）の墓前（ぼぜん）以来か。
@@ -38,7 +54,7 @@
 这是他的第一次问我这个问题，后面也有第二次提问。
 不过在他上次提问过后，我回去后其实也并没有进行过多的深入思考。但我还是尝试给出了与上次不同的答案。
 这次我提到了一个人的知识面的广度，譬如我个人，虽说只是一名切图仔，但是在其他方面也多有涉猎，倘以我们网校的部门举例，我首先是本来就在后端待过半年，在 SRE 也学习过一段时间，开发过一些 Android Apps，甚至还尝试学习像素画（这条还是忽略吧）。我个人以为，在网校范围内，前端本身（特指大前端/全栈）可能是仅次于运维的全栈部门了。
-不过这样的我其实也有一些问题：接触的挺多，深入的却很少。前端本身各种轮子层出不穷，更新迭代很快。真正喜欢前端的人，也常常痴迷于新技术。最近我在网校讲授了一节前端框架相关的课，讲到 TypeScript 时，顺口提了一下 Deno。而学员里有个同学和一勤奋蜂的前端学长聊天时提到了这个，于是勤奋蜂的那位学长便表示想和我聊一下天。那天，我们聊了许多。他也是喜欢新生技术的人。他说，他想要在 WebGL，WASM，Deno 里面的选择一个去深入学习。说来惭愧，虽然这些都早有耳闻，但却没有一个能称得上是比较深入了解的。我们网校的学姐也说过我们，喜欢新技术很好，但不要每次都是写了一个 Hello World 之后就扔一边儿了。而彼时，我也正如其所言，丢掉了刚做完一个 Hello World 的 Tarui。
+不过这样的我其实也有一些问题：接触的挺多，深入的却很少。前端本身各种轮子层出不穷，更新迭代很快。真正喜欢前端的人，也常常痴迷于新技术。最近我在网校讲授了一节前端框架相关的课，讲到 TypeScript 时，顺口提了一下 Deno。而学员里有个同学和一勤奋蜂的前端学长聊天时提到了这个，于是勤奋蜂的那位学长便表示想和我聊一下天。那天，我们聊了许多。他也是喜欢新生技术的人。他说，他想要在 WebGL，WASM，Deno 里面的选择一个去深入学习。说来惭愧，虽然我对这些都早有耳闻，但却没有一个能称得上是比较深入了解的。我们网校的学姐也说过我们，喜欢新技术很好，但不要每次都是写了一个 Hello World 之后就扔一边儿了。而彼时，我也正如其所言，丢掉了刚做完一个 Hello World 的 Tarui。
 三 我感觉自己似乎处在某个瓶颈期，基础知识学得都差不多了，但是每当面对浩如烟海的前端进阶内容，却不知从何学起。也许刚踏入大学时，我还算比较有优势。但是随着时间的推移，我逐渐发现自己的优势正在逐渐消逝，泯然众人。我几乎已经很难说出在某个领域能够完胜其他学员了。
 但是学长却说，我们这个阶段恰好是最容易提升的时期。
 仔细想想，其实好像也对，我们现在的能力，也足以支撑我们去学习新的知识、独立开发项目和参与开源社区之类的了。
