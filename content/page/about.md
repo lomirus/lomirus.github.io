@@ -29,3 +29,4 @@ menu:
 # Blogroll
 
 * [辇道增七的小站](https://wuhaoda.life/)
+* [YYQF's Blog](http://yyqf123.top/)
