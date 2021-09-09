@@ -13,15 +13,14 @@ When I started to write the article, I haven't install the Chinese Input Method,
 
 ## Foreword
 
-I've used Windows OS for a long time. I can still remember that when I was at the junior high school student, it's 2015. I was still a fan to Microsoft at that time, and it's also that year, that the Windows 10 was released. I was so excited but I didn't have a PC then that could reach the lowest requirement of Windows 10. But I still recommended one of my friends and helped him install the newly released system. At the beginning, I couldn't understand why there are so many people do not want try the new system but use the old and retired Windows XP. But many years have passed, and this time it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I am waiting for Windows 11 coming soon. However, unfortunately, it is just not as good as what I thought.
-
-
+I've used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It's 2015. I was still a fan to Microsoft at that time. And it's also in that year, the Windows 10 was released. I was so excited but I didn't have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn't understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.
 
 About a month ago, on Jun 17th, I installed the Manjaro with Gnome.
 
 But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)
 
-And that's why I wrote this article ---- to restore my customized system quickly instead of searching the bug solutions for a whole day.
+And that's why I wrote this article ---- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.
+
 ## Customize
 
 ### Set Redrock Mirrors
