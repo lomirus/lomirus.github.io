@@ -17,7 +17,7 @@ It's a long dream, I've had, for the whole night, at the cramped cabin, in a vil
 
 "So have you tried to search for him?" I asked.
 
-"Perhaps, I am not sure," she answered. "He's a odd man, and seldom went out from his house. So we just didn't notice any **anomalies** for his disappearance at the first days. "
+"Perhaps, I am not sure," she answered. "He's an odd man, and seldom went out from his house. So we just didn't notice any **anomalies** for his disappearance at the first days. "
 
 "But when we realized," she added, "at least in my opinion, it's been too late."
 
@@ -51,27 +51,27 @@ I was interested by this kind of marvelous work and asked him if he would like t
 
 I was astonished by his words and could not **retort** for the moment. I cannot deny that it is he that was at the true side, but I just did not understand why he was so serious about my request and his works in a sudden without any **omens**. "Perhaps he just in a bad mood today," I thought to myself. "Maybe I should have not bothered him."
 
-But except him, most of my classmates were all playing noisily in the spare time between or after classes. And Arnold was the kid king among the whole grade in the school, though there might be only a dozen of people among a whole grade in the school of my remote village. But he still had many friends, yet I was not sure if they were the friends indeed or in **awe**. I was the one of the kind of people who were **taciturn** and **introverted**, so rarely have I called any of my friends to play outside, and always on the contrary——it's they called me. And just as what I mentioned, one day, Arnold called me out——of course I would not have dared to refuse. After all, he even took me to play **truant** together before, so what else could be more severe than that in the world, for me then the kid?
+But except him, most of my classmates were all playing noisily in the spare time between or after classes. And Arnold was the kid king among the whole grade in the school, though there might be only a dozen of people among a whole grade in the school of this remote village of mine. But he still had many friends, yet I was not sure if they were the friends indeed or in **awe**. I was the one of the kind of people who were **taciturn** and **introverted**, so rarely have I called any of my friends to play outside, and always on the contrary——it's they called me. And just as what I mentioned, one day, Arnold called me out——of course I would not have dared to refuse. After all, he even took me to play **truant** together before, so what else could be more severe than that in the world, for me then the kid?
 
-And what did we do then? It's already beyond my memory. What I could only remember was that Arnold seemed to have found some new preys while we were heading towards the Tony's home. His house was just located near the lake that I mentioned above. So specifically, out destination was not Tony's home, but was the lakefront.
+And what did we do then? It's already beyond my memory. What I could only remember was that Arnold seemed to have found some new preys while we were heading towards the Tony's home. His house was just located near the lake that I mentioned above. So specifically, our destination was not Tony's home, but was the lakefront.
 
 "Hey, there's David and Mark," Arnold said, "I'll go to join them now. You can stay here for the moment or go back. Anyway it's not what I need to care about." And I chose the former. After all, David and Mark was even one grade higher than me. Since I was not too familiar with them, to stay with a relative acquaintance like Tony would be surely a better choice obviously.
 
 So we were just watching TV to kill time. But that's not the only thing we used to spend. We then went out and sit around the lake to continue our words. We talked much, from tales to myths, from unicorn to phoenix, and from monsters to thrillers. I was so amazed by the unconstrained world that existed in his mind.
 
-I used to have such a limited outlook during my childhood, and I can prove this by telling you a another story. It was when I was playing the **cobbles** behind the yard of my house, of course it might be boring in your eyes, but not in mine, at least at that time. Then one of my neighbors, an elder sister several years older than me, just came back from her travel to the urban district, where row upon row of skyscrapers, as she described, stood upright there. But it is not point I am going to say, because the story I am telling now actually began with her introduction about the zoo, yes, just the zoo of animals.
+I used to have such a limited outlook during my childhood, and I can prove this by telling you a another story. It was when I was playing the **cobbles** behind the yard of my house, of course it might be boring in your eyes, but not in mine, at least at that time. Then one of my neighbors, an elder sister several years older than me, just came back from her travel to the urban district, where row upon row of skyscrapers, as she described, stood upright there. But it is not the point I am going to say, because the story I am telling now actually began with her introduction about the zoo, yes, just the zoo of animals.
 
 She said she had seen tigers, lions, elephants and many other various animals there. But in fact, I was doubtful about her words: "No joking please," I laughed. "There were never such things like tigers that had even existed in the world." And then it was her turn to be surprised: "What? Why do you have such thoughts?" She laughed, too. But I was serious: "Because I've never seen so-called beasts in the real world, but only in TV programs or cartoons."
 
-That's really ridiculous, to only believe the things that we've seen, but ignore those unknown existences. I am not so naïve anymore. However, what's more ironical is that, up to now I have not seen the tigers or lions personally yet.
+That's really ridiculous, to only believe the things that we've seen, but ignore those unknown existences. Now I've been not so naïve anymore. However, what's more ironical is that, up to now I have not seen the tigers or lions personally yet.
 
 But Tony is not the same, I hardly doubted his words.
 
 Watching the TV for a long time would finally turned a boring activity, therefore we then went away from the chairs and just hung out in his house.
 
-I've never taken a close look at the interior of his house before. I mean, it's the first time that I've taken, but, could also be the last time I did, though I didn't realized it at that time.
+I've never taken a close look at the interior of his house before. I mean, it's the first time that I've taken, but, could also be the last time I did, though I still didn't realized it at that time.
 
-"Let me show you something interesting," he supposed. And then he took out a picture from the drawer, and showed it to me. "That's it," he smiled. And in fact, it actually aroused my curiosity successfully.
+"Let's see something interesting," he supposed. And then he took out a picture from the drawer, and passed it to me. "That's it," he smiled. And in fact, it actually aroused my curiosity successfully.
 
 It was a black & white photo, slightly yellowed color reflecting the old stories beyond its experienced ages. There was a Japanese woman who stood at the prominent position of the photo, which could be easily inferred through the **exotic** kimono she wore, and the oil-paper umbrella she held. And apart from these, beside her was also a man who was standing upright.
 
@@ -85,7 +85,7 @@ Therefore I was only to leave. Perhaps in order to avoid my **suffocation** due 
 
 But of course, no one would have any appetite at such situation. So I just threw it away on the side of the path once the figure of their house had faded away beyond my view. 
 
-That the last time I met him, without farewell. The next term, I transferred to the school located in the county, the town district.
+That was the last time I met him, without farewell. The next term, I transferred to the school located in the county, the town district.
 
 "You know, the school of our village, is so...", my mother said.
 
@@ -101,10 +101,10 @@ Some of them now are working on street barbecue, some do the barber and some bec
 
 We were all changed, never the same, like I was once travelling through the reeds forest, but now walking on the weeds meadow at the same place.
 
-It's been many years since my last time came here. Things were not, and so were the people. Air smelt damp, which made me a little bit chill in addition to the evening breeze. And just like an arranged coincidence, it started to sprinkle after a while, soaked my body and extinguished the flaring flames under the lake surface. Raindrop wrinkled the lake surface, just like the origami folding the ripples. The chirp of cicada was also silenced at that night. Moon shed its lights from lake bottom, **scattering** into beams of light. I was trying to flying to the sky, and finally touched the ceil, only to find that I had already been there, and he was smiling to me.
+It's been many years since my last time came here. Things were not, and so were the people. Air smelt damp, which made me a little bit chill in addition to the evening breeze. And just like an arranged coincidence, it started to sprinkle after a while, soaked my body and extinguished the flaring flames under the lake surface. Raindrop wrinkled the lake surface, just like the origami folding the ripples. The chirp of cicada was also silenced at that night. Moon shed its lights from lake bottom, **scattering** into beams of light. I was trying to flying to the sky, and finally touched the ceil, only to find that I had already been there, and someone was smiling to me.
 
 "It's getting late. Now go home and have a rest."
 
-So I was trying to go back and have a rest. Though I haven't been a regular there for the recent years, I still managed to find my way to that old house following the reeds, and then slept following his words, and therefore then I awoke——
+So I was trying to go back and have a rest. Though I haven't been a regular there for the recent years, I still managed to find my way to that old house following the reeds, and then slept by following his words, and therefore then I awoke——
 
 From a long dream, I've had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk...
