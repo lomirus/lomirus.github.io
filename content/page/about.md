@@ -31,4 +31,5 @@ menu:
 * [辇道增七的小站](https://wuhaoda.life/)
 * [YYQF's Blog](http://yyqf123.top/)
 * [OkAndGreat 的个人博客](http://zhongtai521.wang/links.html)
+* [Victor’s Blog - 在想象中复燃 可能更解烦.](https://qwq.ren)
 
