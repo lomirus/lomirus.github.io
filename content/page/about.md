@@ -9,9 +9,10 @@ aliases:
 license: CC BY-NC-ND
 lastmod: '2021-08-27'
 menu:
-    main: 
-        weight: -90
-        pre: user
+  main: 
+    weight: -90
+    params: 
+      icon: user
 ---
 
 代码（菜），语言（只会中文），历史（控制台上的P社玩家），游戏（Pixel/Plot/RPG/Soul-like/AC），荒谬/自由/存在主义（中二病）
