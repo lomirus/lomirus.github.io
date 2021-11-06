@@ -11,8 +11,12 @@ disqusShortname: hugo-theme-stack
 googleAnalytics:
 
 # Theme i18n support
-# Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl, it
-DefaultContentLanguage: en
+# Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk
+DefaultContentLanguage: zh-cn
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: true
 
 permalinks:
     post: /p/:slug/
@@ -111,6 +115,17 @@ params:
             reactionsEnabled: 1
             emitMetadata: 0
 
+        gitalk:
+            owner: 
+            admin:  
+            repo: 
+            clientID: 
+            clientSecret: 
+        
+        cusdis:
+            host: 
+            id: 
+
     widgets:
         enabled:
             - search
@@ -159,10 +174,17 @@ menu:
           name: Home
           url: /
           weight: -100
-          pre: home
-        #   params:
-        #       ### For demonstration purpose, the home link will be open in a new tab
-        #       newTab: true
+          params:
+            ### For demonstration purpose, the home link will be open in a new tab
+            #newTab: true
+            icon: home
+    
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/lomirus
+          params:
+            icon: brand-github
 
 related:
     includeNewer: true
@@ -176,6 +198,10 @@ related:
           weight: 200
 
 markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
     tableOfContents:
         endLevel: 4
         ordered: true
