@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on Lomirus' Site</title><link>https://lomirus.github.io/tags/javascript/</link><description>Recent content in javascript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Aug 2021 12:42:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>缘起：自动生成狗狗表情包 前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。
-废案：爬取QQ历史头像 一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐的经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？
-关于这个思路，我一开始想到的是利用“获取QQ头像”的接口进行轮询，计算当前头像哈希值并与上一次获取到的头像的哈希值作比较，若不同则保存下载。但是轮询的时间间隔实在不太好设定。因为头像的更新时间并不固定，可能一天更新数次，也可能数天更新一次。如果设定轮询间隔时间过短，会导致服务器压力过大，严重的话说不定腾讯会直接把我给 ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头像大概率是有遗漏的。
-考虑到更新头像终究是由人类来完成的，因此也需要考虑到利用一些社会工程学信息以对程序进行优化。比如在深夜凌晨的时候，可以适时停止爬虫以降低负载。但是考虑到这个作息规律&amp;hellip;咳咳&amp;hellip;还是算了吧，毕竟昨晚凌晨还刚刚看到钰姐又换了新头像来着。
-（那既然我能发现别人在熬夜内卷，那岂不是说明我也是在熬夜摸鱼?）
-（啊这，好像有道理诶😥）
-又考虑到人类是一种优柔寡断的生物，所以每次换完头像后的一段时间内，都有较高的概率再次换个头像。因此在侦测到头像更新后，可以调高在未来一段短时间内的轮询频率。但是这也不能排除在提高轮询频率之前的遗漏情况。
-况且，这个解决方案所收集到的表情包数量还是及其有限的，如果想要收集到足够数量的头像，估计早过 deadline 了。
-综上所述，这个方案还是被 pass 掉了。
-预备：从 Selenium 到 Puppeteer 上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。
-在知乎上搜索“狗狗表情包”关键字，回答数量最多的问题下也不过只有十几个回答。Pass。
-找到一些表情包网站，搜索关键字，质量过低。Pass。
-百度图片搜索关键字，结果还行，然而对百度没什么好感，有谷歌我还用什么百度。Pass。
-于是将目标锁定到了 Google Images.
-预调试阶段，利用 devtools 的 network 栏发现虽然图片是动态加载，但是并没有使用 Fetch/XHR，而是在发送了一些 Other 类的 imgevent 请求，具体原理我也不清楚。因此这里也不能用普通的 Request 解决了。之前记得听说过一种叫做 Chrome headless 的东西，搜索之后发现了 Selenium，遂开始准备学习 Selenium 进行爬虫。不过文章写到这儿的时候又发现了 Google 搞了个 Puppeteer 东西，貌似对 NodeJS 更加易用一些，然后便又转战 Google Puppeteer 了。
-Puppeteer 的官方介绍：
-Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on Lomirus' Site</title><link>https://lomirus.github.io/tags/javascript/</link><description>Recent content in javascript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Aug 2021 12:42:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>缘起：自动生成狗狗表情包 前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用</description></item></channel></rss>
