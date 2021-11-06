@@ -32,6 +32,10 @@ Delete other unnecessary mirrors and add:
 ```
 Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 ```
+Disable mirrorlist automatically refreshing:
+```
+sudo systemctl disable pamac-mirrorlist.timer
+```
 
 ### Set the keyboard shortcuts
 
@@ -83,6 +87,8 @@ sudo pacman -S yay
 sudo pacman -S base-devel
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
+sudo pacman -S gpick
+sudo pacman -S jdk-openjdk
 yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
@@ -100,6 +106,18 @@ nrm use taobao
 sudo npm install -g yarn
 sudo npm install -g @vue/cli
 sudo npm install -g create-react-app
+```
+
+## Fix Multisystem time synchronization problem
+
+```bash
+timedatectl set-local-rtc 1
+```
+
+If you want to verify:
+
+```bash
+timedatectl
 ```
 
 ### Install Deno
