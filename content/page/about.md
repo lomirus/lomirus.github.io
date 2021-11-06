@@ -15,7 +15,10 @@ menu:
       icon: user
 ---
 
-代码（菜），语言（只会中文），历史（控制台上的P社玩家），游戏（Pixel/Plot/RPG/Soul-like/AC），荒谬/自由/存在主义（中二病）
+- 代码：JavaScript/TypeScript/Rust <span style="opacity: 0.3">~~没一个是熟练的~~</span>
+- 语言：精通中、英、日、韩、俄等多国语言 <span style="opacity: 0.3">~~的字母~~</span>
+- 历史：<span style="opacity: 0.3">~~控制台上的~~</span> P社玩家
+- 游戏：Pixel / Story Rich / RPG / Soul-like / AC
 
 # Socials
 
@@ -25,12 +28,7 @@ menu:
 
 # TodoList
 
-* 做一款独立游戏
-
-# Blogroll
-
-* [辇道增七的小站](https://wuhaoda.life/)
-* [YYQF's Blog](http://yyqf123.top/)
-* [OkAndGreat 的个人博客](http://zhongtai521.wang/)
-* [Victor’s Blog](https://qwq.ren)
+* Develop an indie game
+  * Learn pixel art with Aseprite
+  * Learn music
 
