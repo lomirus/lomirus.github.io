@@ -68,6 +68,8 @@ Since I cannot stand the Windows, I embraced the Linux.
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo nano /etc/pacman.d/mirrorlist
 </code></pre></div><p>Delete other unnecessary mirrors and add:</p>
 <pre><code>Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+</code></pre><p>Disable mirrorlist automatically refreshing:</p>
+<pre><code>sudo systemctl disable pamac-mirrorlist.timer
 </code></pre><h3 id=set-the-keyboard-shortcuts>Set the keyboard shortcuts</h3>
 <p>Open:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>gnome-control-center
@@ -118,6 +120,8 @@ sudo pacman -S yay
 sudo pacman -S base-devel
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
+sudo pacman -S gpick
+sudo pacman -S jdk-openjdk
 yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
@@ -135,6 +139,10 @@ nrm use taobao
 sudo npm install -g yarn
 sudo npm install -g @vue/cli
 sudo npm install -g create-react-app
+</code></pre></div><h2 id=fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl set-local-rtc <span class=m>1</span>
+</code></pre></div><p>If you want to verify:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl
 </code></pre></div><h3 id=install-deno>Install Deno</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S deno
 </code></pre></div><h3 id=install-docker>Install Docker</h3>
@@ -197,6 +205,16 @@ Last updated on Aug 25, 2021 00:00 +0800
 </a>
 </article>
 <article class=has-image>
+<a href=/p/flutter-persistent-navigator/>
+<div class=article-image>
+<img src=/p/flutter-persistent-navigator/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=flutter-persistent-navigator data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
 <a href=/p/puppeteer-dog-stickers/>
 <div class=article-image>
 <img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
@@ -223,16 +241,6 @@ Last updated on Aug 25, 2021 00:00 +0800
 </div>
 <div class=article-details>
 <h2 class=article-title>TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/upon-the-mere/>
-<div class=article-image>
-<img src=/p/upon-the-mere/cover.c514d916917173a48a42e0114b469961_hud7e36f7e20e71be184458283bdae4646_55974_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key=upon-the-mere data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>Fiction: Upon the Mere</h2>
 </div>
 </a>
 </article>
@@ -307,7 +315,8 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</a></li>
 </ol>
 </li>
-<li><a href=#install-packages>Install Packages</a>
+<li><a href=#install-packages>Install Packages</a></li>
+<li><a href=#fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</a>
 <ol>
 <li><a href=#install-deno>Install Deno</a></li>
 <li><a href=#install-docker>Install Docker</a></li>

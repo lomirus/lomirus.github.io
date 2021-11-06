@@ -1,0 +1,392 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Web 前端的会点儿 Flutter 没问题吧？"><title>初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录</title>
+<link rel=canonical href=https://lomirus.github.io/p/flutter-persistent-navigator/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录">
+<meta property="og:description" content="Web 前端的会点儿 Flutter 没问题吧？">
+<meta property="og:url" content="https://lomirus.github.io/p/flutter-persistent-navigator/">
+<meta property="og:site_name" content="Lomirus' Site">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Flutter"><meta property="article:tag" content="Dart"><meta property="article:tag" content="Android"><meta property="article:published_time" content="2021-10-19T15:30:00+08:00"><meta property="article:modified_time" content="2021-11-06T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/flutter-persistent-navigator/cover.png">
+<meta name=twitter:title content="初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录">
+<meta name=twitter:description content="Web 前端的会点儿 Flutter 没问题吧？"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://lomirus.github.io/p/flutter-persistent-navigator/cover.png">
+<link rel="shortcut icon" href=/img/favicon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://lomirus.github.io class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/flutter-persistent-navigator/>
+<img src=/p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png srcset="/p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png 800w, /p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_1600x0_resize_box_3.png 1600w" width=800 height=400 loading=lazy alt="Featured image of post 初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/code/>
+Code
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/flutter-persistent-navigator/>初次接触 Flutter 用于开发 Hall of Fame 的踩坑记录</a>
+</h2>
+<h3 class=article-subtitle>
+Web 前端的会点儿 Flutter 没问题吧？
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 19, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+3 min read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=前言>前言</h2>
+<p>首先简要介绍一下 <code>Hall of Fame</code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。</p>
+<p>总的来说，Flutter 的上手难度在我个人角度看来还算是比较简单的。从从未接触过 Flutter，到独立开发出一个相对完整的 App，中间也不过只有两周左右。另外从一名 Web 前端开发者的视角来看，使用 Flutter 开发界面的难度还是要相对高于传统的 Web 开发的，尤其是在自定义方面，一旦写起样式来各种嵌套又要写一堆了&mldr;但是 Google 默认提供的 Material Design UI 库对于没有视觉要求的指定风格的情况来说还是蛮够用的；另外官方也提供了一套 iOS 风格的 Cupertino UI 库，但是我还没有尝试过这个，不知道实际体验效果如何。至少就此来看，使用 Flutter 来进行一款跨端的小品类应用开发确实是一项不错的选择。至于大型项目，虽然 Flutter 版本已经迭代到了 2.5+，但是相对于其他已经发展了数年的 Native/Web 开发方案来说，还不能说是特别成熟。就比如我在下文中提到的一些坑，至今官方还没有提供相应的瀑布流库。闲鱼对此选择的路线则是自研，不过我种初学者自然是没有人家这种专业团队的实力，于是只能乖乖的在社区里找一些开源库先用着。</p>
+<p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。</p>
+<p>下面贴下这个项目的 Github 地址：<a class=link href=https://github.com/hall-of-fame/hof-flutter-md target=_blank rel=noopener>https://github.com/hall-of-fame/hof-flutter-md</a>，以及首屏图：</p>
+<p><figure class=gallery-image style=flex-grow:45;flex-basis:108px>
+<a href=/p/flutter-persistent-navigator/screenshot.jpeg data-size=1080x2400>
+<img src=/p/flutter-persistent-navigator/screenshot.jpeg width=1080 height=2400 srcset="/p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, /p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt=展示图>
+</a>
+<figcaption>展示图</figcaption>
+</figure></p>
+<p>下面则是讲一下我在使用 Flutter 进行开发的过程中遇到的一些问题：</p>
+<h2 id=导航栏标签页-keep-alive>导航栏标签页 keep-alive</h2>
+<h3 id=一般的标签页切换>一般的标签页切换</h3>
+<p>在 Flutter 中，如果我们想通过 BottomNavigationBar 实现一个简单的标签页切换功能，可以在官方文档对于
+<code>BottomNavigationBar class</code> 的介绍看到一些简单示例。这里我们以之为基础，再次对其进行简化，可以得到下面一个只有 32 行的简单结构：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=kd>class</span> <span class=nc>MyStatefulWidget</span> <span class=kd>extends</span> <span class=n>StatefulWidget</span> <span class=p>{</span>
+  <span class=kd>const</span> <span class=n>MyStatefulWidget</span><span class=p>({</span><span class=n>Key</span><span class=o>?</span> <span class=n>key</span><span class=p>})</span> <span class=o>:</span> <span class=k>super</span><span class=p>(</span><span class=nl>key:</span> <span class=n>key</span><span class=p>);</span>
+  <span class=n>State</span><span class=o>&lt;</span><span class=n>MyStatefulWidget</span><span class=o>&gt;</span> <span class=n>createState</span><span class=p>()</span> <span class=o>=&gt;</span> <span class=n>_MyStatefulWidgetState</span><span class=p>();</span>
+<span class=p>}</span>
+
+<span class=kd>class</span> <span class=nc>_MyStatefulWidgetState</span> <span class=kd>extends</span> <span class=n>State</span><span class=o>&lt;</span><span class=n>MyStatefulWidget</span><span class=o>&gt;</span> <span class=p>{</span>
+  <span class=kt>int</span> <span class=n>_selectedIndex</span> <span class=o>=</span> <span class=m>0</span><span class=p>;</span>
+  <span class=kd>static</span> <span class=kd>const</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>Widget</span><span class=o>&gt;</span> <span class=n>_widgetOptions</span> <span class=o>=</span> <span class=o>&lt;</span><span class=n>Widget</span><span class=o>&gt;</span><span class=p>[</span>
+    <span class=n>Text</span><span class=p>(</span><span class=s1>&#39;Index 0: Home&#39;</span><span class=p>),</span>
+    <span class=n>Text</span><span class=p>(</span><span class=s1>&#39;Index 1: Settings&#39;</span><span class=p>),</span>
+  <span class=p>];</span>
+  
+  <span class=n>Widget</span> <span class=n>build</span><span class=p>(</span><span class=n>BuildContext</span> <span class=n>context</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=n>Scaffold</span><span class=p>(</span>
+      <span class=nl>body:</span> <span class=n>Center</span><span class=p>(</span><span class=nl>child:</span> <span class=n>_widgetOptions</span><span class=p>.</span><span class=n>elementAt</span><span class=p>(</span><span class=n>_selectedIndex</span><span class=p>)),</span>
+      <span class=nl>bottomNavigationBar:</span> <span class=n>BottomNavigationBar</span><span class=p>(</span>
+        <span class=nl>items:</span> <span class=kd>const</span> <span class=o>&lt;</span><span class=n>BottomNavigationBarItem</span><span class=o>&gt;</span><span class=p>[</span>
+          <span class=n>BottomNavigationBarItem</span><span class=p>(</span>
+            <span class=nl>icon:</span> <span class=n>Icon</span><span class=p>(</span><span class=n>Icons</span><span class=p>.</span><span class=n>home</span><span class=p>),</span>
+            <span class=nl>label:</span> <span class=s1>&#39;Home&#39;</span><span class=p>,</span>
+          <span class=p>),</span>
+          <span class=n>BottomNavigationBarItem</span><span class=p>(</span>
+            <span class=nl>icon:</span> <span class=n>Icon</span><span class=p>(</span><span class=n>Icons</span><span class=p>.</span><span class=n>settings</span><span class=p>),</span>
+            <span class=nl>label:</span> <span class=s1>&#39;Settings&#39;</span><span class=p>,</span>
+          <span class=p>),</span>
+        <span class=p>],</span>
+        <span class=nl>currentIndex:</span> <span class=n>_selectedIndex</span><span class=p>,</span>
+        <span class=nl>onTap:</span> <span class=p>(</span><span class=kt>int</span> <span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=n>setState</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=n>_selectedIndex</span> <span class=o>=</span> <span class=n>index</span><span class=p>),</span>
+      <span class=p>),</span>
+    <span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h3 id=问题引入无法保存组件状态>问题引入：无法保存组件状态</h3>
+<p>事实上，对于上文中的<a class=link href=#%e6%9c%80%e5%b0%8f%e6%a0%b7%e4%be%8b>最小样例</a>，这么写是完全没有问题的。但是随着软件功能的复杂化，一些问题可能就会暴露出来。比如，我们将上文中的 <code>Text</code>
+组件换为 <code>TextField</code> 标签试一下：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=kd>class</span> <span class=nc>MyStatefulWidget</span> <span class=kd>extends</span> <span class=n>StatefulWidget</span> <span class=p>{</span>
+  <span class=kd>const</span> <span class=n>MyStatefulWidget</span><span class=p>({</span><span class=n>Key</span><span class=o>?</span> <span class=n>key</span><span class=p>})</span> <span class=o>:</span> <span class=k>super</span><span class=p>(</span><span class=nl>key:</span> <span class=n>key</span><span class=p>);</span>
+  <span class=n>State</span><span class=o>&lt;</span><span class=n>MyStatefulWidget</span><span class=o>&gt;</span> <span class=n>createState</span><span class=p>()</span> <span class=o>=&gt;</span> <span class=n>_MyStatefulWidgetState</span><span class=p>();</span>
+<span class=p>}</span>
+
+<span class=kd>class</span> <span class=nc>_MyStatefulWidgetState</span> <span class=kd>extends</span> <span class=n>State</span><span class=o>&lt;</span><span class=n>MyStatefulWidget</span><span class=o>&gt;</span> <span class=p>{</span>
+  <span class=kt>int</span> <span class=n>_selectedIndex</span> <span class=o>=</span> <span class=m>0</span><span class=p>;</span>
+  <span class=kd>static</span> <span class=kd>const</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>Widget</span><span class=o>&gt;</span> <span class=n>_widgetOptions</span> <span class=o>=</span> <span class=o>&lt;</span><span class=n>Widget</span><span class=o>&gt;</span><span class=p>[</span>
+    <span class=n>TextField</span><span class=p>(),</span>
+    <span class=n>TextField</span><span class=p>(),</span>
+  <span class=p>];</span>
+  
+  <span class=n>Widget</span> <span class=n>build</span><span class=p>(</span><span class=n>BuildContext</span> <span class=n>context</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=n>Scaffold</span><span class=p>(</span>
+      <span class=nl>body:</span> <span class=n>Center</span><span class=p>(</span><span class=nl>child:</span> <span class=n>_widgetOptions</span><span class=p>.</span><span class=n>elementAt</span><span class=p>(</span><span class=n>_selectedIndex</span><span class=p>)),</span>
+      <span class=nl>bottomNavigationBar:</span> <span class=n>BottomNavigationBar</span><span class=p>(</span>
+        <span class=nl>items:</span> <span class=kd>const</span> <span class=o>&lt;</span><span class=n>BottomNavigationBarItem</span><span class=o>&gt;</span><span class=p>[</span>
+          <span class=n>BottomNavigationBarItem</span><span class=p>(</span>
+            <span class=nl>icon:</span> <span class=n>Icon</span><span class=p>(</span><span class=n>Icons</span><span class=p>.</span><span class=n>home</span><span class=p>),</span>
+            <span class=nl>label:</span> <span class=s1>&#39;Home&#39;</span><span class=p>,</span>
+          <span class=p>),</span>
+          <span class=n>BottomNavigationBarItem</span><span class=p>(</span>
+            <span class=nl>icon:</span> <span class=n>Icon</span><span class=p>(</span><span class=n>Icons</span><span class=p>.</span><span class=n>settings</span><span class=p>),</span>
+            <span class=nl>label:</span> <span class=s1>&#39;Settings&#39;</span><span class=p>,</span>
+          <span class=p>),</span>
+        <span class=p>],</span>
+        <span class=nl>currentIndex:</span> <span class=n>_selectedIndex</span><span class=p>,</span>
+        <span class=nl>onTap:</span> <span class=p>(</span><span class=kt>int</span> <span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=n>setState</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=n>_selectedIndex</span> <span class=o>=</span> <span class=n>index</span><span class=p>),</span>
+      <span class=p>),</span>
+    <span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>如果你试着跑了一下上文的代码，你会发现代码依旧可以通过编译，也可以正常运行。但是如果你在其中一个 <code>TextField</code>
+输入了一段文字，然后点击底部导航栏切换到了另一个标签页，然后再切换回来，你会发现你之前在 <code>TextField</code> 的内容已经被清空掉了。</p>
+<p>这是因为，当你切换到另一个标签页时，Flutter 会将原先的标签页的组件给销毁掉，并创建一个新的你所选择的标签页（或者说是组件）。当你返回原来的页面时，也会执行一遍同样的操作，这时，这个页面已经不是原来的那个页面了。</p>
+<p>如果我们使用是的 React (Native) 或者是 Vue，我们可以简单地通过 <code>&lt;keep-alive></code> 标签达到状态保存的目的，但是 Flutter 似乎就没有这么方便了😥。</p>
+<h3 id=解决方案automatic-keep-alive-client-mixin>解决方案：Automatic Keep Alive Client Mixin</h3>
+<p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack & Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课件休息摸鱼时在知乎上找到了一个<a class=link href=https://zhuanlan.zhihu.com/p/61458683 target=_blank rel=noopener>解决方案</a>。</p>
+<p>这个方案使用的是 <code>AutomaticKeepAliveClientMixin</code>，按照它的方法，对上文中的示例代码进行修改后可得：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=kd>class</span> <span class=nc>RootScreen</span> <span class=kd>extends</span> <span class=n>StatefulWidget</span> <span class=p>{</span>
+  <span class=n>_RootScreenState</span> <span class=n>createState</span><span class=p>()</span> <span class=o>=&gt;</span> <span class=n>_RootScreenState</span><span class=p>();</span>
+<span class=p>}</span>
+
+<span class=kd>class</span> <span class=nc>_RootScreenState</span> <span class=kd>extends</span> <span class=n>State</span><span class=o>&lt;</span><span class=n>RootScreen</span><span class=o>&gt;</span> <span class=p>{</span>
+  <span class=n>PageController</span> <span class=n>_pageController</span> <span class=o>=</span> <span class=n>PageController</span><span class=p>();</span>
+  <span class=kt>int</span> <span class=n>_pageIndex</span> <span class=o>=</span> <span class=m>0</span><span class=p>;</span>
+
+  <span class=n>Widget</span> <span class=n>build</span><span class=p>(</span><span class=n>BuildContext</span> <span class=n>context</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=n>Scaffold</span><span class=p>(</span>
+      <span class=nl>body:</span> <span class=n>PageView</span><span class=p>(</span>
+        <span class=nl>children:</span> <span class=o>&lt;</span><span class=n>Widget</span><span class=o>&gt;</span><span class=p>[</span>
+          <span class=n>HomeScreen</span><span class=p>(),</span>
+          <span class=n>SettingsScreen</span><span class=p>(),</span>
+        <span class=p>],</span>
+        <span class=nl>controller:</span> <span class=n>_pageController</span><span class=p>,</span>
+        <span class=nl>onPageChanged:</span> <span class=p>(</span><span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=n>setState</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=n>_pageIndex</span> <span class=o>=</span> <span class=n>index</span><span class=p>),</span>
+      <span class=p>),</span>
+      <span class=nl>bottomNavigationBar:</span> <span class=n>BottomNavigator</span><span class=p>(</span>
+        <span class=nl>selectTab:</span> <span class=p>(</span><span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=n>_pageController</span><span class=p>.</span><span class=n>jumpToPage</span><span class=p>(</span><span class=n>index</span><span class=p>),</span>
+        <span class=nl>selectedIndex:</span> <span class=n>_pageIndex</span><span class=p>,</span>
+      <span class=p>),</span>
+    <span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>以其中的 <code>HomeScreen</code> 为例：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=kd>class</span> <span class=nc>HomeScreen</span> <span class=kd>extends</span> <span class=n>StatefulWidget</span> <span class=p>{</span>
+  <span class=n>_HomeScreenState</span> <span class=n>createState</span><span class=p>()</span> <span class=o>=&gt;</span> <span class=n>_HomeScreenState</span><span class=p>();</span>
+<span class=p>}</span>
+
+<span class=kd>class</span> <span class=nc>_HomeScreenState</span> <span class=kd>extends</span> <span class=n>State</span><span class=o>&lt;</span><span class=n>HomeScreen</span><span class=o>&gt;</span>
+    <span class=kd>with</span> <span class=n>AutomaticKeepAliveClientMixin</span> <span class=p>{</span>
+  <span class=kt>bool</span> <span class=kd>get</span> <span class=n>wantKeepAlive</span> <span class=o>=&gt;</span> <span class=kc>true</span><span class=p>;</span>
+
+  <span class=n>Widget</span> <span class=n>build</span><span class=p>(</span><span class=n>BuildContext</span> <span class=n>context</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>super</span><span class=p>.</span><span class=n>build</span><span class=p>(</span><span class=n>context</span><span class=p>);</span>
+    <span class=k>return</span> <span class=n>Center</span><span class=p>(</span><span class=nl>child:</span> <span class=n>Text</span><span class=p>(</span><span class=s2>&#34;Home&#34;</span><span class=p>));</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>即可。</p>
+<p>Ref:
+<a class=link href=https://medium.com/coding-with-flutter/flutter-case-study-multiple-navigators-with-bottomnavigationbar-90eb6caa6dbf target=_blank rel=noopener>Flutter Case Study: Multiple Navigators with BottomNavigationBar</a></p>
+<h2 id=瀑布流展示>瀑布流展示</h2>
+<h3 id=scrollable-view-嵌套>Scrollable View 嵌套</h3>
+<p>当我们尝试在可滚动 View（如ListView/GridView ）中的 children 中嵌套可滚动 View 时，会出现以下报错：</p>
+<pre><code>════════ Exception caught by rendering library ═════════════════════════════════
+The following assertion was thrown during performResize():
+Vertical viewport was given unbounded height.
+
+Viewports expand in the scrolling direction to fill their container. In this case, a vertical viewport was given an unlimited amount of vertical space in which to expand. This situation typically happens when a scrollable widget is nested inside another scrollable widget.
+
+If this widget is always nested in a scrollable widget there is no need to use a viewport because there will always be enough vertical space for the children. In this case, consider using a Column instead. Otherwise, consider using the &quot;shrinkWrap&quot; property (or a ShrinkWrappingViewport) to size the height of the viewport to the sum of the heights of its children.
+</code></pre><p>这时我们在内层的 View 中可以插入 <code>shrinkWrap: true</code>，即可解决报错。但是此时这个 View 将会无法滚动，我们可以继续在后面插入：
+<code>physics: NeverScrollableScrollPhysics()</code>，即可完美解决以上问题。</p>
+<h3 id=flutter_staggered_grid_view-库的简单使用>flutter_staggered_grid_view 库的简单使用</h3>
+<p><a class=link href=https://pub.dev/packages/flutter_staggered_grid_view target=_blank rel=noopener>flutter_staggered_grid_view</a> 是一个可以便捷实现瀑布流布局的 Flutter 库。一般地，要想使用它，我们需要首先导入：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=c>### file: pubspec.yaml</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>dependencies</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=l>// ...</span><span class=w>
+</span><span class=w>  </span><span class=nt>flutter_staggered_grid_view</span><span class=p>:</span><span class=w> </span><span class=l>^0.4.1</span><span class=w>
+</span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=c1>/// file: your_widget.dart
+</span><span class=c1></span>
+<span class=k>import</span> <span class=s1>&#39;package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart&#39;</span><span class=p>;</span>
+</code></pre></div><p>由于官方文档比较残缺，所以这里简要记录一下对于“内部组件宽度相同、数量不定的纵向瀑布流”的实现：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-dart data-lang=dart><span class=k>return</span> <span class=n>ListView</span><span class=p>(</span>
+  <span class=nl>padding:</span> <span class=n>EdgeInsets</span><span class=p>.</span><span class=n>all</span><span class=p>(</span><span class=m>20</span><span class=p>),</span>
+  <span class=nl>children:</span> <span class=p>[</span>
+    <span class=c1>// 此处省略部分固定且无关的组件...
+</span><span class=c1></span>    <span class=n>StaggeredGridView</span><span class=p>.</span><span class=n>countBuilder</span><span class=p>(</span>
+      <span class=c1>// 横向分两个“比例”
+</span><span class=c1></span>      <span class=nl>crossAxisCount:</span> <span class=m>2</span><span class=p>,</span>
+      <span class=c1>// 防止嵌套 Scrollable View 导致报错
+</span><span class=c1></span>      <span class=nl>physics:</span> <span class=n>NeverScrollableScrollPhysics</span><span class=p>(),</span>
+      <span class=c1>// 防止本例中的 ListView 无法滚动
+</span><span class=c1></span>      <span class=nl>shrinkWrap:</span> <span class=kc>true</span><span class=p>,</span>
+      <span class=c1>// 样式相关
+</span><span class=c1></span>      <span class=nl>mainAxisSpacing:</span> <span class=m>4.0</span><span class=p>,</span>
+      <span class=nl>crossAxisSpacing:</span> <span class=m>4.0</span><span class=p>,</span>
+      <span class=c1>// 组件的数量，不填会一直调用 itemBuilder 并不断抛出异常
+</span><span class=c1></span>      <span class=nl>itemCount:</span> <span class=n>filtedStickers</span><span class=p>.</span><span class=n>length</span><span class=p>,</span>
+      <span class=c1>// 对于给定的 index，返回对应组件实例
+</span><span class=c1></span>      <span class=nl>itemBuilder:</span> <span class=p>(</span><span class=n>context</span><span class=p>,</span> <span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span>
+          <span class=n>StickerCard</span><span class=p>(</span><span class=n>filtedStickers</span><span class=p>[</span><span class=n>index</span><span class=p>]),</span>
+      <span class=c1>// 对于给定的 index，返回对应组件的宽度占比（相对于 crossAxisCount）
+</span><span class=c1></span>      <span class=nl>staggeredTileBuilder:</span> <span class=p>(</span><span class=n>index</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=kd>const</span> <span class=n>StaggeredTile</span><span class=p>.</span><span class=n>fit</span><span class=p>(</span><span class=m>1</span><span class=p>),</span>
+    <span class=p>),</span>
+  <span class=p>],</span>
+<span class=p>);</span>
+</code></pre></div>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/flutter/>Flutter</a>
+<a href=/tags/dart/>Dart</a>
+<a href=/tags/android/>Android</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+Last updated on Nov 06, 2021 00:00 +0800
+</span>
+</section></footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/puppeteer-dog-stickers/>
+<div class=article-image>
+<img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/customize-manjaro/>
+<div class=article-image>
+<img src=/p/customize-manjaro/cover.d0f75435dcd75756729c5cf853adcada_hu81f578c0819d5c459ae1161b90d3bf82_144962_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key=customize-manjaro data-hash="md5-0PdUNdzXV1ZynFz4U63K2g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Customize the Manjaro with Gnome</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/wsl2/>
+<div class=article-image>
+<img src=/p/wsl2/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=wsl2 data-hash="md5-y2lElhgAz5XmcVT8m030Sw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>WSL 2 入门使用与踩坑记录</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/vue-vite-start/>
+<div class=article-image>
+<img src=/p/vue-vite-start/cover.6f81209e9443e07b7281d637767c0a11_hu04a4e276885eb709cbeaf2dacb0788b9_351809_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=vue-vite-start data-hash="md5-b4EgnpRD4HtygdY3dnwKEQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Vue & Vite 项目搭建入门</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/not-such-a-beautiful-marriage/>
+<div class=article-image>
+<img src=/p/not-such-a-beautiful-marriage/cover.c5d2c67f829f3c79343413ee11d249bd_hu344cc44c010eb8a4625e74adaa2a9ef7_57613_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=not-such-a-beautiful-marriage data-hash="md5-xdLGf4KfPHk0NBPuEdJJvQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script>
+<style>.utterances{max-width:unset}</style>
+<script>function setUtterancesTheme(b){let a=document.querySelector('.utterances iframe');a&&a.contentWindow.postMessage({type:'set-theme',theme:`github-${b}`},'https://utteranc.es')}addEventListener('message',a=>{if(a.origin!=='https://utteranc.es')return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener('onColorSchemeChange',a=>{setUtterancesTheme(a.detail)})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 Lomirus' Site
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#前言>前言</a></li>
+<li><a href=#导航栏标签页-keep-alive>导航栏标签页 keep-alive</a>
+<ol>
+<li><a href=#一般的标签页切换>一般的标签页切换</a></li>
+<li><a href=#问题引入无法保存组件状态>问题引入：无法保存组件状态</a></li>
+<li><a href=#解决方案automatic-keep-alive-client-mixin>解决方案：Automatic Keep Alive Client Mixin</a></li>
+</ol>
+</li>
+<li><a href=#瀑布流展示>瀑布流展示</a>
+<ol>
+<li><a href=#scrollable-view-嵌套>Scrollable View 嵌套</a></li>
+<li><a href=#flutter_staggered_grid_view-库的简单使用>flutter_staggered_grid_view 库的简单使用</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
