@@ -50,7 +50,7 @@ Since I cannot stand the Windows, I embraced the Linux.
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
-阅读时长: 3 分钟
+阅读时长: 4 分钟
 </time>
 </div>
 </footer>
@@ -64,10 +64,11 @@ Since I cannot stand the Windows, I embraced the Linux.
 <p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)</p>
 <p>And that&rsquo;s why I wrote this article &mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.</p>
 <h2 id=customize>Customize</h2>
-<h3 id=set-redrock-mirrors>Set Redrock Mirrors</h3>
+<h3 id=set-pacman-mirrors>Set Pacman Mirrors</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo nano /etc/pacman.d/mirrorlist
 </code></pre></div><p>Delete other unnecessary mirrors and add:</p>
-<pre><code>Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+<pre><code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 </code></pre><p>Disable mirrorlist automatically refreshing:</p>
 <pre><code>sudo systemctl disable pamac-mirrorlist.timer
 </code></pre><h3 id=set-the-keyboard-shortcuts>Set the keyboard shortcuts</h3>
@@ -100,7 +101,7 @@ Since I cannot stand the Windows, I embraced the Linux.
 <p>Edit <code>~/.config/Code/User/settings.json</code>:</p>
 <pre><code class=language-json5 data-lang=json5>{
     &quot;window.zoomLevel&quot;: 2,
-    //  Fix Terminal Font Display
+    // Fix Terminal Font Display
     &quot;terminal.integrated.fontFamily&quot;: &quot;NotoSansMono Nerd Font&quot;,
     // Make tab size from 2 to 4
     &quot;vetur.format.options.tabSize&quot;: 4
@@ -126,7 +127,10 @@ yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+<span class=c1># Install Netease Cloud Music, run:</span>
 yay -S electron-netease-cloud-music
+<span class=c1># Or a more beautiful version:</span>
+yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
@@ -162,15 +166,15 @@ sudo systemctl <span class=nb>enable</span> docker
 <span class=nb>export</span> <span class=nv>XMODIFIERS</span><span class=o>=</span><span class=s2>&#34;@im=fcitx5&#34;</span>
 </code></pre></div><p>Open <code> fcitx5-configtool</code> to move the input methods from right that you are going to use to left.</p>
 <p>To beautify the skin of the input methods, refer to <a class=link href=https://github.com/thep0y/fcitx5-themes target=_blank rel=noopener>thep0y / fcitx5-themes</a>.</p>
-<h3 id=install-electron-qq>Install <code>electron-qq</code></h3>
+<h3 id=install-icalinguaelectron-qq>Install <code>icalingua</code>(Electron QQ)</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>yay -S mongodb-bin
 yay -S mongodb-tools-bin
 sudo systemctl <span class=nb>enable</span> mongodb.service
 sudo systemctl start mongodb.service
-yay -S electron-qq
+yay -S icalingua
 </code></pre></div><h3 id=install-clash>Install <code>clash</code></h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S clash
-</code></pre></div><p>Download <code>config.yaml</code> to <code>~/.config/clash</code>. Then:</p>
+</code></pre></div><p>Download your <code>config.yaml</code> to <code>~/.config/clash</code>. Then:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo systemctl <span class=nb>enable</span> clash@<span class=nv>$USER</span>
 sudo systemctl start clash@<span class=nv>$USER</span>
 </code></pre></div>
@@ -309,7 +313,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#foreword>Foreword</a></li>
 <li><a href=#customize>Customize</a>
 <ol>
-<li><a href=#set-redrock-mirrors>Set Redrock Mirrors</a></li>
+<li><a href=#set-pacman-mirrors>Set Pacman Mirrors</a></li>
 <li><a href=#set-the-keyboard-shortcuts>Set the keyboard shortcuts</a></li>
 <li><a href=#edit-the-vscode-settings>Edit the VSCode Settings</a></li>
 <li><a href=#enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</a></li>
@@ -321,7 +325,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#install-deno>Install Deno</a></li>
 <li><a href=#install-docker>Install Docker</a></li>
 <li><a href=#install-asia-languages-input-methods>Install Asia Languages Input Methods</a></li>
-<li><a href=#install-electron-qq>Install <code>electron-qq</code></a></li>
+<li><a href=#install-icalinguaelectron-qq>Install <code>icalingua</code>(Electron QQ)</a></li>
 <li><a href=#install-clash>Install <code>clash</code></a></li>
 </ol>
 </li>

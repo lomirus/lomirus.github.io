@@ -93,7 +93,7 @@ alt="展示图">
 &lt;p>这是因为，当你切换到另一个标签页时，Flutter 会将原先的标签页的组件给销毁掉，并创建一个新的你所选择的标签页（或者说是组件）。当你返回原来的页面时，也会执行一遍同样的操作，这时，这个页面已经不是原来的那个页面了。&lt;/p>
 &lt;p>如果我们使用是的 React (Native) 或者是 Vue，我们可以简单地通过 &lt;code>&amp;lt;keep-alive&amp;gt;&lt;/code> 标签达到状态保存的目的，但是 Flutter 似乎就没有这么方便了😥。&lt;/p>
 &lt;h3 id="解决方案automatic-keep-alive-client-mixin">解决方案：Automatic Keep Alive Client Mixin&lt;/h3>
-&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课件休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
+&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
 >解决方案&lt;/a>。&lt;/p>
 &lt;p>这个方案使用的是 &lt;code>AutomaticKeepAliveClientMixin&lt;/code>，按照它的方法，对上文中的示例代码进行修改后可得：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="kd">class&lt;/span> &lt;span class="nc">RootScreen&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
@@ -548,11 +548,12 @@ alt="example.png">
 &lt;p>如果说非要找一些理由，以证明我尽管对祖母的去世无甚反应，却仍不是一个失掉人情味的人的话，或许我可以说，可能正是许久的不见，所造成的疏离与陌生感吧。&lt;/p>
 &lt;p>我的奶奶自我在高中时，便一直卧病在床。从一开始的腿脚不便、到后来的下肢瘫痪、甚至是阿尔兹海默症，直至去世，中间其实也不过两三年。我的爷爷奶奶与我和我爸妈三口，平常并不是住在同一座房子里的。但实际上，我们两家的两座房子正门的直线距离，其实也不过几十步，所以我们家一般都是会聚在一起吃饭的。不过我奶奶自打生病，自然就不断地缺席一场又一场的每日小聚。加之我高中学业繁重，一个月回家不过二三日，与她的见面机会，便只有待短暂放假时偶尔家中做了什么佳肴，家中令我去为她送饭时了。一年所见次数不过寥寥几次，所言亦不多，自然，她的去世也并没有使我如何震撼。仿佛她的身影是逐渐褪色模糊的，而非骤然与世长辞。对于一个卧病在床者，这确实算不上什么稀奇事。&lt;/p>
 &lt;p>而似乎也是去年，还是前年来着，我的老奶奶去世了。我其实并不知道“老奶奶”这个称呼的指代关系到底是什么。我对这种中国的辈份关系向来弄不清，更何况是带有方言的辈份称呼。至于她是我母亲的姥姥，还是父亲的奶奶，无论是至她的离世，还是至今，我都一直没弄清楚。&lt;/p>
-&lt;p>她去世时，家人央我同去参加她的葬礼。虽然我知道，她肯定是挺爱我这个作为曾孙辈的，但是反过来，我其实对她并没有什么特别的感情。但毕竟是亲人离世，葬礼一人一生也不过一次，我便随去参加了。自然，他们还邀请了附近十里八乡我毫不认识的陌生面孔。礼节上，行一些跪拜礼、号哭礼（姑且这么叫吧，至少我无法理解他们对这啼笑的转变仪式是为何如此熟练），抬棺，烧纸，喊一些我听不懂的如同咒语般的长丧音的话语，最后入土。&lt;/p>
+&lt;p>她去世时，家人央我同去参加她的葬礼。虽然我知道，她肯定是挺爱我这个作为曾孙辈的人的，但是反过来，我其实对她并没有什么特别的感情。但毕竟是亲人离世，葬礼一人一生也不过一次，我便随去参加了。自然，他们还邀请了附近十里八乡我毫不认识的陌生面孔。礼节上，行一些跪拜礼、号哭礼（姑且这么叫吧，至少我无法理解他们对这啼笑的转变仪式是为何如此熟练），抬棺，烧纸，喊一些我听不懂的如同咒语般的长丧音的话语，最后入土。&lt;/p>
 &lt;p>说实话，我其实对这类生老病死没什么太大的心理波动。人老而死本自然常理，非遇横祸，寿终正寝。却仍要活人披麻戴孝，摆席宴客，我实在接受不来。死了埋掉，或者烧掉。生者各有其事，各去忙自己的生活就好，何必如此。&lt;/p>
 &lt;p>人死，无魂灵。却仍要造墓建碑。岂不也是浪费土地？抑或是烧香供物，号而通灵者，看了着实讽刺。&lt;/p>
 &lt;p>但是，不如此，却也似乎是少了什么。人终究是感性的动物，无神论者在有实证之前，自然是不相信灵魂的。但人与人的纽带也并非会随着肉体腐烂，感情仍在，物是人非，便只好编造一些谎言，假装他们还在，还在听着我们说话。尽管最终却也还是没有什么回应就是了&amp;hellip;&lt;/p>
-&lt;p>何况我本身也不善言辞，感情也都一直藏在心中，自然不喜欢这种暴露感情的仪式。时间久了，连父母都说我是冷血动物了。不过如果我真的是冷血动物，我恐怕甚至不会给予他们回应；然而幸好我不是——我只是一只哺乳动物，一只直立猿罢了。&lt;/p>
+&lt;p>何况我本身也不善言辞，感情也都一直藏在心中，自然不喜欢这种暴露感情的仪式。时间久了，连父母都说我是冷血动物了。不过如果我真的是冷血动物，我恐怕甚至不会给予他们回应吧。&lt;/p>
+&lt;p>————幸而我不是，我仍旧只是一只哺乳动物罢了。&lt;/p>
 &lt;h2 id="六">六&lt;/h2>
 &lt;p>今晚上摸鱼时看到了 StackOverflow 的 2021 年的年度调查。感觉很有意思的，于是就去看了一下。&lt;/p>
 &lt;p>一开始是国籍，自然，没有那个国家。&lt;/p>
@@ -581,10 +582,11 @@ alt="example.png">
 &lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
 &lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
 &lt;h2 id="customize">Customize&lt;/h2>
-&lt;h3 id="set-redrock-mirrors">Set Redrock Mirrors&lt;/h3>
+&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo nano /etc/pacman.d/mirrorlist
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
-&lt;pre>&lt;code>Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+&lt;pre>&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 &lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
 &lt;pre>&lt;code>sudo systemctl disable pamac-mirrorlist.timer
 &lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts&lt;/h3>
@@ -643,7 +645,10 @@ yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+&lt;span class="c1"># Install Netease Cloud Music, run:&lt;/span>
 yay -S electron-netease-cloud-music
+&lt;span class="c1"># Or a more beautiful version:&lt;/span>
+yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
@@ -680,15 +685,15 @@ sudo systemctl &lt;span class="nb">enable&lt;/span> docker
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
 &lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
 >thep0y / fcitx5-themes&lt;/a>.&lt;/p>
-&lt;h3 id="install-electron-qq">Install &lt;code>electron-qq&lt;/code>&lt;/h3>
+&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">yay -S mongodb-bin
 yay -S mongodb-tools-bin
 sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
 sudo systemctl start mongodb.service
-yay -S electron-qq
+yay -S icalingua
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S clash
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Download &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Download your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
 sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
@@ -1003,7 +1008,7 @@ $ npm install
 &lt;p>不过现在这个博客已经被废弃了，一是因为博客源码太烂，二是因为文章太水，所以不愿再维护了。&lt;/p>
 &lt;p>但是我时而又萌生了继续写点博客的想法，然而正如杜拉斯在《情人》的开头所言，“我已经老了”（无端？），所以我也已经不太想折腾了。网上搜资料时发现有的人直接拿 Github Issues 来写博客，想了想也确实挺符合我的需求：支持 Markdown， 可编辑，可评论，而且现在据说也可以限制他人在自己仓库里乱发 issue 了，所以我就决定选择 Github Issues 作为我的新的博客平台了。不过日后倘若又要迁居，那也是后话了。&lt;/p>
 &lt;p>为防止自己继续写一些水文来占版面，所以这次可能更新频率会降低。不过有时可能受外力影响要求比如每周上交至少一篇博文，emmm，以后再具体看情况办吧。&lt;/p>
-&lt;p>先写到这。&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文&lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+&lt;p>先写到这。&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
 >TypeScript with Babel: A Beautiful Marriage&lt;/a>）&lt;/p>
 &lt;h2 id="origin">Origin&lt;/h2>
 &lt;p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p>
