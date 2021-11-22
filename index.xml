@@ -626,47 +626,57 @@ alt="example.png">
 }
 &lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading&lt;/h3>
 &lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
-&lt;h2 id="install-packages">Install Packages&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S neofetch
-sudo pacman -S gcc
+&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages&lt;/h2>
+&lt;h3 id="basic">Basic&lt;/h3>
+&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>&lt;/h4>
+&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
+&lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
+&lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S base-devel
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S yay
 sudo pacman -S vim
-sudo pacman -S nodejs
-sudo pacman -S npm
 sudo pacman -S net-tools
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S neofetch
+sudo pacman -S btop
 sudo pacman -S htop
-sudo pacman -S yay
-&lt;span class="c1"># To solve: `ERROR: Cannot find the fakeroot binary.` when using yay&lt;/span>
-sudo pacman -S base-devel
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
 sudo pacman -S gpick
-sudo pacman -S jdk-openjdk
 yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
-&lt;span class="c1"># Install Netease Cloud Music, run:&lt;/span>
+&lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
 yay -S electron-netease-cloud-music
 &lt;span class="c1"># Or a more beautiful version:&lt;/span>
 yay -S yesplaymusic
+&lt;span class="c1"># Emoji Picker&lt;/span>
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
 &lt;span class="c1"># Choose 1) scrcpy&lt;/span>
 yay -S scrcpy
-&lt;span class="c1"># Install Rust&lt;/span>
-curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
+&lt;h4 id="nodejs">NodeJS&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S npm
+sudo pacman -S yarn
 sudo npm install -g nrm
 nrm use taobao
-sudo npm install -g yarn
 sudo npm install -g @vue/cli
 sudo npm install -g create-react-app
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-deno">Install Deno&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S deno
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># Install Rust&lt;/span>
+curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S jdk-openjdk
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S docker
 sudo systemctl &lt;span class="nb">enable&lt;/span> docker

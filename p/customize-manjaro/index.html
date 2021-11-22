@@ -108,47 +108,57 @@ Since I cannot stand the Windows, I embraced the Linux.
 }
 </code></pre><h3 id=enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</h3>
 <p>Open <code>chrome://flags/#enable-parallel-downloading</code>, and switch to <code>Enable</code>.</p>
-<h2 id=install-packages>Install Packages</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S neofetch
-sudo pacman -S gcc
+<h3 id=fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl set-local-rtc <span class=m>1</span>
+</code></pre></div><p>If you want to verify:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl
+</code></pre></div><h2 id=install-packages>Install Packages</h2>
+<h3 id=basic>Basic</h3>
+<h4 id=base-devel><code>base-devel</code></h4>
+<p>The <code>base-devel</code> includes these packages:</p>
+<p><code>autoconf</code>, <code>automake</code>, <code>binutils</code>, <code>bison</code>, <code>fakeroot</code>, <code>file</code>, <code>findutils</code>, <code>flex</code>, <code>gawk</code>, <code>gcc</code>, <code>gettext</code>, <code>grep</code>, <code>groff</code>, <code>gzip</code>, <code>libtool</code>, <code>m4</code>, <code>make</code>, <code>pacman</code>, <code>patch</code>, <code>pkgconf</code>, <code>sed</code>, <code>sudo</code>, <code>texinfo</code>, <code>which</code></p>
+<p>If it&rsquo;s uninstalled, you may get some errors then like <code>ERROR: Cannot find the fakeroot binary.</code> when using yay. So run the command before you install other packages:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S base-devel
+</code></pre></div><h4 id=other-basic-packages>Other Basic Packages</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S yay
 sudo pacman -S vim
-sudo pacman -S nodejs
-sudo pacman -S npm
 sudo pacman -S net-tools
+</code></pre></div><h3 id=tools>Tools</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S neofetch
+sudo pacman -S btop
 sudo pacman -S htop
-sudo pacman -S yay
-<span class=c1># To solve: `ERROR: Cannot find the fakeroot binary.` when using yay</span>
-sudo pacman -S base-devel
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
 sudo pacman -S gpick
-sudo pacman -S jdk-openjdk
 yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
-<span class=c1># Install Netease Cloud Music, run:</span>
+<span class=c1># To install Netease Cloud Music (not official), run:</span>
 yay -S electron-netease-cloud-music
 <span class=c1># Or a more beautiful version:</span>
 yay -S yesplaymusic
+<span class=c1># Emoji Picker</span>
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
 <span class=c1># Choose 1) scrcpy</span>
 yay -S scrcpy
-<span class=c1># Install Rust</span>
-curl --proto <span class=s1>&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class=p>|</span> sh
+</code></pre></div><h3 id=developing-environment>Developing Environment</h3>
+<h4 id=nodejs>NodeJS</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S npm
+sudo pacman -S yarn
 sudo npm install -g nrm
 nrm use taobao
-sudo npm install -g yarn
 sudo npm install -g @vue/cli
 sudo npm install -g create-react-app
-</code></pre></div><h2 id=fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl set-local-rtc <span class=m>1</span>
-</code></pre></div><p>If you want to verify:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl
-</code></pre></div><h3 id=install-deno>Install Deno</h3>
+</code></pre></div><h4 id=deno>Deno</h4>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S deno
+</code></pre></div><h4 id=rust>Rust</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Install Rust</span>
+curl --proto <span class=s1>&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class=p>|</span> sh
+</code></pre></div><h4 id=java>Java</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S jdk-openjdk
 </code></pre></div><h3 id=install-docker>Install Docker</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S docker
 sudo systemctl <span class=nb>enable</span> docker
@@ -317,12 +327,26 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#set-the-keyboard-shortcuts>Set the keyboard shortcuts</a></li>
 <li><a href=#edit-the-vscode-settings>Edit the VSCode Settings</a></li>
 <li><a href=#enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</a></li>
+<li><a href=#fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</a></li>
 </ol>
 </li>
-<li><a href=#install-packages>Install Packages</a></li>
-<li><a href=#fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</a>
+<li><a href=#install-packages>Install Packages</a>
 <ol>
-<li><a href=#install-deno>Install Deno</a></li>
+<li><a href=#basic>Basic</a>
+<ol>
+<li><a href=#base-devel><code>base-devel</code></a></li>
+<li><a href=#other-basic-packages>Other Basic Packages</a></li>
+</ol>
+</li>
+<li><a href=#tools>Tools</a></li>
+<li><a href=#developing-environment>Developing Environment</a>
+<ol>
+<li><a href=#nodejs>NodeJS</a></li>
+<li><a href=#deno>Deno</a></li>
+<li><a href=#rust>Rust</a></li>
+<li><a href=#java>Java</a></li>
+</ol>
+</li>
 <li><a href=#install-docker>Install Docker</a></li>
 <li><a href=#install-asia-languages-input-methods>Install Asia Languages Input Methods</a></li>
 <li><a href=#install-icalinguaelectron-qq>Install <code>icalingua</code>(Electron QQ)</a></li>
