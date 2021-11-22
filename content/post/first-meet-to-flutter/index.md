@@ -114,7 +114,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 ### 解决方案：Automatic Keep Alive Client Mixin
 
-于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack & Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课件休息摸鱼时在知乎上找到了一个[解决方案](https://zhuanlan.zhihu.com/p/61458683)。
+于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack & Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个[解决方案](https://zhuanlan.zhihu.com/p/61458683)。
 
 这个方案使用的是 `AutomaticKeepAliveClientMixin`，按照它的方法，对上文中的示例代码进行修改后可得：
 

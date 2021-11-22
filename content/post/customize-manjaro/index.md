@@ -23,16 +23,21 @@ And that's why I wrote this article ---- to restore my customized system working
 
 ## Customize
 
-### Set Redrock Mirrors
+### Set Pacman Mirrors
 
 ```bash
 sudo nano /etc/pacman.d/mirrorlist
 ```
+
 Delete other unnecessary mirrors and add:
+
 ```
-Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 ```
+
 Disable mirrorlist automatically refreshing:
+
 ```
 sudo systemctl disable pamac-mirrorlist.timer
 ```
@@ -61,7 +66,7 @@ Edit `~/.config/Code/User/settings.json`:
 ```json5
 {
     "window.zoomLevel": 2,
-    //  Fix Terminal Font Display
+    // Fix Terminal Font Display
     "terminal.integrated.fontFamily": "NotoSansMono Nerd Font",
     // Make tab size from 2 to 4
     "vetur.format.options.tabSize": 4
@@ -93,7 +98,10 @@ yay -S typora
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+# Install Netease Cloud Music, run:
 yay -S electron-netease-cloud-music
+# Or a more beautiful version:
+yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
@@ -163,18 +171,19 @@ export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx5"
 ```
+
 Open ` fcitx5-configtool` to move the input methods from right that you are going to use to left.
 
 To beautify the skin of the input methods, refer to [thep0y / fcitx5-themes](https://github.com/thep0y/fcitx5-themes).
 
-### Install `electron-qq`
+### Install `icalingua`(Electron QQ)
 
 ```bash
 yay -S mongodb-bin
 yay -S mongodb-tools-bin
 sudo systemctl enable mongodb.service
 sudo systemctl start mongodb.service
-yay -S electron-qq
+yay -S icalingua
 ```
 
 ### Install `clash`
@@ -183,7 +192,7 @@ yay -S electron-qq
 sudo pacman -S clash
 ```
 
-Download `config.yaml` to `~/.config/clash`. Then:
+Download your `config.yaml` to `~/.config/clash`. Then:
 
 ```bash
 sudo systemctl enable clash@$USER
