@@ -77,46 +77,7 @@ Edit `~/.config/Code/User/settings.json`:
 
 Open `chrome://flags/#enable-parallel-downloading`, and switch to `Enable`.
 
-## Install Packages
-
-```bash
-sudo pacman -S neofetch
-sudo pacman -S gcc
-sudo pacman -S vim
-sudo pacman -S nodejs
-sudo pacman -S npm
-sudo pacman -S net-tools
-sudo pacman -S htop
-sudo pacman -S yay
-# To solve: `ERROR: Cannot find the fakeroot binary.` when using yay
-sudo pacman -S base-devel
-sudo pacman -S wireshark-qt
-sudo pacman -S aria2
-sudo pacman -S gpick
-sudo pacman -S jdk-openjdk
-yay -S typora
-yay -S visual-studio-code-bin
-yay -S obs-studio
-yay -S google-chrome
-# Install Netease Cloud Music, run:
-yay -S electron-netease-cloud-music
-# Or a more beautiful version:
-yay -S yesplaymusic
-yay -S emote
-yay -S burpsuite
-yay -S postman-bin
-# Choose 1) scrcpy
-yay -S scrcpy
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo npm install -g nrm
-nrm use taobao
-sudo npm install -g yarn
-sudo npm install -g @vue/cli
-sudo npm install -g create-react-app
-```
-
-## Fix Multisystem time synchronization problem
+### Fix Multisystem time synchronization problem
 
 ```bash
 timedatectl set-local-rtc 1
@@ -128,10 +89,85 @@ If you want to verify:
 timedatectl
 ```
 
-### Install Deno
+## Install Packages
+
+### Basic
+
+#### `base-devel`
+
+The `base-devel` includes these packages:
+
+`autoconf`, `automake`, `binutils`, `bison`, `fakeroot`, `file`, `findutils`, `flex`, `gawk`, `gcc`, `gettext`, `grep`, `groff`, `gzip`, `libtool`, `m4`, `make`, `pacman`, `patch`, `pkgconf`, `sed`, `sudo`, `texinfo`, `which`
+
+If it's uninstalled, you may get some errors then like `ERROR: Cannot find the fakeroot binary.` when using yay. So run the command before you install other packages:
+
+```bash
+sudo pacman -S base-devel
+```
+
+#### Other Basic Packages
+
+```bash
+sudo pacman -S yay
+sudo pacman -S vim
+sudo pacman -S net-tools
+```
+
+### Tools
+
+```bash
+sudo pacman -S neofetch
+sudo pacman -S btop
+sudo pacman -S htop
+sudo pacman -S wireshark-qt
+sudo pacman -S aria2
+sudo pacman -S gpick
+yay -S typora
+yay -S visual-studio-code-bin
+yay -S obs-studio
+yay -S google-chrome
+# To install Netease Cloud Music (not official), run:
+yay -S electron-netease-cloud-music
+# Or a more beautiful version:
+yay -S yesplaymusic
+# Emoji Picker
+yay -S emote
+yay -S burpsuite
+yay -S postman-bin
+# Choose 1) scrcpy
+yay -S scrcpy
+```
+
+### Developing Environment
+
+#### NodeJS
+
+```bash
+sudo pacman -S npm
+sudo pacman -S yarn
+sudo npm install -g nrm
+nrm use taobao
+sudo npm install -g @vue/cli
+sudo npm install -g create-react-app
+```
+
+#### Deno
 
 ```bash
 sudo pacman -S deno
+```
+
+#### Rust
+
+```bash
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+#### Java
+
+```bash
+sudo pacman -S jdk-openjdk
 ```
 
 ### Install Docker
