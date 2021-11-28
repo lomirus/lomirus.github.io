@@ -6,7 +6,7 @@ image: "cover.png"
 description: "Web 前端的会点儿 Flutter 没问题吧？"
 categories: ["Code"]
 tags: ["Flutter", "Dart", "Android"]
-slug: "flutter-persistent-navigator"
+slug: "first-meet-to-flutter"
 ---
 
 ## 前言

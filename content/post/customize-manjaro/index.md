@@ -54,8 +54,9 @@ Go by `Keyboard -> Keyboard Shortcuts -> Customize Shortcuts`
 
 |Name|Command|Shortcut|
 |---|---|---|
-|Launch Terminal|gnome-terminal|`Super` + `T`|
-|Launch Nautilus|nautilus|`Super` + `E`|
+|Launch Terminal|`gnome-terminal`|`Super` + `T`|
+|Launch Nautilus|`nautilus`|`Super` + `E`|
+|Delay Screenshot|`gnome-screenshot --delay 3`|`Ctrl` + `Print`|
 
 ### Edit the VSCode Settings
 
@@ -119,13 +120,16 @@ sudo pacman -S net-tools
 sudo pacman -S neofetch
 sudo pacman -S btop
 sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
 sudo pacman -S gpick
-yay -S typora
+yay -S marktext-bin
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
 # To install Netease Cloud Music (not official), run:
 yay -S electron-netease-cloud-music
 # Or a more beautiful version:
@@ -134,7 +138,6 @@ yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
-# Choose 1) scrcpy
 yay -S scrcpy
 ```
 
@@ -228,10 +231,12 @@ yay -S icalingua
 sudo pacman -S clash
 ```
 
-Download your `config.yaml` to `~/.config/clash`. Then:
+Move your `config.yaml` to `~/.config/clash`. Then:
 
 ```bash
 sudo systemctl enable clash@$USER
 sudo systemctl start clash@$USER
 ```
+
+Open the [dashboard](https://clash.razord.top/) for configuration.
 

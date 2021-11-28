@@ -6,9 +6,10 @@ image: "cover.png"
 description: "好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。"
 categories: ["Code"]
 slug: "not-such-a-beautiful-marriage"
+tags: ["typescript", "javascript", "webpack", "eslint", "babel", "react"]
 ---
 
-好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题~~抄袭~~引用改编自著名博文 [TypeScript with Babel: A Beautiful Marriage](https://medium.com/dailyjs/typescript-babel-ce24f724398)）
+（顺带一提，标题~~抄袭~~引用改编自著名博文 [TypeScript with Babel: A Beautiful Marriage](https://medium.com/dailyjs/typescript-babel-ce24f724398)）
 
 ## Origin
 
