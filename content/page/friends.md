@@ -16,5 +16,6 @@ menu:
 * [Victor’s Blog](https://qwq.ren)
 * [Nirvana Shoka](https://www.nirvana.cool/)
 * [Sunsun](https://sunsun.work/)
+* [苟牛马](https://iamazhi.xyz)
 
 还没写头像展示的功能，以后有空再整（🕊）
