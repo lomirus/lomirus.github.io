@@ -86,13 +86,18 @@ Since I cannot stand the Windows, I embraced the Linux.
 <tbody>
 <tr>
 <td>Launch Terminal</td>
-<td>gnome-terminal</td>
+<td><code>gnome-terminal</code></td>
 <td><code>Super</code> + <code>T</code></td>
 </tr>
 <tr>
 <td>Launch Nautilus</td>
-<td>nautilus</td>
+<td><code>nautilus</code></td>
 <td><code>Super</code> + <code>E</code></td>
+</tr>
+<tr>
+<td>Delay Screenshot</td>
+<td><code>gnome-screenshot --delay 3</code></td>
+<td><code>Ctrl</code> + <code>Print</code></td>
 </tr>
 </tbody>
 </table>
@@ -127,13 +132,16 @@ sudo pacman -S net-tools
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S neofetch
 sudo pacman -S btop
 sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
 sudo pacman -S gpick
-yay -S typora
+yay -S marktext-bin
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
 <span class=c1># To install Netease Cloud Music (not official), run:</span>
 yay -S electron-netease-cloud-music
 <span class=c1># Or a more beautiful version:</span>
@@ -142,7 +150,6 @@ yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
-<span class=c1># Choose 1) scrcpy</span>
 yay -S scrcpy
 </code></pre></div><h3 id=developing-environment>Developing Environment</h3>
 <h4 id=nodejs>NodeJS</h4>
@@ -184,10 +191,10 @@ sudo systemctl start mongodb.service
 yay -S icalingua
 </code></pre></div><h3 id=install-clash>Install <code>clash</code></h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S clash
-</code></pre></div><p>Download your <code>config.yaml</code> to <code>~/.config/clash</code>. Then:</p>
+</code></pre></div><p>Move your <code>config.yaml</code> to <code>~/.config/clash</code>. Then:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo systemctl <span class=nb>enable</span> clash@<span class=nv>$USER</span>
 sudo systemctl start clash@<span class=nv>$USER</span>
-</code></pre></div>
+</code></pre></div><p>Open the <a class=link href=https://clash.razord.top/ target=_blank rel=noopener>dashboard</a> for configuration.</p>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
@@ -219,9 +226,9 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 </a>
 </article>
 <article class=has-image>
-<a href=/p/flutter-persistent-navigator/>
+<a href=/p/first-meet-to-flutter/>
 <div class=article-image>
-<img src=/p/flutter-persistent-navigator/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=flutter-persistent-navigator data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
+<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
 </div>
 <div class=article-details>
 <h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>

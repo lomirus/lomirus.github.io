@@ -6,7 +6,7 @@
 <meta property="og:description" content="好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。">
 <meta property="og:url" content="https://lomirus.github.io/p/not-such-a-beautiful-marriage/">
 <meta property="og:site_name" content="Lomirus' Site">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-04-14T00:00:00+08:00"><meta property="article:modified_time" content="2021-05-15T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="typescript"><meta property="article:tag" content="javascript"><meta property="article:tag" content="webpack"><meta property="article:tag" content="eslint"><meta property="article:tag" content="babel"><meta property="article:tag" content="react"><meta property="article:published_time" content="2021-04-14T00:00:00+08:00"><meta property="article:modified_time" content="2021-05-15T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png">
 <meta name=twitter:title content="TypeScript & Webpack & Babel & Eslint & React: Not Such a Beautiful Marriage">
 <meta name=twitter:description content="好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png">
@@ -54,7 +54,7 @@ Code
 </div>
 </header>
 <section class=article-content>
-<p>好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题<del>抄袭</del>引用改编自著名博文 <a class=link href=https://medium.com/dailyjs/typescript-babel-ce24f724398 target=_blank rel=noopener>TypeScript with Babel: A Beautiful Marriage</a>）</p>
+<p>（顺带一提，标题<del>抄袭</del>引用改编自著名博文 <a class=link href=https://medium.com/dailyjs/typescript-babel-ce24f724398 target=_blank rel=noopener>TypeScript with Babel: A Beautiful Marriage</a>）</p>
 <h2 id=origin>Origin</h2>
 <p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。</p>
 <p>对于题目中的五个工具，除去 ESlint之外，其实其他的都多多少少用过一段时间。特别是 Webpack Babel React 这三个，用的时间也算是比较久了。TypeScript 倒是用过，但是感觉 JS 加上类型限制后写起来就不那么自由了，所以尝试用它写了一个模块之后就将它卸载了。但是这些这个工具终究还是太常用，早晚逃不了还是得学，所以就试着用它们做个简单的小项目练练手。毕竟当初我学 Webpack 时也是学得很憋屈，一直不知道这玩意儿打个包为啥还非得用 js 文件做入口，直到后来学了 React 才豁然开朗，所以我至今认为如果是要做跑在浏览器的网页而且不用什么框架的话 Webpack 还真没什么卵用。当然，有了之后自然用处就大了。</p>
@@ -185,6 +185,14 @@ npx create-react-app ts --template typescript
 </code></pre></div>
 </section>
 <footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/typescript/>typescript</a>
+<a href=/tags/javascript/>javascript</a>
+<a href=/tags/webpack/>webpack</a>
+<a href=/tags/eslint/>eslint</a>
+<a href=/tags/babel/>babel</a>
+<a href=/tags/react/>react</a>
+</section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
 </section>
@@ -199,22 +207,22 @@ npx create-react-app ts --template typescript
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
-<a href=/p/flutter-persistent-navigator/>
-<div class=article-image>
-<img src=/p/flutter-persistent-navigator/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=flutter-persistent-navigator data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
-</div>
-<div class=article-details>
-<h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
 <a href=/p/puppeteer-dog-stickers/>
 <div class=article-image>
 <img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
 </div>
 <div class=article-details>
 <h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/first-meet-to-flutter/>
+<div class=article-image>
+<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
 </div>
 </a>
 </article>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Oct 2021 15:30:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/flutter-persistent-navigator/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/flutter-persistent-navigator/</guid><description>&lt;img src="https://lomirus.github.io/p/flutter-persistent-navigator/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Oct 2021 15:30:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
 &lt;p>总的来说，Flutter 的上手难度在我个人角度看来还算是比较简单的。从从未接触过 Flutter，到独立开发出一个相对完整的 App，中间也不过只有两周左右。另外从一名 Web 前端开发者的视角来看，使用 Flutter 开发界面的难度还是要相对高于传统的 Web 开发的，尤其是在自定义方面，一旦写起样式来各种嵌套又要写一堆了&amp;hellip;但是 Google 默认提供的 Material Design UI 库对于没有视觉要求的指定风格的情况来说还是蛮够用的；另外官方也提供了一套 iOS 风格的 Cupertino UI 库，但是我还没有尝试过这个，不知道实际体验效果如何。至少就此来看，使用 Flutter 来进行一款跨端的小品类应用开发确实是一项不错的选择。至于大型项目，虽然 Flutter 版本已经迭代到了 2.5+，但是相对于其他已经发展了数年的 Native/Web 开发方案来说，还不能说是特别成熟。就比如我在下文中提到的一些坑，至今官方还没有提供相应的瀑布流库。闲鱼对此选择的路线则是自研，不过我种初学者自然是没有人家这种专业团队的实力，于是只能乖乖的在社区里找一些开源库先用着。&lt;/p>
 &lt;p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。&lt;/p>
@@ -10,11 +10,11 @@ style="
 flex-grow: 45;
 flex-basis: 108px"
 >
-&lt;a href="https://lomirus.github.io/p/flutter-persistent-navigator/screenshot.jpeg" data-size="1080x2400">
-&lt;img src="https://lomirus.github.io/p/flutter-persistent-navigator/screenshot.jpeg"
+&lt;a href="https://lomirus.github.io/p/first-meet-to-flutter/screenshot.jpeg" data-size="1080x2400">
+&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/screenshot.jpeg"
 width="1080"
 height="2400"
-srcset="https://lomirus.github.io/p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w"
+srcset="https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w"
 loading="lazy"
 alt="展示图">
 &lt;/a>
@@ -604,13 +604,18 @@ alt="example.png">
 &lt;tbody>
 &lt;tr>
 &lt;td>Launch Terminal&lt;/td>
-&lt;td>gnome-terminal&lt;/td>
+&lt;td>&lt;code>gnome-terminal&lt;/code>&lt;/td>
 &lt;td>&lt;code>Super&lt;/code> + &lt;code>T&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Launch Nautilus&lt;/td>
-&lt;td>nautilus&lt;/td>
+&lt;td>&lt;code>nautilus&lt;/code>&lt;/td>
 &lt;td>&lt;code>Super&lt;/code> + &lt;code>E&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Delay Screenshot&lt;/td>
+&lt;td>&lt;code>gnome-screenshot --delay 3&lt;/code>&lt;/td>
+&lt;td>&lt;code>Ctrl&lt;/code> + &lt;code>Print&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -645,13 +650,16 @@ sudo pacman -S net-tools
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S neofetch
 sudo pacman -S btop
 sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
 sudo pacman -S wireshark-qt
 sudo pacman -S aria2
 sudo pacman -S gpick
-yay -S typora
+yay -S marktext-bin
 yay -S visual-studio-code-bin
 yay -S obs-studio
 yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
 &lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
 yay -S electron-netease-cloud-music
 &lt;span class="c1"># Or a more beautiful version:&lt;/span>
@@ -660,7 +668,6 @@ yay -S yesplaymusic
 yay -S emote
 yay -S burpsuite
 yay -S postman-bin
-&lt;span class="c1"># Choose 1) scrcpy&lt;/span>
 yay -S scrcpy
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
 &lt;h4 id="nodejs">NodeJS&lt;/h4>
@@ -703,10 +710,11 @@ sudo systemctl start mongodb.service
 yay -S icalingua
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S clash
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Download your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
 sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
+>dashboard&lt;/a> for configuration.&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
 &lt;p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p>
 &lt;ul>
@@ -1018,7 +1026,7 @@ $ npm install
 &lt;p>不过现在这个博客已经被废弃了，一是因为博客源码太烂，二是因为文章太水，所以不愿再维护了。&lt;/p>
 &lt;p>但是我时而又萌生了继续写点博客的想法，然而正如杜拉斯在《情人》的开头所言，“我已经老了”（无端？），所以我也已经不太想折腾了。网上搜资料时发现有的人直接拿 Github Issues 来写博客，想了想也确实挺符合我的需求：支持 Markdown， 可编辑，可评论，而且现在据说也可以限制他人在自己仓库里乱发 issue 了，所以我就决定选择 Github Issues 作为我的新的博客平台了。不过日后倘若又要迁居，那也是后话了。&lt;/p>
 &lt;p>为防止自己继续写一些水文来占版面，所以这次可能更新频率会降低。不过有时可能受外力影响要求比如每周上交至少一篇博文，emmm，以后再具体看情况办吧。&lt;/p>
-&lt;p>先写到这。&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>好吧，我承认我有点标题党，主要是因为我最近被这几个工具折腾的不轻，所以想吐槽一下。（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+&lt;p>先写到这。&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
 >TypeScript with Babel: A Beautiful Marriage&lt;/a>）&lt;/p>
 &lt;h2 id="origin">Origin&lt;/h2>
 &lt;p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p>

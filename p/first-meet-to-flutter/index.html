@@ -1,15 +1,15 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Web 前端的会点儿 Flutter 没问题吧？"><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title>
-<link rel=canonical href=https://lomirus.github.io/p/flutter-persistent-navigator/>
+<link rel=canonical href=https://lomirus.github.io/p/first-meet-to-flutter/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）">
 <meta property="og:description" content="Web 前端的会点儿 Flutter 没问题吧？">
-<meta property="og:url" content="https://lomirus.github.io/p/flutter-persistent-navigator/">
+<meta property="og:url" content="https://lomirus.github.io/p/first-meet-to-flutter/">
 <meta property="og:site_name" content="Lomirus' Site">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Flutter"><meta property="article:tag" content="Dart"><meta property="article:tag" content="Android"><meta property="article:published_time" content="2021-10-19T15:30:00+08:00"><meta property="article:modified_time" content="2021-11-06T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/flutter-persistent-navigator/cover.png">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Flutter"><meta property="article:tag" content="Dart"><meta property="article:tag" content="Android"><meta property="article:published_time" content="2021-10-19T15:30:00+08:00"><meta property="article:modified_time" content="2021-11-06T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/first-meet-to-flutter/cover.png">
 <meta name=twitter:title content="与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）">
 <meta name=twitter:description content="Web 前端的会点儿 Flutter 没问题吧？"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://lomirus.github.io/p/flutter-persistent-navigator/cover.png">
+<meta name=twitter:image content="https://lomirus.github.io/p/first-meet-to-flutter/cover.png">
 <link rel="shortcut icon" href=/img/favicon.png>
 </head>
 <body class="article-page has-toc">
@@ -25,8 +25,8 @@ extended">
 <article class="has-image main-article">
 <header class=article-header>
 <div class=article-image>
-<a href=/p/flutter-persistent-navigator/>
-<img src=/p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png srcset="/p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png 800w, /p/flutter-persistent-navigator/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_1600x0_resize_box_3.png 1600w" width=800 height=400 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）">
+<a href=/p/first-meet-to-flutter/>
+<img src=/p/first-meet-to-flutter/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png srcset="/p/first-meet-to-flutter/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_800x0_resize_box_3.png 800w, /p/first-meet-to-flutter/cover_huf7a57ca01dd62cd64befafa39a2c7819_77572_1600x0_resize_box_3.png 1600w" width=800 height=400 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）">
 </a>
 </div>
 <div class=article-details>
@@ -36,7 +36,7 @@ Code
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/flutter-persistent-navigator/>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</a>
+<a href=/p/first-meet-to-flutter/>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</a>
 </h2>
 <h3 class=article-subtitle>
 Web 前端的会点儿 Flutter 没问题吧？
@@ -60,8 +60,8 @@ Web 前端的会点儿 Flutter 没问题吧？
 <p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。</p>
 <p>下面贴下这个项目的 Github 地址：<a class=link href=https://github.com/hall-of-fame/hof-flutter-md target=_blank rel=noopener>https://github.com/hall-of-fame/hof-flutter-md</a>，以及首屏图：</p>
 <p><figure class=gallery-image style=flex-grow:45;flex-basis:108px>
-<a href=/p/flutter-persistent-navigator/screenshot.jpeg data-size=1080x2400>
-<img src=/p/flutter-persistent-navigator/screenshot.jpeg width=1080 height=2400 srcset="/p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, /p/flutter-persistent-navigator/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt=展示图>
+<a href=/p/first-meet-to-flutter/screenshot.jpeg data-size=1080x2400>
+<img src=/p/first-meet-to-flutter/screenshot.jpeg width=1080 height=2400 srcset="/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, /p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt=展示图>
 </a>
 <figcaption>展示图</figcaption>
 </figure></p>
