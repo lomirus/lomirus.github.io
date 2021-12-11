@@ -1,4 +1,191 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Oct 2021 15:30:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 00:16:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>从零开始打造一款属于你自己的 Gnome Extension（施工中）</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 从零开始打造一款属于你自己的 Gnome Extension（施工中）" />&lt;h2 id="引子">引子&lt;/h2>
+&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 215;
+flex-basis: 518px"
+>
+&lt;a href="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg" data-size="1244x576">
+&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
+width="1244"
+height="576"
+srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="MacOS Example">
+&lt;/a>
+&lt;figcaption>MacOS Example&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的&lt;a class="link" href="https://extensions.gnome.org/" target="_blank" rel="noopener"
+>官方网站&lt;/a>上查找相关的扩展，然后就找到一款叫做 &lt;a class="link" href="https://extensions.gnome.org/extension/4114/fildem-global-menu/" target="_blank" rel="noopener"
+>Fildem global menu&lt;/a> 的扩展：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 151;
+flex-basis: 364px"
+>
+&lt;a href="https://lomirus.github.io/p/gnome-extention-development/fildem.png" data-size="1281x843">
+&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
+width="1281"
+height="843"
+srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Fildem global menu">
+&lt;/a>
+&lt;figcaption>Fildem global menu&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p>
+&lt;p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p>
+&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构&lt;/h2>
+&lt;h3 id="概览">概览&lt;/h3>
+&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
+>官方文档&lt;/a>。&lt;/p>
+&lt;p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p>
+&lt;pre>&lt;code>example@shell.gnome.org.zip
+locale/
+de/
+LC_MESSAGES/
+example.mo
+schemas/
+gschemas.compiled
+org.gnome.shell.extensions.example.gschema.xml
+extension.js
+metadata.json
+prefs.js
+stylesheet.css
+&lt;/code>&lt;/pre>&lt;p>其中，最重要并且也是唯二 required 的是 &lt;code>metadata.json&lt;/code> 和 &lt;code>extension.js&lt;/code>。&lt;/p>
+&lt;h3 id="metadatajson">metadata.json&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;uuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;example@shell.gnome.org&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Example&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;This is an example extension.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;shell-version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="s2">&amp;#34;3.38&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;40&amp;#34;&lt;/span> &lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://gitlab.gnome.org/World/ShellExtensions/example&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>一个 &lt;code>metadata.json&lt;/code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
+>metadata.json (Required)&lt;/a>&lt;/p>
+&lt;h3 id="extensionjs">extension.js&lt;/h3>
+&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Extension&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;enabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;disabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`initializing`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Extension&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>也可以这样：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;enabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;disabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`initializing...`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的&lt;a class="link" href="http://devdocs.baznga.org/" target="_blank" rel="noopener"
+>文档地址&lt;/a> 访问返回 502 Bad Gateway，页面右上角的 &lt;a class="link" href="https://gjs-docs.gnome.org/" target="_blank" rel="noopener"
+>API References&lt;/a> 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：&lt;/p>
+&lt;blockquote>
+&lt;p>Here are a few links to some commonly used modules.&lt;/p>
+&lt;p>You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.&lt;/p>
+&lt;/blockquote>
+&lt;p>然后下面给了相关链接，其中 &lt;code>js/&lt;/code> 对应的链接是：&lt;a class="link" href="https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/" target="_blank" rel="noopener"
+>https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/&lt;/a>，我于是随便翻开了一个页面：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 95;
+flex-basis: 228px"
+>
+&lt;a href="https://lomirus.github.io/p/gnome-extention-development/docs.png" data-size="748x787">
+&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
+width="748"
+height="787"
+srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;blockquote>
+&lt;p>我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“&lt;code>/***/function&lt;/code>”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！&lt;/p>
+&lt;/blockquote>
+&lt;p>我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？&lt;/p>
+&lt;blockquote>
+&lt;p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="后续">后续&lt;/h2>
+&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">St&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">St&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">GObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">GObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Gio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Gio&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Clutter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Clutter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Shell&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Shell&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">WinTracker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Shell&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">WindowTracker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get_default&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Main&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">main&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">PanelMenu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">panelMenu&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">PopupMenu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">popupMenu&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Me&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">misc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">extensionUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getCurrentExtension&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">buttonTexts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;File&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Edit&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Selection&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;View&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Go&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Run&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Terminal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Window&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Help&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">reverse&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * @type {(title: string) =&amp;gt; any}
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">MenuButton&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">GObject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">registerClass&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">PopupClass&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">PanelMenu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Button&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * @type {(title: string) =&amp;gt; void}
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="mi">_&lt;/span>&lt;span class="nx">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mi">_&lt;/span>&lt;span class="nx">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add_child&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">St&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Label&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">y_align&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Clutter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ActorAlign&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">CENTER&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">PopupMenu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">PopupMenuItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Test&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">menu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addMenuItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">MenuButton&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]));&lt;/span>
+&lt;span class="nx">Main&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">panel&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addToStatusArea&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;left&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// const focusApp = WinTracker.focus_app;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// if (!focusApp) return;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// const focusWindow = focusApp.get_windows()[0];
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// if (!focusWindow) return;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// const names = [];
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// for (let name in focusWindow) {
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// names.push(name)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// }
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(names)
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// global.display.connect(&amp;#39;notify::focus-window&amp;#39;, (e) =&amp;gt; {
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(&amp;#34;focus something&amp;#34;);
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(e)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// });
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">destroy&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
 &lt;p>总的来说，Flutter 的上手难度在我个人角度看来还算是比较简单的。从从未接触过 Flutter，到独立开发出一个相对完整的 App，中间也不过只有两周左右。另外从一名 Web 前端开发者的视角来看，使用 Flutter 开发界面的难度还是要相对高于传统的 Web 开发的，尤其是在自定义方面，一旦写起样式来各种嵌套又要写一堆了&amp;hellip;但是 Google 默认提供的 Material Design UI 库对于没有视觉要求的指定风格的情况来说还是蛮够用的；另外官方也提供了一套 iOS 风格的 Cupertino UI 库，但是我还没有尝试过这个，不知道实际体验效果如何。至少就此来看，使用 Flutter 来进行一款跨端的小品类应用开发确实是一项不错的选择。至于大型项目，虽然 Flutter 版本已经迭代到了 2.5+，但是相对于其他已经发展了数年的 Native/Web 开发方案来说，还不能说是特别成熟。就比如我在下文中提到的一些坑，至今官方还没有提供相应的瀑布流库。闲鱼对此选择的路线则是自研，不过我种初学者自然是没有人家这种专业团队的实力，于是只能乖乖的在社区里找一些开源库先用着。&lt;/p>
 &lt;p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。&lt;/p>
