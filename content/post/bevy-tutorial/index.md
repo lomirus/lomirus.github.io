@@ -1,5 +1,5 @@
 ---
-title: "Bevy v0.6 基础入门（基于 Github 12/18/21 最新构建版本）"
+title: "Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）"
 description: "年轻人的第一款开源 Rust 游戏引擎"
 date: 2021-12-19T00:01:05+08:00
 lastmod: 2021-12-29T00:00:00+08:00
