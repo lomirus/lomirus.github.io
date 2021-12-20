@@ -1,4 +1,309 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 00:16:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 19 Dec 2021 00:01:05 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Bevy v0.6 基础入门（基于 Github 12/18/21 最新构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.6 基础入门（基于 Github 12/18/21 最新构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
+&lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
+&lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
+等著名引擎，然而这些都是商业引擎，且对我来说太过笨重。大一的时候听说了
+Godot，得知它应该是当前世界范围内最完善，也是知名与流行度最广的开源游戏引擎了。而且体积极其精简，只有不过百兆；与其他大型引擎动辄几 GB
+的体积相比，实属一股清流。于是深得我心，我后面也开始学习这款引擎。&lt;/p>
+&lt;p>这款引擎主要面向的应该是独立游戏开发者，预设了开发者技术能力不强的立场，同时也是为了使更多人接触到游戏开发，所以内置的官方语言是一门叫做 GDScript
+的脚本语言，语法极其类似 Python。同时为了秉持开放性，也提供了 GDNative 供开发者使用几乎是任意语言（如 C/C++/Rust 等）进行开发。&lt;/p>
+&lt;p>首先谈一下这个 Python，哦不，是 GDScript，我个人其实并不是很喜欢这门语言，简要列举一些原因：&lt;/p>
+&lt;ul>
+&lt;li>个人不喜欢 Python 的缩进语法&lt;/li>
+&lt;li>GDScript 语言本身过于小众（但小众本身不是原罪），适用范围狭窄，语法设计拉跨，不够优雅&lt;/li>
+&lt;li>性能拉跨，之前看过测试速度比 Python 还慢&lt;/li>
+&lt;/ul>
+&lt;p>当然 Godot 也可以通过 GDNative 使用我最喜欢的 Rust。但是中间终究隔着一层转译层，如同隔着一层可悲的厚壁障（什么奇妙比喻？）。其次,
+Godot 本身使用的 Node 架构也会带来一定性能上的问题,参见官方文档：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>When and how to avoid using nodes for everything&lt;/strong>&lt;/p>
+&lt;p>Nodes are cheap to produce, but even they have their limits. A project may
+have tens of thousands of nodes all doing things. The more complex their
+behavior though, the larger the strain each one adds to a project&amp;rsquo;s
+performance.&lt;/p>
+&lt;p>(&lt;a class="link" href="https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/node_alternatives.html" target="_blank" rel="noopener"
+>https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/node_alternatives.html&lt;/a>)&lt;/p>
+&lt;/blockquote>
+&lt;p>那么问题来了：&lt;/p>
+&lt;blockquote>
+&lt;p>你就一臭做独游的，还考虑个锤子性能？&lt;/p>
+&lt;/blockquote>
+&lt;p>话虽如此，可有哪个开发者能拒绝对性能的追求呢？再者，开发体验对我来说才是它更大的痛点。&lt;/p>
+&lt;h3 id="从-godot-园到-bevy-书屋">从 Godot 园到 Bevy 书屋&lt;/h3>
+&lt;p>后来，我又不知道在哪看到了 Bevy 这个游戏引擎。一开始没怎么注意它，最近见我加的一个 Godot 游戏开发的群组也时而提到它，但开始对它再次萌生好奇之心。&lt;/p>
+&lt;p>印象里，Rust 里面之前比较火的开源游戏引擎有两个，一个 &lt;a class="link" href="https://github.com/amethyst/amethyst" target="_blank" rel="noopener"
+>Amethyst&lt;/a>
+和一个 &lt;a class="link" href="https://github.com/bevyengine/bevy" target="_blank" rel="noopener"
+>Bevy&lt;/a>。看 Bevy 之前特意也查了下
+Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一下它的论坛，发现里面也有一些谈到 Bevy
+的优秀特性的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。&lt;/p>
+&lt;p>总之，接触到 Bevy 后不久，我就确定全面转向它了。它吸引我的地方实在太多，再简单列几条：&lt;/p>
+&lt;ul>
+&lt;li>Open Source, Free(自由) &amp;amp; Free(免费)&lt;/li>
+&lt;li>源码与开发语言均为我最喜欢的 Rust（JS 谁啊，不是很熟🤔）&lt;/li>
+&lt;li>采用新潮的 ECS 架构，天生并发友好，性能优异&lt;/li>
+&lt;li>对原生工具链友好，如 VSCode/Cargo 等&lt;/li>
+&lt;li>&lt;del>它作者本人也很让我喜欢👀&lt;/del>&lt;/li>
+&lt;/ul>
+&lt;p>话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧&lt;/p>
+&lt;p>（本文假定你已经有一定的 Rust 语法基础，对其使用上的语法细节不会过多讲解）&lt;/p>
+&lt;h2 id="ecs-架构扫盲">ECS 架构扫盲&lt;/h2>
+&lt;blockquote>
+&lt;p>什么呀，ECS，我知道，不就是阿里云的那个云服务器吗，好像全称是什么弹性计算服务（Elastic Compute Service）？&lt;/p>
+&lt;/blockquote>
+&lt;p>少年，莫急，此 ECS 非彼 ECS，这里的 ECS，指的是：&lt;code>Entity-Component-System&lt;/code>。&lt;/p>
+&lt;p>ECS 是相对于传统的 OOP 思想而言的，遵循“组合大于继承”的原则。在 ECS 架构的游戏中，游戏单元由无数的 &lt;code>Entity&lt;/code> 构成，其中
+&lt;code>Entity&lt;/code> 可类比做常见编程概念中的实例。而每个 &lt;code>Entity&lt;/code> 则由多个或单个 &lt;code>Component&lt;/code> 组成，&lt;code>Component&lt;/code>
+是存储数据的结构类型，不包含任何方法。如果想要更新游戏数据，则需要通过 &lt;code>System&lt;/code> 来完成。&lt;/p>
+&lt;p>如果需要进一步介绍，可自行百度/谷歌。&lt;/p>
+&lt;p>光说不练略显抽象，还是一起来看下面的代码吧：&lt;/p>
+&lt;h2 id="使用-bevy-实现简单的-ecs-架构">使用 Bevy 实现简单的 ECS 架构&lt;/h2>
+&lt;p>Bevy 是一款基于 ECS 架构的游戏引擎，它的官网上就这么写道：&lt;/p>
+&lt;blockquote>
+&lt;p>Massively Parallel and Cache-Friendly. The fastest ECS according to some
+benchmarks&lt;/p>
+&lt;/blockquote>
+&lt;p>简单翻译下就是：大规模并行&amp;amp;缓存友好，据某些测评说是最快的 ECS 游戏引擎&lt;/p>
+&lt;p>因此，接下来我们就使用 Bevy 来实践一下 ECS：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">cargo new bevy-demo
+&lt;span class="nb">cd&lt;/span> bevy-demo
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改 &lt;code>Cargo.toml&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="p">[&lt;/span>&lt;span class="nx">package&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="nx">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;bevy-demo&amp;#34;&lt;/span>
+&lt;span class="nx">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;0.1.0&amp;#34;&lt;/span>
+&lt;span class="nx">edition&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;2021&amp;#34;&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">dependencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bevy&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="nx">git&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/bevyengine/bevy&amp;#34;&lt;/span>
+&lt;span class="nx">rev&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;#34;&lt;/span>
+&lt;span class="nx">features&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;dynamic&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意，这里没有使用 crate.io 上的最新版 0.5.0，而是使用了其 Github 上的最新版。原因是 0.6.0 发布在即（估计还有几个月），当前版本与
+0.5.0 的用法已经存在较大差异。所以直接使用较新的版本也可以降低今后的学习成本。&lt;/p>
+&lt;p>请确保你的配置中 &lt;code>rev&lt;/code> 与此处相同。本文所基于的版本为 Github 上 2021-12-18 的最新提交。&lt;/p>
+&lt;p>&lt;code>features&lt;/code> 中的 &lt;code>dynamic&lt;/code> 是用于加快构建速度的，但是当你正式发布 Release
+时最好去掉此特性，至于为什么，你可以自己去观察下当开启或关闭此特性后的生成的编译产物分别是什么。&lt;/p>
+&lt;p>简简单单一个 Hello World 级别的主文件(&lt;code>main.rs&lt;/code>)：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">use&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">bevy&lt;/span>::&lt;span class="n">prelude&lt;/span>::&lt;span class="o">*&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>跑起来试试&lt;/p>
+&lt;pre>&lt;code>cargo run
+&lt;/code>&lt;/pre>&lt;p>啥输出也没有，正常预期。&lt;/p>
+&lt;p>接下来再加上点 ECS 架构：&lt;/p>
+&lt;p>首先，定义 &lt;code>Component&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="cp">#[derive(Component)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">struct&lt;/span> &lt;span class="nc">Person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>: &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">job&lt;/span>: &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">age&lt;/span>: &lt;span class="kt">u32&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>写一个创建 &lt;code>Entity&lt;/code> 的 &lt;code>System&lt;/code>（函数）：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">init_people&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>: &lt;span class="nc">Commands&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>: &lt;span class="s">&amp;#34;野獣先輩&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">to_string&lt;/span>&lt;span class="p">(),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">job&lt;/span>: &lt;span class="s">&amp;#34;学生&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">to_string&lt;/span>&lt;span class="p">(),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">age&lt;/span>: &lt;span class="mi">24&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">});&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>: &lt;span class="s">&amp;#34;田所浩二&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">to_string&lt;/span>&lt;span class="p">(),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">job&lt;/span>: &lt;span class="s">&amp;#34;学生&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">to_string&lt;/span>&lt;span class="p">(),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">age&lt;/span>: &lt;span class="mi">114514&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">});&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着再写一个遍历所有 &lt;code>Entities&lt;/code> 并输出的 &lt;code>System&lt;/code>（函数）：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">print_people&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="n">Person&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">query&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">println&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;{}：{} 歳、{}です&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">job&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来我们就要把这些东西整合起来，也就是添加到 &lt;code>main()&lt;/code> 中的 &lt;code>App&lt;/code> 上。&lt;/p>
+&lt;p>这里要先介绍 &lt;code>App&lt;/code> 的两个方法，&lt;code>add_system()&lt;/code> 和 &lt;code>add_startup_system()&lt;/code>。&lt;code>add_system()&lt;/code>
+顾名思义，就是用来添加 &lt;code>system&lt;/code> 到 &lt;code>App&lt;/code> 上的；而 &lt;code>add_startup_system()&lt;/code>，则是会在游戏初始化阶段也就是最开始执行某个
+&lt;code>system&lt;/code>。因此，我们可以把主函数改成这样：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">init_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">print_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行 &lt;code>cargo run&lt;/code>，输出结果是：&lt;/p>
+&lt;pre>&lt;code>$ cargo run
+Compiling rust-demo v0.1.0 (/home/lomirus/demo/rust-demo)
+Finished dev [unoptimized + debuginfo] target(s) in 3.03s
+Running `target/debug/rust-demo`
+野獣先輩：24 歳、学生です
+田所浩二：114514 歳、学生です
+&lt;/code>&lt;/pre>&lt;h2 id="bevy-基础开发">Bevy 基础开发&lt;/h2>
+&lt;p>有些小伙伴可能会问了：&lt;/p>
+&lt;blockquote>
+&lt;p>正经人谁玩控制台黑框框游戏呀？&lt;/p>
+&lt;/blockquote>
+&lt;p>确实，Bevy 毕竟也不是用来写 CLI 的。所以接下来我们再实现一个简单的图形界面。&lt;/p>
+&lt;h3 id="准备资源">准备资源&lt;/h3>
+&lt;p>首先，在项目目录创建一个 &lt;code>assets&lt;/code> 文件夹，在里面放一张图片。比如我放了一张 &lt;code>image.jpg&lt;/code> 进去，但是这里要注意，bevy 默认是不支持载入
+jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="p">[&lt;/span>&lt;span class="nx">dependencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bevy&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="nx">git&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/bevyengine/bevy&amp;#34;&lt;/span>
+&lt;span class="nx">rev&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;#34;&lt;/span>
+&lt;span class="c"># features = [&amp;#34;dynamic&amp;#34;]&lt;/span>
+&lt;span class="nx">features&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;jpeg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;dynamic&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就可以支持载入 jpg 格式的图片了。&lt;/p>
+&lt;p>然后，再在 &lt;code>assets&lt;/code> 文件夹下创建一个字体文件。由于我是 Linux 用户，所以直接复制了一份系统自带的
+&lt;code>NotoSansMono-Regular.ttf&lt;/code> 字体。这里你当然也可以选自己喜欢的，记得后面的相应操作改成你的字体名就行。&lt;/p>
+&lt;h3 id="创建窗口">创建窗口&lt;/h3>
+&lt;p>Bevy 的设计是很模块化的，许多功能都被拆成了不同的模块，利用添加插件的形式使用。不过幸好 Bevy 也为我们提供了默认的插件配置。比如我们可以使用：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">init_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">print_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>以此导入默认插件，然后我们运行，会发现控制台不断输出内容，同时也弹出了一个窗口：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 172;
+flex-basis: 413px"
+>
+&lt;a href="https://lomirus.github.io/p/bevy-tutorial/1.png" data-size="1373x797">
+&lt;img src="https://lomirus.github.io/p/bevy-tutorial/1.png"
+width="1373"
+height="797"
+srcset="https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>这就说明添加成功了，至于控制台里会出现无限输出的现象，是因为添加 &lt;code>DefaultPlugins&lt;/code> 的时候，同时也引入了 eventloop。&lt;/p>
+&lt;h3 id="载入图片">载入图片&lt;/h3>
+&lt;p>现在我们之前写的函数都可以扬了，再重新创建一个新的 &lt;code>main&lt;/code> 函数：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">setup&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来我们将在 &lt;code>setup&lt;/code> 函数中实现载入图片的逻辑：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">setup&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>: &lt;span class="nc">Commands&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">asset_server&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">AssetServer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">insert_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SpriteBundle&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">texture&lt;/span>: &lt;span class="nc">asset_server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;image.jpg&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">..&lt;/span>&lt;span class="nb">Default&lt;/span>::&lt;span class="n">default&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">});&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这就就添加了图片到游戏里面，但是我们并看不到图片，原因是我们没有添加摄像头，所以接下来我们再添加一个“正交相机”：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">insert_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">OrthographicCameraBundle&lt;/span>::&lt;span class="n">new_2d&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">insert_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SpriteBundle&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">texture&lt;/span>: &lt;span class="nc">asset_server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;image.jpg&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">..&lt;/span>&lt;span class="nb">Default&lt;/span>::&lt;span class="n">default&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">});&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>此外，&lt;code>spawn().insert_bundle(bundle)&lt;/code> 还可以简化成 &lt;code>spawn_bundle(bundle)&lt;/code>，所以上面的代码可以改成：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">OrthographicCameraBundle&lt;/span>::&lt;span class="n">new_2d&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SpriteBundle&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">texture&lt;/span>: &lt;span class="nc">asset_server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;image.jpg&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">..&lt;/span>&lt;span class="nb">Default&lt;/span>::&lt;span class="n">default&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">});&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>运行看看效果：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 134;
+flex-basis: 322px"
+>
+&lt;a href="https://lomirus.github.io/p/bevy-tutorial/2.png" data-size="1047x780">
+&lt;img src="https://lomirus.github.io/p/bevy-tutorial/2.png"
+width="1047"
+height="780"
+srcset="https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h3 id="读取键盘输入">读取键盘输入&lt;/h3>
+&lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">setup&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">keyboard_input_system&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面编写 &lt;code>keyboard_input_system&lt;/code> 函数：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">keyboard_input_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">println&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Go Left!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">println&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Go Right!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来运行一下，按下键盘的 &lt;code>A&lt;/code> 和 &lt;code>D&lt;/code> 键，便会看到控制台出现相应的输出。另外此处的 &lt;code>keyboard_input&lt;/code> 常用的方法还有两个 &lt;code>just_pressed()&lt;/code> 和 &lt;code>just_released()&lt;/code>，它们各自具体的用途可以自己分别试一下，看看是什么效果。&lt;/p>
+&lt;h3 id="角色移动">角色移动&lt;/h3>
+&lt;p>为了更加使函数名更加语义化，我们先把 &lt;code>keyboard_input_system()&lt;/code> 改成 &lt;code>move_system()&lt;/code>，然后修改函数：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>由于我们的在之前的 &lt;code>setup&lt;/code> 中添加的 &lt;code>SpriteBundle&lt;/code> 中含有 &lt;code>Transform&lt;/code> &lt;code>Component&lt;/code>，所以这里会获取到所有的 &lt;code>Transform&lt;/code>。然后我们对它遍历，并修改它的 &lt;code>translate&lt;/code> 属性，如果用户按 &lt;code>A&lt;/code> 则角色向左移动，按 &lt;code>D&lt;/code> 则向右移动。&lt;/p>
+&lt;p>如果现在你试着运行，你会发现按键后角色并没有移动。之所以这样，是因为我们前面还添加了一个“正交相机”，它也具有 &lt;code>Transform&lt;/code> 组件。而根据著名的锡进定律，我们易证：&lt;/p>
+&lt;blockquote>
+&lt;p>所有组件都移动了，就等于所有组件都没移动。😅&lt;/p>
+&lt;/blockquote>
+&lt;p>这里体现了运动的相对性，由于相机和角色是一起移动的，所以在相机看来，角色相当于就是没有移动。&lt;/p>
+&lt;p>为了解决这个问题，我们需要再给角色添加一个特殊的组件（&lt;code>Component&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="cp">#[derive(Component)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">struct&lt;/span> &lt;span class="nc">Player&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着再向角色实体 &lt;code>Entity&lt;/code> 添加上该 &lt;code>Component&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">setup&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>: &lt;span class="nc">Commands&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">asset_server&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">AssetServer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">OrthographicCameraBundle&lt;/span>::&lt;span class="n">new_2d&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">commands&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">spawn_bundle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SpriteBundle&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">texture&lt;/span>: &lt;span class="nc">asset_server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;image.jpg&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">..&lt;/span>&lt;span class="nb">Default&lt;/span>::&lt;span class="n">default&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">})&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后再修改一下角色移动系统，要求查询（&lt;code>Query&lt;/code>）到的角色需要含有 &lt;code>Player&lt;/code> 组件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">With&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来运行一下，角色就可以移动起来了。&lt;/p>
+&lt;p>另外，由于这里的玩家只有一个，我们可以把 for 循环给去掉，简化一下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">With&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">unwrap&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">unwrap&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。&lt;/p>
+&lt;h2 id="next-steps">Next Steps&lt;/h2>
+&lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
+>官方示例&lt;/a>&lt;/p>
+&lt;p>至于我自己，除了学习游戏引擎，我觉得也该去先学点画画了😥毕竟我的 Aseprite 都不知道吃灰多久了&lt;/p></description></item><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子&lt;/h2>
 &lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
 &lt;p>&lt;figure
 class="gallery-image"
