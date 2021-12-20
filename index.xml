@@ -35,13 +35,15 @@ performance.&lt;/p>
 和一个 &lt;a class="link" href="https://github.com/bevyengine/bevy" target="_blank" rel="noopener"
 >Bevy&lt;/a>。看 Bevy 之前特意也查了下
 Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一下它的论坛，发现里面也有一些谈到 Bevy
-的优秀特性的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。&lt;/p>
+的优秀特性甚至是推荐转 Bevy 的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。&lt;/p>
 &lt;p>总之，接触到 Bevy 后不久，我就确定全面转向它了。它吸引我的地方实在太多，再简单列几条：&lt;/p>
 &lt;ul>
 &lt;li>Open Source, Free(自由) &amp;amp; Free(免费)&lt;/li>
 &lt;li>源码与开发语言均为我最喜欢的 Rust（JS 谁啊，不是很熟🤔）&lt;/li>
 &lt;li>采用新潮的 ECS 架构，天生并发友好，性能优异&lt;/li>
-&lt;li>对原生工具链友好，如 VSCode/Cargo 等&lt;/li>
+&lt;li>对原生工具链友好，如 VSCode/Cargo 等，开发环境对我来说更熟悉&lt;/li>
+&lt;li>可以调用 Rust 的丰富生态&lt;/li>
+&lt;li>&lt;del>无 GUI，学习成本低（x）&lt;/del>&lt;/li>
 &lt;li>&lt;del>它作者本人也很让我喜欢👀&lt;/del>&lt;/li>
 &lt;/ul>
 &lt;p>话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧&lt;/p>
@@ -217,7 +219,7 @@ loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
-&lt;h3 id="读取键盘输入">读取键盘输入&lt;/h3>
+&lt;h3 id="键盘输入">键盘输入&lt;/h3>
 &lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -300,6 +302,23 @@ loading="lazy"
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。&lt;/p>
+&lt;h3 id="移动优化">移动优化&lt;/h3>
+&lt;p>我们有时候会需要获取并修改多个组件，这里可以通过元组(&lt;code>tuple&lt;/code>)来查询：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Sprite&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">With&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sprite&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter_mut&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="n">unwrap&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sprite&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">flip_x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KeyCode&lt;/span>::&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sprite&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">flip_x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">player&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">translation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这里通过修改 &lt;code>sprite.flip_x&lt;/code>，使角色图片在移动时随着方向的不同而进行镜面反转。&lt;/p>
 &lt;h2 id="next-steps">Next Steps&lt;/h2>
 &lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
 >官方示例&lt;/a>&lt;/p>

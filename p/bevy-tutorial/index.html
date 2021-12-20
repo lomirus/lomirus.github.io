@@ -88,13 +88,15 @@ performance.</p>
 <p>印象里，Rust 里面之前比较火的开源游戏引擎有两个，一个 <a class=link href=https://github.com/amethyst/amethyst target=_blank rel=noopener>Amethyst</a>
 和一个 <a class=link href=https://github.com/bevyengine/bevy target=_blank rel=noopener>Bevy</a>。看 Bevy 之前特意也查了下
 Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一下它的论坛，发现里面也有一些谈到 Bevy
-的优秀特性的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。</p>
+的优秀特性甚至是推荐转 Bevy 的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。</p>
 <p>总之，接触到 Bevy 后不久，我就确定全面转向它了。它吸引我的地方实在太多，再简单列几条：</p>
 <ul>
 <li>Open Source, Free(自由) & Free(免费)</li>
 <li>源码与开发语言均为我最喜欢的 Rust（JS 谁啊，不是很熟🤔）</li>
 <li>采用新潮的 ECS 架构，天生并发友好，性能优异</li>
-<li>对原生工具链友好，如 VSCode/Cargo 等</li>
+<li>对原生工具链友好，如 VSCode/Cargo 等，开发环境对我来说更熟悉</li>
+<li>可以调用 Rust 的丰富生态</li>
+<li><del>无 GUI，学习成本低（x）</del></li>
 <li><del>它作者本人也很让我喜欢👀</del></li>
 </ul>
 <p>话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧</p>
@@ -251,7 +253,7 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml</p>
 <img src=/p/bevy-tutorial/2.png width=1047 height=780 srcset="/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_480x0_resize_box_3.png 480w, /p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_1024x0_resize_box_3.png 1024w" loading=lazy>
 </a>
 </figure></p>
-<h3 id=读取键盘输入>读取键盘输入</h3>
+<h3 id=键盘输入>键盘输入</h3>
 <p>为 <code>App</code> 增加读取键盘输入的系统：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=n>App</span>::<span class=n>new</span><span class=p>()</span><span class=w>
 </span><span class=w>    </span><span class=p>.</span><span class=n>add_plugins</span><span class=p>(</span><span class=n>DefaultPlugins</span><span class=p>)</span><span class=w>
@@ -334,6 +336,23 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml</p>
 </span><span class=w>    </span><span class=p>}</span><span class=w>
 </span><span class=w></span><span class=p>}</span><span class=w>
 </span></code></pre></div><p>另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。</p>
+<h3 id=移动优化>移动优化</h3>
+<p>我们有时候会需要获取并修改多个组件，这里可以通过元组(<code>tuple</code>)来查询：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>fn</span> <span class=nf>move_system</span><span class=p>(</span><span class=w>
+</span><span class=w>    </span><span class=n>keyboard_input</span>: <span class=nc>Res</span><span class=o>&lt;</span><span class=n>Input</span><span class=o>&lt;</span><span class=n>KeyCode</span><span class=o>&gt;&gt;</span><span class=p>,</span><span class=w>
+</span><span class=w>    </span><span class=k>mut</span><span class=w> </span><span class=n>players</span>: <span class=nc>Query</span><span class=o>&lt;</span><span class=p>(</span><span class=o>&amp;</span><span class=k>mut</span><span class=w> </span><span class=n>Transform</span><span class=p>,</span><span class=w> </span><span class=o>&amp;</span><span class=k>mut</span><span class=w> </span><span class=n>Sprite</span><span class=p>),</span><span class=w> </span><span class=n>With</span><span class=o>&lt;</span><span class=n>Player</span><span class=o>&gt;&gt;</span><span class=p>,</span><span class=w>
+</span><span class=w></span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>    </span><span class=kd>let</span><span class=w> </span><span class=p>(</span><span class=k>mut</span><span class=w> </span><span class=n>player</span><span class=p>,</span><span class=w> </span><span class=k>mut</span><span class=w> </span><span class=n>sprite</span><span class=p>)</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>players</span><span class=p>.</span><span class=n>iter_mut</span><span class=p>().</span><span class=n>next</span><span class=p>().</span><span class=n>unwrap</span><span class=p>();</span><span class=w>
+</span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>keyboard_input</span><span class=p>.</span><span class=n>pressed</span><span class=p>(</span><span class=n>KeyCode</span>::<span class=n>A</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=n>sprite</span><span class=p>.</span><span class=n>flip_x</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=kc>false</span><span class=p>;</span><span class=w>
+</span><span class=w>        </span><span class=n>player</span><span class=p>.</span><span class=n>translation</span><span class=p>.</span><span class=n>x</span><span class=w> </span><span class=o>-=</span><span class=w> </span><span class=mf>1.0</span><span class=p>;</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>keyboard_input</span><span class=p>.</span><span class=n>pressed</span><span class=p>(</span><span class=n>KeyCode</span>::<span class=n>D</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=n>sprite</span><span class=p>.</span><span class=n>flip_x</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=kc>true</span><span class=p>;</span><span class=w>
+</span><span class=w>        </span><span class=n>player</span><span class=p>.</span><span class=n>translation</span><span class=p>.</span><span class=n>x</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=mf>1.0</span><span class=p>;</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span></code></pre></div><p>这里通过修改 <code>sprite.flip_x</code>，使角色图片在移动时随着方向的不同而进行镜面反转。</p>
 <h2 id=next-steps>Next Steps</h2>
 <p>Bevy 的进一步学习建议阅读<a class=link href=https://github.com/bevyengine/bevy/tree/latest/examples target=_blank rel=noopener>官方示例</a></p>
 <p>至于我自己，除了学习游戏引擎，我觉得也该去先学点画画了😥毕竟我的 Aseprite 都不知道吃灰多久了</p>
@@ -482,8 +501,9 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#准备资源>准备资源</a></li>
 <li><a href=#创建窗口>创建窗口</a></li>
 <li><a href=#载入图片>载入图片</a></li>
-<li><a href=#读取键盘输入>读取键盘输入</a></li>
+<li><a href=#键盘输入>键盘输入</a></li>
 <li><a href=#角色移动>角色移动</a></li>
+<li><a href=#移动优化>移动优化</a></li>
 </ol>
 </li>
 <li><a href=#next-steps>Next Steps</a></li>
