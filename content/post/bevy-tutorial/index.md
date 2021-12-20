@@ -52,14 +52,16 @@ Godot 本身使用的 Node 架构也会带来一定性能上的问题,参见官�
 印象里，Rust 里面之前比较火的开源游戏引擎有两个，一个 [Amethyst](https://github.com/amethyst/amethyst)
 和一个 [Bevy](https://github.com/bevyengine/bevy)。看 Bevy 之前特意也查了下
 Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一下它的论坛，发现里面也有一些谈到 Bevy
-的优秀特性的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。
+的优秀特性甚至是推荐转 Bevy 的帖子，遂不禁唏嘘。不过同时，这也坚定了我转向 Bevy 的决心，为下文中与 Bevy 的邂逅埋下了伏笔（阅读理解后遗症了属于是）。
 
 总之，接触到 Bevy 后不久，我就确定全面转向它了。它吸引我的地方实在太多，再简单列几条：
 
 - Open Source, Free(自由) & Free(免费)
 - 源码与开发语言均为我最喜欢的 Rust（JS 谁啊，不是很熟🤔）
 - 采用新潮的 ECS 架构，天生并发友好，性能优异
-- 对原生工具链友好，如 VSCode/Cargo 等
+- 对原生工具链友好，如 VSCode/Cargo 等，开发环境对我来说更熟悉
+- 可以调用 Rust 的丰富生态
+- ~~无 GUI，学习成本低（x）~~
 - ~~它作者本人也很让我喜欢👀~~
 
 话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧
@@ -294,7 +296,7 @@ commands.spawn_bundle(SpriteBundle {
 
 ![](2.png)
 
-### 读取键盘输入
+### 键盘输入
 
 为 `App` 增加读取键盘输入的系统：
 
@@ -411,6 +413,29 @@ fn move_system(
 ```
 
 另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。
+
+### 移动优化
+
+我们有时候会需要获取并修改多个组件，这里可以通过元组(`tuple`)来查询：
+
+```rust
+fn move_system(
+    keyboard_input: Res<Input<KeyCode>>,
+    mut players: Query<(&mut Transform, &mut Sprite), With<Player>>,
+) {
+    let (mut player, mut sprite) = players.iter_mut().next().unwrap();
+    if keyboard_input.pressed(KeyCode::A) {
+        sprite.flip_x = false;
+        player.translation.x -= 1.0;
+    }
+    if keyboard_input.pressed(KeyCode::D) {
+        sprite.flip_x = true;
+        player.translation.x += 1.0;
+    }
+}
+```
+
+这里通过修改 `sprite.flip_x`，使角色图片在移动时随着方向的不同而进行镜面反转。
 
 ## Next Steps
 
