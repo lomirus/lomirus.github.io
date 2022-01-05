@@ -9,34 +9,45 @@ menu:
     params: 
       icon: link
 links:
-  # - title: GitHub
-  #   description: GitHub is the world's largest software development platform.
-  #   website: https://github.com
-  #   image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: 辇道增七的小站
-    description: 
+    description: 不忘初心，方得始终
     website: https://wuhaoda.life:444/
+    image: whd1.jpg
+
   - title: 辇道增七的朝花集
-    description: 
+    description: 直到黄昏洗尽颜色
     website: https://blog.wuhaoda.life:444/
+    image: whd2.jpg
+
   - title: YYQF's Blog
-    description: 
+    description: " "
     website: http://yyqf123.top/
+    image: zyc.jpg
+
   - title: OkAndGreat 的个人博客
-    description: 
+    description: Great,up,happy! 
     website: http://zhongtai521.wang/
+    image: wzt.jpg
+
   - title: Victor’s Blog
-    description: 
-    website: https://qwq.ren
+    description: 在想象中复燃 可能更解烦.
+    website: https://blog.qwq.ren
+    image: hks.png
+
   - title: Nirvana Shoka
-    description: 
+    description: 往事已成定局，但未来由我们书写
     website: https://www.nirvana.cool/
+    image: zwj.jpg
+
   - title: Sunsun
-    description: 
+    description: " "
     website: https://sunsun.work/
-  - title: Echo's Sharing
-    description: 
+    image: hs.png
+
+  - title: 你好我叫阿志
+    description: 持续在洞察人性，不断在理解社会，一直在克制欲望。
     website: https://iamazhi.xyz
+    image: fht.jpg
 comments: false
 ---
 
