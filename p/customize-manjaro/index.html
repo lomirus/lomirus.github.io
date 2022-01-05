@@ -2,7 +2,7 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Since I cannot stand the Windows, I embraced the Linux. "><title>Customize the Manjaro with Gnome</title>
 <link rel=canonical href=https://lomirus.github.io/p/customize-manjaro/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Customize the Manjaro with Gnome">
+<link rel=stylesheet href=/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css><meta property="og:title" content="Customize the Manjaro with Gnome">
 <meta property="og:description" content="Since I cannot stand the Windows, I embraced the Linux. ">
 <meta property="og:url" content="https://lomirus.github.io/p/customize-manjaro/">
 <meta property="og:site_name" content="Lomirus' Site">
@@ -177,7 +177,11 @@ sudo systemctl <span class=nb>enable</span> docker
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5-mozc
 </code></pre></div><p>For Korean:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5-hangul
-</code></pre></div><p>Edit <code>~/.xprofile</code>:</p>
+</code></pre></div><p>Edit <code>~/.xprofile</code> for X11 users:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>export</span> <span class=nv>GTK_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>QT_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>XMODIFIERS</span><span class=o>=</span><span class=s2>&#34;@im=fcitx5&#34;</span>
+</code></pre></div><p>Edit <code>~/.pam_environment</code> for Wayland users:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>export</span> <span class=nv>GTK_IM_MODULE</span><span class=o>=</span>fcitx5
 <span class=nb>export</span> <span class=nv>QT_IM_MODULE</span><span class=o>=</span>fcitx5
 <span class=nb>export</span> <span class=nv>XMODIFIERS</span><span class=o>=</span><span class=s2>&#34;@im=fcitx5&#34;</span>
@@ -218,7 +222,7 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <article class=has-image>
 <a href=/p/gnome-extention-development/>
 <div class=article-image>
-<img src=/p/gnome-extention-development/cover.16bdb0183ab6c4c8222dc99f05ba0a2f_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key=gnome-extention-development data-hash="md5-Fr2wGDq2xMgiLcmfBboKLw==">
+<img src=/p/gnome-extention-development/cover.16bdb0183ab6c4c8222dc99f05ba0a2f_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" data-key=gnome-extention-development data-hash="md5-Fr2wGDq2xMgiLcmfBboKLw==">
 </div>
 <div class=article-details>
 <h2 class=article-title>一次失败的尝试开发 Gnome Extension 经历</h2>
@@ -228,7 +232,7 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <article class=has-image>
 <a href=/p/wsl2/>
 <div class=article-image>
-<img src=/p/wsl2/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=wsl2 data-hash="md5-y2lElhgAz5XmcVT8m030Sw==">
+<img src=/p/wsl2/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post WSL 2 入门使用与踩坑记录" data-key=wsl2 data-hash="md5-y2lElhgAz5XmcVT8m030Sw==">
 </div>
 <div class=article-details>
 <h2 class=article-title>WSL 2 入门使用与踩坑记录</h2>
@@ -238,7 +242,7 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <article class=has-image>
 <a href=/p/bevy-tutorial/>
 <div class=article-image>
-<img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA==">
+<img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA==">
 </div>
 <div class=article-details>
 <h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2>
@@ -248,7 +252,7 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <article class=has-image>
 <a href=/p/first-meet-to-flutter/>
 <div class=article-image>
-<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
+<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
 </div>
 <div class=article-details>
 <h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
@@ -258,7 +262,7 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <article class=has-image>
 <a href=/p/puppeteer-dog-stickers/>
 <div class=article-image>
-<img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
+<img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
 </div>
 <div class=article-details>
 <h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2>
@@ -275,11 +279,11 @@ sudo systemctl start clash@<span class=nv>$USER</span>
 <section class=copyright>
 &copy;
 2020 -
-2021 Lomirus' Site
+2022 Lomirus' Site
 </section>
 <section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.6.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>
 </footer>
 <div class=pswp tabindex=-1 role=dialog aria-hidden=true>
