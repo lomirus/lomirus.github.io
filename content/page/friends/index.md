@@ -14,7 +14,7 @@ links:
     website: https://wuhaoda.life:444/
     image: whd1.jpg
 
-  - title: Holden Wu 的朝花集
+  - title: 朝花集
     description: 直到黄昏洗尽颜色
     website: https://blog.wuhaoda.life:444/
     image: whd2.jpg
