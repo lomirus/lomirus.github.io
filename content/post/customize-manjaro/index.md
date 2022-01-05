@@ -203,7 +203,15 @@ For Korean:
 sudo pacman -S fcitx5-hangul
 ```
 
-Edit `~/.xprofile`:
+Edit `~/.xprofile` for X11 users:
+
+```bash
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+```
+
+Edit `~/.pam_environment` for Wayland users:
 
 ```bash
 export GTK_IM_MODULE=fcitx5

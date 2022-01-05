@@ -10,7 +10,8 @@ menu:
       icon: link
 ---
 
-* [辇道增七的小站](https://wuhaoda.life/)
+* [辇道增七的小站](https://wuhaoda.life:444/)
+* [辇道增七的朝花集](https://blog.wuhaoda.life:444/)
 * [YYQF's Blog](http://yyqf123.top/)
 * [OkAndGreat 的个人博客](http://zhongtai521.wang/)
 * [Victor’s Blog](https://qwq.ren)
