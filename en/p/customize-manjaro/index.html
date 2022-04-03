@@ -1,0 +1,369 @@
+<!doctype html><html lang=zh-cn dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Since I cannot stand the Windows, I embraced the Linux. "><title>Customize the Manjaro with Gnome</title>
+<link rel=canonical href=https://lomirus.github.io/en/p/customize-manjaro/>
+<link rel=stylesheet href=/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css><meta property="og:title" content="Customize the Manjaro with Gnome">
+<meta property="og:description" content="Since I cannot stand the Windows, I embraced the Linux. ">
+<meta property="og:url" content="https://lomirus.github.io/en/p/customize-manjaro/">
+<meta property="og:site_name" content="Lomirus' Site">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Linux"><meta property="article:tag" content="Manjaro"><meta property="article:tag" content="Gnome"><meta property="article:published_time" content="2021-07-20T00:00:00+08:00"><meta property="article:modified_time" content="2021-08-25T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/en/p/customize-manjaro/cover.jpg">
+<meta name=twitter:site content="@lomirus">
+<meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="Customize the Manjaro with Gnome">
+<meta name=twitter:description content="Since I cannot stand the Windows, I embraced the Linux. "><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://lomirus.github.io/en/p/customize-manjaro/cover.jpg">
+<link rel="shortcut icon" href=/img/favicon.png>
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/en>
+<img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>🍥</span>
+</figure>
+<div class=site-meta>
+<h1 class=site-name><a href=/en>Lomirus' Site</a></h1>
+<h2 class=site-description>We shall meet in the place where there is no darkness.</h2>
+</div>
+</header><ol class=social-menu>
+<li>
+<a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li>
+</ol><ol class=menu id=main-menu>
+<div class=menu-bottom-section>
+<li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
+<select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/>简体中文</option><option value=https://lomirus.github.io/en/ selected>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span>
+</li>
+</div>
+</ol>
+</aside>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/en/p/customize-manjaro/>
+<img src=/en/p/customize-manjaro/cover_hu81f578c0819d5c459ae1161b90d3bf82_144962_800x0_resize_q75_box.jpg srcset="/en/p/customize-manjaro/cover_hu81f578c0819d5c459ae1161b90d3bf82_144962_800x0_resize_q75_box.jpg 800w, /en/p/customize-manjaro/cover_hu81f578c0819d5c459ae1161b90d3bf82_144962_1600x0_resize_q75_box.jpg 1600w" width=800 height=422 loading=lazy alt="Featured image of post Customize the Manjaro with Gnome">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/en/categories/code/>
+Code
+</a>
+<a href=/en/categories/english/>
+English
+</a>
+</header>
+<div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/en/p/customize-manjaro/>Customize the Manjaro with Gnome</a>
+</h2>
+<h3 class=article-subtitle>
+Since I cannot stand the Windows, I embraced the Linux.
+</h3>
+</div>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jul 20, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+4 minute read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<p>When I started to write the article, I haven&rsquo;t install the Chinese Input Method, and therefore I just completed it in English.</p>
+<h2 id=foreword>Foreword</h2>
+<p>I&rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&rsquo;s 2015. I was still a fan to Microsoft at that time. And it&rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.</p>
+<p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.</p>
+<p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)</p>
+<p>And that&rsquo;s why I wrote this article &mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.</p>
+<h2 id=customize>Customize</h2>
+<h3 id=set-pacman-mirrors>Set Pacman Mirrors</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo nano /etc/pacman.d/mirrorlist
+</code></pre></div><p>Delete other unnecessary mirrors and add:</p>
+<pre><code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+</code></pre><p>Disable mirrorlist automatically refreshing:</p>
+<pre><code>sudo systemctl disable pamac-mirrorlist.timer
+</code></pre><h3 id=set-the-keyboard-shortcuts>Set the keyboard shortcuts</h3>
+<p>Open:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>gnome-control-center
+</code></pre></div><p>Go by <code>Keyboard -> Keyboard Shortcuts -> Customize Shortcuts</code></p>
+<div class=table-wrapper><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Command</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Launch Terminal</td>
+<td><code>gnome-terminal</code></td>
+<td><code>Super</code> + <code>T</code></td>
+</tr>
+<tr>
+<td>Launch Nautilus</td>
+<td><code>nautilus</code></td>
+<td><code>Super</code> + <code>E</code></td>
+</tr>
+<tr>
+<td>Delay Screenshot</td>
+<td><code>gnome-screenshot --delay 3</code></td>
+<td><code>Ctrl</code> + <code>Print</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id=edit-the-vscode-settings>Edit the VSCode Settings</h3>
+<p>You need to installl VSCode before reading this section.</p>
+<p>Edit <code>~/.config/Code/User/settings.json</code>:</p>
+<pre><code class=language-json5 data-lang=json5>{
+    &quot;window.zoomLevel&quot;: 2,
+    // Fix Terminal Font Display
+    &quot;terminal.integrated.fontFamily&quot;: &quot;NotoSansMono Nerd Font&quot;,
+    // Make tab size from 2 to 4
+    &quot;vetur.format.options.tabSize&quot;: 4
+}
+</code></pre><h3 id=enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</h3>
+<p>Open <code>chrome://flags/#enable-parallel-downloading</code>, and switch to <code>Enable</code>.</p>
+<h3 id=fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl set-local-rtc <span class=m>1</span>
+</code></pre></div><p>If you want to verify:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>timedatectl
+</code></pre></div><h2 id=install-packages>Install Packages</h2>
+<h3 id=basic>Basic</h3>
+<h4 id=base-devel><code>base-devel</code></h4>
+<p>The <code>base-devel</code> includes these packages:</p>
+<p><code>autoconf</code>, <code>automake</code>, <code>binutils</code>, <code>bison</code>, <code>fakeroot</code>, <code>file</code>, <code>findutils</code>, <code>flex</code>, <code>gawk</code>, <code>gcc</code>, <code>gettext</code>, <code>grep</code>, <code>groff</code>, <code>gzip</code>, <code>libtool</code>, <code>m4</code>, <code>make</code>, <code>pacman</code>, <code>patch</code>, <code>pkgconf</code>, <code>sed</code>, <code>sudo</code>, <code>texinfo</code>, <code>which</code></p>
+<p>If it&rsquo;s uninstalled, you may get some errors then like <code>ERROR: Cannot find the fakeroot binary.</code> when using yay. So run the command before you install other packages:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S base-devel
+</code></pre></div><h4 id=other-basic-packages>Other Basic Packages</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S yay
+sudo pacman -S vim
+sudo pacman -S net-tools
+</code></pre></div><h3 id=tools>Tools</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S neofetch
+sudo pacman -S btop
+sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
+sudo pacman -S wireshark-qt
+sudo pacman -S aria2
+sudo pacman -S gpick
+yay -S marktext-bin
+yay -S visual-studio-code-bin
+yay -S obs-studio
+yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
+<span class=c1># To install Netease Cloud Music (not official), run:</span>
+yay -S electron-netease-cloud-music
+<span class=c1># Or a more beautiful version:</span>
+yay -S yesplaymusic
+<span class=c1># Emoji Picker</span>
+yay -S emote
+yay -S burpsuite
+yay -S postman-bin
+yay -S scrcpy
+</code></pre></div><h3 id=developing-environment>Developing Environment</h3>
+<h4 id=nodejs>NodeJS</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S npm
+sudo pacman -S yarn
+sudo npm install -g nrm
+nrm use taobao
+sudo npm install -g @vue/cli
+sudo npm install -g create-react-app
+</code></pre></div><h4 id=deno>Deno</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S deno
+</code></pre></div><h4 id=rust>Rust</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=c1># Install Rust</span>
+curl --proto <span class=s1>&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class=p>|</span> sh
+</code></pre></div><h4 id=java>Java</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S jdk-openjdk
+</code></pre></div><h3 id=install-docker>Install Docker</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S docker
+sudo systemctl <span class=nb>enable</span> docker
+</code></pre></div><h3 id=install-asia-languages-input-methods>Install Asia Languages Input Methods</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+</code></pre></div><p>For Chinese:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5-rime
+</code></pre></div><p>For Japanese:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5-mozc
+</code></pre></div><p>For Korean:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S fcitx5-hangul
+</code></pre></div><p>Edit <code>~/.xprofile</code> for X11 users:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>export</span> <span class=nv>GTK_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>QT_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>XMODIFIERS</span><span class=o>=</span><span class=s2>&#34;@im=fcitx5&#34;</span>
+</code></pre></div><p>Edit <code>~/.pam_environment</code> for Wayland users:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>export</span> <span class=nv>GTK_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>QT_IM_MODULE</span><span class=o>=</span>fcitx5
+<span class=nb>export</span> <span class=nv>XMODIFIERS</span><span class=o>=</span><span class=s2>&#34;@im=fcitx5&#34;</span>
+</code></pre></div><p>Open <code> fcitx5-configtool</code> to move the input methods from right that you are going to use to left.</p>
+<p>To beautify the skin of the input methods, refer to <a class=link href=https://github.com/thep0y/fcitx5-themes target=_blank rel=noopener>thep0y / fcitx5-themes</a>.</p>
+<h3 id=install-icalinguaelectron-qq>Install <code>icalingua</code>(Electron QQ)</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>yay -S mongodb-bin
+yay -S mongodb-tools-bin
+sudo systemctl <span class=nb>enable</span> mongodb.service
+sudo systemctl start mongodb.service
+yay -S icalingua
+</code></pre></div><h3 id=install-clash>Install <code>clash</code></h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo pacman -S clash
+</code></pre></div><p>Move your <code>config.yaml</code> to <code>~/.config/clash</code>. Then:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo systemctl <span class=nb>enable</span> clash@<span class=nv>$USER</span>
+sudo systemctl start clash@<span class=nv>$USER</span>
+</code></pre></div><p>Open the <a class=link href=https://clash.razord.top/ target=_blank rel=noopener>dashboard</a> for configuration.</p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/en/tags/linux/>Linux</a>
+<a href=/en/tags/manjaro/>Manjaro</a>
+<a href=/en/tags/gnome/>Gnome</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+Last updated on Aug 25, 2021 00:00 +0800
+</span>
+</section></footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/en/p/upon-the-mere/>
+<div class=article-image>
+<img src=/en/p/upon-the-mere/cover.c514d916917173a48a42e0114b469961_hud7e36f7e20e71be184458283bdae4646_55974_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post Fiction: Upon the Mere" data-key=upon-the-mere data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Fiction: Upon the Mere</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script>
+<style>.utterances{max-width:unset}</style>
+<script>function setUtterancesTheme(b){let a=document.querySelector('.utterances iframe');a&&a.contentWindow.postMessage({type:'set-theme',theme:`github-${b}`},'https://utteranc.es')}addEventListener('message',a=>{if(a.origin!=='https://utteranc.es')return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener('onColorSchemeChange',a=>{setUtterancesTheme(a.detail)})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2022 Lomirus' Site
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.11.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#foreword>Foreword</a></li>
+<li><a href=#customize>Customize</a>
+<ol>
+<li><a href=#set-pacman-mirrors>Set Pacman Mirrors</a></li>
+<li><a href=#set-the-keyboard-shortcuts>Set the keyboard shortcuts</a></li>
+<li><a href=#edit-the-vscode-settings>Edit the VSCode Settings</a></li>
+<li><a href=#enable-chrome-parallel-downloading>Enable Chrome Parallel Downloading</a></li>
+<li><a href=#fix-multisystem-time-synchronization-problem>Fix Multisystem time synchronization problem</a></li>
+</ol>
+</li>
+<li><a href=#install-packages>Install Packages</a>
+<ol>
+<li><a href=#basic>Basic</a>
+<ol>
+<li><a href=#base-devel><code>base-devel</code></a></li>
+<li><a href=#other-basic-packages>Other Basic Packages</a></li>
+</ol>
+</li>
+<li><a href=#tools>Tools</a></li>
+<li><a href=#developing-environment>Developing Environment</a>
+<ol>
+<li><a href=#nodejs>NodeJS</a></li>
+<li><a href=#deno>Deno</a></li>
+<li><a href=#rust>Rust</a></li>
+<li><a href=#java>Java</a></li>
+</ol>
+</li>
+<li><a href=#install-docker>Install Docker</a></li>
+<li><a href=#install-asia-languages-input-methods>Install Asia Languages Input Methods</a></li>
+<li><a href=#install-icalinguaelectron-qq>Install <code>icalingua</code>(Electron QQ)</a></li>
+<li><a href=#install-clash>Install <code>clash</code></a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

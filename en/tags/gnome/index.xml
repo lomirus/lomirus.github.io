@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnome on Lomirus' Site</title><link>https://lomirus.github.io/en/tags/gnome/</link><description>Recent content in Gnome on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/en/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/en/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/en/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/en/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
+&lt;h2 id="foreword">Foreword&lt;/h2>
+&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
+&lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
+&lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
+&lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
+&lt;h2 id="customize">Customize&lt;/h2>
+&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo nano /etc/pacman.d/mirrorlist
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
+&lt;pre>&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+&lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
+&lt;pre>&lt;code>sudo systemctl disable pamac-mirrorlist.timer
+&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts&lt;/h3>
+&lt;p>Open:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">gnome-control-center
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Command&lt;/th>
+&lt;th>Shortcut&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Launch Terminal&lt;/td>
+&lt;td>&lt;code>gnome-terminal&lt;/code>&lt;/td>
+&lt;td>&lt;code>Super&lt;/code> + &lt;code>T&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Launch Nautilus&lt;/td>
+&lt;td>&lt;code>nautilus&lt;/code>&lt;/td>
+&lt;td>&lt;code>Super&lt;/code> + &lt;code>E&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Delay Screenshot&lt;/td>
+&lt;td>&lt;code>gnome-screenshot --delay 3&lt;/code>&lt;/td>
+&lt;td>&lt;code>Ctrl&lt;/code> + &lt;code>Print&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings&lt;/h3>
+&lt;p>You need to installl VSCode before reading this section.&lt;/p>
+&lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
+&lt;pre>&lt;code class="language-json5" data-lang="json5">{
+&amp;quot;window.zoomLevel&amp;quot;: 2,
+// Fix Terminal Font Display
+&amp;quot;terminal.integrated.fontFamily&amp;quot;: &amp;quot;NotoSansMono Nerd Font&amp;quot;,
+// Make tab size from 2 to 4
+&amp;quot;vetur.format.options.tabSize&amp;quot;: 4
+}
+&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading&lt;/h3>
+&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
+&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages&lt;/h2>
+&lt;h3 id="basic">Basic&lt;/h3>
+&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>&lt;/h4>
+&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
+&lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
+&lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S base-devel
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S yay
+sudo pacman -S vim
+sudo pacman -S net-tools
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S neofetch
+sudo pacman -S btop
+sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
+sudo pacman -S wireshark-qt
+sudo pacman -S aria2
+sudo pacman -S gpick
+yay -S marktext-bin
+yay -S visual-studio-code-bin
+yay -S obs-studio
+yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
+&lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
+yay -S electron-netease-cloud-music
+&lt;span class="c1"># Or a more beautiful version:&lt;/span>
+yay -S yesplaymusic
+&lt;span class="c1"># Emoji Picker&lt;/span>
+yay -S emote
+yay -S burpsuite
+yay -S postman-bin
+yay -S scrcpy
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
+&lt;h4 id="nodejs">NodeJS&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S npm
+sudo pacman -S yarn
+sudo npm install -g nrm
+nrm use taobao
+sudo npm install -g @vue/cli
+sudo npm install -g create-react-app
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S deno
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># Install Rust&lt;/span>
+curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S jdk-openjdk
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S docker
+sudo systemctl &lt;span class="nb">enable&lt;/span> docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-rime
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-mozc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Korean:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-hangul
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.xprofile&lt;/code> for X11 users:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.pam_environment&lt;/code> for Wayland users:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
+&lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
+>thep0y / fcitx5-themes&lt;/a>.&lt;/p>
+&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">yay -S mongodb-bin
+yay -S mongodb-tools-bin
+sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
+sudo systemctl start mongodb.service
+yay -S icalingua
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S clash
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
+sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
+>dashboard&lt;/a> for configuration.&lt;/p></description></item></channel></rss>

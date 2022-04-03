@@ -1,1 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>typescript on Lomirus' Site</title><link>https://lomirus.github.io/tags/typescript/</link><description>Recent content in typescript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>（顺带一提，标题抄袭引用改编自著名博文 TypeScript with Babel: A Beautiful Marriage） Origin 看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>typescript on Lomirus' Site</title><link>https://lomirus.github.io/tags/typescript/</link><description>Recent content in typescript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+>TypeScript with Babel: A Beautiful Marriage&lt;/a>）&lt;/p>
+&lt;h2 id="origin">Origin&lt;/h2>
+&lt;p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p>
+&lt;p>对于题目中的五个工具，除去 ESlint之外，其实其他的都多多少少用过一段时间。特别是 Webpack Babel React 这三个，用的时间也算是比较久了。TypeScript 倒是用过，但是感觉 JS 加上类型限制后写起来就不那么自由了，所以尝试用它写了一个模块之后就将它卸载了。但是这些这个工具终究还是太常用，早晚逃不了还是得学，所以就试着用它们做个简单的小项目练练手。毕竟当初我学 Webpack 时也是学得很憋屈，一直不知道这玩意儿打个包为啥还非得用 js 文件做入口，直到后来学了 React 才豁然开朗，所以我至今认为如果是要做跑在浏览器的网页而且不用什么框架的话 Webpack 还真没什么卵用。当然，有了之后自然用处就大了。&lt;/p>
+&lt;p>不过说了这么多好像有点跑题，先回到正题：让我们来讨论一下究竟怎么把这五个架子给支楞到一块儿去。&lt;/p>
+&lt;h2 id="introductions-of-the-packages">Introductions of the packages&lt;/h2>
+&lt;p>这种东西还用得着在这介绍？官网文档，维基百科，请~&lt;/p>
+&lt;h2 id="tsc-or-babel-its-a-question">TSC or Babel, it&amp;rsquo;s a question.&lt;/h2>
+&lt;p>老实说，单是在两个之间进行选择就够让我想半天了。但是实际上，摆在我面前的包括但不限于：&lt;code>ts-loader&lt;/code>,&lt;code>awesome-typescript-loader&lt;/code>, &lt;code>babel-loader&lt;/code>等一堆loaders/packages。而且由于我开始参考了过时的中文文档，所以先下载了&lt;code>awesome-typescript-loader&lt;/code>，后来才意识到被坑（😅）。而在剩余的两者之间，参考&lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+>TypeScript with Babel: A Beautiful Marriage&lt;/a>后，决定选择了后者。&lt;/p>
+&lt;p>安装好之后，我又顺着我的思路捋了一遍，发现整个过程中编译是&lt;code>babel&lt;/code>做的，根本没用到&lt;code>typescript&lt;/code>什么事儿呀。我于是就想，把它卸载之后会怎么样呢？接着神奇的现象发生了，我卸载了&lt;code>typescipt&lt;/code>，删除了它的配置文件&lt;code>tsconfig.json&lt;/code>，结果发现我的用&lt;code>typescript&lt;/code>写的项目居然还能正常编译并运行（谢谢有被震惊到）。我就想既然如此那我还用ts干啥呀，赶紧卸了得了，可别再让我见着你了（😅）。&lt;/p>
+&lt;h2 id="anti-human-eslint">Anti-human ESLint&lt;/h2>
+&lt;p>听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。&lt;/p>
+&lt;p>安装过程中被问了几个问题，回答之后他给我推荐了几个插件。行，听您的。选择 YES，进行安装。看起来一切顺利，然后&amp;hellip;果不其然，报错了。报啥呢：&lt;/p>
+&lt;pre>&lt;code>Oops! Something went wrong! :(
+ESLint: 7.24.0
+Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file
+itself may not follow your linting rules.
+Error: Failed to load plugin '@typescript-eslint' declared in 'BaseConfig': Cannot find module 'typescript'
+&lt;/code>&lt;/pre>&lt;p>我心想，这不废话嘛，我又没安装 typescipt 您能到哪儿找模块去？不过话又说回来，刚才，它倒是的确问过我这么一句：&lt;/p>
+&lt;pre>&lt;code>Does your project use TypeScript? · No / Yes
+&lt;/code>&lt;/pre>&lt;p>唔，我要用 TypeScript 倒是没错，不过这和我安没安装 TypeScript 的 package 也没什么必然的联系吧。&lt;/p>
+&lt;p>然后经过摸滚带爬的上下求索，终于意识到 typescript 貌似还是有点儿用的，再加上后面用到的 &lt;code>@types/react&lt;/code>，&lt;code>@types/react-dom&lt;/code>，感觉是在类型推断和自动补全方面有些作用（应该）&lt;/p>
+&lt;h2 id="module-or-commonjs-its-a-question">Module or CommonJS, it&amp;rsquo;s a question.&lt;/h2>
+&lt;p>刚才 ESLint 问我用的是 &lt;code>Module&lt;/code> 还是 &lt;code>CommonJS&lt;/code>，秉着“啥新用啥，用嘛嘛新”的原则，我当然选择的ES6的&lt;code>Module&lt;/code>。&lt;/p>
+&lt;p>然后由于我的&lt;code>webpack.config.js&lt;/code>用到了&lt;code>module.exports = {}&lt;/code>，所以 ESLint报错了。&lt;/p>
+&lt;pre>&lt;code>'require' is not defined. eslint(no-undef)
+'module' is not defined. eslint(no-undef)
+&lt;/code>&lt;/pre>&lt;p>好，那我改。&lt;/p>
+&lt;p>我把 &lt;code>module.exports&lt;/code>改成了&lt;code>export default&lt;/code>，把&lt;code>require&lt;/code>改成了&lt;code>import&lt;/code>。结果又报错了：&lt;/p>
+&lt;pre>&lt;code>SyntaxError: Cannot use import statement outside a module
+&lt;/code>&lt;/pre>&lt;p>好，那我改。
+我在&lt;code>package.json&lt;/code>里加了句 &lt;code>&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/code>。结果又报错了：&lt;/p>
+&lt;pre>&lt;code>ReferenceError: __dirname is not defined
+&lt;/code>&lt;/pre>&lt;p>&lt;code>__dirname&lt;/code> 用不了可不行，那还是再改回来吧。
+好，那我改。
+于是回到了原点：&lt;/p>
+&lt;pre>&lt;code>'require' is not defined. eslint(no-undef)
+'module' is not defined. eslint(no-undef)
+&lt;/code>&lt;/pre>&lt;p>（闹着玩是吧？😅）&lt;/p>
+&lt;p>然后在&lt;code>.eslintrc.js&lt;/code>的&lt;code>&amp;quot;env&amp;quot;&lt;/code>中加了行&lt;code>&amp;quot;node&amp;quot;: true&lt;/code>，行，终于，不报错了。&lt;/p>
+&lt;h2 id="eslint-comes-again">ESLint Comes Again&lt;/h2>
+&lt;p>&lt;code>App.js&lt;/code>里有这么一段：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
+&lt;pre>&lt;code>Missing return type on function. eslint(@typescript-eslint/explicit-module-boundary-types)
+&lt;/code>&lt;/pre>&lt;p>接着修改代码为：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="c1">// has imported ReactElement...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
+&lt;pre>&lt;code>Object pattern argument should be typed. eslint(@typescript-eslint/explicit-module-boundary-types)
+'title' is missing in props validation eslint(react/prop-types)
+Binding element 'children' implicitly has an 'any' type. ts(7031)
+&lt;/code>&lt;/pre>&lt;p>接着修改代码为：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="c1">// has imported ReactElement...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">type&lt;/span> &lt;span class="nx">BoxProps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">title&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">children&lt;/span>: &lt;span class="kt">ReactElement&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">BoxProps&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint在这块儿倒是不报错了，不过当其他地方调用&lt;code>Box&lt;/code>又报错了：&lt;/p>
+&lt;pre>&lt;code>This JSX tag's 'children' prop expects a single child of type 'ReactElement&amp;lt;any, string | JSXElementConstructor&amp;lt;any&amp;gt;&amp;gt;', but multiple children were provided.
+&lt;/code>&lt;/pre>&lt;p>查了下资料，发现除了&lt;code>ReactElement&lt;/code>之外原来还有&lt;code>ReactNode&lt;/code>和&lt;code>JSX.Element&lt;/code>（参考 &lt;a class="link" href="https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement" target="_blank" rel="noopener"
+>When to use JSX.Element vs ReactNode vs ReactElement?&lt;/a>）。&lt;/p>
+&lt;p>简单总结下，原因：拉胯TS的历史遗留问题；解决方法：将&lt;code>children&lt;/code>类型改成&lt;code>ReactNode&lt;/code>&lt;/p>
+&lt;h2 id="react-jsx">&lt;code>react-jsx&lt;/code>&lt;/h2>
+&lt;p>在上面的 StackOverflow 里看到了 &lt;code>create-react-app&lt;/code>，这才想到可以去参考一下它的代码，话不多说，开始安装。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">npm init -y
+npm install create-react-app
+npx create-react-app ts --template typescript
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>进去之后发现他在&lt;code>tsconfig.json&lt;/code>里的&lt;code>&amp;quot;compilerOptions&amp;quot;&lt;/code>写有&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code>，而我之前一直都是用的&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code>。好奇他们之间的差别，所以去 TypeScript官网文档查了下&lt;a class="link" href="https://www.typescriptlang.org/tsconfig/#jsx" target="_blank" rel="noopener"
+>资料&lt;/a>：&lt;/p>
+&lt;blockquote>
+&lt;p>Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.&lt;/p>
+&lt;ul>
+&lt;li>react: Emit .js files with JSX changed to the equivalent React.createElement calls&lt;/li>
+&lt;li>react-jsx: Emit .js files with the JSX changed to _jsx calls&lt;/li>
+&lt;li>react-jsxdev: Emit .js files with the JSX to _jsx calls&lt;/li>
+&lt;li>preserve: Emit .jsx files with the JSX unchanged&lt;/li>
+&lt;li>react-native: Emit .js files with the JSX unchanged&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>Umm，说实话没看懂，继续往下滑，发现一个&lt;a class="link" href="https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" target="_blank" rel="noopener"
+>链接&lt;/a>，点进去，读了下，发现&lt;code>react-jsx&lt;/code>相对&lt;code>react&lt;/code>有许多优点，例如：&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>With the new transform, you can &lt;strong>use JSX without importing React&lt;/strong>.&lt;/li>
+&lt;li>Depending on your setup, its compiled output may &lt;strong>slightly improve the bundle size&lt;/strong>.&lt;/li>
+&lt;li>It will enable future improvements that &lt;strong>reduce the number of concepts&lt;/strong> you need to learn React.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>继续秉承着“啥新用啥”的信条，我便将&lt;code>tsconfig.json&lt;/code>里的&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code>改成了&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code>。但是过了会儿突然想起来我使用的&lt;code>babel-loader&lt;/code>编译的，所以写在&lt;code>tsconfig.json&lt;/code>里其实并没有什么卵用&amp;hellip;&lt;/p>
+&lt;p>所以应该修改&lt;code>babel.config.js&lt;/code>的&lt;code>module.exports&lt;/code>，添加以下属性：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="s2">&amp;#34;presets&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;@babel/preset-react&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;runtime&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;automatic&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>不过单单这么改还是会报错，这是因为 ESLint 的缘故，实际上代码是可以正常编译的。不过 ESLint 总是报错看着很不爽呀，说实话我都想把它给卸载了。但是转念又想到将来团队协作肯定是要用到的，只好再硬着头皮继续写了。&lt;/p>
+&lt;p>修改 ESLint 配置文件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;rules&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;react/jsx-uses-react&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;react/react-in-jsx-scope&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
