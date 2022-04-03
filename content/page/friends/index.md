@@ -9,11 +9,6 @@ menu:
     params: 
       icon: link
 links:
-  - title: 辇道增七的小站
-    description: 不忘初心，方得始终
-    website: https://wuhaoda.life:444/
-    image: whd1.jpg
-
   - title: 朝花集
     description: 直到黄昏洗尽颜色
     website: https://blog.wuhaoda.life:444/
@@ -33,6 +28,11 @@ links:
     description: 往事已成定局，但未来由我们书写
     website: https://www.nirvana.cool/
     image: zwj.jpg
+
+  - title: 江陵
+    description: 找回我的精神
+    website: http://江陵.life
+    image: whd1.jpg
 
   - title: OkAndGreat 的个人博客
     description: Great,up,happy! 
