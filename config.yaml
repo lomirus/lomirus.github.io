@@ -4,6 +4,20 @@ theme: hugo-theme-stack
 paginate: 5
 title: Lomirus' Site
 
+languages:
+    zh-cn:
+        languageName: 简体中文
+        title: Lomirus' Site
+        weight: 1
+    en:
+        languageName: English
+        title: Lomirus' Site
+        weight: 2
+    jp:
+        languageName: 日本語
+        title: ロミラスのサイト
+        weight: 3
+
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
 
