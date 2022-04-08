@@ -34,15 +34,20 @@ links:
     website: http://江陵.life
     image: whd1.jpg
 
+  - title: MYY
+    description: 扩大舒适圈
+    website: http://mayingyi.space
+    image: https://avatars.githubusercontent.com/u/72426675?s=400&u=0a0c37c3b974f47a46c4acd1ec111dc6dd692d4c&v=4
+
   - title: OkAndGreat 的个人博客
     description: Great,up,happy! 
     website: http://zhongtai521.wang/
     image: wzt.jpg
 
   - title: Sunsun
-    description: 114514
-    website: https://sunsun.work/
-    image: hs.png
+    description: Lilin
+    website: https://re-sunsun.github.io/
+    image: https://raw.githubusercontent.com/re-sunsun/image/master/blog/head/newhead.jpg
 
   - title: YYQF's Blog
     description: " "
