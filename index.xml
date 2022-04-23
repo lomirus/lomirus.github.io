@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下店中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下典中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
 &lt;p>而说回这学期的西班牙语，或许是发音比较简单的原因（除了大舌音），我感觉相对前两门语言我们似乎更早地进入了对于语法的学习。因此，需要记忆的东西也变得更多了。此外，也是为了尽量不在重蹈前两次的覆辙，所以这次我便想去试着做一些笔记，所以也就有了这边文章。写的过程，也权当是复习了。&lt;/p>
 &lt;h2 id="字母">字母&lt;/h2>
 &lt;p>西班牙语相对拉丁字母来说，只是多了一个字母，即 &lt;code>Ñ/ñ&lt;/code>，另外也还有两个比较特殊的字母，即 &lt;code>Ch/ch&lt;/code> 和 &lt;code>Ll/ll&lt;/code>。很明显地，可以看出这俩其实就是两个字母的组合。但是在某些使用西班牙的国家确实是把他们两个作为两个单独的字母来看待的。所以如果要回答西班牙语中到底有多少个字母，答案既可以是27个，也可以是29个。&lt;/p>
@@ -52,14 +52,11 @@
 &lt;p>e.g.&lt;/p>
 &lt;blockquote>
 &lt;p>El mundo = The world = 砸瓦鲁多（雾）&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
 &lt;p>Los niños = The children&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
 &lt;p>Unas niñas = Some girls&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="阴阳性">阴阳性&lt;/h2>
+&lt;h2 id="基础语法">基础语法&lt;/h2>
+&lt;h3 id="阴阳性">阴阳性&lt;/h3>
 &lt;p>阴阳性可谓是西班牙语的一大特色。首先名词要分阴阳性，其次代词冠词动词等也都要根据对象来变形。所以接下来就说一下判断西班牙语中的名词的印象的规律。&lt;/p>
 &lt;p>第一，也是最常用的规律，o 结尾的，一般是阳性，a 结尾的，一般是阴性。当然这个并不绝对，但是对于大多数名词甚至代词冠词来说都是适用的。&lt;/p>
 &lt;p>e.g.&lt;/p>
@@ -110,9 +107,10 @@
 &lt;p>el amigo -&amp;gt; la amiga&lt;/p>
 &lt;/blockquote>
 &lt;p>其他更复杂的规则可以自行查阅，这里就不再展开了。&lt;/p>
-&lt;h2 id="复数">复数&lt;/h2>
+&lt;h3 id="复数">复数&lt;/h3>
 &lt;p>单复数变化规则相对简单。元音结尾，直接加 -s，辅音结尾，直接加 -es。当然，凡事总有例外，但本文毕竟是入门文章，所以这个也是和前面一样不再继续展开了。&lt;/p>
-&lt;h2 id="人称代词">人称代词&lt;/h2>
+&lt;h2 id="代词">代词&lt;/h2>
+&lt;h3 id="人称代词">人称代词&lt;/h3>
 &lt;p>下面为了减少翻译为汉语的歧义，使用特定的规则来表示人称代词：&lt;/p>
 &lt;ul>
 &lt;li>1️⃣2️⃣3️⃣: 第几人称，~ 表示同上；&lt;/li>
@@ -216,7 +214,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="物主代词">物主代词&lt;/h2>
+&lt;h3 id="物主代词">物主代词&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -344,7 +342,8 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="系动词">系动词&lt;/h2>
+&lt;h2 id="动词">动词&lt;/h2>
+&lt;h3 id="系动词">系动词&lt;/h3>
 &lt;p>（待写）&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
 &lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
 &lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
