@@ -1,4 +1,351 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 19 Dec 2021 00:01:05 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下店中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
+&lt;p>而说回这学期的西班牙语，或许是发音比较简单的原因（除了大舌音），我感觉相对前两门语言我们似乎更早地进入了对于语法的学习。因此，需要记忆的东西也变得更多了。此外，也是为了尽量不在重蹈前两次的覆辙，所以这次我便想去试着做一些笔记，所以也就有了这边文章。写的过程，也权当是复习了。&lt;/p>
+&lt;h2 id="字母">字母&lt;/h2>
+&lt;p>西班牙语相对拉丁字母来说，只是多了一个字母，即 &lt;code>Ñ/ñ&lt;/code>，另外也还有两个比较特殊的字母，即 &lt;code>Ch/ch&lt;/code> 和 &lt;code>Ll/ll&lt;/code>。很明显地，可以看出这俩其实就是两个字母的组合。但是在某些使用西班牙的国家确实是把他们两个作为两个单独的字母来看待的。所以如果要回答西班牙语中到底有多少个字母，答案既可以是27个，也可以是29个。&lt;/p>
+&lt;p>至于发音嘛，建议还是去看维基百科吧，毕竟博客里不方便放音频，而且介绍不同的发音情况也会导致篇幅太长（虽然西班牙语的单词确实可以直接根据单词读出发音）。&lt;/p>
+&lt;h2 id="冠词">冠词&lt;/h2>
+&lt;h3 id="定冠词">定冠词&lt;/h3>
+&lt;p>首先介绍一下最常用的冠词，其中涉及到了复数和阴阳性，这几个知识点会在后面提到。另外先说这个还有就是因为后面为了区分阴阳性，也一般会在单词前加定冠词来表示的。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>单数&lt;/th>
+&lt;th>复数&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>阳性&lt;/td>
+&lt;td>el&lt;/td>
+&lt;td>los&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>阴性&lt;/td>
+&lt;td>la&lt;/td>
+&lt;td>las&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="不定冠词">不定冠词&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>单数&lt;/th>
+&lt;th>复数&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>阳性&lt;/td>
+&lt;td>uno&lt;/td>
+&lt;td>unos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>阴性&lt;/td>
+&lt;td>una&lt;/td>
+&lt;td>unas&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>e.g.&lt;/p>
+&lt;blockquote>
+&lt;p>El mundo = The world = 砸瓦鲁多（雾）&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Los niños = The children&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Unas niñas = Some girls&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="阴阳性">阴阳性&lt;/h2>
+&lt;p>阴阳性可谓是西班牙语的一大特色。首先名词要分阴阳性，其次代词冠词动词等也都要根据对象来变形。所以接下来就说一下判断西班牙语中的名词的印象的规律。&lt;/p>
+&lt;p>第一，也是最常用的规律，o 结尾的，一般是阳性，a 结尾的，一般是阴性。当然这个并不绝对，但是对于大多数名词甚至代词冠词来说都是适用的。&lt;/p>
+&lt;p>e.g.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>el libro（书）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>el río（河）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>el oro（金）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la mesa（桌子）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la silla（椅子）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la luna（月亮）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>除此之外，还有几条出现频率相对较低，但优先级更高的规则：&lt;/p>
+&lt;p>以 -or，-aje，-an，-ambre 结尾的词多属阳性:&lt;/p>
+&lt;ul>
+&lt;li>el valor(价值)&lt;/li>
+&lt;li>el motor (发动机)&lt;/li>
+&lt;li>el traje(西装)&lt;/li>
+&lt;li>el oleaje(浪)&lt;/li>
+&lt;li>el pan (面包)&lt;/li>
+&lt;li>el plan (计划)&lt;/li>
+&lt;li>el enjambre(蜂群)&lt;/li>
+&lt;/ul>
+&lt;p>以 –dad，-umbre，-tud，-ie, -sis, -ción, -sión 结尾的词多属阴性:&lt;/p>
+&lt;ul>
+&lt;li>la bondad(仁慈)&lt;/li>
+&lt;li>la pesadumbre(忧虑)&lt;/li>
+&lt;li>la virtud(道德)&lt;/li>
+&lt;li>la serie(系列)&lt;/li>
+&lt;li>la crisis(危机)&lt;/li>
+&lt;li>la canción(歌曲)&lt;/li>
+&lt;li>la sesión(会议)&lt;/li>
+&lt;/ul>
+&lt;p>如果需要将阳性名词变成阴性，若名词以辅音结尾，一般是直接加 -a；若名词以 -e, -o 结尾，一般是把结尾的字母换成 -a。比如随便举几个简单的例子：&lt;/p>
+&lt;blockquote>
+&lt;p>el niño -&amp;gt; la niña&lt;/p>
+&lt;p>el amigo -&amp;gt; la amiga&lt;/p>
+&lt;/blockquote>
+&lt;p>其他更复杂的规则可以自行查阅，这里就不再展开了。&lt;/p>
+&lt;h2 id="复数">复数&lt;/h2>
+&lt;p>单复数变化规则相对简单。元音结尾，直接加 -s，辅音结尾，直接加 -es。当然，凡事总有例外，但本文毕竟是入门文章，所以这个也是和前面一样不再继续展开了。&lt;/p>
+&lt;h2 id="人称代词">人称代词&lt;/h2>
+&lt;p>下面为了减少翻译为汉语的歧义，使用特定的规则来表示人称代词：&lt;/p>
+&lt;ul>
+&lt;li>1️⃣2️⃣3️⃣: 第几人称，~ 表示同上；&lt;/li>
+&lt;li>🌑🌕: 分别指代阴阳，🌗表示阴阳通用，重复符号表示复数；&lt;/li>
+&lt;li>👍: 敬语。&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>人称&lt;/th>
+&lt;th>阴阳性/单复数&lt;/th>
+&lt;th>敬语&lt;/th>
+&lt;th>中文&lt;/th>
+&lt;th>西班牙语&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1️⃣&lt;/td>
+&lt;td>🌗&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我&lt;/td>
+&lt;td>yo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌕🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我们（男）&lt;/td>
+&lt;td>nosotros&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我们（女）&lt;/td>
+&lt;td>nosotras&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2️⃣&lt;/td>
+&lt;td>🌗&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>你&lt;/td>
+&lt;td>tú&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌗&lt;/td>
+&lt;td>👍&lt;/td>
+&lt;td>您&lt;/td>
+&lt;td>usted&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌕🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>你们&lt;/td>
+&lt;td>vosotros&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>妳们&lt;/td>
+&lt;td>vosotras&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌗🌗&lt;/td>
+&lt;td>👍&lt;/td>
+&lt;td>诸位&lt;/td>
+&lt;td>ustedes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3️⃣&lt;/td>
+&lt;td>🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>他&lt;/td>
+&lt;td>él&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>她&lt;/td>
+&lt;td>élla&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌕🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>他们&lt;/td>
+&lt;td>ellos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>她们&lt;/td>
+&lt;td>ellas&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="物主代词">物主代词&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>人称&lt;/th>
+&lt;th>阴阳性/单复数&lt;/th>
+&lt;th>敬语&lt;/th>
+&lt;th>中文&lt;/th>
+&lt;th>西班牙语&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1️⃣&lt;/td>
+&lt;td>🌗&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我&lt;/td>
+&lt;td>mi&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌕🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我们（男）&lt;/td>
+&lt;td>nuestro&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>我们（女）&lt;/td>
+&lt;td>nuestra&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2️⃣&lt;/td>
+&lt;td>🌗&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>你&lt;/td>
+&lt;td>tu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌗/🌗🌗&lt;/td>
+&lt;td>👍&lt;/td>
+&lt;td>您/诸位&lt;/td>
+&lt;td>su&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌕🌕&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>你们&lt;/td>
+&lt;td>vuestro&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>~&lt;/td>
+&lt;td>🌑🌑&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>妳们&lt;/td>
+&lt;td>vosotra&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3️⃣&lt;/td>
+&lt;td>🌗/🌗🌗&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>他/他们&lt;/td>
+&lt;td>su&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>不会吧，不会吧，不会真有人觉得背完了这几个单词就学会了西班牙语的物主代词了吧？&lt;/p>
+&lt;/blockquote>
+&lt;p>西班牙当然不会这么无聊让你背背就完事儿了，都学到这儿了怎么能不整点儿活呢？实际上，物主代词是会根据对象的复数和阴阳性变化的。&lt;/p>
+&lt;p>e.g.&lt;/p>
+&lt;blockquote>
+&lt;p>Mis amigos = My friends&lt;/p>
+&lt;/blockquote>
+&lt;p>需要注意一下，这里的“朋友”是复数，所以代词“我的”后面也要加 s。其他的物主代词也是同理，比如：nuestros, nuestras, vuestros, vuestras, tus, sus。&lt;/p>
+&lt;p>下面是一个以🐱（gato）为例，一个更加完整的表格：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>🌕&lt;/th>
+&lt;th>🌑&lt;/th>
+&lt;th>🌕🌕&lt;/th>
+&lt;th>🌑🌑&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>mi&lt;/td>
+&lt;td>el gato mío&lt;/td>
+&lt;td>la gata mía&lt;/td>
+&lt;td>los gatos míos&lt;/td>
+&lt;td>las gatas mías&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tu&lt;/td>
+&lt;td>el gato tuyo&lt;/td>
+&lt;td>la gata tuya&lt;/td>
+&lt;td>los gatos tuyos&lt;/td>
+&lt;td>las gatas tuyas&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>su&lt;/td>
+&lt;td>el gato suyo&lt;/td>
+&lt;td>la gata suya&lt;/td>
+&lt;td>los gatos suyos&lt;/td>
+&lt;td>las gatas suyas&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nuestro&lt;/td>
+&lt;td>el gato nuestro&lt;/td>
+&lt;td>la gata nuestra&lt;/td>
+&lt;td>los gatos nuestros&lt;/td>
+&lt;td>las gatas nuestras&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vuestro&lt;/td>
+&lt;td>el gato vuestro&lt;/td>
+&lt;td>la gata nuestro&lt;/td>
+&lt;td>los gatos vuestros&lt;/td>
+&lt;td>las gatas vuestras&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="系动词">系动词&lt;/h2>
+&lt;p>（待写）&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
 &lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
 &lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
 等著名引擎，然而这些都是商业引擎，且对我来说太过笨重。大一的时候听说了
@@ -842,7 +1189,157 @@ data-flex-basis="320px"
 &lt;li>Learn music&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Some Impressions (2021-08)</title><link>https://lomirus.github.io/p/2021-08/</link><pubDate>Thu, 05 Aug 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/2021-08/</guid><description>&lt;h2 id="一">一&lt;/h2>
+&lt;/ul></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零&lt;/h2>
+&lt;p>做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~&lt;/p>
+&lt;h2 id="永真---出场">永真 - 出场&lt;/h2>
+&lt;blockquote>
+&lt;p>忍びよ、目覚めて下さい。貴方の、主の為に。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="弦一郎---芦苇原">弦一郎 - 芦苇原&lt;/h2>
+&lt;blockquote>
+&lt;p>久しな、御子よ。（おじゅうん？）の（ぼうぜん？）以来か。&lt;/p>
+&lt;p>久しいな、御子よ。叔父上（おじじょう）の墓前（ぼぜん）以来か。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>久し&lt;/code> 作为形容词少了个 &lt;code>い&lt;/code>，此处应为 &lt;code>久しいな&lt;/code>，无论是从长音还是语法上原来听的都不算对&amp;hellip;&lt;/p>
+&lt;p>另外有两个生词，&lt;code>叔父上（おじじょう）&lt;/code>和&lt;code>墓前（ぼぜん）&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>弦一郎旦那。あたしはっ。済まぬ。&lt;/p>
+&lt;p>弦一郎殿。あたしは。済まぬ。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>旦那（だんな）&lt;/code> 与 &lt;code>殿（どの）&lt;/code> 均有表示XX大人的意思，此处应用 &lt;code>殿（どの）&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>御任せよ。&lt;/p>
+&lt;p>御任せを。&lt;/p>
+&lt;/blockquote>
+&lt;p>这里在语法上确实有些区别，不过在句意的理解上没啥影响。&lt;/p>
+&lt;blockquote>
+&lt;p>邪魔だってするか、御子のしのびよ。&lt;/p>
+&lt;p>邪魔立てするか、御子のしのびよ。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>んっなれ、😵&lt;/p>
+&lt;p>お、のれ、😵&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>ん？🤨&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>は！😏&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>忍びよ、（ヒキ？）事は（ユウマイ？）な。御子は貰って行くぞ。&lt;/p>
+&lt;p>忍びよ、卑怯（ひきょう）とは言うまいな。御子は貰って行くぞ。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="弦一郎---天守阁">弦一郎 - 天守阁&lt;/h2>
+&lt;blockquote>
+&lt;p>御爺様の（ごうゆうす？）はどうだ。&lt;/p>
+&lt;p>御祖父様のご様子（ようす）はどうだ。&lt;/p>
+&lt;/blockquote>
+&lt;p>日语里同音词这个设定真的离谱。&lt;/p>
+&lt;blockquote>
+&lt;p>一心様は、命を保って（ウラレル？）のは、不思議の事です。&lt;/p>
+&lt;p>一心様は、命を保っておられるのは、不思議のほどです。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>おられる&lt;/code> 是 &lt;code>居る（おる）&lt;/code> 的敬语形式&lt;/p>
+&lt;blockquote>
+&lt;p>そうか。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>御子よ、もう一度と言う。不死の契りを俺と（もすぶ？）&lt;/p>
+&lt;p>御子よ、もう一度言う。不死の契りを、俺と結べ（むすべ）&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>結べ&lt;/code> 是 &lt;code>むすぶ&lt;/code> 的命令形&lt;/p>
+&lt;blockquote>
+&lt;p>出来ませんぬ、弦一郎旦那。&lt;/p>
+&lt;p>出来ませんぬ、弦一郎殿。&lt;/p>
+&lt;/blockquote>
+&lt;p>不说了，同上。&lt;/p>
+&lt;blockquote>
+&lt;p>（たとえひとたび？）敗れるのも、命を落とし、主に必ず取り戻し、其れが、我が忍びなれば。&lt;/p>
+&lt;p>たとえ一度、敗れる（やぶれる）とも、命を賭し（とし）、主に必ず取り戻す、それが、我が忍びなれば。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>仮令（たとえ）...とも/ても&lt;/code> 表示纵使、即使。&lt;/p>
+&lt;blockquote>
+&lt;p>お迎えに参上しました。今暫く、御待ち下さい。&lt;/p>
+&lt;p>お迎えに参上いたしました。今、暫く、お待ち下さい。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>なるほどな。貴様を殺し（きらぬかぎる？）、龍胤を我が手に出来ぬよ。&lt;/p>
+&lt;p>なるほどな。貴様を殺し切らぬ限り、龍胤を、我が手にはできぬような。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>見事な、忍びよ。&lt;/p>
+&lt;p>見事な、御子の忍びよ。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>惜しいな、主を換える積りは無いか。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>（ざれ？）事。&lt;/p>
+&lt;p>戯言（ざれごと）を。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>（ざれ？）事だと？俺は、此の葦名を守る為なれば、どうの（？？？）力で有れ、（したかえち？）見せる。（ともえ？）の雷、見せてやろ。&lt;/p>
+&lt;p>戯言だと？俺は、此の葦名を守る為なれば、どうの異端の力で有れ、縦えて見せる。巴（ともえ）の雷、見せてやろ。&lt;/p>
+&lt;/blockquote>
+&lt;p>这里弦一郎说 &lt;code>異端&lt;/code> 的时候声音实在太小了，听不清。不过就这个单词本身而言我还算挺熟的，甚至还记得第一次是在哪儿见到的。如果没记错的话，应该是在看《进击的巨人》里面前几话的时候，里面阿尔敏在被几个小混混揍的时候被称为 &lt;code>異端者&lt;/code>，所以我当时就顺手查了下词典记下了。&lt;/p>
+&lt;blockquote>
+&lt;p>葦名は、此の国は、俺の全てだ。其の為なら、俺は、人間を止めよ。&lt;/p>
+&lt;p>葦名は、此の国は、俺の全てだ。其の為なら、俺は、人間を止めよう。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>我不做人了，JoJo！&lt;/code> 这段话着实印象深刻，甚至可以说我就是冲着这段来的🤣️&lt;/p>
+&lt;blockquote>
+&lt;p>（しびりと？）帰りか？&lt;/p>
+&lt;p>死人（しびと）帰りか？&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>さあ。&lt;/p>
+&lt;p>さらば。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="弦一郎一心---芦苇原">弦一郎、一心 - 芦苇原&lt;/h2>
+&lt;blockquote>
+&lt;p>九郎様。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>久しいな、御子の忍び。見よ、不死斬りの（もうひとふり？）よ。&lt;/p>
+&lt;p>久しいな、御子の忍び。見よ、不死斬りのもう一振りよ。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>一振り&lt;/code> 在这里可以认为是量词，例如 Moji 辞書 上有一个例句：&lt;code>ひと振りの太刀（たち）&lt;/code>，意为 &lt;code>一把大刀&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>弦一郎旦那、其の用の物では、（けんしで？）葦名の運命は、変わりませぬ。狼よ、龍胤等、誰の手に有るべきではないのだ。九郎を（かける？）な。&lt;/p>
+&lt;p>弦一郎殿、其のような物では、決して（けっして）葦名の運命は、変わりませぬ。狼よ、竜胤等、誰の手にも、有るべきではないのだ。苦労をかけるな。&lt;/p>
+&lt;/blockquote>
+&lt;p>把 &lt;code>苦労&lt;/code> 听成 &lt;code>九郎&lt;/code> 可太草了，不过毕竟只狼整天九郎九郎得叫，听错也不能全怪我嘛（&lt;/p>
+&lt;p>其实当初听的时候就感觉很奇怪：把 &lt;code>九郎&lt;/code> 给 &lt;code>かける&lt;/code> 了是几个意思，应该是我听错了不是 &lt;code>かける&lt;/code> 吧？没想到这里没听错，错的反而是前面。&lt;/p>
+&lt;blockquote>
+&lt;p>（ぎょうい？）。前る（まえる）。&lt;/p>
+&lt;p>御意（ぎょい）。参る（まいる）。&lt;/p>
+&lt;/blockquote>
+&lt;p>还是为 &lt;code>前る&lt;/code> 是名词活用做动词&amp;hellip;结果发现原来是我自己生造的。&lt;/p>
+&lt;blockquote>
+&lt;p>嗚呼、（しまいとしゅう？）。&lt;/p>
+&lt;p>嗚呼、終いとしよう。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>俺は、（きっきょく？）何も出来なかった。だっが、龍胤が、此の国を生かす。此れで葦名の夕（ゆう）は、開ける。ほんっ。&lt;/p>
+&lt;p>俺は、結局（けっきょく）、何も出来なかった。だが、竜胤が、此の国を生かす。此れで葦名の夜（よ）は、明ける。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>划开/开启苇名的的日暮/夕阳&lt;/code> v.s. &lt;code>苇名的黑夜即将破晓&lt;/code>. 好像都能解释得过去（&lt;/p>
+&lt;p>“结果我到头来，还是什么都没有做到”，划重点，感觉这句话放在这里对弦一郎的人物刻画真的是太适合了，尤其是那种体现出的无力与不甘。不过感觉其实我也和弦一郎差不多，终究是，“结果我到头来，还是什么都没有做到”😮‍💨️。&lt;/p>
+&lt;blockquote>
+&lt;p>哀れな（まも？）の、最後願えじゃ。わしは此の葦名を、（ゆみがえなせんねばなら？）、（ゆえに？）、隻狼、（おまし？）を斬るぞ。&lt;/p>
+&lt;p>憐れな孫（まご）の、最後の願い（ねがい）じゃ。儂は此の葦名を、黄泉帰らせぬばならぬ、ゆえに隻狼、お主を斬るぞ。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>黄泉&lt;/code> 一词太生僻了，怨不得我呀😭&lt;/p>
+&lt;p>在 “憐れな孫（まご）の、最後の願い（ねがい）じゃ” 这句话的中文翻译中，&lt;code>憐れな孫&lt;/code> 被翻译为 &lt;code>可怜孙儿&lt;/code>，这种带有陌生而又熟悉的感觉的称谓，确实莫名地使我同情起了弦一郎。&lt;/p>
+&lt;p>&lt;strong>这是我可怜孙儿的，最后的愿望啊。&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>かあ。やれ。（みごこ？）じゃ、隻狼。&lt;/p>
+&lt;p>かあ。やれ。見事じゃ、隻狼。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>さらば。&lt;/p>
+&lt;/blockquote></description></item><item><title>Some Impressions (2021-08)</title><link>https://lomirus.github.io/p/2021-08/</link><pubDate>Thu, 05 Aug 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/2021-08/</guid><description>&lt;h2 id="一">一&lt;/h2>
 &lt;p>自上次期中总结过去也差不多两个月了，期末考试也已经过去了一个月，按说我早该动手这篇文章了，但实际上却迟迟没有动笔。这并不是说我没有时间如何如何，只是我变的愈发懒散了，于是乎便少了份写博客的动力。&lt;/p>
 &lt;p>回忆起我之前每次写博客，无非是想去说什么什么，却无处施展，于是便到自己的博客上胡绉。既然如此，那每次博文的开头便少不了牢骚抱怨。每当自己去浏览自己的旧文，便发觉自己只是一个丧丧的駄目人間，不免心生愧意：将自己如此劣质的文字公诸网路，实属制造垃圾资源。又“于是乎”地，废弃了自己的博客。而这正是我上一个博客的结局。&lt;/p>
 &lt;p>但是，有时候确实有些东西不吐不快。长久地将烦闷郁结在心中，绝然不能称之为一个好习惯。如此向来，将自己的博客作为自己倾吐不快的垃圾场，也算是物尽其用了。&lt;/p>
@@ -910,7 +1407,150 @@ data-flex-basis="320px"
 &lt;p>昨天晚上又下了一场雨，当时我在仍在观众席上，躲在遮雨棚下。身后开启了夜灯，灯光下的跑道，雨滴淅淅沥沥的砸在水坑里。我来时，同我一起在观众席上的加上我共三人；我走时，只剩下了一个。我坐在最高处，看着他们，尽管并不知道他们在干什么。&lt;/p>
 &lt;p>这是处暑后的第三日，身着短袖，自不敌入夜后的寒气，只好先行一步离开。&lt;/p>
 &lt;p>离开时，我撑起雨伞，将自己送回了宿舍。&lt;/p>
-&lt;p>（完）&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>（完）&lt;/p></description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
+&lt;h2 id="foreword">Foreword&lt;/h2>
+&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
+&lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
+&lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
+&lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
+&lt;h2 id="customize">Customize&lt;/h2>
+&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo nano /etc/pacman.d/mirrorlist
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
+&lt;pre>&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+# Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
+&lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
+&lt;pre>&lt;code>sudo systemctl disable pamac-mirrorlist.timer
+&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts&lt;/h3>
+&lt;p>Open:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">gnome-control-center
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Command&lt;/th>
+&lt;th>Shortcut&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Launch Terminal&lt;/td>
+&lt;td>&lt;code>gnome-terminal&lt;/code>&lt;/td>
+&lt;td>&lt;code>Super&lt;/code> + &lt;code>T&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Launch Nautilus&lt;/td>
+&lt;td>&lt;code>nautilus&lt;/code>&lt;/td>
+&lt;td>&lt;code>Super&lt;/code> + &lt;code>E&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Delay Screenshot&lt;/td>
+&lt;td>&lt;code>gnome-screenshot --delay 3&lt;/code>&lt;/td>
+&lt;td>&lt;code>Ctrl&lt;/code> + &lt;code>Print&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings&lt;/h3>
+&lt;p>You need to installl VSCode before reading this section.&lt;/p>
+&lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
+&lt;pre>&lt;code class="language-json5" data-lang="json5">{
+&amp;quot;window.zoomLevel&amp;quot;: 2,
+// Fix Terminal Font Display
+&amp;quot;terminal.integrated.fontFamily&amp;quot;: &amp;quot;NotoSansMono Nerd Font&amp;quot;,
+// Make tab size from 2 to 4
+&amp;quot;vetur.format.options.tabSize&amp;quot;: 4
+}
+&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading&lt;/h3>
+&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
+&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">timedatectl
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages&lt;/h2>
+&lt;h3 id="basic">Basic&lt;/h3>
+&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>&lt;/h4>
+&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
+&lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
+&lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S base-devel
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S yay
+sudo pacman -S vim
+sudo pacman -S net-tools
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S neofetch
+sudo pacman -S btop
+sudo pacman -S htop
+sudo pacman -S gnome-terminal-fedora
+sudo pacman -S wireshark-qt
+sudo pacman -S aria2
+sudo pacman -S gpick
+yay -S marktext-bin
+yay -S visual-studio-code-bin
+yay -S obs-studio
+yay -S google-chrome
+yay -S firefox-developer-edition
+yay -S feishu
+&lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
+yay -S electron-netease-cloud-music
+&lt;span class="c1"># Or a more beautiful version:&lt;/span>
+yay -S yesplaymusic
+&lt;span class="c1"># Emoji Picker&lt;/span>
+yay -S emote
+yay -S burpsuite
+yay -S postman-bin
+yay -S scrcpy
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
+&lt;h4 id="nodejs">NodeJS&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S npm
+sudo pacman -S yarn
+sudo npm install -g nrm
+nrm use taobao
+sudo npm install -g @vue/cli
+sudo npm install -g create-react-app
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S deno
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># Install Rust&lt;/span>
+curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S jdk-openjdk
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S docker
+sudo systemctl &lt;span class="nb">enable&lt;/span> docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-rime
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-mozc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Korean:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S fcitx5-hangul
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.xprofile&lt;/code> for X11 users:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.pam_environment&lt;/code> for Wayland users:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
+&lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
+>thep0y / fcitx5-themes&lt;/a>.&lt;/p>
+&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">yay -S mongodb-bin
+yay -S mongodb-tools-bin
+sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
+sudo systemctl start mongodb.service
+yay -S icalingua
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo pacman -S clash
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
+sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
+>dashboard&lt;/a> for configuration.&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
 &lt;p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p>
 &lt;ul>
@@ -1345,4 +1985,58 @@ npx create-react-app ts --template typescript
 &lt;span class="s2">&amp;#34;react/react-in-jsx-scope&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Code</title><link>https://lomirus.github.io/categories/code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/code/</guid><description>&lt;img src="https://lomirus.github.io/categories/code/cover.webp" alt="Featured image of post Code" /></description></item><item><title>English</title><link>https://lomirus.github.io/categories/english/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/english/</guid><description>&lt;img src="https://lomirus.github.io/categories/english/cover.jpg" alt="Featured image of post English" /></description></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends' Links, mostly in Redrock.&lt;/p></description></item><item><title>Game</title><link>https://lomirus.github.io/categories/game/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/game/</guid><description>&lt;img src="https://lomirus.github.io/categories/game/cover.jpg" alt="Featured image of post Game" /></description></item><item><title>Literature</title><link>https://lomirus.github.io/categories/literature/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/literature/</guid><description>&lt;img src="https://lomirus.github.io/categories/literature/cover.webp" alt="Featured image of post Literature" /></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item><item><title>日本語</title><link>https://lomirus.github.io/categories/hihongo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/hihongo/</guid><description>&lt;img src="https://lomirus.github.io/categories/hihongo/cover.jpg" alt="Featured image of post 日本語" /></description></item><item><title>随笔，或其他</title><link>https://lomirus.github.io/categories/essays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/essays/</guid><description>&lt;img src="https://lomirus.github.io/categories/essays/cover.jpg" alt="Featured image of post 随笔，或其他" /></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Fiction: Upon the Mere</title><link>https://lomirus.github.io/p/upon-the-mere/</link><pubDate>Wed, 31 Mar 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/upon-the-mere/</guid><description>&lt;img src="https://lomirus.github.io/p/upon-the-mere/cover.jpg" alt="Featured image of post Fiction: Upon the Mere" />&lt;ul>
+&lt;li>This is a fiction that was written as my assignment of the Comprehensive English during my freshman in CQUPT.&lt;/li>
+&lt;li>The bold fonts here are used to mark the new words of this semester as my teacher requested.&lt;/li>
+&lt;/ul>
+&lt;h1 id="upon-the-mere">Upon the Mere&lt;/h1>
+&lt;p>It&amp;rsquo;s a long dream, I&amp;rsquo;ve had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn. It&amp;rsquo;s a quiet place, reeds growing around it and a river soaked the nearby earth. A lake branched out from the river was just behind the village. I had never been a regular there since my childhood, because I was still so young on those days, that even the &lt;strong>reeds&lt;/strong> could cover upon my head and make me drowned. Sometimes I would stare at the surface of the lake absent-mindedly or wondered if there was a monster &lt;strong>lurking&lt;/strong> in the bottom of the lake. Though honestly, this lake was not so big, probably no more than twenty meters wide. But I can still remembered the story that my grandma once told me with a serious expression: &amp;ldquo;Once upon a time, there was an old man who was living alone near the lake. But one day he vanished, and his body was never found after that. No one knew where he&amp;rsquo;d gone&amp;rdquo;&lt;/p>
+&lt;p>&amp;ldquo;So have you tried to search for him?&amp;rdquo; I asked.&lt;/p>
+&lt;p>&amp;ldquo;Perhaps, I am not sure,&amp;rdquo; she answered. &amp;ldquo;He&amp;rsquo;s an odd man, and seldom went out from his house. So we just didn&amp;rsquo;t notice any &lt;strong>anomalies&lt;/strong> for his disappearance at the first days. &amp;quot;&lt;/p>
+&lt;p>&amp;ldquo;But when we realized,&amp;rdquo; she added, &amp;ldquo;at least in my opinion, it&amp;rsquo;s been too late.&amp;rdquo;&lt;/p>
+&lt;p>&amp;ldquo;——Umm, maybe you don&amp;rsquo;t like this story?&amp;rdquo; again it&amp;rsquo;s she that proposed. &amp;ldquo;Well, we can just leave it alone and go home for a rest now. What do you think?&amp;rdquo;&lt;/p>
+&lt;p>&amp;ldquo;Whew, you&amp;rsquo;re right, &amp;quot; so I seconded, &amp;ldquo;Why need we talk such boring and scary topics. &amp;quot;&lt;/p>
+&lt;p>And so I reached home, played all the left day, until the sun went down, and the stars came out beyond the clouds.&lt;/p>
+&lt;p>I still miss those days of my childhood. Children like us then were always curious about the the world which they had never seen before. But with the days in and out, continuous stimulations from various novelties had been gradually making us become numb to re-perceive the world. Sometimes I might fantasized and wished there would be a &lt;em>&lt;strong>Deus ex Machina&lt;/strong>&lt;/em> to renew or even reconstruct my world. But all of those might forever only remain in my nostalgia.&lt;/p>
+&lt;p>I sounds like a sad story, as if my childhood was so ordinary and boring. And as a matter of fact, I can hardly deny it, since it&amp;rsquo;s not a false description of the life, that I&amp;rsquo;ve experienced by myself. But on the other hand while in my view, most of the people just wasted their life and were busy handling all kinds of meaningless affairs forcedly or unconsciously, and finally died with doubts and regrets, but said &amp;ldquo;I&amp;rsquo;ve enjoyed my life and been enough&amp;rdquo;. And I do not think that everyone have an obligation to live an exceptional story.&lt;/p>
+&lt;p>But what I said above maybe just self-comforting words. After all, no one would like to spend the whole life for their goals &lt;strong>unswervingly&lt;/strong> and then finally turn into the dust that no one knows and remembers, as if they had never come before. I don&amp;rsquo;t know which side is right. It&amp;rsquo;s like a ultimate question. So I can say with certainty, that I cannot handle it.&lt;/p>
+&lt;p>But I did not think much about such things in that afternoon. For me, that afternoon was just a trivial one, of my thousands of afternoons. Many years later, when I tried to recall this period, I might have even forgotten it and cannot even utter any words about it. But I did remember that there was a time when I was truly living in that afternoon, which was enough. At least now I can still recall the dusk of that day, when the night gathered, and the darkness of forests were prolonged till the horizon. The moonlight cast on the &lt;strong>mottled&lt;/strong> leaves, and I &lt;strong>strolled&lt;/strong> along the path leading to the distance, no one with me except my shadow.&lt;/p>
+&lt;p>Both of the evening breeze and the morning breeze were cool and refreshing. And in fact, I was just a kid afraid of the dark like most kids then. So I cannot ensure that my memory is right, since I can even not believe that I was so brave to walk outside the darkness alone. either. So more particularly, it was like at a summer morning, on which time I was passing the path.&lt;/p>
+&lt;p>And therefore it brought me back to that distant morning again, when I was still a student. I was studying in the school of my village. It&amp;rsquo;s a small one, whose tallest building was only two floors. Ever since I started my school, I had constantly witnessed that it was &lt;strong>encroached&lt;/strong> gradually by surround growing houses and other buildings. The school also lacked the teachers. And by the way, it was said that my class teacher, also responsible for my math and other several main courses, teaching us for years, was used to be just a cook in our school, until no more teachers could be found.&lt;/p>
+&lt;p>And here I want to talk about Tony, my classmate. It doesn&amp;rsquo;t mean that he&amp;rsquo;s the special one, but just, the first one that appears in my mind when I am thinking back now. He&amp;rsquo;s neither my desk-mate, nor front-desk- or back-desk-mate. To be honest, he was a guy who was a little short, quiet, and perhaps also a nerd at certain angle. But in the other hand, he was not an academic-excellent student either. Perhaps on the opposite as what you think, he just performed bad in his nearly every courses.&lt;/p>
+&lt;p>But everyone at least has some areas in which (s)he is expert. And as for him, it is the origami. With no cut or paste, just by folding, the papers turned into various animals, like &lt;em>&lt;strong>senbazurus&lt;/strong>&lt;/em>&lt;sup>[1]&lt;/sup>, as if given the breath of life.&lt;/p>
+&lt;blockquote>
+&lt;p>[1] From the Japanese word 千羽鶴（せんばづる）, meaning one thousand origami cranes. Considering its English name is too lengthy when put here and below, which may cause the inconsistent language sense from the source language, therefore here I just used its romaji.&lt;/p>
+&lt;/blockquote>
+&lt;p>I was interested by this kind of marvelous work and asked him if he would like to teach me how to make it. &amp;ldquo;It seems to &lt;strong>flutter&lt;/strong> away once you throw it into the air,&amp;rdquo; I &lt;strong>flattered&lt;/strong>.&lt;/p>
+&lt;p>&amp;ldquo;But it cannot be true,&amp;rdquo; he responded, without looking up, just sitting on the chair and concentrating on the desk. &amp;ldquo;Senbazurus are just the senbazurus, instead the cranes indeed after all. There&amp;rsquo;s no sleep, no diet, and no joy, no pain for it. In short: &amp;lsquo;it doesn&amp;rsquo;t think, therefore it is not&amp;rsquo;.&amp;rdquo;&lt;/p>
+&lt;p>I was astonished by his words and could not &lt;strong>retort&lt;/strong> for the moment. I cannot deny that it is he that was at the true side, but I just did not understand why he was so serious about my request and his works in a sudden without any &lt;strong>omens&lt;/strong>. &amp;ldquo;Perhaps he just in a bad mood today,&amp;rdquo; I thought to myself. &amp;ldquo;Maybe I should have not bothered him.&amp;rdquo;&lt;/p>
+&lt;p>But except him, most of my classmates were all playing noisily in the spare time between or after classes. And Arnold was the kid king among the whole grade in the school, though there might be only a dozen of people among a whole grade in the school of this remote village of mine. But he still had many friends, yet I was not sure if they were the friends indeed or in &lt;strong>awe&lt;/strong>. I was the one of the kind of people who were &lt;strong>taciturn&lt;/strong> and &lt;strong>introverted&lt;/strong>, so rarely have I called any of my friends to play outside, and always on the contrary——it&amp;rsquo;s they called me. And just as what I mentioned, one day, Arnold called me out——of course I would not have dared to refuse. After all, he even took me to play &lt;strong>truant&lt;/strong> together before, so what else could be more severe than that in the world, for me then the kid?&lt;/p>
+&lt;p>And what did we do then? It&amp;rsquo;s already beyond my memory. What I could only remember was that Arnold seemed to have found some new preys while we were heading towards the Tony&amp;rsquo;s home. His house was just located near the lake that I mentioned above. So specifically, our destination was not Tony&amp;rsquo;s home, but was the lakefront.&lt;/p>
+&lt;p>&amp;ldquo;Hey, there&amp;rsquo;s David and Mark,&amp;rdquo; Arnold said, &amp;ldquo;I&amp;rsquo;ll go to join them now. You can stay here for the moment or go back. Anyway it&amp;rsquo;s not what I need to care about.&amp;rdquo; And I chose the former. After all, David and Mark was even one grade higher than me. Since I was not too familiar with them, to stay with a relative acquaintance like Tony would be surely a better choice obviously.&lt;/p>
+&lt;p>So we were just watching TV to kill time. But that&amp;rsquo;s not the only thing we used to spend. We then went out and sit around the lake to continue our words. We talked much, from tales to myths, from unicorn to phoenix, and from monsters to thrillers. I was so amazed by the unconstrained world that existed in his mind.&lt;/p>
+&lt;p>I used to have such a limited outlook during my childhood, and I can prove this by telling you a another story. It was when I was playing the &lt;strong>cobbles&lt;/strong> behind the yard of my house, of course it might be boring in your eyes, but not in mine, at least at that time. Then one of my neighbors, an elder sister several years older than me, just came back from her travel to the urban district, where row upon row of skyscrapers, as she described, stood upright there. But it is not the point I am going to say, because the story I am telling now actually began with her introduction about the zoo, yes, just the zoo of animals.&lt;/p>
+&lt;p>She said she had seen tigers, lions, elephants and many other various animals there. But in fact, I was doubtful about her words: &amp;ldquo;No joking please,&amp;rdquo; I laughed. &amp;ldquo;There were never such things like tigers that had even existed in the world.&amp;rdquo; And then it was her turn to be surprised: &amp;ldquo;What? Why do you have such thoughts?&amp;rdquo; She laughed, too. But I was serious: &amp;ldquo;Because I&amp;rsquo;ve never seen so-called beasts in the real world, but only in TV programs or cartoons.&amp;rdquo;&lt;/p>
+&lt;p>That&amp;rsquo;s really ridiculous, to only believe the things that we&amp;rsquo;ve seen, but ignore those unknown existences. Now I&amp;rsquo;ve been not so naïve anymore. However, what&amp;rsquo;s more ironical is that, up to now I have not seen the tigers or lions personally yet.&lt;/p>
+&lt;p>But Tony is not the same, I hardly doubted his words.&lt;/p>
+&lt;p>Watching the TV for a long time would finally turned a boring activity, therefore we then went away from the chairs and just hung out in his house.&lt;/p>
+&lt;p>I&amp;rsquo;ve never taken a close look at the interior of his house before. I mean, it&amp;rsquo;s the first time that I&amp;rsquo;ve taken, but, could also be the last time I did, though I still didn&amp;rsquo;t realized it at that time.&lt;/p>
+&lt;p>&amp;ldquo;Let&amp;rsquo;s see something interesting,&amp;rdquo; he supposed. And then he took out a picture from the drawer, and passed it to me. &amp;ldquo;That&amp;rsquo;s it,&amp;rdquo; he smiled. And in fact, it actually aroused my curiosity successfully.&lt;/p>
+&lt;p>It was a black &amp;amp; white photo, slightly yellowed color reflecting the old stories beyond its experienced ages. There was a Japanese woman who stood at the prominent position of the photo, which could be easily inferred through the &lt;strong>exotic&lt;/strong> kimono she wore, and the oil-paper umbrella she held. And apart from these, beside her was also a man who was standing upright.&lt;/p>
+&lt;p>So I started wondering——that who they were, and why they should appear in such picture——if they were still alive, or gone——was it a romance, or &lt;strong>tragedy&lt;/strong>.&lt;/p>
+&lt;p>So I started trying to think about anything that might had some relations about this but was just in vain. Tony was an American, which I was sure about, so his parents should also be the same, apparently. I could also confirm from the accents of their tongues and appearance of their faces easily, because they were just coming back outside, opening the door, standing in front of us, and staring at us.&lt;/p>
+&lt;p>So I tried to look up, and then saw his father. I attempted to greet to him or say something, but his fury suddenly erupted before my hello somehow when he noticed the picture on the desk. He tried to hold back his anger to me at first but finally still shouted to me: &amp;ldquo;Go out here, now.&amp;rdquo; And then he turned his head to Tony. The atmosphere became solemn and both me and Tony could feel the pressure from the air. The pressure seemed to push me out, and then I realized that I was just an unexpected guest, instead of the intimate of them or someone else.&lt;/p>
+&lt;p>Therefore I was only to leave. Perhaps in order to avoid my &lt;strong>suffocation&lt;/strong> due to the high pressure, Tony&amp;rsquo;s mom pulled out a piece of bread from their bag and gave it me, &amp;ldquo;You are Tony&amp;rsquo;s friend, right? Don&amp;rsquo;t be nervous or worry about Tony&amp;rsquo;s father, he is always like that——oh, well, would you like this? Just take it as a gift&amp;rdquo;. But what she said didn&amp;rsquo;t relaxed me, instead, I was even more worried when I heard the word &amp;ldquo;always&amp;rdquo;. But I did not want to intensify the tension anymore so I just took it symbolically.&lt;/p>
+&lt;p>But of course, no one would have any appetite at such situation. So I just threw it away on the side of the path once the figure of their house had faded away beyond my view.&lt;/p>
+&lt;p>That was the last time I met him, without farewell. The next term, I transferred to the school located in the county, the town district.&lt;/p>
+&lt;p>&amp;ldquo;You know, the school of our village, is so&amp;hellip;&amp;rdquo;, my mother said.&lt;/p>
+&lt;p>&amp;ldquo;Up to you,&amp;rdquo; I just replied casually.&lt;/p>
+&lt;p>As a matter of fact, I was not the only one who transferred. According to my friends who still stayed there, after our leavings, two whole grades of the school did have classes in one classroom. Yes, just two grades, third of the primary school.&lt;/p>
+&lt;p>And the next time I come back, though in fact just passing through, I found that the gate has been locked, and the yard was only left with ruined walls under overgrown weeds.&lt;/p>
+&lt;p>I&amp;rsquo;ve left my hometown for education for nearly ten years. But most of my childhood friends have dropped out in their ninth grade year, drawing the period of their study career. It might seem a bit strange that though we were just living in the same village, we haven&amp;rsquo;t met each other for so many years.&lt;/p>
+&lt;p>Some of them now are working on street barbecue, some do the barber and some become laborers. Some are enjoying their lives and looking forward to tomorrow. Some are dreaming of getting rich overnight and write it down as a slogan in their social medias. Some of them are just another me that lost the dreams, doing the &lt;strong>tedious&lt;/strong> work for living. Some of them have had the thick barriers with me, and I am also not the boy that denied the existence of tigers back then. Somehow I started to miss the old time&amp;hellip;&lt;/p>
+&lt;p>We were all changed, never the same, like I was once travelling through the reeds forest, but now walking on the weeds meadow at the same place.&lt;/p>
+&lt;p>It&amp;rsquo;s been many years since my last time came here. Things were not, and so were the people. Air smelt damp, which made me a little bit chill in addition to the evening breeze. And just like an arranged coincidence, it started to sprinkle after a while, soaked my body and extinguished the flaring flames under the lake surface. Raindrop wrinkled the lake surface, just like the origami folding the ripples. The chirp of cicada was also silenced at that night. Moon shed its lights from lake bottom, &lt;strong>scattering&lt;/strong> into beams of light. I was trying to flying to the sky, and finally touched the ceil, only to find that I had already been there, and someone was smiling to me.&lt;/p>
+&lt;p>&amp;ldquo;It&amp;rsquo;s getting late. Now go home and have a rest.&amp;rdquo;&lt;/p>
+&lt;p>So I was trying to go back and have a rest. Though I haven&amp;rsquo;t been a regular there for the recent years, I still managed to find my way to that old house following the reeds, and then slept by following his words, and therefore then I awoke——&lt;/p>
+&lt;p>From a long dream, I&amp;rsquo;ve had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk&amp;hellip;&lt;/p></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Code</title><link>https://lomirus.github.io/categories/code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/code/</guid><description>&lt;img src="https://lomirus.github.io/categories/code/cover.webp" alt="Featured image of post Code" /></description></item><item><title>English</title><link>https://lomirus.github.io/categories/english/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/english/</guid><description>&lt;img src="https://lomirus.github.io/categories/english/cover.jpg" alt="Featured image of post English" /></description></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends' Links, mostly in Redrock.&lt;/p></description></item><item><title>Game</title><link>https://lomirus.github.io/categories/game/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/game/</guid><description>&lt;img src="https://lomirus.github.io/categories/game/cover.jpg" alt="Featured image of post Game" /></description></item><item><title>Literature</title><link>https://lomirus.github.io/categories/literature/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/literature/</guid><description>&lt;img src="https://lomirus.github.io/categories/literature/cover.webp" alt="Featured image of post Literature" /></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item><item><title>日本語</title><link>https://lomirus.github.io/categories/hihongo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/hihongo/</guid><description>&lt;img src="https://lomirus.github.io/categories/hihongo/cover.jpg" alt="Featured image of post 日本語" /></description></item><item><title>随笔，或其他</title><link>https://lomirus.github.io/categories/essays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/essays/</guid><description>&lt;img src="https://lomirus.github.io/categories/essays/cover.jpg" alt="Featured image of post 随笔，或其他" /></description></item></channel></rss>
