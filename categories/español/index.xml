@@ -230,56 +230,56 @@
 &lt;td>1️⃣&lt;/td>
 &lt;td>🌗&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>我&lt;/td>
+&lt;td>我的&lt;/td>
 &lt;td>mi&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>~&lt;/td>
 &lt;td>🌕🌕&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>我们（男）&lt;/td>
+&lt;td>我们（男）的&lt;/td>
 &lt;td>nuestro&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>~&lt;/td>
 &lt;td>🌑🌑&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>我们（女）&lt;/td>
+&lt;td>我们（女）的&lt;/td>
 &lt;td>nuestra&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>2️⃣&lt;/td>
 &lt;td>🌗&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>你&lt;/td>
+&lt;td>你的&lt;/td>
 &lt;td>tu&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>~&lt;/td>
 &lt;td>🌗/🌗🌗&lt;/td>
 &lt;td>👍&lt;/td>
-&lt;td>您/诸位&lt;/td>
+&lt;td>您/诸位的&lt;/td>
 &lt;td>su&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>~&lt;/td>
 &lt;td>🌕🌕&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>你们&lt;/td>
+&lt;td>你们的&lt;/td>
 &lt;td>vuestro&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>~&lt;/td>
 &lt;td>🌑🌑&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>妳们&lt;/td>
+&lt;td>妳们的&lt;/td>
 &lt;td>vosotra&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>3️⃣&lt;/td>
 &lt;td>🌗/🌗🌗&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>他/他们&lt;/td>
+&lt;td>他/他们的&lt;/td>
 &lt;td>su&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -342,6 +342,121 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h3 id="疑问代词">疑问代词&lt;/h3>
+&lt;h4 id="quién">Quién&lt;/h4>
+&lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
+&lt;p>e.g.&lt;/p>
+&lt;blockquote>
+&lt;p>¿Quién eres? 你是谁？&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="dónde">Dónde&lt;/h4>
+&lt;p>意为 &amp;ldquo;Where&amp;rdquo;。&lt;/p>
+&lt;p>e.g.&lt;/p>
+&lt;blockquote>
+&lt;p>¿Dónde estás? 你在哪里？&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>¿De dónde eres? 你来自哪里？&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="动词">动词&lt;/h2>
 &lt;h3 id="系动词">系动词&lt;/h3>
-&lt;p>（待写）&lt;/p></description></item></channel></rss>
+&lt;p>西班牙语中系动词有两个：ser 和 estar&lt;/p>
+&lt;p>先列一下他们的变形，相信看到这儿了你也应该对西班牙语的人称代词比较熟悉了吧，所以下面就直接用人称代词了：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>ser&lt;/th>
+&lt;th>estar&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>soy&lt;/td>
+&lt;td>estoy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>eres&lt;/td>
+&lt;td>estás&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>es&lt;/td>
+&lt;td>está&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>somos&lt;/td>
+&lt;td>estamos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotrosa/s&lt;/td>
+&lt;td>sois&lt;/td>
+&lt;td>estáis&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>son&lt;/td>
+&lt;td>están&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>TODO: 介绍 ser 和 estar 的区别&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="一般动词">一般动词&lt;/h3>
+&lt;p>西班牙语的动词由形式可划分为三种，分别是以 -ar, -er 和 -ir 结尾的动词。&lt;/p>
+&lt;p>对于规则的动词来说，它们的变形规则如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>-ar&lt;/th>
+&lt;th>-er&lt;/th>
+&lt;th>-ir&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>-o&lt;/td>
+&lt;td>-o&lt;/td>
+&lt;td>-o&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>-as&lt;/td>
+&lt;td>-es&lt;/td>
+&lt;td>-es&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>-a&lt;/td>
+&lt;td>-e&lt;/td>
+&lt;td>-e&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>-amos&lt;/td>
+&lt;td>-emos&lt;/td>
+&lt;td>-imos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotros/as&lt;/td>
+&lt;td>-áis&lt;/td>
+&lt;td>-éis&lt;/td>
+&lt;td>-ís&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>-an&lt;/td>
+&lt;td>-en&lt;/td>
+&lt;td>-en&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>TODO: 举例&lt;/p>
+&lt;/blockquote></description></item></channel></rss>
