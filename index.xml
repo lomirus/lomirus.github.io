@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下典中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 00:19:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子&lt;/h2>
+&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
+&lt;p>对于战棋游戏来说，常见的模拟地图的方法，按照地块形状可分为正方形和正六边形，其中后者的主要代表有《文明：VI》等。而即使对于部分大战略类游戏来说，譬如《灰衣主教》，也是采用的六边形地块。&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6.jpg"
+width="1459"
+height="972"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="文明：IV"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+>&lt;/p>
+&lt;p>究其原因，乃是六边形地块相较正方形地块而言有诸多优点：&lt;/p>
+&lt;ol>
+&lt;li>六边形地块与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/li>
+&lt;li>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/li>
+&lt;/ol>
+&lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点&lt;/p>
+&lt;h2 id="邻角处理">邻角处理&lt;/h2>
+&lt;p>对于上文中所说的&lt;/p>
+&lt;blockquote>
+&lt;p>且与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/p>
+&lt;/blockquote>
+&lt;p>显然，由于六边形到各相邻地块的距离相等，而正方形就不一样了。对于传统战旗类来说，一般有两种处理方法：&lt;/p>
+&lt;ol>
+&lt;li>只允许玩家上下左右行走&lt;/li>
+&lt;li>允许玩家于九宫格内八向行走&lt;/li>
+&lt;/ol>
+&lt;p>然而以上两种方法都存在着相同的弊端，如果设正方形边长为 $1$，则斜边长为 $\sqrt{2}$. 如果选择第一种方案，则到达斜边所在地块需要走两步，否则只需要一步，而 $1&amp;lt;\sqrt{2}&amp;lt;2$，这两者无论选哪一个都是与实际情况不符且不公平的。&lt;/p>
+&lt;p>但是在我的需求当中，并没有要求与实际的棋类一样，一次走一步，一步跨一格，这么量子化。因为对我来说，只要设置一个简单的步长即可，以下面的矩阵为例：&lt;/p>
+&lt;p>$$
+\begin{vmatrix}
+A &amp;amp; B\&lt;br>
+C &amp;amp; D
+\end{vmatrix}
+$$&lt;/p>
+&lt;p>假设某人从 $A$ 点到 $B$ 点，耗时 $1$ 日；那么对应地，我们只需将其从 $A$ 点到 $D$ 点的耗时设为 $\sqrt{2}$ 日即可。&lt;/p>
+&lt;h2 id="平滑边界">平滑边界&lt;/h2>
+&lt;p>对于上文中所说的&lt;/p>
+&lt;blockquote>
+&lt;p>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/p>
+&lt;/blockquote>
+&lt;p>显然，对于任意多边形，放到地图上看都是有棱有角，锯齿化太过严重。目前对于这个问题，我的想法是存储的时候按地块存起来，但展示的时候用户看到的其实是已经平滑过的曲线。&lt;/p>
+&lt;p>此外，如果再考虑上四个顶点，相邻正方形的连线方向其实有八个，比六边形还多了两个，这样反而能够更好得模拟各种边界线。&lt;/p>
+&lt;h2 id="圆形逼近">圆形逼近&lt;/h2>
+&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
+&lt;p>那么，我们应该怎么使用像素地块来模拟这种情况呢？&lt;/p>
+&lt;p>类似于 &lt;a class="link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener"
+>Conway&amp;rsquo;s Game of Life&lt;/a>，我们可以定义一套规则，例如在下图中，假设其为开始时刻：&lt;/p>
+&lt;p>$$
+\begin{vmatrix}
+LT &amp;amp; T &amp;amp; RT\&lt;br>
+L &amp;amp; C &amp;amp; R\&lt;br>
+LB &amp;amp; B &amp;amp; RB
+\end{vmatrix}
+$$&lt;/p>
+&lt;p>对于下一时刻，此时有两套简单规则供我们选择：&lt;/p>
+&lt;ul>
+&lt;li>L, T, R, B 被人群占领&lt;/li>
+&lt;li>L, T, R, B, LT, RT, LB, RB 被人群占领&lt;/li>
+&lt;/ul>
+&lt;p>但是，这两种方法均不能逼近圆形：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
+width="353"
+height="305"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="115"
+data-flex-basis="277px"
+>&lt;/p>
+&lt;p>分别如上图所示，当扩散次数趋于无穷，前者会逼近于倾斜45°的正方形，后者会保留为原来的形状————双方都还是原来的正方形。&lt;/p>
+&lt;p>此时的我想当然地就会去想增加对步长的计算，由于此处的时间是量子化的，便只能去修改步长了。在同一时间段内，若 $C$ 恰好能到达 $R$，则此时段内 $C$ 恰好走完了 $l_{C \to RT}$ 的 $\frac{1}{\sqrt2}$ 倍的路程，约为 0.707。&lt;/p>
+&lt;p>描述成算法就是：&lt;/p>
+&lt;blockquote>
+&lt;p>若 C 此时数值为 1，则下一时刻， L、T、R、B 点数值 $+1$，LT、RT、LB、RB 点数值 $+\frac{1}{\sqrt2}$（数值范围 0~1）。&lt;/p>
+&lt;/blockquote>
+&lt;p>可惜事与愿违，这样并不能达到想象中的效果：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2.png"
+width="324"
+height="149"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="217"
+data-flex-basis="521px"
+>&lt;/p>
+&lt;p>这样最终依旧是只能成为倾斜45°的正方形，只不过是顶角变钝了，由一个点变成了三个点。&lt;/p>
+&lt;p>简单思索过后，我发现问题出在突变上：C 此时数值为 1，
+若导致下一时刻 L、T、R、B 点数值突变 +1，其实并不能真实反应迁移速度与边界人口的关系。因此，我们需要重新规定规律，改为：&lt;/p>
+&lt;blockquote>
+&lt;p>若 L、T、R、B、LT、RT、LB、RB 八点数值均为 1，则下一时刻 C 点变为 1.&lt;/p>
+&lt;/blockquote>
+&lt;p>由此，以及对于要求其连续化的要求，我们可以得到推论：&lt;/p>
+&lt;blockquote>
+&lt;p>若 Q 此时数值为 $n$，则下一时刻 L、T、R、B 点数值 $+\frac{n}{8}$，LT、RT、LB、RB 点数值 $+\frac{n}{8}\times\frac{1}{\sqrt2}$，其中 $n\in[0, 1]$.&lt;/p>
+&lt;/blockquote>
+&lt;p>不过再这样下去徒手画图可就撑不住了，所以还是写段代码用 canvas 实现吧，这里我简单用 js 写了个：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">DILUTION&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">OBLIQUE_STEP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.707&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">canvas&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;canvas&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">canvas&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getContext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2d&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">button&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;button&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">255&lt;/span> &lt;span class="p">},&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">255&lt;/span> &lt;span class="p">},&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">127&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">127&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">render&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">imageData&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getImageData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">imageData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">[(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">255&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">putImageData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imageData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">clampIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">clamp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">254&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">clamp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">min&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">max&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">min&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">max&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">max&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">clampIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)][&lt;/span>&lt;span class="nx">clampIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">)]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">update&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">thisData&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">structuredClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">OBLIQUE_STEP&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">OBLIQUE_STEP&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">OBLIQUE_STEP&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">thisData&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">DILUTION&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">OBLIQUE_STEP&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">clamp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">button&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onclick&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">update&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>点了几十下按钮之后效果是这样的：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1.png"
+width="808"
+height="751"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="258px"
+>&lt;/p>
+&lt;p>和前面的相比，已经可以说是很圆了。但是仔细观察的话总感觉有点儿别扭。经过测量，实际上，这个圆在 LT、RT、LB、RB 有点突出了。&lt;/p>
+&lt;p>我对这一现象感到很奇怪，前面的都是经过数学推导计算得出的，按说应该没问题呀，怎么会和实际效果有些偏移呢。&lt;/p>
+&lt;p>经过一番思考，我发现实际上，正如前文所提到过的：&lt;/p>
+&lt;blockquote>
+&lt;p>对于下一时刻，此时有两套简单规则供我们选择：&lt;/p>
+&lt;ul>
+&lt;li>L, T, R, B 被人群占领&lt;/li>
+&lt;li>L, T, R, B, LT, RT, LB, RB 被人群占领&lt;/li>
+&lt;/ul>
+&lt;p>但是，这两种方法均不能逼近圆形：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
+width="353"
+height="305"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="115"
+data-flex-basis="277px"
+>&lt;/p>
+&lt;p>分别如上图所示，当扩散次数趋于无穷，前者会逼近于倾斜45°的正方形，后者会保留为原来的形状————双方都还是原来的正方形。&lt;/p>
+&lt;/blockquote>
+&lt;p>我们这里采取本质上还是后一种方案。人群最终扩散到达的位置，实际上已经构成了一个大正方形，只是四角的颜色过浅，导致我们看不到罢了。但尽管我们看不到，它实际上还是会对四角产生微弱的影响，导致其四角方向的延伸长度必定多于正圆。&lt;/p>
+&lt;p>于是，我想如果将斜边权重 &lt;code>OBLIQUE_STEP&lt;/code> 设为 0 会怎么样呢？结果如下：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2.png"
+width="808"
+height="751"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="258px"
+>&lt;/p>
+&lt;p>果然，四边变得更扁了，但是也扁过头了，依旧不是正圆。&lt;/p>
+&lt;p>由此，我联想到了几个问题：&lt;/p>
+&lt;ul>
+&lt;li>当 &lt;code>DILUTION&lt;/code> 即时间段细分趋于无效小时，是否会影响到最终的形状？&lt;/li>
+&lt;li>根据二分法可以猜测，大概率存在一个 &lt;code>OBLIQUE_STEP&lt;/code>，使得最终形状趋于正圆，那此时 &lt;code>OBLIQUE_STEP&lt;/code> 会是几呢？（可惜以我的数学能力只能获得逼近值，而无法获得准确值）&lt;/li>
+&lt;li>既然 LT 可以对 T 产生 1 的影响，LT 也可以对 C 产生 $\frac{1}{\sqrt{2}}$ 的影响，那凭什么 LT 就不对 RB 产生 $\frac{1}{2\sqrt{2}}$ 的影响呢？依次类推，一个点可以对图中任意远的点产生影响。正如此刻一只澳大利亚的袋鼠可以对梵蒂冈的教皇产生万有引力，尽管微乎其微，但它确实存在。&lt;/li>
+&lt;li>这个例子从一开始可能就是不恰当的，与其说是人群的迁移，不如比作是信息的传播，因为信息可以无限复制。但这又引入了一个新问题，A 点当前的信息量会对下一刻 A 点本身施加影响吗？&lt;/li>
+&lt;/ul>
+&lt;h2 id="结语">结语&lt;/h2>
+&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
+&lt;h2 id="花絮">花絮&lt;/h2>
+&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下典中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
 &lt;p>而说回这学期的西班牙语，或许是发音比较简单的原因（除了大舌音），我感觉相对前两门语言我们似乎更早地进入了对于语法的学习。因此，需要记忆的东西也变得更多了。此外，也是为了尽量不在重蹈前两次的覆辙，所以这次我便想去试着做一些笔记，所以也就有了这边文章。写的过程，也权当是复习了。&lt;/p>
 &lt;h2 id="字母">字母&lt;/h2>
 &lt;p>西班牙语相对拉丁字母来说，只是多了一个字母，即 &lt;code>Ñ/ñ&lt;/code>，另外也还有两个比较特殊的字母，即 &lt;code>Ch/ch&lt;/code> 和 &lt;code>Ll/ll&lt;/code>。很明显地，可以看出这俩其实就是两个字母的组合。但是在某些使用西班牙的国家确实是把他们两个作为两个单独的字母来看待的。所以如果要回答西班牙语中到底有多少个字母，答案既可以是27个，也可以是29个。&lt;/p>
@@ -39,7 +242,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>阳性&lt;/td>
-&lt;td>uno&lt;/td>
+&lt;td>un&lt;/td>
 &lt;td>unos&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -51,9 +254,9 @@
 &lt;/table>
 &lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>El mundo = The world = 砸瓦鲁多（雾）&lt;/p>
-&lt;p>Los niños = The children&lt;/p>
-&lt;p>Unas niñas = Some girls&lt;/p>
+&lt;p>El mundo =&amp;gt; The world =&amp;gt; 砸瓦鲁多（雾）&lt;/p>
+&lt;p>Los niños =&amp;gt; The children&lt;/p>
+&lt;p>Unas niñas =&amp;gt; Some girls&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="基础语法">基础语法&lt;/h2>
 &lt;h3 id="阴阳性">阴阳性&lt;/h3>
@@ -103,8 +306,8 @@
 &lt;/ul>
 &lt;p>如果需要将阳性名词变成阴性，若名词以辅音结尾，一般是直接加 -a；若名词以 -e, -o 结尾，一般是把结尾的字母换成 -a。比如随便举几个简单的例子：&lt;/p>
 &lt;blockquote>
-&lt;p>el niño -&amp;gt; la niña&lt;/p>
-&lt;p>el amigo -&amp;gt; la amiga&lt;/p>
+&lt;p>el niño &amp;lt;-&amp;gt; la niña&lt;/p>
+&lt;p>el amigo &amp;lt;-&amp;gt; la amiga&lt;/p>
 &lt;/blockquote>
 &lt;p>其他更复杂的规则可以自行查阅，这里就不再展开了。&lt;/p>
 &lt;h3 id="复数">复数&lt;/h3>
@@ -288,9 +491,8 @@
 &lt;p>不会吧，不会吧，不会真有人觉得背完了这几个单词就学会了西班牙语的物主代词了吧？&lt;/p>
 &lt;/blockquote>
 &lt;p>西班牙当然不会这么无聊让你背背就完事儿了，都学到这儿了怎么能不整点儿活呢？实际上，物主代词是会根据对象的复数和阴阳性变化的。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>Mis amigos = My friends&lt;/p>
+&lt;p>Mis amigos =&amp;gt; My friends&lt;/p>
 &lt;/blockquote>
 &lt;p>需要注意一下，这里的“朋友”是复数，所以代词“我的”后面也要加 s。其他的物主代词也是同理，比如：nuestros, nuestras, vuestros, vuestras, tus, sus。&lt;/p>
 &lt;p>下面是一个以🐱（gato）为例，一个更加完整的表格：&lt;/p>
@@ -345,18 +547,16 @@
 &lt;h3 id="疑问代词">疑问代词&lt;/h3>
 &lt;h4 id="quién">Quién&lt;/h4>
 &lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
 &lt;p>¿Quién eres? 你是谁？&lt;/p>
 &lt;/blockquote>
 &lt;h4 id="dónde">Dónde&lt;/h4>
 &lt;p>意为 &amp;ldquo;Where&amp;rdquo;。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>¿Dónde estás? 你在哪里？&lt;/p>
+&lt;p>¿Dónde estás? =&amp;gt; 你在哪里？&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
-&lt;p>¿De dónde eres? 你来自哪里？&lt;/p>
+&lt;p>¿De dónde eres? =&amp;gt; 你来自哪里？&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="动词">动词&lt;/h2>
 &lt;h3 id="系动词">系动词&lt;/h3>
@@ -457,8 +657,14 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;ul>
+&lt;li>hablar：讲，说&lt;/li>
+&lt;/ul>
 &lt;blockquote>
-&lt;p>TODO: 举例&lt;/p>
+&lt;p>I spean Spanish. =&amp;gt; Yo hablo español.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Do you speak Spanish? =&amp;gt; ¿Hablas español?&lt;/p>
 &lt;/blockquote></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
 &lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
 &lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal

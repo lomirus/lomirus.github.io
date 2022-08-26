@@ -1,0 +1,424 @@
+<!doctype html><html lang=zh-cn dir=ltr>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="战略游戏地图设计的简单问题"><title>如何利用正方形地块扩散逼近圆形</title>
+<link rel=canonical href=https://lomirus.github.io/p/approximate-circle-with-pixels/>
+<link rel=stylesheet href=/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css><meta property="og:title" content="如何利用正方形地块扩散逼近圆形">
+<meta property="og:description" content="战略游戏地图设计的简单问题">
+<meta property="og:url" content="https://lomirus.github.io/p/approximate-circle-with-pixels/">
+<meta property="og:site_name" content="Lomirus' Site">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Game"><meta property="article:tag" content="Algorithm"><meta property="article:published_time" content="2022-08-26T00:19:00+08:00"><meta property="article:modified_time" content="2022-08-26T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg">
+<meta name=twitter:site content="@lomirus">
+<meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="如何利用正方形地块扩散逼近圆形">
+<meta name=twitter:description content="战略游戏地图设计的简单问题"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg">
+<link rel="shortcut icon" href=/img/favicon.png>
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header>
+<figure class=site-avatar>
+<a href=/>
+<img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a>
+<span class=emoji>🍥</span>
+</figure>
+<div class=site-meta>
+<h1 class=site-name><a href=/>Lomirus' Site</a></h1>
+<h2 class=site-description>We shall meet in the place where there is no darkness.</h2>
+</div>
+</header><ol class=social-menu>
+<li>
+<a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+</a>
+</li>
+</ol><ol class=menu id=main-menu>
+<li>
+<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Friends</span>
+</a>
+</li>
+<li>
+<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span>
+</a>
+</li>
+<div class=menu-bottom-section>
+<li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
+<select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/ selected>简体中文</option><option value=https://lomirus.github.io/en/>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span>
+</li>
+</div>
+</ol>
+</aside>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/approximate-circle-with-pixels/>
+<img src=/p/approximate-circle-with-pixels/cover_hu9b862756a4ac73bda75fd037b8a74264_460997_800x0_resize_q75_box.jpg srcset="/p/approximate-circle-with-pixels/cover_hu9b862756a4ac73bda75fd037b8a74264_460997_800x0_resize_q75_box.jpg 800w, /p/approximate-circle-with-pixels/cover_hu9b862756a4ac73bda75fd037b8a74264_460997_1600x0_resize_q75_box.jpg 1600w" width=800 height=800 loading=lazy alt="Featured image of post 如何利用正方形地块扩散逼近圆形">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/code/>
+Code
+</a>
+<a href=/categories/game/>
+Game
+</a>
+</header>
+<div class=article-title-wrapper>
+<h2 class=article-title>
+<a href=/p/approximate-circle-with-pixels/>如何利用正方形地块扩散逼近圆形</a>
+</h2>
+<h3 class=article-subtitle>
+战略游戏地图设计的简单问题
+</h3>
+</div>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Aug 26, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 6 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=引子>引子</h2>
+<p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。</p>
+<p>对于战棋游戏来说，常见的模拟地图的方法，按照地块形状可分为正方形和正六边形，其中后者的主要代表有《文明：VI》等。而即使对于部分大战略类游戏来说，譬如《灰衣主教》，也是采用的六边形地块。</p>
+<p><img src=/p/approximate-circle-with-pixels/civilization-6.jpg width=1459 height=972 srcset="/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_480x0_resize_q75_box.jpg 480w, /p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_1024x0_resize_q75_box.jpg 1024w" loading=lazy alt=文明：IV class=gallery-image data-flex-grow=150 data-flex-basis=360px></p>
+<p>究其原因，乃是六边形地块相较正方形地块而言有诸多优点：</p>
+<ol>
+<li>六边形地块与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。</li>
+<li>六边形是能密铺于平面的最多边形，更加接近圆形；</li>
+</ol>
+<p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点</p>
+<h2 id=邻角处理>邻角处理</h2>
+<p>对于上文中所说的</p>
+<blockquote>
+<p>且与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。</p>
+</blockquote>
+<p>显然，由于六边形到各相邻地块的距离相等，而正方形就不一样了。对于传统战旗类来说，一般有两种处理方法：</p>
+<ol>
+<li>只允许玩家上下左右行走</li>
+<li>允许玩家于九宫格内八向行走</li>
+</ol>
+<p>然而以上两种方法都存在着相同的弊端，如果设正方形边长为 $1$，则斜边长为 $\sqrt{2}$. 如果选择第一种方案，则到达斜边所在地块需要走两步，否则只需要一步，而 $1&lt;\sqrt{2}&lt;2$，这两者无论选哪一个都是与实际情况不符且不公平的。</p>
+<p>但是在我的需求当中，并没有要求与实际的棋类一样，一次走一步，一步跨一格，这么量子化。因为对我来说，只要设置一个简单的步长即可，以下面的矩阵为例：</p>
+<p>$$
+\begin{vmatrix}
+A & B\<br>
+C & D
+\end{vmatrix}
+$$</p>
+<p>假设某人从 $A$ 点到 $B$ 点，耗时 $1$ 日；那么对应地，我们只需将其从 $A$ 点到 $D$ 点的耗时设为 $\sqrt{2}$ 日即可。</p>
+<h2 id=平滑边界>平滑边界</h2>
+<p>对于上文中所说的</p>
+<blockquote>
+<p>六边形是能密铺于平面的最多边形，更加接近圆形；</p>
+</blockquote>
+<p>显然，对于任意多边形，放到地图上看都是有棱有角，锯齿化太过严重。目前对于这个问题，我的想法是存储的时候按地块存起来，但展示的时候用户看到的其实是已经平滑过的曲线。</p>
+<p>此外，如果再考虑上四个顶点，相邻正方形的连线方向其实有八个，比六边形还多了两个，这样反而能够更好得模拟各种边界线。</p>
+<h2 id=圆形逼近>圆形逼近</h2>
+<p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。</p>
+<p>那么，我们应该怎么使用像素地块来模拟这种情况呢？</p>
+<p>类似于 <a class=link href=https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life target=_blank rel=noopener>Conway&rsquo;s Game of Life</a>，我们可以定义一套规则，例如在下图中，假设其为开始时刻：</p>
+<p>$$
+\begin{vmatrix}
+LT & T & RT\<br>
+L & C & R\<br>
+LB & B & RB
+\end{vmatrix}
+$$</p>
+<p>对于下一时刻，此时有两套简单规则供我们选择：</p>
+<ul>
+<li>L, T, R, B 被人群占领</li>
+<li>L, T, R, B, LT, RT, LB, RB 被人群占领</li>
+</ul>
+<p>但是，这两种方法均不能逼近圆形：</p>
+<p><img src=/p/approximate-circle-with-pixels/graph-1.png width=353 height=305 srcset="/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, /p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=115 data-flex-basis=277px></p>
+<p>分别如上图所示，当扩散次数趋于无穷，前者会逼近于倾斜45°的正方形，后者会保留为原来的形状————双方都还是原来的正方形。</p>
+<p>此时的我想当然地就会去想增加对步长的计算，由于此处的时间是量子化的，便只能去修改步长了。在同一时间段内，若 $C$ 恰好能到达 $R$，则此时段内 $C$ 恰好走完了 $l_{C \to RT}$ 的 $\frac{1}{\sqrt2}$ 倍的路程，约为 0.707。</p>
+<p>描述成算法就是：</p>
+<blockquote>
+<p>若 C 此时数值为 1，则下一时刻， L、T、R、B 点数值 $+1$，LT、RT、LB、RB 点数值 $+\frac{1}{\sqrt2}$（数值范围 0~1）。</p>
+</blockquote>
+<p>可惜事与愿违，这样并不能达到想象中的效果：</p>
+<p><img src=/p/approximate-circle-with-pixels/graph-2.png width=324 height=149 srcset="/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_480x0_resize_box_3.png 480w, /p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=217 data-flex-basis=521px></p>
+<p>这样最终依旧是只能成为倾斜45°的正方形，只不过是顶角变钝了，由一个点变成了三个点。</p>
+<p>简单思索过后，我发现问题出在突变上：C 此时数值为 1，
+若导致下一时刻 L、T、R、B 点数值突变 +1，其实并不能真实反应迁移速度与边界人口的关系。因此，我们需要重新规定规律，改为：</p>
+<blockquote>
+<p>若 L、T、R、B、LT、RT、LB、RB 八点数值均为 1，则下一时刻 C 点变为 1.</p>
+</blockquote>
+<p>由此，以及对于要求其连续化的要求，我们可以得到推论：</p>
+<blockquote>
+<p>若 Q 此时数值为 $n$，则下一时刻 L、T、R、B 点数值 $+\frac{n}{8}$，LT、RT、LB、RB 点数值 $+\frac{n}{8}\times\frac{1}{\sqrt2}$，其中 $n\in[0, 1]$.</p>
+</blockquote>
+<p>不过再这样下去徒手画图可就撑不住了，所以还是写段代码用 canvas 实现吧，这里我简单用 js 写了个：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>DILUTION</span> <span class=o>=</span> <span class=mi>1</span> <span class=o>/</span> <span class=mi>8</span><span class=p>;</span>
+<span class=kr>const</span> <span class=nx>OBLIQUE_STEP</span> <span class=o>=</span> <span class=mf>0.707</span>
+
+<span class=kr>const</span> <span class=nx>canvas</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;canvas&#39;</span><span class=p>);</span>
+<span class=kr>const</span> <span class=nx>context</span> <span class=o>=</span> <span class=nx>canvas</span><span class=p>.</span><span class=nx>getContext</span><span class=p>(</span><span class=s1>&#39;2d&#39;</span><span class=p>);</span>
+<span class=kr>const</span> <span class=nx>button</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;button&#39;</span><span class=p>)</span>
+
+<span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>from</span><span class=p>({</span> <span class=nx>length</span><span class=o>:</span> <span class=mi>255</span> <span class=p>},</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>from</span><span class=p>({</span> <span class=nx>length</span><span class=o>:</span> <span class=mi>255</span> <span class=p>},</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=mi>0</span><span class=p>));</span>
+<span class=nx>data</span><span class=p>[</span><span class=mi>127</span><span class=p>][</span><span class=mi>127</span><span class=p>]</span> <span class=o>=</span> <span class=mi>255</span><span class=p>;</span>
+
+<span class=kd>function</span> <span class=nx>render</span><span class=p>()</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>imageData</span> <span class=o>=</span> <span class=nx>context</span><span class=p>.</span><span class=nx>getImageData</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>255</span><span class=p>,</span> <span class=mi>255</span><span class=p>);</span>
+    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>255</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>j</span> <span class=o>&lt;</span> <span class=mi>255</span><span class=p>;</span> <span class=nx>j</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+            <span class=nx>imageData</span><span class=p>.</span><span class=nx>data</span><span class=p>[(</span><span class=nx>i</span> <span class=o>*</span> <span class=mi>255</span> <span class=o>+</span> <span class=nx>j</span><span class=p>)</span> <span class=o>*</span> <span class=mi>4</span> <span class=o>+</span> <span class=mi>3</span><span class=p>]</span> <span class=o>=</span> <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=nx>context</span><span class=p>.</span><span class=nx>putImageData</span><span class=p>(</span><span class=nx>imageData</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>clampIndex</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>clamp</span><span class=p>(</span><span class=nx>x</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>254</span><span class=p>)</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>clamp</span><span class=p>(</span><span class=nx>x</span><span class=p>,</span> <span class=nx>min</span><span class=p>,</span> <span class=nx>max</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>x</span> <span class=o>&lt;</span> <span class=nx>min</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>return</span> <span class=nx>min</span><span class=p>;</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>x</span> <span class=o>&gt;</span> <span class=nx>max</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>return</span> <span class=nx>max</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+        <span class=k>return</span> <span class=nx>x</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>data</span><span class=p>,</span> <span class=nx>x</span><span class=p>,</span> <span class=nx>y</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>data</span><span class=p>[</span><span class=nx>clampIndex</span><span class=p>(</span><span class=nx>x</span><span class=p>)][</span><span class=nx>clampIndex</span><span class=p>(</span><span class=nx>y</span><span class=p>)]</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>update</span><span class=p>()</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>thisData</span> <span class=o>=</span> <span class=nx>structuredClone</span><span class=p>(</span><span class=nx>data</span><span class=p>)</span>
+    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>255</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>j</span> <span class=o>&lt;</span> <span class=mi>255</span><span class=p>;</span> <span class=nx>j</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span><span class=p>;</span>
+
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span> <span class=o>*</span> <span class=nx>OBLIQUE_STEP</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span> <span class=o>*</span> <span class=nx>OBLIQUE_STEP</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span> <span class=o>*</span> <span class=nx>OBLIQUE_STEP</span><span class=p>;</span>
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>getData</span><span class=p>(</span><span class=nx>thisData</span><span class=p>,</span> <span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>*</span> <span class=nx>DILUTION</span> <span class=o>*</span> <span class=nx>OBLIQUE_STEP</span><span class=p>;</span>
+
+            <span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>=</span> <span class=nx>clamp</span><span class=p>(</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>],</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>255</span><span class=p>)</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=nx>button</span><span class=p>.</span><span class=nx>onclick</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>update</span><span class=p>()</span>
+    <span class=nx>render</span><span class=p>()</span>
+<span class=p>}</span>
+</code></pre></div><p>点了几十下按钮之后效果是这样的：</p>
+<p><img src=/p/approximate-circle-with-pixels/result-1.png width=808 height=751 srcset="/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_480x0_resize_box_3.png 480w, /p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=107 data-flex-basis=258px></p>
+<p>和前面的相比，已经可以说是很圆了。但是仔细观察的话总感觉有点儿别扭。经过测量，实际上，这个圆在 LT、RT、LB、RB 有点突出了。</p>
+<p>我对这一现象感到很奇怪，前面的都是经过数学推导计算得出的，按说应该没问题呀，怎么会和实际效果有些偏移呢。</p>
+<p>经过一番思考，我发现实际上，正如前文所提到过的：</p>
+<blockquote>
+<p>对于下一时刻，此时有两套简单规则供我们选择：</p>
+<ul>
+<li>L, T, R, B 被人群占领</li>
+<li>L, T, R, B, LT, RT, LB, RB 被人群占领</li>
+</ul>
+<p>但是，这两种方法均不能逼近圆形：</p>
+<p><img src=/p/approximate-circle-with-pixels/graph-1.png width=353 height=305 srcset="/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, /p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=115 data-flex-basis=277px></p>
+<p>分别如上图所示，当扩散次数趋于无穷，前者会逼近于倾斜45°的正方形，后者会保留为原来的形状————双方都还是原来的正方形。</p>
+</blockquote>
+<p>我们这里采取本质上还是后一种方案。人群最终扩散到达的位置，实际上已经构成了一个大正方形，只是四角的颜色过浅，导致我们看不到罢了。但尽管我们看不到，它实际上还是会对四角产生微弱的影响，导致其四角方向的延伸长度必定多于正圆。</p>
+<p>于是，我想如果将斜边权重 <code>OBLIQUE_STEP</code> 设为 0 会怎么样呢？结果如下：</p>
+<p><img src=/p/approximate-circle-with-pixels/result-2.png width=808 height=751 srcset="/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_480x0_resize_box_3.png 480w, /p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=107 data-flex-basis=258px></p>
+<p>果然，四边变得更扁了，但是也扁过头了，依旧不是正圆。</p>
+<p>由此，我联想到了几个问题：</p>
+<ul>
+<li>当 <code>DILUTION</code> 即时间段细分趋于无效小时，是否会影响到最终的形状？</li>
+<li>根据二分法可以猜测，大概率存在一个 <code>OBLIQUE_STEP</code>，使得最终形状趋于正圆，那此时 <code>OBLIQUE_STEP</code> 会是几呢？（可惜以我的数学能力只能获得逼近值，而无法获得准确值）</li>
+<li>既然 LT 可以对 T 产生 1 的影响，LT 也可以对 C 产生 $\frac{1}{\sqrt{2}}$ 的影响，那凭什么 LT 就不对 RB 产生 $\frac{1}{2\sqrt{2}}$ 的影响呢？依次类推，一个点可以对图中任意远的点产生影响。正如此刻一只澳大利亚的袋鼠可以对梵蒂冈的教皇产生万有引力，尽管微乎其微，但它确实存在。</li>
+<li>这个例子从一开始可能就是不恰当的，与其说是人群的迁移，不如比作是信息的传播，因为信息可以无限复制。但这又引入了一个新问题，A 点当前的信息量会对下一刻 A 点本身施加影响吗？</li>
+</ul>
+<h2 id=结语>结语</h2>
+<p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。</p>
+<h2 id=花絮>花絮</h2>
+<p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）</p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/game/>Game</a>
+<a href=/tags/algorithm/>Algorithm</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+最后更新于 Aug 26, 2022 00:00 +0800
+</span>
+</section></footer>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/bevy-tutorial/>
+<div class=article-image>
+<img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/gnome-extention-development/>
+<div class=article-image>
+<img src=/p/gnome-extention-development/cover.16bdb0183ab6c4c8222dc99f05ba0a2f_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" data-key=gnome-extention-development data-hash="md5-Fr2wGDq2xMgiLcmfBboKLw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>一次失败的尝试开发 Gnome Extension 经历</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/first-meet-to-flutter/>
+<div class=article-image>
+<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/puppeteer-dog-stickers/>
+<div class=article-image>
+<img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/sekiro-dictation/>
+<div class=article-image>
+<img src=/p/sekiro-dictation/cover.4afb9e079aae7040f550d76c1385b5a5_hua91090e55ff23bbed1fcc151a5e52513_4702921_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" data-key=sekiro-dictation data-hash="md5-SvueB5qucED1UNdsE4W1pQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>『隻狼』名シーンの日本語台詞を書き取りの練習</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script>
+<style>.utterances{max-width:unset}</style>
+<script>function setUtterancesTheme(b){let a=document.querySelector('.utterances iframe');a&&a.contentWindow.postMessage({type:'set-theme',theme:`github-${b}`},'https://utteranc.es')}addEventListener('message',a=>{if(a.origin!=='https://utteranc.es')return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener('onColorSchemeChange',a=>{setUtterancesTheme(a.detail)})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2022 Lomirus' Site
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.11.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#引子>引子</a></li>
+<li><a href=#邻角处理>邻角处理</a></li>
+<li><a href=#平滑边界>平滑边界</a></li>
+<li><a href=#圆形逼近>圆形逼近</a></li>
+<li><a href=#结语>结语</a></li>
+<li><a href=#花絮>花絮</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

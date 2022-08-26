@@ -39,7 +39,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>阳性&lt;/td>
-&lt;td>uno&lt;/td>
+&lt;td>un&lt;/td>
 &lt;td>unos&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -51,9 +51,9 @@
 &lt;/table>
 &lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>El mundo = The world = 砸瓦鲁多（雾）&lt;/p>
-&lt;p>Los niños = The children&lt;/p>
-&lt;p>Unas niñas = Some girls&lt;/p>
+&lt;p>El mundo =&amp;gt; The world =&amp;gt; 砸瓦鲁多（雾）&lt;/p>
+&lt;p>Los niños =&amp;gt; The children&lt;/p>
+&lt;p>Unas niñas =&amp;gt; Some girls&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="基础语法">基础语法&lt;/h2>
 &lt;h3 id="阴阳性">阴阳性&lt;/h3>
@@ -103,8 +103,8 @@
 &lt;/ul>
 &lt;p>如果需要将阳性名词变成阴性，若名词以辅音结尾，一般是直接加 -a；若名词以 -e, -o 结尾，一般是把结尾的字母换成 -a。比如随便举几个简单的例子：&lt;/p>
 &lt;blockquote>
-&lt;p>el niño -&amp;gt; la niña&lt;/p>
-&lt;p>el amigo -&amp;gt; la amiga&lt;/p>
+&lt;p>el niño &amp;lt;-&amp;gt; la niña&lt;/p>
+&lt;p>el amigo &amp;lt;-&amp;gt; la amiga&lt;/p>
 &lt;/blockquote>
 &lt;p>其他更复杂的规则可以自行查阅，这里就不再展开了。&lt;/p>
 &lt;h3 id="复数">复数&lt;/h3>
@@ -288,9 +288,8 @@
 &lt;p>不会吧，不会吧，不会真有人觉得背完了这几个单词就学会了西班牙语的物主代词了吧？&lt;/p>
 &lt;/blockquote>
 &lt;p>西班牙当然不会这么无聊让你背背就完事儿了，都学到这儿了怎么能不整点儿活呢？实际上，物主代词是会根据对象的复数和阴阳性变化的。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>Mis amigos = My friends&lt;/p>
+&lt;p>Mis amigos =&amp;gt; My friends&lt;/p>
 &lt;/blockquote>
 &lt;p>需要注意一下，这里的“朋友”是复数，所以代词“我的”后面也要加 s。其他的物主代词也是同理，比如：nuestros, nuestras, vuestros, vuestras, tus, sus。&lt;/p>
 &lt;p>下面是一个以🐱（gato）为例，一个更加完整的表格：&lt;/p>
@@ -345,18 +344,16 @@
 &lt;h3 id="疑问代词">疑问代词&lt;/h3>
 &lt;h4 id="quién">Quién&lt;/h4>
 &lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
 &lt;p>¿Quién eres? 你是谁？&lt;/p>
 &lt;/blockquote>
 &lt;h4 id="dónde">Dónde&lt;/h4>
 &lt;p>意为 &amp;ldquo;Where&amp;rdquo;。&lt;/p>
-&lt;p>e.g.&lt;/p>
 &lt;blockquote>
-&lt;p>¿Dónde estás? 你在哪里？&lt;/p>
+&lt;p>¿Dónde estás? =&amp;gt; 你在哪里？&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
-&lt;p>¿De dónde eres? 你来自哪里？&lt;/p>
+&lt;p>¿De dónde eres? =&amp;gt; 你来自哪里？&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="动词">动词&lt;/h2>
 &lt;h3 id="系动词">系动词&lt;/h3>
@@ -457,6 +454,12 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;ul>
+&lt;li>hablar：讲，说&lt;/li>
+&lt;/ul>
 &lt;blockquote>
-&lt;p>TODO: 举例&lt;/p>
+&lt;p>I spean Spanish. =&amp;gt; Yo hablo español.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Do you speak Spanish? =&amp;gt; ¿Hablas español?&lt;/p>
 &lt;/blockquote></description></item></channel></rss>
