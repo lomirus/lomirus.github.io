@@ -16,7 +16,7 @@ data-flex-basis="360px"
 &lt;li>六边形地块与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/li>
 &lt;li>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/li>
 &lt;/ol>
-&lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点&lt;/p>
+&lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点。&lt;/p>
 &lt;h2 id="邻角处理">邻角处理&lt;/h2>
 &lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
@@ -544,6 +544,42 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h3 id="反身代词自复代词">反身代词/自复代词&lt;/h3>
+&lt;p>请和下文中的&lt;a class="link" href="#%e8%87%aa%e5%a4%8d%e5%8a%a8%e8%af%8d" >自复动词&lt;/a>搭配使用。（页内跳转点不了的话估计是博客的 bug 吧&amp;hellip;）&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>反身代词&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>me&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>te&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>se&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>nos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotrosa/s&lt;/td>
+&lt;td>os&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>se&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h3 id="疑问代词">疑问代词&lt;/h3>
 &lt;h4 id="quién">Quién&lt;/h4>
 &lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
@@ -603,9 +639,11 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;blockquote>
-&lt;p>TODO: 介绍 ser 和 estar 的区别&lt;/p>
-&lt;/blockquote>
+&lt;p>区别：&lt;/p>
+&lt;ul>
+&lt;li>ser 表达事物或人的固有的、永久性的性质和特点；&lt;/li>
+&lt;li>estar用于表达事物或者人的暂时性、非永恒的状态。&lt;/li>
+&lt;/ul>
 &lt;h3 id="一般动词">一般动词&lt;/h3>
 &lt;p>西班牙语的动词由形式可划分为三种，分别是以 -ar, -er 和 -ir 结尾的动词。&lt;/p>
 &lt;p>对于规则的动词来说，它们的变形规则如下：&lt;/p>
@@ -665,7 +703,81 @@ data-flex-basis="258px"
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>Do you speak Spanish? =&amp;gt; ¿Hablas español?&lt;/p>
-&lt;/blockquote></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
+&lt;/blockquote>
+&lt;h3 id="进行时">进行时&lt;/h3>
+&lt;p>西班牙语的进行时的表示方式为 estar + gerundio（副动词），副动词的变形规则如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>原型&lt;/th>
+&lt;th>副动词&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>-ar&lt;/td>
+&lt;td>-ando&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-er&lt;/td>
+&lt;td>-iendo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-ir&lt;/td>
+&lt;td>-iendo&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>Estamos comiendo. =&amp;gt; 我们正在吃饭。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="自复动词">自复动词&lt;/h3>
+&lt;p>这个语法有点类似日语的他动词，比如自动词 消える 表示主语消失，而他动词 消す 表示主语使宾语消失。变形的直接加 se。比如 llamar 表示“叫喊”，而 llamarse 表示“名字叫”。不过我没见过直接用 llamarse 这种原型的，都要和反身代词搭配使用，而且要去掉 se，比如：&lt;/p>
+&lt;p>Me llamo Sofia. =&amp;gt; 我叫 Sofia.&lt;/p>
+&lt;p>需要注意一点，动词此时要进行元音替换，即把 e 替换为 ie，“我们”和“你们”不变。以 perder（迷失）为例：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>人称&lt;/th>
+&lt;th>动词搭配&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>me pierdo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>te pierdes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>se pierde&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>nos perdemos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotrosa/s&lt;/td>
+&lt;td>os perdéis&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>se pierden&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;ul>
+&lt;li>¿Tienes un mapa?&lt;/li>
+&lt;li>Porque me estoy perdiendo en tu mirada.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="后记">后记&lt;/h2>
+&lt;p>这学期西班牙语的期末成绩是91，也算是在期望之内了。不过这片博客从四月份开始，直到期末考试结束后都还没写完。整个暑假也基本没碰过，直到今天（2022/08/27）才补完了剩下的部分。不过说实话感觉现在西班牙语也已经忘得差不多了，看来语言这东西不学不用的话真的是忘得很快呀😮‍💨&lt;/p>
+&lt;p>BTW，我们西班牙语的这个班里也还有很多大佬，譬如在学拉丁语的，还有学过德语和希腊语的，学过韩语和日语的据我所知就有好几个。不过感觉我自己的话对于大多数外语也都还是浅尝辄止吧，看来我还是专心去学好我的日语和英语吧😵‍💫&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
 &lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
 &lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
 等著名引擎，然而这些都是商业引擎，且对我来说太过笨重。大一的时候听说了
@@ -1489,7 +1601,7 @@ data-flex-basis="320px"
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item><item><title>About</title><link>https://lomirus.github.io/about/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/about/</guid><description>&lt;ul>
 &lt;li>代码：JavaScript/TypeScript/Rust &lt;span style="opacity: 0.3">&lt;del>没一个是熟练的&lt;/del>&lt;/span>&lt;/li>
-&lt;li>语言：精通中、英、日、韩、俄等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
+&lt;li>语言：精通中、英、日、韩、俄、意等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
 &lt;li>历史：&lt;span style="opacity: 0.3">&lt;del>控制台上的&lt;/del>&lt;/span> P社玩家&lt;/li>
 &lt;li>游戏：Pixel / Story Rich / RPG / Soul-like / AC&lt;/li>
 &lt;/ul>
@@ -1500,15 +1612,7 @@ data-flex-basis="320px"
 &lt;li>&lt;a class="link" href="https://space.bilibili.com/27590260" target="_blank" rel="noopener"
 >Bilibili&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="mailto:lomirus@qq.com" >lomirus@qq.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="todolist">TodoList&lt;/h1>
-&lt;ul>
-&lt;li>Develop an indie game
-&lt;ul>
-&lt;li>Learn pixel art with Aseprite&lt;/li>
-&lt;li>Learn music&lt;/li>
-&lt;/ul>
-&lt;/li>
+&lt;li>&lt;a class="link" href="mailto:lomirus.dev@protonmail.com" >lomirus.dev@protonmail.com&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零&lt;/h2>
 &lt;p>做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~&lt;/p>
 &lt;h2 id="永真---出场">永真 - 出场&lt;/h2>
@@ -2359,4 +2463,4 @@ npx create-react-app ts --template typescript
 &lt;p>It&amp;rsquo;s been many years since my last time came here. Things were not, and so were the people. Air smelt damp, which made me a little bit chill in addition to the evening breeze. And just like an arranged coincidence, it started to sprinkle after a while, soaked my body and extinguished the flaring flames under the lake surface. Raindrop wrinkled the lake surface, just like the origami folding the ripples. The chirp of cicada was also silenced at that night. Moon shed its lights from lake bottom, &lt;strong>scattering&lt;/strong> into beams of light. I was trying to flying to the sky, and finally touched the ceil, only to find that I had already been there, and someone was smiling to me.&lt;/p>
 &lt;p>&amp;ldquo;It&amp;rsquo;s getting late. Now go home and have a rest.&amp;rdquo;&lt;/p>
 &lt;p>So I was trying to go back and have a rest. Though I haven&amp;rsquo;t been a regular there for the recent years, I still managed to find my way to that old house following the reeds, and then slept by following his words, and therefore then I awoke——&lt;/p>
-&lt;p>From a long dream, I&amp;rsquo;ve had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk&amp;hellip;&lt;/p></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Code</title><link>https://lomirus.github.io/categories/code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/code/</guid><description>&lt;img src="https://lomirus.github.io/categories/code/cover.webp" alt="Featured image of post Code" /></description></item><item><title>English</title><link>https://lomirus.github.io/categories/english/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/english/</guid><description>&lt;img src="https://lomirus.github.io/categories/english/cover.jpg" alt="Featured image of post English" /></description></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends' Links, mostly in Redrock.&lt;/p></description></item><item><title>Game</title><link>https://lomirus.github.io/categories/game/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/game/</guid><description>&lt;img src="https://lomirus.github.io/categories/game/cover.jpg" alt="Featured image of post Game" /></description></item><item><title>Literature</title><link>https://lomirus.github.io/categories/literature/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/literature/</guid><description>&lt;img src="https://lomirus.github.io/categories/literature/cover.webp" alt="Featured image of post Literature" /></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item><item><title>日本語</title><link>https://lomirus.github.io/categories/hihongo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/hihongo/</guid><description>&lt;img src="https://lomirus.github.io/categories/hihongo/cover.jpg" alt="Featured image of post 日本語" /></description></item><item><title>随笔，或其他</title><link>https://lomirus.github.io/categories/essays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/essays/</guid><description>&lt;img src="https://lomirus.github.io/categories/essays/cover.jpg" alt="Featured image of post 随笔，或其他" /></description></item></channel></rss>
+&lt;p>From a long dream, I&amp;rsquo;ve had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk&amp;hellip;&lt;/p></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Code</title><link>https://lomirus.github.io/categories/code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/code/</guid><description>&lt;img src="https://lomirus.github.io/categories/code/cover.webp" alt="Featured image of post Code" /></description></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends' Links, mostly in Redrock.&lt;/p></description></item><item><title>Game</title><link>https://lomirus.github.io/categories/game/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/game/</guid><description>&lt;img src="https://lomirus.github.io/categories/game/cover.jpg" alt="Featured image of post Game" /></description></item><item><title>Language</title><link>https://lomirus.github.io/categories/language/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/language/</guid><description>&lt;img src="https://lomirus.github.io/categories/language/cover.jpg" alt="Featured image of post Language" /></description></item><item><title>Others</title><link>https://lomirus.github.io/categories/others/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/others/</guid><description>&lt;img src="https://lomirus.github.io/categories/others/cover.jpg" alt="Featured image of post Others" /></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item></channel></rss>

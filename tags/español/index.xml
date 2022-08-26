@@ -341,6 +341,42 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h3 id="反身代词自复代词">反身代词/自复代词&lt;/h3>
+&lt;p>请和下文中的&lt;a class="link" href="#%e8%87%aa%e5%a4%8d%e5%8a%a8%e8%af%8d" >自复动词&lt;/a>搭配使用。（页内跳转点不了的话估计是博客的 bug 吧&amp;hellip;）&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>反身代词&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>me&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>te&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>se&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>nos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotrosa/s&lt;/td>
+&lt;td>os&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>se&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h3 id="疑问代词">疑问代词&lt;/h3>
 &lt;h4 id="quién">Quién&lt;/h4>
 &lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
@@ -400,9 +436,11 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;blockquote>
-&lt;p>TODO: 介绍 ser 和 estar 的区别&lt;/p>
-&lt;/blockquote>
+&lt;p>区别：&lt;/p>
+&lt;ul>
+&lt;li>ser 表达事物或人的固有的、永久性的性质和特点；&lt;/li>
+&lt;li>estar用于表达事物或者人的暂时性、非永恒的状态。&lt;/li>
+&lt;/ul>
 &lt;h3 id="一般动词">一般动词&lt;/h3>
 &lt;p>西班牙语的动词由形式可划分为三种，分别是以 -ar, -er 和 -ir 结尾的动词。&lt;/p>
 &lt;p>对于规则的动词来说，它们的变形规则如下：&lt;/p>
@@ -462,4 +500,78 @@
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>Do you speak Spanish? =&amp;gt; ¿Hablas español?&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;/blockquote>
+&lt;h3 id="进行时">进行时&lt;/h3>
+&lt;p>西班牙语的进行时的表示方式为 estar + gerundio（副动词），副动词的变形规则如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>原型&lt;/th>
+&lt;th>副动词&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>-ar&lt;/td>
+&lt;td>-ando&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-er&lt;/td>
+&lt;td>-iendo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-ir&lt;/td>
+&lt;td>-iendo&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>Estamos comiendo. =&amp;gt; 我们正在吃饭。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="自复动词">自复动词&lt;/h3>
+&lt;p>这个语法有点类似日语的他动词，比如自动词 消える 表示主语消失，而他动词 消す 表示主语使宾语消失。变形的直接加 se。比如 llamar 表示“叫喊”，而 llamarse 表示“名字叫”。不过我没见过直接用 llamarse 这种原型的，都要和反身代词搭配使用，而且要去掉 se，比如：&lt;/p>
+&lt;p>Me llamo Sofia. =&amp;gt; 我叫 Sofia.&lt;/p>
+&lt;p>需要注意一点，动词此时要进行元音替换，即把 e 替换为 ie，“我们”和“你们”不变。以 perder（迷失）为例：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>人称&lt;/th>
+&lt;th>动词搭配&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>me pierdo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tú&lt;/td>
+&lt;td>te pierdes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>él/ella/usted&lt;/td>
+&lt;td>se pierde&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nosotros/as&lt;/td>
+&lt;td>nos perdemos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vosotrosa/s&lt;/td>
+&lt;td>os perdéis&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ellos/ellas/usteded&lt;/td>
+&lt;td>se pierden&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;ul>
+&lt;li>¿Tienes un mapa?&lt;/li>
+&lt;li>Porque me estoy perdiendo en tu mirada.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="后记">后记&lt;/h2>
+&lt;p>这学期西班牙语的期末成绩是91，也算是在期望之内了。不过这片博客从四月份开始，直到期末考试结束后都还没写完。整个暑假也基本没碰过，直到今天（2022/08/27）才补完了剩下的部分。不过说实话感觉现在西班牙语也已经忘得差不多了，看来语言这东西不学不用的话真的是忘得很快呀😮‍💨&lt;/p>
+&lt;p>BTW，我们西班牙语的这个班里也还有很多大佬，譬如在学拉丁语的，还有学过德语和希腊语的，学过韩语和日语的据我所知就有好几个。不过感觉我自己的话对于大多数外语也都还是浅尝辄止吧，看来我还是专心去学好我的日语和英语吧😵‍💫&lt;/p></description></item></channel></rss>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Lomirus' Site</title><link>https://lomirus.github.io/page/</link><description>Recent content in Pages on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lomirus.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://lomirus.github.io/about/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/about/</guid><description>&lt;ul>
 &lt;li>代码：JavaScript/TypeScript/Rust &lt;span style="opacity: 0.3">&lt;del>没一个是熟练的&lt;/del>&lt;/span>&lt;/li>
-&lt;li>语言：精通中、英、日、韩、俄等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
+&lt;li>语言：精通中、英、日、韩、俄、意等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
 &lt;li>历史：&lt;span style="opacity: 0.3">&lt;del>控制台上的&lt;/del>&lt;/span> P社玩家&lt;/li>
 &lt;li>游戏：Pixel / Story Rich / RPG / Soul-like / AC&lt;/li>
 &lt;/ul>
@@ -11,13 +11,5 @@
 &lt;li>&lt;a class="link" href="https://space.bilibili.com/27590260" target="_blank" rel="noopener"
 >Bilibili&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="mailto:lomirus@qq.com" >lomirus@qq.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="todolist">TodoList&lt;/h1>
-&lt;ul>
-&lt;li>Develop an indie game
-&lt;ul>
-&lt;li>Learn pixel art with Aseprite&lt;/li>
-&lt;li>Learn music&lt;/li>
-&lt;/ul>
-&lt;/li>
+&lt;li>&lt;a class="link" href="mailto:lomirus.dev@protonmail.com" >lomirus.dev@protonmail.com&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends' Links, mostly in Redrock.&lt;/p></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item></channel></rss>
