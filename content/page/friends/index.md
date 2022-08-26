@@ -49,11 +49,6 @@ links:
     website: https://re-sunsun.github.io/
     image: https://raw.githubusercontent.com/re-sunsun/image/master/blog/head/newhead.jpg
 
-  - title: YYQF's Blog
-    description: " "
-    website: http://yyqf123.top/
-    image: zyc.jpg
-
 comments: false
 ---
 
