@@ -4,7 +4,7 @@ date: 2022-04-21T00:00:00+08:00
 lastmod: 2022-04-24T00:00:00+08:00
 image: "cover.jpg"
 description: "¡Hola, Español!"
-categories: ["Español"]
+categories: ["Language"]
 slug: "spanish-getting-started-notes"
 tags: ["Español"]
 ---

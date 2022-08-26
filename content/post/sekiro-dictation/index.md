@@ -4,7 +4,7 @@ date: 2021-08-26T00:00:00+08:00
 lastmod: 2021-08-26T18:25:17+08:00
 image: "cover.png"
 description: "忍びよ、目覚めて下さい。貴方の、主の為に"
-categories: ["日本語", "Game"]
+categories: ["Language", "Game"]
 slug: "sekiro-dictation"
 tags: ["隻狼"]
 ---

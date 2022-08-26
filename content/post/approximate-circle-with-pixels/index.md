@@ -4,7 +4,7 @@ date: 2022-08-26T00:19:00+08:00
 lastmod: 2022-08-26T00:00:00+08:00
 image: "cover.jpg"
 description: "一个由战略游戏地图设计的联想到的简单问题"
-categories: ["Code", "Game"]
+categories: ["Code"]
 slug: "approximate-circle-with-pixels"
 tags: ["Game", "Algorithm"]
 ---

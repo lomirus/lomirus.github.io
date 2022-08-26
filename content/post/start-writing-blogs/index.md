@@ -2,7 +2,7 @@
 title: "Writing Blogs in Github Issues"
 date: 2021-05-09T00:00:00+08:00
 lastmod: 2021-05-09T18:25:17+08:00
-categories: ["随笔，及其他"]
+categories: ["Others"]
 tags: ["blog"]
 slug: "start-writing-blogs"
 ---

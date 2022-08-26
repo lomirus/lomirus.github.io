@@ -4,7 +4,7 @@ description: "年轻人的第一款开源 Rust 游戏引擎"
 date: 2021-12-19T00:01:05+08:00
 lastmod: 2021-12-29T00:00:00+08:00
 image: "cover.png"
-categories: ["Code", "Game"]
+categories: ["Code"]
 tags: ["Rust", "Bevy", "Game"]
 slug: "bevy-tutorial"
 ---

@@ -4,7 +4,7 @@ date: 2021-07-20T00:00:00+08:00
 lastmod: 2021-08-25T00:00:00+08:00
 image: "cover.jpg"
 description: "Since I cannot stand the Windows, I embraced the Linux. "
-categories: ["Code", "English"]
+categories: ["Code", "Language"]
 tags: ["Linux", "Manjaro", "Gnome"]
 slug: "customize-manjaro"
 ---
