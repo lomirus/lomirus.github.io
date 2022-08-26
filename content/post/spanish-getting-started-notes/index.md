@@ -3,7 +3,7 @@ title: "西班牙语入门笔记"
 date: 2022-04-21T00:00:00+08:00
 lastmod: 2022-04-24T00:00:00+08:00
 image: "cover.jpg"
-description: "Hola, Español!"
+description: "¡Hola, Español!"
 categories: ["Español"]
 slug: "spanish-getting-started-notes"
 tags: ["Español"]
@@ -34,16 +34,16 @@ tags: ["Español"]
 
 |      | 单数 | 复数 |
 | ---- | ---- | ---- |
-| 阳性 | uno  | unos |
+| 阳性 | un  | unos |
 | 阴性 | una  | unas |
 
 e.g.
 
-> El mundo = The world = 砸瓦鲁多（雾）
+> El mundo => The world => 砸瓦鲁多（雾）
 >
-> Los niños = The children
+> Los niños => The children
 >
-> Unas niñas = Some girls
+> Unas niñas => Some girls
 
 ## 基础语法
 
@@ -87,9 +87,9 @@ e.g.
 
 如果需要将阳性名词变成阴性，若名词以辅音结尾，一般是直接加 -a；若名词以 -e, -o 结尾，一般是把结尾的字母换成 -a。比如随便举几个简单的例子：
 
-> el niño -> la niña
+> el niño <-> la niña
 > 
-> el amigo -> la amiga
+> el amigo <-> la amiga
 
 其他更复杂的规则可以自行查阅，这里就不再展开了。
 
@@ -139,9 +139,7 @@ e.g.
 
 西班牙当然不会这么无聊让你背背就完事儿了，都学到这儿了怎么能不整点儿活呢？实际上，物主代词是会根据对象的复数和阴阳性变化的。
 
-e.g.
-
-> Mis amigos = My friends
+> Mis amigos => My friends
 
 需要注意一下，这里的“朋友”是复数，所以代词“我的”后面也要加 s。其他的物主代词也是同理，比如：nuestros, nuestras, vuestros, vuestras, tus, sus。
 
@@ -161,19 +159,15 @@ e.g.
 
 意为 "Who"。
 
-e.g.
-
 > ¿Quién eres? 你是谁？
 
 #### Dónde
 
 意为 "Where"。
 
-e.g.
+> ¿Dónde estás? => 你在哪里？
 
-> ¿Dónde estás? 你在哪里？
-
-> ¿De dónde eres? 你来自哪里？
+> ¿De dónde eres? => 你来自哪里？
 
 ## 动词
 
@@ -209,4 +203,10 @@ e.g.
 | vosotros/as         | -áis  | -éis  | -ís   |
 | ellos/ellas/usteded | -an   | -en   | -en   |
 
-> TODO: 举例
+- hablar：讲，说
+
+> I spean Spanish. => Yo hablo español.
+
+> Do you speak Spanish? => ¿Hablas español?
+
+
