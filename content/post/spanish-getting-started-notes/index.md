@@ -1,7 +1,7 @@
 ---
 title: "西班牙语入门笔记"
 date: 2022-04-21T00:00:00+08:00
-lastmod: 2022-04-24T00:00:00+08:00
+lastmod: 2022-08-27T00:00:00+08:00
 image: "cover.jpg"
 description: "¡Hola, Español!"
 categories: ["Language"]
@@ -34,7 +34,7 @@ tags: ["Español"]
 
 |      | 单数 | 复数 |
 | ---- | ---- | ---- |
-| 阳性 | un  | unos |
+| 阳性 | un   | unos |
 | 阴性 | una  | unas |
 
 e.g.
@@ -153,6 +153,19 @@ e.g.
 | nuestro | el gato nuestro | la gata nuestra | los gatos nuestros | las gatas nuestras |
 | vuestro | el gato vuestro | la gata nuestro | los gatos vuestros | las gatas vuestras |
 
+### 反身代词/自复代词
+
+请和下文中的[自复动词](#自复动词)搭配使用。（页内跳转点不了的话估计是博客的 bug 吧...）
+
+|                     | 反身代词 |
+| ------------------- | -------- |
+| yo                  | me       |
+| tú                  | te       |
+| él/ella/usted       | se       |
+| nosotros/as         | nos      |
+| vosotrosa/s         | os       |
+| ellos/ellas/usteded | se       |
+
 ### 疑问代词
 
 #### Quién
@@ -186,7 +199,9 @@ e.g.
 | vosotrosa/s         | sois  | estáis  |
 | ellos/ellas/usteded | son   | están   |
 
-> TODO: 介绍 ser 和 estar 的区别
+区别：
+- ser 表达事物或人的固有的、永久性的性质和特点；
+- estar用于表达事物或者人的暂时性、非永恒的状态。
 
 ### 一般动词
 
@@ -209,4 +224,41 @@ e.g.
 
 > Do you speak Spanish? => ¿Hablas español?
 
+### 进行时
 
+西班牙语的进行时的表示方式为 estar + gerundio（副动词），副动词的变形规则如下：
+
+
+| 原型 | 副动词 |
+| ---- | ------ |
+| -ar  | -ando  |
+| -er  | -iendo |
+| -ir  | -iendo |
+
+> Estamos comiendo. => 我们正在吃饭。
+
+### 自复动词
+
+这个语法有点类似日语的他动词，比如自动词 消える 表示主语消失，而他动词 消す 表示主语使宾语消失。变形的直接加 se。比如 llamar 表示“叫喊”，而 llamarse 表示“名字叫”。不过我没见过直接用 llamarse 这种原型的，都要和反身代词搭配使用，而且要去掉 se，比如：
+
+Me llamo Sofia. => 我叫 Sofia.
+
+需要注意一点，动词此时要进行元音替换，即把 e 替换为 ie，“我们”和“你们”不变。以 perder（迷失）为例：
+
+| 人称                | 动词搭配     |
+| ------------------- | ------------ |
+| yo                  | me pierdo    |
+| tú                  | te pierdes   |
+| él/ella/usted       | se pierde    |
+| nosotros/as         | nos perdemos |
+| vosotrosa/s         | os perdéis   |
+| ellos/ellas/usteded | se pierden   |
+
+> - ¿Tienes un mapa?
+> - Porque me estoy perdiendo en tu mirada.
+
+## 后记
+
+这学期西班牙语的期末成绩是91，也算是在期望之内了。不过这片博客从四月份开始，直到期末考试结束后都还没写完。整个暑假也基本没碰过，直到今天（2022/08/27）才补完了剩下的部分。不过说实话感觉现在西班牙语也已经忘得差不多了，看来语言这东西不学不用的话真的是忘得很快呀😮‍💨
+
+BTW，我们西班牙语的这个班里也还有很多大佬，譬如在学拉丁语的，还有学过德语和希腊语的，学过韩语和日语的据我所知就有好几个。不过感觉我自己的话对于大多数外语也都还是浅尝辄止吧，看来我还是专心去学好我的日语和英语吧😵‍💫
