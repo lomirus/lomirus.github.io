@@ -46,26 +46,28 @@ data-flex-basis="204px"
 &lt;p>首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;p>接着老三样：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">mkdir dog-stickers
-&lt;span class="nb">cd&lt;/span> dog-stickers
-npm init -y
-&lt;span class="nb">echo&lt;/span> node_modules &amp;gt; .gitignore
-git init
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装 &lt;code>puppeteer&lt;/code>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">npm install puppeteer
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果没有自动下载 Chromium，需要自己手动下载：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">cd&lt;/span> node_modules/puppeteer
-npm install
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来写个 demo 测试一下，在项目根目录新建一个 &lt;code>index.js&lt;/code>，写入：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">puppeteer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;puppeteer&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">browser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">puppeteer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">launch&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">page&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newPage&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kr">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://example.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">screenshot&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">path&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;example.png&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">close&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="p">})();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后 &lt;code>node index.js&lt;/code>，如果项目根目录下面生成一张截图文件，说明安装成功了。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir dog-stickers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> dog-stickers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm init -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> node_modules &amp;gt; .gitignore
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装 &lt;code>puppeteer&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm install puppeteer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果没有自动下载 Chromium，需要自己手动下载：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> node_modules/puppeteer
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来写个 demo 测试一下，在项目根目录新建一个 &lt;code>index.js&lt;/code>，写入：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">puppeteer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;puppeteer&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">browser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">puppeteer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">launch&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">page&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newPage&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kr">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://example.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">screenshot&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">path&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;example.png&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">close&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后 &lt;code>node index.js&lt;/code>，如果项目根目录下面生成一张截图文件，说明安装成功了。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/example.png"
 width="800"
 height="600"
@@ -77,59 +79,63 @@ data-flex-grow="133"
 data-flex-basis="320px"
 >&lt;/p>
 &lt;p>然后只要再稍微加几行代码（迫真），我们的程序就完成了：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">import&lt;/span> &lt;span class="nx">puppeteer&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;puppeteer&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">isReachedBottom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">scrollHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollHeight&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clientHeight&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">scrollTop&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollTop&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="nx">scrollHeight&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">scrollTop&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="p">})&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getLoadingStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.DwpMZe&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">getAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;data-status&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">})&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">browser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">puppeteer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">launch&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">headless&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">});&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">page&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newPage&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="cm">/* 这里要重新设置视窗大小，
-&lt;/span>&lt;span class="cm"> 一是因为默认的视窗大小会导致浏览器出现横向滚动条，调大窗口可以方便调试，
-&lt;/span>&lt;span class="cm"> 二是因为我猜测 Google Images 对于不在视窗范围内的图片 URL 可能不会进行加载，
-&lt;/span>&lt;span class="cm"> 使用默认视窗大小总会出现大量 Empty 的情况，不知道是不是我猜测的原因。*/&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setViewport&lt;/span>&lt;span class="p">({&lt;/span>
-&lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1280&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">720&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="p">});&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kr">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://www.google.com.hk/search?q=image&amp;amp;tbm=isch&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="c1">// 滚（doge
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="cm">/* 这里 scrollBy 和 waitForTimeout 的参数大小都是经过 N 多次调试确定的，
-&lt;/span>&lt;span class="cm"> scrollBy 太大、waitForTimeout 太小会因为滑动过快而导致出现遗漏情况，反之则会导致耗时过长。
-&lt;/span>&lt;span class="cm"> 这里的参数和运行环境的网速、配置等都有关系，所以在其他 PC 上并不能保证能够完美运行。*/&lt;/span>
-&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollBy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">))&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">waitForTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">isReachedBottom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">getLoadingStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="k">else&lt;/span>
-&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Loading new images...`&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">};&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="c1">// 爪巴.jpg
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">images&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.islrc&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">];&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">div&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">div&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">})&lt;/span>
-&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`All: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">\nEmpty: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">src&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="c1">// 拿来吧你.jpg
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;images.json&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">));&lt;/span>
-&lt;span class="c1">// 今天的狗狗就看到这儿了.jpg
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">close&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="p">})();&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>说几个要注意的点，首先是我使用了 &lt;code>import&lt;/code> 语句，所以需要在 &lt;code>package.json&lt;/code> 中加一行 &lt;code>&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/code>。其他需要注意的点都写在代码注释里面了，这里就不赘述了。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">puppeteer&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;puppeteer&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">isReachedBottom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">scrollHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clientHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">scrollTop&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollTop&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">scrollHeight&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">round&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">scrollTop&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getLoadingStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.DwpMZe&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">getAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;data-status&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">browser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">puppeteer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">launch&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">headless&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">page&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newPage&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* 这里要重新设置视窗大小，
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> 一是因为默认的视窗大小会导致浏览器出现横向滚动条，调大窗口可以方便调试，
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> 二是因为我猜测 Google Images 对于不在视窗范围内的图片 URL 可能不会进行加载，
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> 使用默认视窗大小总会出现大量 Empty 的情况，不知道是不是我猜测的原因。*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setViewport&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1280&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">720&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kr">goto&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://www.google.com.hk/search?q=image&amp;amp;tbm=isch&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 滚（doge
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="cm">/* 这里 scrollBy 和 waitForTimeout 的参数大小都是经过 N 多次调试确定的，
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> scrollBy 太大、waitForTimeout 太小会因为滑动过快而导致出现遗漏情况，反之则会导致耗时过长。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> 这里的参数和运行环境的网速、配置等都有关系，所以在其他 PC 上并不能保证能够完美运行。*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollBy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">waitForTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">isReachedBottom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">getLoadingStatus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Loading new images...`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 爪巴.jpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">images&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.islrc&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">div&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">div&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">firstChild&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`All: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">\nEmpty: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">src&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 拿来吧你.jpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;images.json&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">images&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 今天的狗狗就看到这儿了.jpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">browser&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">close&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>说几个要注意的点，首先是我使用了 &lt;code>import&lt;/code> 语句，所以需要在 &lt;code>package.json&lt;/code> 中加一行 &lt;code>&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/code>。其他需要注意的点都写在代码注释里面了，这里就不赘述了。&lt;/p>
 &lt;p>程序运行完成之后会在项目根目录创建 &lt;code>images.json&lt;/code> 文件，里面保存图片的 URL 地址。其中有些是图片链接，有些是直接以 base64 的形式储存起来，还有的是 &lt;code>null&lt;/code>。至于为什么会出现 &lt;code>null&lt;/code> 我也懒得去深究了，反正总数还是很少的。&lt;/p>
 &lt;p>对了，Puppeteer 的文档有这样一段话：&lt;/p>
 &lt;blockquote>
@@ -138,28 +144,32 @@ data-flex-basis="320px"
 &lt;p>感觉我代码里面也没少写 &lt;code>sleep()&lt;/code> 呀😅，也许只是因为我太菜了吧。&lt;/p>
 &lt;h2 id="下载">下载&lt;/h2>
 &lt;p>获取到 &lt;code>images.json&lt;/code> 后就好说了，遍历链接下载即可：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">import&lt;/span> &lt;span class="nx">download&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;download&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">downloadFromBase64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^data:image\/\w+;base64,/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;base64&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">downloadFromUrl&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">download&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">));&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">links&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;images.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">encoding&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">}));&lt;/span>
-&lt;span class="nx">links&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/^http/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">downloadFromUrl&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Downloaded images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg...`&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/^data/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kr">await&lt;/span> &lt;span class="nx">downloadFromBase64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Downloaded images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg...`&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">})&lt;/span>
-&lt;span class="p">})()&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Google Images 的预览图好像都是 &lt;code>jpeg&lt;/code> 格式的，所以这里就全部默认扩展名为 &lt;code>jpeg&lt;/code> 了。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">download&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;download&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">downloadFromBase64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^data:image\/\w+;base64,/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;base64&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">downloadFromUrl&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">download&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">links&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">await&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;images.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">encoding&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">}));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">links&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/^http/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">downloadFromUrl&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Downloaded images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg...`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/^data/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">link&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">downloadFromBase64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Downloaded images/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">.jpeg...`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Google Images 的预览图好像都是 &lt;code>jpeg&lt;/code> 格式的，所以这里就全部默认扩展名为 &lt;code>jpeg&lt;/code> 了。&lt;/p>
 &lt;p>下载的图片会保存在项目根目录的 &lt;code>images&lt;/code> 文件夹。&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
@@ -177,78 +187,79 @@ data-flex-basis="320px"
 &lt;h2 id="anti-human-eslint">Anti-human ESLint&lt;/h2>
 &lt;p>听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。&lt;/p>
 &lt;p>安装过程中被问了几个问题，回答之后他给我推荐了几个插件。行，听您的。选择 YES，进行安装。看起来一切顺利，然后&amp;hellip;果不其然，报错了。报啥呢：&lt;/p>
-&lt;pre>&lt;code>Oops! Something went wrong! :(
+&lt;pre tabindex="0">&lt;code>Oops! Something went wrong! :(
 ESLint: 7.24.0
 Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file
 itself may not follow your linting rules.
-Error: Failed to load plugin '@typescript-eslint' declared in 'BaseConfig': Cannot find module 'typescript'
+Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &amp;#39;BaseConfig&amp;#39;: Cannot find module &amp;#39;typescript&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>我心想，这不废话嘛，我又没安装 typescipt 您能到哪儿找模块去？不过话又说回来，刚才，它倒是的确问过我这么一句：&lt;/p>
-&lt;pre>&lt;code>Does your project use TypeScript? · No / Yes
+&lt;pre tabindex="0">&lt;code>Does your project use TypeScript? · No / Yes
 &lt;/code>&lt;/pre>&lt;p>唔，我要用 TypeScript 倒是没错，不过这和我安没安装 TypeScript 的 package 也没什么必然的联系吧。&lt;/p>
 &lt;p>然后经过摸滚带爬的上下求索，终于意识到 typescript 貌似还是有点儿用的，再加上后面用到的 &lt;code>@types/react&lt;/code>，&lt;code>@types/react-dom&lt;/code>，感觉是在类型推断和自动补全方面有些作用（应该）&lt;/p>
 &lt;h2 id="module-or-commonjs-its-a-question">Module or CommonJS, it&amp;rsquo;s a question.&lt;/h2>
 &lt;p>刚才 ESLint 问我用的是 &lt;code>Module&lt;/code> 还是 &lt;code>CommonJS&lt;/code>，秉着“啥新用啥，用嘛嘛新”的原则，我当然选择的ES6的&lt;code>Module&lt;/code>。&lt;/p>
 &lt;p>然后由于我的&lt;code>webpack.config.js&lt;/code>用到了&lt;code>module.exports = {}&lt;/code>，所以 ESLint报错了。&lt;/p>
-&lt;pre>&lt;code>'require' is not defined. eslint(no-undef)
-'module' is not defined. eslint(no-undef)
+&lt;pre tabindex="0">&lt;code>&amp;#39;require&amp;#39; is not defined. eslint(no-undef)
+&amp;#39;module&amp;#39; is not defined. eslint(no-undef)
 &lt;/code>&lt;/pre>&lt;p>好，那我改。&lt;/p>
 &lt;p>我把 &lt;code>module.exports&lt;/code>改成了&lt;code>export default&lt;/code>，把&lt;code>require&lt;/code>改成了&lt;code>import&lt;/code>。结果又报错了：&lt;/p>
-&lt;pre>&lt;code>SyntaxError: Cannot use import statement outside a module
+&lt;pre tabindex="0">&lt;code>SyntaxError: Cannot use import statement outside a module
 &lt;/code>&lt;/pre>&lt;p>好，那我改。
 我在&lt;code>package.json&lt;/code>里加了句 &lt;code>&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/code>。结果又报错了：&lt;/p>
-&lt;pre>&lt;code>ReferenceError: __dirname is not defined
+&lt;pre tabindex="0">&lt;code>ReferenceError: __dirname is not defined
 &lt;/code>&lt;/pre>&lt;p>&lt;code>__dirname&lt;/code> 用不了可不行，那还是再改回来吧。
 好，那我改。
 于是回到了原点：&lt;/p>
-&lt;pre>&lt;code>'require' is not defined. eslint(no-undef)
-'module' is not defined. eslint(no-undef)
+&lt;pre tabindex="0">&lt;code>&amp;#39;require&amp;#39; is not defined. eslint(no-undef)
+&amp;#39;module&amp;#39; is not defined. eslint(no-undef)
 &lt;/code>&lt;/pre>&lt;p>（闹着玩是吧？😅）&lt;/p>
 &lt;p>然后在&lt;code>.eslintrc.js&lt;/code>的&lt;code>&amp;quot;env&amp;quot;&lt;/code>中加了行&lt;code>&amp;quot;node&amp;quot;: true&lt;/code>，行，终于，不报错了。&lt;/p>
 &lt;h2 id="eslint-comes-again">ESLint Comes Again&lt;/h2>
 &lt;p>&lt;code>App.js&lt;/code>里有这么一段：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
-&lt;pre>&lt;code>Missing return type on function. eslint(@typescript-eslint/explicit-module-boundary-types)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
+&lt;pre tabindex="0">&lt;code>Missing return type on function. eslint(@typescript-eslint/explicit-module-boundary-types)
 &lt;/code>&lt;/pre>&lt;p>接着修改代码为：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="c1">// has imported ReactElement...
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
-&lt;pre>&lt;code>Object pattern argument should be typed. eslint(@typescript-eslint/explicit-module-boundary-types)
-'title' is missing in props validation eslint(react/prop-types)
-Binding element 'children' implicitly has an 'any' type. ts(7031)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// has imported ReactElement...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint报错：&lt;/p>
+&lt;pre tabindex="0">&lt;code>Object pattern argument should be typed. eslint(@typescript-eslint/explicit-module-boundary-types)
+&amp;#39;title&amp;#39; is missing in props validation eslint(react/prop-types)
+Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#39; type. ts(7031)
 &lt;/code>&lt;/pre>&lt;p>接着修改代码为：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="c1">// has imported ReactElement...
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">type&lt;/span> &lt;span class="nx">BoxProps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">title&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nx">children&lt;/span>: &lt;span class="kt">ReactElement&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">BoxProps&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint在这块儿倒是不报错了，不过当其他地方调用&lt;code>Box&lt;/code>又报错了：&lt;/p>
-&lt;pre>&lt;code>This JSX tag's 'children' prop expects a single child of type 'ReactElement&amp;lt;any, string | JSXElementConstructor&amp;lt;any&amp;gt;&amp;gt;', but multiple children were provided.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// has imported ReactElement...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">type&lt;/span> &lt;span class="nx">BoxProps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">children&lt;/span>: &lt;span class="kt">ReactElement&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">BoxProps&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">ReactElement&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>ESLint在这块儿倒是不报错了，不过当其他地方调用&lt;code>Box&lt;/code>又报错了：&lt;/p>
+&lt;pre tabindex="0">&lt;code>This JSX tag&amp;#39;s &amp;#39;children&amp;#39; prop expects a single child of type &amp;#39;ReactElement&amp;lt;any, string | JSXElementConstructor&amp;lt;any&amp;gt;&amp;gt;&amp;#39;, but multiple children were provided.
 &lt;/code>&lt;/pre>&lt;p>查了下资料，发现除了&lt;code>ReactElement&lt;/code>之外原来还有&lt;code>ReactNode&lt;/code>和&lt;code>JSX.Element&lt;/code>（参考 &lt;a class="link" href="https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement" target="_blank" rel="noopener"
 >When to use JSX.Element vs ReactNode vs ReactElement?&lt;/a>）。&lt;/p>
 &lt;p>简单总结下，原因：拉胯TS的历史遗留问题；解决方法：将&lt;code>children&lt;/code>类型改成&lt;code>ReactNode&lt;/code>&lt;/p>
 &lt;h2 id="react-jsx">&lt;code>react-jsx&lt;/code>&lt;/h2>
 &lt;p>在上面的 StackOverflow 里看到了 &lt;code>create-react-app&lt;/code>，这才想到可以去参考一下它的代码，话不多说，开始安装。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">npm init -y
-npm install create-react-app
-npx create-react-app ts --template typescript
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>进去之后发现他在&lt;code>tsconfig.json&lt;/code>里的&lt;code>&amp;quot;compilerOptions&amp;quot;&lt;/code>写有&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code>，而我之前一直都是用的&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code>。好奇他们之间的差别，所以去 TypeScript官网文档查了下&lt;a class="link" href="https://www.typescriptlang.org/tsconfig/#jsx" target="_blank" rel="noopener"
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm init -y
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm install create-react-app
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx create-react-app ts --template typescript
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>进去之后发现他在&lt;code>tsconfig.json&lt;/code>里的&lt;code>&amp;quot;compilerOptions&amp;quot;&lt;/code>写有&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code>，而我之前一直都是用的&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code>。好奇他们之间的差别，所以去 TypeScript官网文档查了下&lt;a class="link" href="https://www.typescriptlang.org/tsconfig/#jsx" target="_blank" rel="noopener"
 >资料&lt;/a>：&lt;/p>
 &lt;blockquote>
 &lt;p>Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.&lt;/p>
@@ -271,25 +282,25 @@ npx create-react-app ts --template typescript
 &lt;/blockquote>
 &lt;p>继续秉承着“啥新用啥”的信条，我便将&lt;code>tsconfig.json&lt;/code>里的&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code>改成了&lt;code>&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code>。但是过了会儿突然想起来我使用的&lt;code>babel-loader&lt;/code>编译的，所以写在&lt;code>tsconfig.json&lt;/code>里其实并没有什么卵用&amp;hellip;&lt;/p>
 &lt;p>所以应该修改&lt;code>babel.config.js&lt;/code>的&lt;code>module.exports&lt;/code>，添加以下属性：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="s2">&amp;#34;presets&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="c1">// ...
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="s2">&amp;#34;@babel/preset-react&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="c1">// ...
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;runtime&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;automatic&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">]&lt;/span>
-&lt;span class="p">]&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>不过单单这么改还是会报错，这是因为 ESLint 的缘故，实际上代码是可以正常编译的。不过 ESLint 总是报错看着很不爽呀，说实话我都想把它给卸载了。但是转念又想到将来团队协作肯定是要用到的，只好再硬着头皮继续写了。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;presets&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;@babel/preset-react&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;runtime&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;automatic&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>不过单单这么改还是会报错，这是因为 ESLint 的缘故，实际上代码是可以正常编译的。不过 ESLint 总是报错看着很不爽呀，说实话我都想把它给卸载了。但是转念又想到将来团队协作肯定是要用到的，只好再硬着头皮继续写了。&lt;/p>
 &lt;p>修改 ESLint 配置文件：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">{&lt;/span>
-&lt;span class="c1">// ...
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;rules&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="c1">// ...
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;react/jsx-uses-react&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s2">&amp;#34;react/react-in-jsx-scope&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;rules&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;react/jsx-uses-react&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;react/react-in-jsx-scope&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

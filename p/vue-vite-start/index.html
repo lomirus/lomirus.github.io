@@ -1,435 +1,134 @@
-<!doctype html><html lang=zh-cn dir=ltr>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="学习 Vue 与 Vite 项目搭建的踩坑记录"><title>Vue & Vite 项目搭建入门</title>
-<link rel=canonical href=https://lomirus.github.io/p/vue-vite-start/>
-<link rel=stylesheet href=/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css><meta property="og:title" content="Vue & Vite 项目搭建入门">
-<meta property="og:description" content="学习 Vue 与 Vite 项目搭建的踩坑记录">
-<meta property="og:url" content="https://lomirus.github.io/p/vue-vite-start/">
-<meta property="og:site_name" content="Lomirus' Site">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Vite"><meta property="article:published_time" content="2021-05-22T18:25:17+08:00"><meta property="article:modified_time" content="2021-05-22T18:25:17+08:00"><meta property="og:image" content="https://lomirus.github.io/p/vue-vite-start/cover.png">
-<meta name=twitter:site content="@lomirus">
-<meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="Vue & Vite 项目搭建入门">
-<meta name=twitter:description content="学习 Vue 与 Vite 项目搭建的踩坑记录"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://lomirus.github.io/p/vue-vite-start/cover.png">
-<link rel="shortcut icon" href=/img/favicon.png>
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header>
-<figure class=site-avatar>
-<a href=/>
-<img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-</a>
-<span class=emoji>🍥</span>
-</figure>
-<div class=site-meta>
-<h1 class=site-name><a href=/>Lomirus' Site</a></h1>
-<h2 class=site-description>We shall meet in the place where there is no darkness.</h2>
-</div>
-</header><ol class=social-menu>
-<li>
-<a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-</a>
-</li>
-</ol><ol class=menu id=main-menu>
-<li>
-<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span>
-</a>
-</li>
-<li>
-<a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
-<span>Friends</span>
-</a>
-</li>
-<li>
-<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span>
-</a>
-</li>
-<div class=menu-bottom-section>
-<li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
-<select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/ selected>简体中文</option><option value=https://lomirus.github.io/en/>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span>
-</li>
-</div>
-</ol>
-</aside>
-<main class="main full-width">
-<article class="has-image main-article">
-<header class=article-header>
-<div class=article-image>
-<a href=/p/vue-vite-start/>
-<img src=/p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_800x0_resize_box_3.png srcset="/p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_800x0_resize_box_3.png 800w, /p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_1600x0_resize_box_3.png 1600w" width=800 height=340 loading=lazy alt="Featured image of post Vue & Vite 项目搭建入门">
-</a>
-</div>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/code/>
-Code
-</a>
-</header>
-<div class=article-title-wrapper>
-<h2 class=article-title>
-<a href=/p/vue-vite-start/>Vue & Vite 项目搭建入门</a>
-</h2>
-<h3 class=article-subtitle>
-学习 Vue 与 Vite 项目搭建的踩坑记录
-</h3>
-</div>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>May 22, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 3 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=学习-vue-与-vite-项目搭建的踩坑记录>学习 Vue 与 Vite 项目搭建的踩坑记录</h1>
-<h2 id=vue-20--webpack>Vue 2.0 + Webpack</h2>
-<h3 id=installation>Installation</h3>
-<p>虽然 Vue 的最新版已经是 3.0，而且 Vite 也似乎是大势所趋，不过我还是选择了先从 Vue 2.0 + Webpack 这种比较传统的方式开始学习。主要是因为这几个方面：</p>
-<ul>
-<li>现在仍有许多项目没有从 Vue 2.0 迁移到 3.0，使用 Vue 2.0 进行开发在实际生产中还是比较常见的，所以以后还可能会用到 2.0；</li>
-<li>Vue 2.0 的资料相对比较多，踩坑时更容易查到资料；</li>
-<li>学习 2.0 之后再学习 3.0，会对 3.0 的改进有更深的体会，比如能够切身体会到 Vue 3.0 为什么这么那么设计、这样设计有什么好处、它解决了哪些痛处与弊端等；</li>
-<li>入门曲线相对平缓。</li>
-</ul>
-<p>好了，前言就先讲到这里，接下来进入正题。</p>
-<p>首先创建项目：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ mkdir vue-learning
-$ <span class=nb>cd</span> vue-learning
-$ npm init -y
-</code></pre></div><p>接着安装相关库：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin
-$ npm install vue
-</code></pre></div><p>创建相关文件，创建后的目录结构：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ tree -I <span class=s2>&#34;node_modules&#34;</span>
-.
-<span class=p>|</span>-- dist
-<span class=p>|</span>   <span class=sb>`</span>-- main.js
-<span class=p>|</span>-- package-lock.json
-<span class=p>|</span>-- package.json
-<span class=p>|</span>-- public
-<span class=p>|</span>   <span class=sb>`</span>-- index.html
-<span class=p>|</span>-- src
-<span class=p>|</span>   <span class=sb>`</span>-- index.js
-<span class=sb>`</span>-- webpack.config.js
-
-<span class=m>3</span> directories, <span class=m>6</span> files
-</code></pre></div><p><code>webpack.config.js</code> :</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=p>{</span> <span class=nx>resolve</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
-<span class=kr>const</span> <span class=nx>HtmlWebpackPlugin</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;html-webpack-plugin&#39;</span><span class=p>)</span>
-
-<span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=p>{</span>
-    <span class=nx>mode</span><span class=o>:</span> <span class=s2>&#34;production&#34;</span><span class=p>,</span>
-    <span class=nx>entry</span><span class=o>:</span> <span class=s2>&#34;./src/index.js&#34;</span><span class=p>,</span>
-    <span class=nx>output</span><span class=o>:</span> <span class=p>{</span>
-        <span class=nx>path</span><span class=o>:</span> <span class=nx>resolve</span><span class=p>(</span><span class=s2>&#34;dist&#34;</span><span class=p>),</span>
-        <span class=nx>filename</span><span class=o>:</span> <span class=s2>&#34;[name].js&#34;</span>
-    <span class=p>},</span>
-    <span class=nx>plugins</span><span class=o>:</span> <span class=p>[</span> <span class=k>new</span> <span class=nx>HtmlWebpackPlugin</span><span class=p>({</span>
-        <span class=nx>template</span><span class=o>:</span> <span class=s2>&#34;./public/index.html&#34;</span>
-    <span class=p>})</span> <span class=p>],</span>
-    <span class=nx>devtool</span><span class=o>:</span> <span class=s2>&#34;source-map&#34;</span>
-<span class=p>}</span>
-</code></pre></div><p>然后基础部分就做完了，接下来开始加入 Vue：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// src/index.js
-</span><span class=c1></span>
-<span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
-
-<span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Vue</span><span class=p>()</span>
-</code></pre></div><p>打包之后可以看到 <code>dist/main.js</code> 中已经引入了 Vue 的 runtime。</p>
-<h3 id=runtime--compiler-vs-runtime-only>Runtime + Compiler vs. Runtime-only</h3>
-<p>按照官网文档中的第一个例子，修改 <code>index.html</code> 的 <code>body</code> 为：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;app&#34;</span><span class=p>&gt;</span>
-    {{ message }}
-<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</code></pre></div><p>并修改 <code>index.js</code> 为以下内容：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
-
-<span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Vue</span><span class=p>({</span>
-    <span class=nx>el</span><span class=o>:</span> <span class=s2>&#34;#app&#34;</span><span class=p>,</span>
-    <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
-        <span class=nx>message</span><span class=o>:</span> <span class=s2>&#34;Hello World!&#34;</span>
-    <span class=p>}</span>
-<span class=p>})</span>
-</code></pre></div><p>然后 <code>npx webpack serve</code> ，打开 <code>http://127.0.0.1:8080</code>，发现控制台报错：</p>
-<blockquote>
-<p>You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.</p>
-</blockquote>
-<p>原因是我们导入 Vue 时使用的语句是 <code>import Vue from 'vue';</code>。这行语句默认会导入 <code>Runtime-only</code> 版本的 Vue，而这个版本的 Vue 是不含编译器的，因此无法编译像 <code>{{ message }}</code> 这种模板语句。</p>
-<p>为了解决这个问题，我们可以修改一下 <code>webpack.config.js</code> 的内容，向其 <code>module.exports</code> assign 以下内容</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=p>{</span>
-    <span class=nx>resolve</span><span class=o>:</span> <span class=p>{</span>
-        <span class=nx>alias</span><span class=o>:</span> <span class=p>{</span>
-            <span class=s1>&#39;vue$&#39;</span><span class=o>:</span> <span class=s1>&#39;vue/dist/vue.esm.js&#39;</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-</code></pre></div><p>然后编译，运行，成功！</p>
-<p>相关参考资料：</p>
-<ul>
-<li><a class=link href=https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only target=_blank rel=noopener>https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only</a></li>
-</ul>
-<h3 id=single-file-components>Single File Components</h3>
-<p>接下来介绍一下单文件组件，这也是我比较推崇的方式。之前我写 React 时，就是采取了 CSS in JS 的方案，而不是 SCSS 或者是 Less；因为如果将<code>.less</code> 和 <code>.jsx</code> 分割开来的话，后期维护就会变得非常难受了。而单文件组件不仅目录结构看起来更舒服，在可维护性上也更加友好。不过 Vue 的单文件组件相比非单文件组件来说，并不仅仅是以上这些方面，比如说原生的 JavaScript 并不支持 jsx 语法，用模板字符串就显得丑了吧唧的等等。具体可参考<a class=link href=https://vuejs.org/v2/guide/single-file-components.html target=_blank rel=noopener>官方文档</a>，这里就不赘述了。</p>
-<p>然后正式开始，首先安装 <code>vue-loader</code> 和 <code>vue-template-compiler</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm install -D vue-loader vue-template-compiler
-</code></pre></div><p>修改 <code>webpack.config.js</code>，将以下内容添加到 <code>module.exports</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=p>{</span> <span class=nx>VueLoaderPlugin</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;vue-loader&#39;</span><span class=p>)</span>
-
-<span class=nx>module</span><span class=o>:</span> <span class=p>{</span>
-    <span class=nx>rules</span><span class=o>:</span> <span class=p>[{</span>
-        <span class=nx>test</span><span class=o>:</span> <span class=sr>/\.vue$/</span><span class=p>,</span>
-        <span class=nx>use</span><span class=o>:</span> <span class=s2>&#34;vue-loader&#34;</span>
-    <span class=p>}],</span>
-    <span class=nx>plugins</span><span class=o>:</span> <span class=p>[</span>
-        <span class=k>new</span> <span class=nx>VueLoaderPlugin</span><span class=p>()</span>
-    <span class=p>]</span>
-<span class=p>},</span>
-</code></pre></div><p>参考文档：https://vue-loader.vuejs.org/guide/#manual-setup</p>
-<p>然后修改<code>index.html</code>，<code>div#app</code>里面的内容全删掉就可以了，只留下：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;app&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</code></pre></div><p>创建文件<code>App.vue</code>：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
-        <span class=p>{{</span> <span class=nx>message</span> <span class=p>}}</span>
-    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-<span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
-
-<span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
-<span class=kr>export</span> <span class=k>default</span> <span class=p>{</span>
-    <span class=nx>data</span><span class=p>()</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=p>{</span>
-            <span class=nx>message</span><span class=o>:</span> <span class=s2>&#34;Hello World!&#34;</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-<span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-</code></pre></div><p>修改 <code>index.js</code>：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
-<span class=kr>import</span> <span class=nx>App</span> <span class=nx>from</span> <span class=s1>&#39;./App.vue&#39;</span>
-
-<span class=k>new</span> <span class=nx>Vue</span><span class=p>({</span>
-    <span class=nx>el</span><span class=o>:</span> <span class=s2>&#34;#app&#34;</span><span class=p>,</span>
-    <span class=nx>template</span><span class=o>:</span> <span class=s2>&#34;&lt;App /&gt;&#34;</span><span class=p>,</span>
-    <span class=nx>components</span><span class=o>:</span> <span class=p>{</span> <span class=nx>App</span> <span class=p>}</span>
-<span class=p>})</span>
-</code></pre></div><p>此时目录结构：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ tree -I <span class=s2>&#34;node_modules|dist&#34;</span>
-.
-<span class=p>|</span>-- package-lock.json
-<span class=p>|</span>-- package.json
-<span class=p>|</span>-- public
-<span class=p>|</span>   <span class=sb>`</span>-- index.html
-<span class=p>|</span>-- src
-<span class=p>|</span>   <span class=p>|</span>-- App.vue
-<span class=p>|</span>   <span class=sb>`</span>-- index.js
-<span class=sb>`</span>-- webpack.config.js
-
-<span class=m>2</span> directories, <span class=m>6</span> files
-</code></pre></div><p>完成。</p>
-<h2 id=vue-30--vite>Vue 3.0 + Vite</h2>
-<h3 id=creation>Creation</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ npm init @vitejs/app
-√ Project name: · vite-project
-√ Select a framework: · vue
-√ Select a variant: · JavaScript
-$ <span class=nb>cd</span> vite-project
-$ npm install
-</code></pre></div><p>安装就这么完成了，没啥好说的。</p>
-<h3 id=simplification>Simplification</h3>
-<p>如果正在阅读这篇文章的你是一名初学者的话，可能对这复杂（或许？）的目录结构毫无头绪，而且事实上它也确实用到了许多高级/新特性。所以我们可以试着将它简化并还原一下。</p>
-<p>简化后：</p>
-<p><code>src/components/HelloWorld.vue</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
-  <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;{{</span> <span class=nx>msg</span> <span class=p>}}&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
-<span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
-</code></pre></div><p><code>src/App.vue</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
-  <span class=p>&lt;</span><span class=nt>HelloWorld</span> <span class=na>msg</span><span class=o>=</span><span class=s>&#34;Hello Vue 3 + Vite&#34;</span> <span class=p>/&gt;</span>
-<span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
-
-<span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
-<span class=kr>import</span> <span class=nx>HelloWorld</span> <span class=nx>from</span> <span class=s1>&#39;./components/HelloWorld.vue&#39;</span>
-<span class=kr>export</span> <span class=k>default</span> <span class=p>{</span>
-    <span class=nx>components</span><span class=o>:</span> <span class=p>{</span> <span class=nx>HelloWorld</span> <span class=p>}</span>
-<span class=p>}</span>
-<span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-</code></pre></div><h2 id=next>Next</h2>
-<p>既然基础的项目搭建学会了，接下来就可以直接⏩到实战了（雾）。而且我最近正好要参加一个学校组织的叫什么什么数据库的比赛，或许可以考虑用比赛项目的前端部分来给 Vue 练手一下（）。那么接下来，就继续学习 Vue & Vite 吧！</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/vue/>Vue</a>
-<a href=/tags/vite/>Vite</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article class=has-image>
-<a href=/p/approximate-circle-with-pixels/>
-<div class=article-image>
-<img src=/p/approximate-circle-with-pixels/cover.2d1f118f27b1488d8f4522105e0b8c39_hu9b862756a4ac73bda75fd037b8a74264_460997_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何利用正方形地块扩散逼近圆形" data-key=approximate-circle-with-pixels data-hash="md5-LR8RjyexSI2PRSIQXguMOQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>如何利用正方形地块扩散逼近圆形</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/bevy-tutorial/>
-<div class=article-image>
-<img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA==">
-</div>
-<div class=article-details>
-<h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/gnome-extention-development/>
-<div class=article-image>
-<img src=/p/gnome-extention-development/cover.16bdb0183ab6c4c8222dc99f05ba0a2f_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" data-key=gnome-extention-development data-hash="md5-Fr2wGDq2xMgiLcmfBboKLw==">
-</div>
-<div class=article-details>
-<h2 class=article-title>一次失败的尝试开发 Gnome Extension 经历</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/first-meet-to-flutter/>
-<div class=article-image>
-<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
-</div>
-<div class=article-details>
-<h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/puppeteer-dog-stickers/>
-<div class=article-image>
-<img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script>
-<style>.utterances{max-width:unset}</style>
-<script>function setUtterancesTheme(b){let a=document.querySelector('.utterances iframe');a&&a.contentWindow.postMessage({type:'set-theme',theme:`github-${b}`},'https://utteranc.es')}addEventListener('message',a=>{if(a.origin!=='https://utteranc.es')return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener('onColorSchemeChange',a=>{setUtterancesTheme(a.detail)})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="学习 Vue 与 Vite 项目搭建的踩坑记录"><title>Vue & Vite 项目搭建入门</title><link rel=canonical href=https://lomirus.github.io/p/vue-vite-start/><link rel=stylesheet href=/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css><meta property="og:title" content="Vue & Vite 项目搭建入门"><meta property="og:description" content="学习 Vue 与 Vite 项目搭建的踩坑记录"><meta property="og:url" content="https://lomirus.github.io/p/vue-vite-start/"><meta property="og:site_name" content="Lomirus' Site"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Vue"><meta property="article:tag" content="Vite"><meta property="article:published_time" content="2021-05-22T18:25:17+08:00"><meta property="article:modified_time" content="2021-05-22T18:25:17+08:00"><meta property="og:image" content="https://lomirus.github.io/p/vue-vite-start/cover.png"><meta name=twitter:site content="@lomirus"><meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="Vue & Vite 项目搭建入门"><meta name=twitter:description content="学习 Vue 与 Vite 项目搭建的踩坑记录"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://lomirus.github.io/p/vue-vite-start/cover.png"><link rel="shortcut icon" href=/img/favicon.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>Lomirus' Site</a></h1><h2 class=site-description>We shall meet in the place where there is no darkness.</h2></div></header><ol class=social-menu><li><a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Friends</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/ selected>简体中文</option><option value=https://lomirus.github.io/en/>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/vue-vite-start/><img src=/p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_800x0_resize_box_3.png srcset="/p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_800x0_resize_box_3.png 800w, /p/vue-vite-start/cover_hu04a4e276885eb709cbeaf2dacb0788b9_351809_1600x0_resize_box_3.png 1600w" width=800 height=340 loading=lazy alt="Featured image of post Vue & Vite 项目搭建入门"></a></div><div class=article-details><header class=article-category><a href=/categories/code/>Code</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/vue-vite-start/>Vue & Vite 项目搭建入门</a></h2><h3 class=article-subtitle>学习 Vue 与 Vite 项目搭建的踩坑记录</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>May 22, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 3 分钟</time></div></footer></div></header><section class=article-content><h1 id=学习-vue-与-vite-项目搭建的踩坑记录>学习 Vue 与 Vite 项目搭建的踩坑记录</h1><h2 id=vue-20--webpack>Vue 2.0 + Webpack</h2><h3 id=installation>Installation</h3><p>虽然 Vue 的最新版已经是 3.0，而且 Vite 也似乎是大势所趋，不过我还是选择了先从 Vue 2.0 + Webpack 这种比较传统的方式开始学习。主要是因为这几个方面：</p><ul><li>现在仍有许多项目没有从 Vue 2.0 迁移到 3.0，使用 Vue 2.0 进行开发在实际生产中还是比较常见的，所以以后还可能会用到 2.0；</li><li>Vue 2.0 的资料相对比较多，踩坑时更容易查到资料；</li><li>学习 2.0 之后再学习 3.0，会对 3.0 的改进有更深的体会，比如能够切身体会到 Vue 3.0 为什么这么那么设计、这样设计有什么好处、它解决了哪些痛处与弊端等；</li><li>入门曲线相对平缓。</li></ul><p>好了，前言就先讲到这里，接下来进入正题。</p><p>首先创建项目：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ mkdir vue-learning
+</span></span><span class=line><span class=cl>$ <span class=nb>cd</span> vue-learning
+</span></span><span class=line><span class=cl>$ npm init -y
+</span></span></code></pre></div><p>接着安装相关库：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+</span></span><span class=line><span class=cl>$ npm install vue
+</span></span></code></pre></div><p>创建相关文件，创建后的目录结构：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ tree -I <span class=s2>&#34;node_modules&#34;</span>
+</span></span><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl><span class=p>|</span>-- dist
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=sb>`</span>-- main.js
+</span></span><span class=line><span class=cl><span class=p>|</span>-- package-lock.json
+</span></span><span class=line><span class=cl><span class=p>|</span>-- package.json
+</span></span><span class=line><span class=cl><span class=p>|</span>-- public
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=sb>`</span>-- index.html
+</span></span><span class=line><span class=cl><span class=p>|</span>-- src
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=sb>`</span>-- index.js
+</span></span><span class=line><span class=cl><span class=sb>`</span>-- webpack.config.js
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=m>3</span> directories, <span class=m>6</span> files
+</span></span></code></pre></div><p><code>webpack.config.js</code> :</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=p>{</span> <span class=nx>resolve</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;path&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>HtmlWebpackPlugin</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;html-webpack-plugin&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>mode</span><span class=o>:</span> <span class=s2>&#34;production&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>entry</span><span class=o>:</span> <span class=s2>&#34;./src/index.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>output</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>path</span><span class=o>:</span> <span class=nx>resolve</span><span class=p>(</span><span class=s2>&#34;dist&#34;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>        <span class=nx>filename</span><span class=o>:</span> <span class=s2>&#34;[name].js&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=nx>plugins</span><span class=o>:</span> <span class=p>[</span> <span class=k>new</span> <span class=nx>HtmlWebpackPlugin</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>        <span class=nx>template</span><span class=o>:</span> <span class=s2>&#34;./public/index.html&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span> <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nx>devtool</span><span class=o>:</span> <span class=s2>&#34;source-map&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>然后基础部分就做完了，接下来开始加入 Vue：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// src/index.js
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Vue</span><span class=p>()</span>
+</span></span></code></pre></div><p>打包之后可以看到 <code>dist/main.js</code> 中已经引入了 Vue 的 runtime。</p><h3 id=runtime--compiler-vs-runtime-only>Runtime + Compiler vs. Runtime-only</h3><p>按照官网文档中的第一个例子，修改 <code>index.html</code> 的 <code>body</code> 为：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;app&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    {{ message }}
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span></code></pre></div><p>并修改 <code>index.js</code> 为以下内容：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Vue</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>    <span class=nx>el</span><span class=o>:</span> <span class=s2>&#34;#app&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>message</span><span class=o>:</span> <span class=s2>&#34;Hello World!&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p>然后 <code>npx webpack serve</code> ，打开 <code>http://127.0.0.1:8080</code>，发现控制台报错：</p><blockquote><p>You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.</p></blockquote><p>原因是我们导入 Vue 时使用的语句是 <code>import Vue from 'vue';</code>。这行语句默认会导入 <code>Runtime-only</code> 版本的 Vue，而这个版本的 Vue 是不含编译器的，因此无法编译像 <code>{{ message }}</code> 这种模板语句。</p><p>为了解决这个问题，我们可以修改一下 <code>webpack.config.js</code> 的内容，向其 <code>module.exports</code> assign 以下内容</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>resolve</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>alias</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=s1>&#39;vue$&#39;</span><span class=o>:</span> <span class=s1>&#39;vue/dist/vue.esm.js&#39;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>然后编译，运行，成功！</p><p>相关参考资料：</p><ul><li><a class=link href=https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only target=_blank rel=noopener>https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only</a></li></ul><h3 id=single-file-components>Single File Components</h3><p>接下来介绍一下单文件组件，这也是我比较推崇的方式。之前我写 React 时，就是采取了 CSS in JS 的方案，而不是 SCSS 或者是 Less；因为如果将<code>.less</code> 和 <code>.jsx</code> 分割开来的话，后期维护就会变得非常难受了。而单文件组件不仅目录结构看起来更舒服，在可维护性上也更加友好。不过 Vue 的单文件组件相比非单文件组件来说，并不仅仅是以上这些方面，比如说原生的 JavaScript 并不支持 jsx 语法，用模板字符串就显得丑了吧唧的等等。具体可参考<a class=link href=https://vuejs.org/v2/guide/single-file-components.html target=_blank rel=noopener>官方文档</a>，这里就不赘述了。</p><p>然后正式开始，首先安装 <code>vue-loader</code> 和 <code>vue-template-compiler</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ npm install -D vue-loader vue-template-compiler
+</span></span></code></pre></div><p>修改 <code>webpack.config.js</code>，将以下内容添加到 <code>module.exports</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=p>{</span> <span class=nx>VueLoaderPlugin</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;vue-loader&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>module</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rules</span><span class=o>:</span> <span class=p>[{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>test</span><span class=o>:</span> <span class=sr>/\.vue$/</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>use</span><span class=o>:</span> <span class=s2>&#34;vue-loader&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}],</span>
+</span></span><span class=line><span class=cl>    <span class=nx>plugins</span><span class=o>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=k>new</span> <span class=nx>VueLoaderPlugin</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>},</span>
+</span></span></code></pre></div><p>参考文档：https://vue-loader.vuejs.org/guide/#manual-setup</p><p>然后修改<code>index.html</code>，<code>div#app</code>里面的内容全删掉就可以了，只留下：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;app&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span></code></pre></div><p>创建文件<code>App.vue</code>：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>{{</span> <span class=nx>message</span> <span class=p>}}</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>data</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>message</span><span class=o>:</span> <span class=s2>&#34;Hello World!&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></div><p>修改 <code>index.js</code>：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>import</span> <span class=nx>Vue</span> <span class=nx>from</span> <span class=s1>&#39;vue&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>App</span> <span class=nx>from</span> <span class=s1>&#39;./App.vue&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>new</span> <span class=nx>Vue</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>    <span class=nx>el</span><span class=o>:</span> <span class=s2>&#34;#app&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>template</span><span class=o>:</span> <span class=s2>&#34;&lt;App /&gt;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>components</span><span class=o>:</span> <span class=p>{</span> <span class=nx>App</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p>此时目录结构：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ tree -I <span class=s2>&#34;node_modules|dist&#34;</span>
+</span></span><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl><span class=p>|</span>-- package-lock.json
+</span></span><span class=line><span class=cl><span class=p>|</span>-- package.json
+</span></span><span class=line><span class=cl><span class=p>|</span>-- public
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=sb>`</span>-- index.html
+</span></span><span class=line><span class=cl><span class=p>|</span>-- src
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=p>|</span>-- App.vue
+</span></span><span class=line><span class=cl><span class=p>|</span>   <span class=sb>`</span>-- index.js
+</span></span><span class=line><span class=cl><span class=sb>`</span>-- webpack.config.js
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=m>2</span> directories, <span class=m>6</span> files
+</span></span></code></pre></div><p>完成。</p><h2 id=vue-30--vite>Vue 3.0 + Vite</h2><h3 id=creation>Creation</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ npm init @vitejs/app
+</span></span><span class=line><span class=cl>√ Project name: · vite-project
+</span></span><span class=line><span class=cl>√ Select a framework: · vue
+</span></span><span class=line><span class=cl>√ Select a variant: · JavaScript
+</span></span><span class=line><span class=cl>$ <span class=nb>cd</span> vite-project
+</span></span><span class=line><span class=cl>$ npm install
+</span></span></code></pre></div><p>安装就这么完成了，没啥好说的。</p><h3 id=simplification>Simplification</h3><p>如果正在阅读这篇文章的你是一名初学者的话，可能对这复杂（或许？）的目录结构毫无头绪，而且事实上它也确实用到了许多高级/新特性。所以我们可以试着将它简化并还原一下。</p><p>简化后：</p><p><code>src/components/HelloWorld.vue</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;{{</span> <span class=nx>msg</span> <span class=p>}}&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span></code></pre></div><p><code>src/App.vue</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vue data-lang=vue><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>HelloWorld</span> <span class=na>msg</span><span class=o>=</span><span class=s>&#34;Hello Vue 3 + Vite&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>template</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>HelloWorld</span> <span class=nx>from</span> <span class=s1>&#39;./components/HelloWorld.vue&#39;</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>components</span><span class=o>:</span> <span class=p>{</span> <span class=nx>HelloWorld</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></div><h2 id=next>Next</h2><p>既然基础的项目搭建学会了，接下来就可以直接⏩到实战了（雾）。而且我最近正好要参加一个学校组织的叫什么什么数据库的比赛，或许可以考虑用比赛项目的前端部分来给 Vue 练手一下（）。那么接下来，就继续学习 Vue & Vite 吧！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/vue/>Vue</a>
+<a href=/tags/vite/>Vite</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/approximate-circle-with-pixels/><div class=article-image><img src=/p/approximate-circle-with-pixels/cover.2d1f118f27b1488d8f4522105e0b8c39_hu9b862756a4ac73bda75fd037b8a74264_460997_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何利用正方形地块扩散逼近圆形" data-key=approximate-circle-with-pixels data-hash="md5-LR8RjyexSI2PRSIQXguMOQ=="></div><div class=article-details><h2 class=article-title>如何利用正方形地块扩散逼近圆形</h2></div></a></article><article class=has-image><a href=/p/bevy-tutorial/><div class=article-image><img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA=="></div><div class=article-details><h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2></div></a></article><article class=has-image><a href=/p/gnome-extention-development/><div class=article-image><img src=/p/gnome-extention-development/cover.16bdb0183ab6c4c8222dc99f05ba0a2f_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" data-key=gnome-extention-development data-hash="md5-Fr2wGDq2xMgiLcmfBboKLw=="></div><div class=article-details><h2 class=article-title>一次失败的尝试开发 Gnome Extension 经历</h2></div></a></article><article class=has-image><a href=/p/first-meet-to-flutter/><div class=article-image><img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg=="></div><div class=article-details><h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2></div></a></article><article class=has-image><a href=/p/puppeteer-dog-stickers/><div class=article-image><img src=/p/puppeteer-dog-stickers/cover.c6348903d9f5190255cace7363ef2931_huc6897c2f5887580bd568d12d3c01737e_12632_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" data-key=puppeteer-dog-stickers data-hash="md5-xjSJA9n1GQJVys5zY+8pMQ=="></div><div class=article-details><h2 class=article-title>使用 Puppeteer 爬取 Google Images 狗狗表情包</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2022 Lomirus' Site
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.11.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Lomirus' Site</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.13.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#vue-20--webpack>Vue 2.0 + Webpack</a>
-<ol>
-<li><a href=#installation>Installation</a></li>
-<li><a href=#runtime--compiler-vs-runtime-only>Runtime + Compiler vs. Runtime-only</a></li>
-<li><a href=#single-file-components>Single File Components</a></li>
-</ol>
-</li>
-<li><a href=#vue-30--vite>Vue 3.0 + Vite</a>
-<ol>
-<li><a href=#creation>Creation</a></li>
-<li><a href=#simplification>Simplification</a></li>
-</ol>
-</li>
-<li><a href=#next>Next</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#vue-20--webpack>Vue 2.0 + Webpack</a><ol><li><a href=#installation>Installation</a></li><li><a href=#runtime--compiler-vs-runtime-only>Runtime + Compiler vs. Runtime-only</a></li><li><a href=#single-file-components>Single File Components</a></li></ol></li><li><a href=#vue-30--vite>Vue 3.0 + Vite</a><ol><li><a href=#creation>Creation</a></li><li><a href=#simplification>Simplification</a></li></ol></li><li><a href=#next>Next</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

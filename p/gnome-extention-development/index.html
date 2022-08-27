@@ -1,124 +1,6 @@
-<!doctype html><html lang=zh-cn dir=ltr>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="所以 Gnome Extension 是什么牛马文档😅"><title>一次失败的尝试开发 Gnome Extension 经历</title>
-<link rel=canonical href=https://lomirus.github.io/p/gnome-extention-development/>
-<link rel=stylesheet href=/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css><meta property="og:title" content="一次失败的尝试开发 Gnome Extension 经历">
-<meta property="og:description" content="所以 Gnome Extension 是什么牛马文档😅">
-<meta property="og:url" content="https://lomirus.github.io/p/gnome-extention-development/">
-<meta property="og:site_name" content="Lomirus' Site">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Linux"><meta property="article:tag" content="Gnome"><meta property="article:published_time" content="2021-11-29T00:16:00+08:00"><meta property="article:modified_time" content="2021-12-11T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/gnome-extention-development/cover.jpg">
-<meta name=twitter:site content="@lomirus">
-<meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="一次失败的尝试开发 Gnome Extension 经历">
-<meta name=twitter:description content="所以 Gnome Extension 是什么牛马文档😅"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://lomirus.github.io/p/gnome-extention-development/cover.jpg">
-<link rel="shortcut icon" href=/img/favicon.png>
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header>
-<figure class=site-avatar>
-<a href=/>
-<img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-</a>
-<span class=emoji>🍥</span>
-</figure>
-<div class=site-meta>
-<h1 class=site-name><a href=/>Lomirus' Site</a></h1>
-<h2 class=site-description>We shall meet in the place where there is no darkness.</h2>
-</div>
-</header><ol class=social-menu>
-<li>
-<a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-</a>
-</li>
-</ol><ol class=menu id=main-menu>
-<li>
-<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span>
-</a>
-</li>
-<li>
-<a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
-<span>Friends</span>
-</a>
-</li>
-<li>
-<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span>
-</a>
-</li>
-<div class=menu-bottom-section>
-<li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg>
-<select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/ selected>简体中文</option><option value=https://lomirus.github.io/en/>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span>
-</li>
-</div>
-</ol>
-</aside>
-<main class="main full-width">
-<article class="has-image main-article">
-<header class=article-header>
-<div class=article-image>
-<a href=/p/gnome-extention-development/>
-<img src=/p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_800x0_resize_q75_box.jpg srcset="/p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_800x0_resize_q75_box.jpg 800w, /p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历">
-</a>
-</div>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/code/>
-Code
-</a>
-</header>
-<div class=article-title-wrapper>
-<h2 class=article-title>
-<a href=/p/gnome-extention-development/>一次失败的尝试开发 Gnome Extension 经历</a>
-</h2>
-<h3 class=article-subtitle>
-所以 Gnome Extension 是什么牛马文档😅
-</h3>
-</div>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Nov 29, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 4 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h2 id=引子>引子</h2>
-<p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。</p>
-<p><img src=/p/gnome-extention-development/macos_example.jpeg width=1244 height=576 srcset="/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_480x0_resize_q75_box.jpeg 480w, /p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt="MacOS Example" class=gallery-image data-flex-grow=215 data-flex-basis=518px></p>
-<p>然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的<a class=link href=https://extensions.gnome.org/ target=_blank rel=noopener>官方网站</a>上查找相关的扩展，然后就找到一款叫做 <a class=link href=https://extensions.gnome.org/extension/4114/fildem-global-menu/ target=_blank rel=noopener>Fildem global menu</a> 的扩展：</p>
-<p><img src=/p/gnome-extention-development/fildem.png width=1281 height=843 srcset="/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_480x0_resize_box_3.png 480w, /p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_1024x0_resize_box_3.png 1024w" loading=lazy alt="Fildem global menu" class=gallery-image data-flex-grow=151 data-flex-basis=364px></p>
-<p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。</p>
-<p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。</p>
-<h2 id=gnome-extension-目录结构>Gnome Extension 目录结构</h2>
-<h3 id=概览>概览</h3>
-<p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的<a class=link href=https://gjs.guide/ target=_blank rel=noopener>官方文档</a>。</p>
-<p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：</p>
-<pre><code>example@shell.gnome.org.zip
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="所以 Gnome Extension 是什么牛马文档😅"><title>一次失败的尝试开发 Gnome Extension 经历</title><link rel=canonical href=https://lomirus.github.io/p/gnome-extention-development/><link rel=stylesheet href=/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css><meta property="og:title" content="一次失败的尝试开发 Gnome Extension 经历"><meta property="og:description" content="所以 Gnome Extension 是什么牛马文档😅"><meta property="og:url" content="https://lomirus.github.io/p/gnome-extention-development/"><meta property="og:site_name" content="Lomirus' Site"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Linux"><meta property="article:tag" content="Gnome"><meta property="article:published_time" content="2021-11-29T00:16:00+08:00"><meta property="article:modified_time" content="2021-12-11T00:00:00+08:00"><meta property="og:image" content="https://lomirus.github.io/p/gnome-extention-development/cover.jpg"><meta name=twitter:site content="@lomirus"><meta name=twitter:creator content="@lomirus"><meta name=twitter:title content="一次失败的尝试开发 Gnome Extension 经历"><meta name=twitter:description content="所以 Gnome Extension 是什么牛马文档😅"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://lomirus.github.io/p/gnome-extention-development/cover.jpg"><link rel="shortcut icon" href=/img/favicon.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu9f6d40a38d2898de60fa6d5c3680415f_391042_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>Lomirus' Site</a></h1><h2 class=site-description>We shall meet in the place where there is no darkness.</h2></div></header><ol class=social-menu><li><a href=https://github.com/lomirus target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com/lomirus target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Friends</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><div class=menu-bottom-section><li id=i18n-switch><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/><path d="M5 9c-.003 2.144 2.952 3.908 6.7 4"/><path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/></svg><select name=language onchange="window.location.href=this.selectedOptions[0].value"><option value=https://lomirus.github.io/ selected>简体中文</option><option value=https://lomirus.github.io/en/>English</option><option value=https://lomirus.github.io/jp/>日本語</option></select></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/gnome-extention-development/><img src=/p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_800x0_resize_q75_box.jpg srcset="/p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_800x0_resize_q75_box.jpg 800w, /p/gnome-extention-development/cover_huc5fd00db66fd6af7b2bacec5fd3acda5_130750_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历"></a></div><div class=article-details><header class=article-category><a href=/categories/code/>Code</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/gnome-extention-development/>一次失败的尝试开发 Gnome Extension 经历</a></h2><h3 class=article-subtitle>所以 Gnome Extension 是什么牛马文档😅</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Nov 29, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><section class=article-content><h2 id=引子>引子</h2><p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。</p><p><img src=/p/gnome-extention-development/macos_example.jpeg width=1244 height=576 srcset="/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_480x0_resize_q75_box.jpeg 480w, /p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt="MacOS Example" class=gallery-image data-flex-grow=215 data-flex-basis=518px></p><p>然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的<a class=link href=https://extensions.gnome.org/ target=_blank rel=noopener>官方网站</a>上查找相关的扩展，然后就找到一款叫做 <a class=link href=https://extensions.gnome.org/extension/4114/fildem-global-menu/ target=_blank rel=noopener>Fildem global menu</a> 的扩展：</p><p><img src=/p/gnome-extention-development/fildem.png width=1281 height=843 srcset="/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_480x0_resize_box_3.png 480w, /p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_1024x0_resize_box_3.png 1024w" loading=lazy alt="Fildem global menu" class=gallery-image data-flex-grow=151 data-flex-basis=364px></p><p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。</p><p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。</p><h2 id=gnome-extension-目录结构>Gnome Extension 目录结构</h2><h3 id=概览>概览</h3><p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的<a class=link href=https://gjs.guide/ target=_blank rel=noopener>官方文档</a>。</p><p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：</p><pre tabindex=0><code>example@shell.gnome.org.zip
     locale/
         de/
           LC_MESSAGES/
@@ -130,280 +12,115 @@ Code
     metadata.json
     prefs.js
     stylesheet.css
-</code></pre><p>其中，最重要并且也是唯二 required 的是 <code>metadata.json</code> 和 <code>extension.js</code>。</p>
-<h3 id=metadatajson>metadata.json</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
-    <span class=nt>&#34;uuid&#34;</span><span class=p>:</span> <span class=s2>&#34;example@shell.gnome.org&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Example&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;This is an example extension.&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
-    <span class=nt>&#34;shell-version&#34;</span><span class=p>:</span> <span class=p>[</span> <span class=s2>&#34;3.38&#34;</span><span class=p>,</span> <span class=s2>&#34;40&#34;</span> <span class=p>],</span>
-    <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;https://gitlab.gnome.org/World/ShellExtensions/example&#34;</span>
-<span class=p>}</span>
-</code></pre></div><p>一个 <code>metadata.json</code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：<a class=link href=https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required target=_blank rel=noopener>metadata.json (Required)</a></p>
-<h3 id=extensionjs>extension.js</h3>
-<p>这个是扩展的核心文件，里面需要提供三个方法：<code>init()</code>, <code>enable()</code>, <code>disable()</code>。你可以像这样提供：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>class</span> <span class=nx>Extension</span> <span class=p>{</span>
-    <span class=nx>constructor</span><span class=p>()</span> <span class=p>{}</span>
-
-    <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
-        <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;enabled&#34;</span><span class=p>);</span>
-    <span class=p>}</span>
-
-    <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
-        <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;disabled&#34;</span><span class=p>);</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
-    <span class=nx>log</span><span class=p>(</span><span class=sb>`initializing`</span><span class=p>);</span>
-    <span class=k>return</span> <span class=k>new</span> <span class=nx>Extension</span><span class=p>();</span>
-<span class=p>}</span>
-</code></pre></div><p>也可以这样：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
-    <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;enabled&#34;</span><span class=p>);</span>
-<span class=p>}</span>
-
-<span class=kd>function</span> <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
-    <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;disabled&#34;</span><span class=p>);</span>
-<span class=p>}</span>
-
-<span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
-    <span class=nx>log</span><span class=p>(</span><span class=sb>`initializing...`</span><span class=p>);</span>
-<span class=p>}</span>
-</code></pre></div><p>然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的<a class=link href=http://devdocs.baznga.org/ target=_blank rel=noopener>文档地址</a> 访问返回 502 Bad Gateway，页面右上角的 <a class=link href=https://gjs-docs.gnome.org/ target=_blank rel=noopener>API References</a> 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：</p>
-<blockquote>
-<p>Here are a few links to some commonly used modules.</p>
-<p>You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.</p>
-</blockquote>
-<p>然后下面给了相关链接，其中 <code>js/</code> 对应的链接是：<a class=link href=https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/ target=_blank rel=noopener>https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/</a>，我于是随便翻开了一个页面：</p>
-<p><img src=/p/gnome-extention-development/docs.png width=748 height=787 srcset="/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_480x0_resize_box_3.png 480w, /p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=95 data-flex-basis=228px></p>
-<blockquote>
-<p>我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“<code>/***/function</code>”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！</p>
-</blockquote>
-<p>我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？</p>
-<blockquote>
-<p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了</p>
-</blockquote>
-<h2 id=后续>后续</h2>
-<p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>const</span> <span class=nx>St</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>St</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>GObject</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>GObject</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>Gio</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Gio</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>Clutter</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Clutter</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>Shell</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Shell</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>WinTracker</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Shell</span><span class=p>.</span><span class=nx>WindowTracker</span><span class=p>.</span><span class=nx>get_default</span><span class=p>();</span>
-<span class=kr>const</span> <span class=nx>Main</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>main</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>PanelMenu</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>panelMenu</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>PopupMenu</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>popupMenu</span><span class=p>;</span>
-<span class=kr>const</span> <span class=nx>Me</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>misc</span><span class=p>.</span><span class=nx>extensionUtils</span><span class=p>.</span><span class=nx>getCurrentExtension</span><span class=p>();</span>
-
-<span class=kr>const</span> <span class=nx>buttonTexts</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;File&#34;</span><span class=p>,</span> <span class=s2>&#34;Edit&#34;</span><span class=p>,</span> <span class=s2>&#34;Selection&#34;</span><span class=p>,</span> <span class=s2>&#34;View&#34;</span><span class=p>,</span> <span class=s2>&#34;Go&#34;</span><span class=p>,</span> <span class=s2>&#34;Run&#34;</span><span class=p>,</span> <span class=s2>&#34;Terminal&#34;</span><span class=p>,</span> <span class=s2>&#34;Window&#34;</span><span class=p>,</span> <span class=s2>&#34;Help&#34;</span><span class=p>]</span>
-    <span class=p>.</span><span class=nx>reverse</span><span class=p>();</span>
-<span class=kd>let</span> <span class=nx>MenuButtons</span> <span class=o>=</span> <span class=p>[];</span>
-
-<span class=cm>/**
-</span><span class=cm> * @type {(title: string) =&gt; any}
-</span><span class=cm> */</span>
-<span class=kr>const</span> <span class=nx>MenuButton</span> <span class=o>=</span> <span class=nx>GObject</span><span class=p>.</span><span class=nx>registerClass</span><span class=p>(</span>
-    <span class=kr>class</span> <span class=nx>PopupClass</span> <span class=kr>extends</span> <span class=nx>PanelMenu</span><span class=p>.</span><span class=nx>Button</span> <span class=p>{</span>
-        <span class=cm>/**
-</span><span class=cm>         * @type {(title: string) =&gt; void}
-</span><span class=cm>         */</span>
-        <span class=mi>_</span><span class=nx>init</span><span class=p>(</span><span class=nx>title</span><span class=p>)</span> <span class=p>{</span>
-            <span class=kr>super</span><span class=p>.</span><span class=mi>_</span><span class=nx>init</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
-            <span class=k>this</span><span class=p>.</span><span class=nx>add_child</span><span class=p>(</span><span class=k>new</span> <span class=nx>St</span><span class=p>.</span><span class=nx>Label</span><span class=p>({</span>
-                <span class=nx>text</span><span class=o>:</span> <span class=nx>title</span><span class=p>,</span>
-                <span class=nx>y_align</span><span class=o>:</span> <span class=nx>Clutter</span><span class=p>.</span><span class=nx>ActorAlign</span><span class=p>.</span><span class=nx>CENTER</span>
-            <span class=p>}));</span>
-
-            <span class=kd>let</span> <span class=nx>item</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>PopupMenu</span><span class=p>.</span><span class=nx>PopupMenuItem</span><span class=p>(</span><span class=s1>&#39;Test&#39;</span><span class=p>);</span>
-            <span class=k>this</span><span class=p>.</span><span class=nx>menu</span><span class=p>.</span><span class=nx>addMenuItem</span><span class=p>(</span><span class=nx>item</span><span class=p>);</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
-<span class=p>)</span>
-
-<span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
-
-<span class=p>}</span>
-
-<span class=kd>function</span> <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
-    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>buttonTexts</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>MenuButtons</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=k>new</span> <span class=nx>MenuButton</span><span class=p>(</span><span class=nx>buttonTexts</span><span class=p>[</span><span class=nx>i</span><span class=p>]));</span>
-        <span class=nx>Main</span><span class=p>.</span><span class=nx>panel</span><span class=p>.</span><span class=nx>addToStatusArea</span><span class=p>(</span><span class=nx>buttonTexts</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>MenuButtons</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=mi>2</span><span class=p>,</span> <span class=s1>&#39;left&#39;</span><span class=p>);</span>
-    <span class=p>}</span>
-    <span class=c1>// const focusApp = WinTracker.focus_app;
-</span><span class=c1></span>    <span class=c1>// if (!focusApp) return;
-</span><span class=c1></span>    <span class=c1>// const focusWindow = focusApp.get_windows()[0];
-</span><span class=c1></span>    <span class=c1>// if (!focusWindow) return;
-</span><span class=c1></span>    
-    <span class=c1>// const names = [];
-</span><span class=c1></span>    <span class=c1>// for (let name in focusWindow) {
-</span><span class=c1></span>    <span class=c1>//     names.push(name)
-</span><span class=c1></span>    <span class=c1>// }
-</span><span class=c1></span>    <span class=c1>// log(names)
-</span><span class=c1></span>
-    <span class=c1>// global.display.connect(&#39;notify::focus-window&#39;, (e) =&gt; {
-</span><span class=c1></span>    <span class=c1>//     log(&#34;focus something&#34;);
-</span><span class=c1></span>    <span class=c1>//     log(e)
-</span><span class=c1></span>    <span class=c1>// });
-</span><span class=c1></span><span class=p>}</span>
-
-<span class=kd>function</span> <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
-    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>MenuButtons</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>MenuButtons</span><span class=p>[</span><span class=nx>i</span><span class=p>].</span><span class=nx>destroy</span><span class=p>();</span>
-    <span class=p>}</span>
-    <span class=nx>MenuButtons</span> <span class=o>=</span> <span class=p>[]</span>
-<span class=p>}</span>
-</code></pre></div>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/linux/>Linux</a>
-<a href=/tags/gnome/>Gnome</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span>
-最后更新于 Dec 11, 2021 00:00 +0800
-</span>
-</section></footer>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article class=has-image>
-<a href=/p/customize-manjaro/>
-<div class=article-image>
-<img src=/p/customize-manjaro/cover.d0f75435dcd75756729c5cf853adcada_hu81f578c0819d5c459ae1161b90d3bf82_144962_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post Customize the Manjaro with Gnome" data-key=customize-manjaro data-hash="md5-0PdUNdzXV1ZynFz4U63K2g==">
-</div>
-<div class=article-details>
-<h2 class=article-title>Customize the Manjaro with Gnome</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/wsl2/>
-<div class=article-image>
-<img src=/p/wsl2/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post WSL 2 入门使用与踩坑记录" data-key=wsl2 data-hash="md5-y2lElhgAz5XmcVT8m030Sw==">
-</div>
-<div class=article-details>
-<h2 class=article-title>WSL 2 入门使用与踩坑记录</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/approximate-circle-with-pixels/>
-<div class=article-image>
-<img src=/p/approximate-circle-with-pixels/cover.2d1f118f27b1488d8f4522105e0b8c39_hu9b862756a4ac73bda75fd037b8a74264_460997_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何利用正方形地块扩散逼近圆形" data-key=approximate-circle-with-pixels data-hash="md5-LR8RjyexSI2PRSIQXguMOQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>如何利用正方形地块扩散逼近圆形</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/bevy-tutorial/>
-<div class=article-image>
-<img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA==">
-</div>
-<div class=article-details>
-<h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
-<a href=/p/first-meet-to-flutter/>
-<div class=article-image>
-<img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg==">
-</div>
-<div class=article-details>
-<h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script>
-<style>.utterances{max-width:unset}</style>
-<script>function setUtterancesTheme(b){let a=document.querySelector('.utterances iframe');a&&a.contentWindow.postMessage({type:'set-theme',theme:`github-${b}`},'https://utteranc.es')}addEventListener('message',a=>{if(a.origin!=='https://utteranc.es')return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener('onColorSchemeChange',a=>{setUtterancesTheme(a.detail)})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+</code></pre><p>其中，最重要并且也是唯二 required 的是 <code>metadata.json</code> 和 <code>extension.js</code>。</p><h3 id=metadatajson>metadata.json</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;uuid&#34;</span><span class=p>:</span> <span class=s2>&#34;example@shell.gnome.org&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Example&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;This is an example extension.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;shell-version&#34;</span><span class=p>:</span> <span class=p>[</span> <span class=s2>&#34;3.38&#34;</span><span class=p>,</span> <span class=s2>&#34;40&#34;</span> <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;https://gitlab.gnome.org/World/ShellExtensions/example&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>一个 <code>metadata.json</code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：<a class=link href=https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required target=_blank rel=noopener>metadata.json (Required)</a></p><h3 id=extensionjs>extension.js</h3><p>这个是扩展的核心文件，里面需要提供三个方法：<code>init()</code>, <code>enable()</code>, <code>disable()</code>。你可以像这样提供：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Extension</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>constructor</span><span class=p>()</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;enabled&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;disabled&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>log</span><span class=p>(</span><span class=sb>`initializing`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=k>new</span> <span class=nx>Extension</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>也可以这样：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;enabled&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>log</span><span class=p>(</span><span class=s2>&#34;disabled&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>log</span><span class=p>(</span><span class=sb>`initializing...`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的<a class=link href=http://devdocs.baznga.org/ target=_blank rel=noopener>文档地址</a> 访问返回 502 Bad Gateway，页面右上角的 <a class=link href=https://gjs-docs.gnome.org/ target=_blank rel=noopener>API References</a> 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：</p><blockquote><p>Here are a few links to some commonly used modules.</p><p>You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.</p></blockquote><p>然后下面给了相关链接，其中 <code>js/</code> 对应的链接是：<a class=link href=https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/ target=_blank rel=noopener>https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/</a>，我于是随便翻开了一个页面：</p><p><img src=/p/gnome-extention-development/docs.png width=748 height=787 srcset="/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_480x0_resize_box_3.png 480w, /p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_1024x0_resize_box_3.png 1024w" loading=lazy class=gallery-image data-flex-grow=95 data-flex-basis=228px></p><blockquote><p>我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“<code>/***/function</code>”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！</p></blockquote><p>我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？</p><blockquote><p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了</p></blockquote><h2 id=后续>后续</h2><p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>St</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>St</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>GObject</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>GObject</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Gio</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Gio</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Clutter</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Clutter</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Shell</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Shell</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>WinTracker</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>gi</span><span class=p>.</span><span class=nx>Shell</span><span class=p>.</span><span class=nx>WindowTracker</span><span class=p>.</span><span class=nx>get_default</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Main</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>main</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>PanelMenu</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>panelMenu</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>PopupMenu</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>ui</span><span class=p>.</span><span class=nx>popupMenu</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Me</span> <span class=o>=</span> <span class=nx>imports</span><span class=p>.</span><span class=nx>misc</span><span class=p>.</span><span class=nx>extensionUtils</span><span class=p>.</span><span class=nx>getCurrentExtension</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>buttonTexts</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;File&#34;</span><span class=p>,</span> <span class=s2>&#34;Edit&#34;</span><span class=p>,</span> <span class=s2>&#34;Selection&#34;</span><span class=p>,</span> <span class=s2>&#34;View&#34;</span><span class=p>,</span> <span class=s2>&#34;Go&#34;</span><span class=p>,</span> <span class=s2>&#34;Run&#34;</span><span class=p>,</span> <span class=s2>&#34;Terminal&#34;</span><span class=p>,</span> <span class=s2>&#34;Window&#34;</span><span class=p>,</span> <span class=s2>&#34;Help&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>reverse</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>MenuButtons</span> <span class=o>=</span> <span class=p>[];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * @type {(title: string) =&gt; any}
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>MenuButton</span> <span class=o>=</span> <span class=nx>GObject</span><span class=p>.</span><span class=nx>registerClass</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=kr>class</span> <span class=nx>PopupClass</span> <span class=kr>extends</span> <span class=nx>PanelMenu</span><span class=p>.</span><span class=nx>Button</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm>         * @type {(title: string) =&gt; void}
+</span></span></span><span class=line><span class=cl><span class=cm>         */</span>
+</span></span><span class=line><span class=cl>        <span class=nx>_init</span><span class=p>(</span><span class=nx>title</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=kr>super</span><span class=p>.</span><span class=nx>_init</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=p>.</span><span class=nx>add_child</span><span class=p>(</span><span class=k>new</span> <span class=nx>St</span><span class=p>.</span><span class=nx>Label</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>                <span class=nx>text</span><span class=o>:</span> <span class=nx>title</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nx>y_align</span><span class=o>:</span> <span class=nx>Clutter</span><span class=p>.</span><span class=nx>ActorAlign</span><span class=p>.</span><span class=nx>CENTER</span>
+</span></span><span class=line><span class=cl>            <span class=p>}));</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=kd>let</span> <span class=nx>item</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>PopupMenu</span><span class=p>.</span><span class=nx>PopupMenuItem</span><span class=p>(</span><span class=s1>&#39;Test&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=p>.</span><span class=nx>menu</span><span class=p>.</span><span class=nx>addMenuItem</span><span class=p>(</span><span class=nx>item</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>init</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>enable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>buttonTexts</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>MenuButtons</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=k>new</span> <span class=nx>MenuButton</span><span class=p>(</span><span class=nx>buttonTexts</span><span class=p>[</span><span class=nx>i</span><span class=p>]));</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Main</span><span class=p>.</span><span class=nx>panel</span><span class=p>.</span><span class=nx>addToStatusArea</span><span class=p>(</span><span class=nx>buttonTexts</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>MenuButtons</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=mi>2</span><span class=p>,</span> <span class=s1>&#39;left&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// const focusApp = WinTracker.focus_app;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// if (!focusApp) return;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// const focusWindow = focusApp.get_windows()[0];
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// if (!focusWindow) return;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    
+</span></span><span class=line><span class=cl>    <span class=c1>// const names = [];
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// for (let name in focusWindow) {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//     names.push(name)
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// }
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// log(names)
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>// global.display.connect(&#39;notify::focus-window&#39;, (e) =&gt; {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//     log(&#34;focus something&#34;);
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//     log(e)
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// });
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>disable</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>MenuButtons</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>MenuButtons</span><span class=p>[</span><span class=nx>i</span><span class=p>].</span><span class=nx>destroy</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nx>MenuButtons</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></section><footer class=article-footer><section class=article-tags><a href=/tags/linux/>Linux</a>
+<a href=/tags/gnome/>Gnome</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最后更新于 Dec 11, 2021 00:00 +0800</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/customize-manjaro/><div class=article-image><img src=/p/customize-manjaro/cover.d0f75435dcd75756729c5cf853adcada_hu81f578c0819d5c459ae1161b90d3bf82_144962_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post Customize the Manjaro with Gnome" data-key=customize-manjaro data-hash="md5-0PdUNdzXV1ZynFz4U63K2g=="></div><div class=article-details><h2 class=article-title>Customize the Manjaro with Gnome</h2></div></a></article><article class=has-image><a href=/p/wsl2/><div class=article-image><img src=/p/wsl2/cover.cb6944961800cf95e67154fc9b4df44b_hu942fe59d1722165a0491fd14e8631074_1587106_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post WSL 2 入门使用与踩坑记录" data-key=wsl2 data-hash="md5-y2lElhgAz5XmcVT8m030Sw=="></div><div class=article-details><h2 class=article-title>WSL 2 入门使用与踩坑记录</h2></div></a></article><article class=has-image><a href=/p/approximate-circle-with-pixels/><div class=article-image><img src=/p/approximate-circle-with-pixels/cover.2d1f118f27b1488d8f4522105e0b8c39_hu9b862756a4ac73bda75fd037b8a74264_460997_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何利用正方形地块扩散逼近圆形" data-key=approximate-circle-with-pixels data-hash="md5-LR8RjyexSI2PRSIQXguMOQ=="></div><div class=article-details><h2 class=article-title>如何利用正方形地块扩散逼近圆形</h2></div></a></article><article class=has-image><a href=/p/bevy-tutorial/><div class=article-image><img src=/p/bevy-tutorial/cover.5ebf211a2c38b3831b2a02f44be35f00_huf5bbcca3084d9f76a2d0ab9f6e7b7f03_51990_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" data-key=bevy-tutorial data-hash="md5-Xr8hGiw4s4MbKgL0S+NfAA=="></div><div class=article-details><h2 class=article-title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</h2></div></a></article><article class=has-image><a href=/p/first-meet-to-flutter/><div class=article-image><img src=/p/first-meet-to-flutter/cover.95b185fc991ea898b77af265380585ca_huf7a57ca01dd62cd64befafa39a2c7819_77572_250x150_fill_box_smart1_3.png width=250 height=150 loading=lazy alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" data-key=first-meet-to-flutter data-hash="md5-lbGF/JkeqJi3evJlOAWFyg=="></div><div class=article-details><h2 class=article-title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=lomirus/lomirus.github.io issue-term=pathname label=utterances crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2022 Lomirus' Site
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.11.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Lomirus' Site</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.13.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#引子>引子</a></li>
-<li><a href=#gnome-extension-目录结构>Gnome Extension 目录结构</a>
-<ol>
-<li><a href=#概览>概览</a></li>
-<li><a href=#metadatajson>metadata.json</a></li>
-<li><a href=#extensionjs>extension.js</a></li>
-</ol>
-</li>
-<li><a href=#后续>后续</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#引子>引子</a></li><li><a href=#gnome-extension-目录结构>Gnome Extension 目录结构</a><ol><li><a href=#概览>概览</a></li><li><a href=#metadatajson>metadata.json</a></li><li><a href=#extensionjs>extension.js</a></li></ol></li><li><a href=#后续>后续</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
