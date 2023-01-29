@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lomirus' Site</title><link>https://lomirus.github.io/post/</link><description>Recent content in Posts on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Nov 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>有关设计的“人性化”与“反人类”</title><link>https://lomirus.github.io/p/shit-design/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/shit-design/</guid><description>&lt;img src="https://lomirus.github.io/p/shit-design/cover.png" alt="Featured image of post 有关设计的“人性化”与“反人类”" />&lt;p>国外软件最让我让我厌恶的一个设计之一是，当你想查看一个帖子的发布时间、或是一个 Release 的 Publish 日期时，它只给显示了 1 year ago. 然而到底是 365 天前呢，还是 730 天（毕竟还得考虑闰年不是）前呢，那非得让你好好上下求索一番方能找到设计师到底把它藏在了何处。更有甚者，则是索性不给你提供查看原始日期的选项，如此一来其谜底究竟如何你便不得而知了——或者当然，你也可以选择再在原地等待365天来验证，前提是你愿意的话。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lomirus' Site</title><link>https://lomirus.github.io/post/</link><description>Recent content in Posts on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Jan 2023 23:11:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>生成语法入门系列（一）：头部方向参数 (Head-Directionality Parameter)</title><link>https://lomirus.github.io/p/head-directionality-parameter/</link><pubDate>Sat, 28 Jan 2023 23:11:00 +0800</pubDate><guid>https://lomirus.github.io/p/head-directionality-parameter/</guid><description>&lt;img src="https://lomirus.github.io/p/head-directionality-parameter/cover.webp" alt="Featured image of post 生成语法入门系列（一）：头部方向参数 (Head-Directionality Parameter)" />&lt;h2 id="background">Background&lt;/h2>
+&lt;p>最近在研究人工语言，特别是语序问题，不由得涉及了头部方向参数、X-bar Theory 等领域的知识，而且也这才意识到了乔姆斯基到底有多强orz。所以后面就着手写一下学习这些东西的一些笔记汇总，希望能帮到后面会用到的人。&lt;/p>
+&lt;p>目前计划分三篇文章完成，本篇主要介绍句法学的入门知识，第二篇会讲 X-bar Theory，第三篇则会涉及当前 generative grammar 的最新研究成果 minimalist program。&lt;/p>
+&lt;p>下面开始正文。&lt;/p>
+&lt;h2 id="syntactic-category">Syntactic Category&lt;/h2>
+&lt;p>在讲 syntactic category 之前，现引入两个新概念，lexical categories 和 phrasal categories。前者 lexical categories 就是我们在中学时学过的单词分类，比如动词，名词，副词等，lexical 即“语素的”之意。而 phrasal categories 在功能上与前者类似，不过针对的不是语素，而是短语，比如名词短语，动词短语等。&lt;/p>
+&lt;p>Syntactic category 则是句法理论中所假定的一种句法单元。在 phrase structure grammars 中，syntactic category 包括 lexical categories 和 phrasal categories。但是另一个理论 dependency grammars 中，syntactic category 则不承认 phrasal categories，只包括 lexical categories。本文依照前者为讨论基础。&lt;/p>
+&lt;p>由于在后面的讨论中，主要用到的是其英文及其缩写，所以先简单列举一下常见的词性：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>中文&lt;/th>
+&lt;th>英文&lt;/th>
+&lt;th>缩写&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>名词短语&lt;/td>
+&lt;td>noun phrase&lt;/td>
+&lt;td>NP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>动词短语&lt;/td>
+&lt;td>verb phrase&lt;/td>
+&lt;td>VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>形容词短语&lt;/td>
+&lt;td>adjective phrase&lt;/td>
+&lt;td>AP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>副词短语&lt;/td>
+&lt;td>adverb phrase&lt;/td>
+&lt;td>AdvP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>介词短语&lt;/td>
+&lt;td>adposition phrase&lt;/td>
+&lt;td>PP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>限定词短语&lt;/td>
+&lt;td>determiner phrase&lt;/td>
+&lt;td>DetP&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="head">Head&lt;/h2>
+&lt;p>在语言学中，对某个短语来说，我们用在这个短语中决定了该短语的 syntactic category 的词语称之为 head.&lt;/p>
+&lt;p>由于汉语本身的语序导致的歧义现象（这也是本系列要讨论的问题之一），所以下面我先用英语举几个例子：&lt;/p>
+&lt;ul>
+&lt;li>cute cat 是一个 noun phrase，因此其 head 是 cat&lt;/li>
+&lt;li>eat fish 是一个 verb phrase，因此其 head 是 eat&lt;/li>
+&lt;li>too cute 是一个 adjective phrase，因此其 head 是 cute&lt;/li>
+&lt;li>too slowly 是一个 adverb phrase，因此其 head 是 slow&lt;/li>
+&lt;/ul>
+&lt;p>具体鉴定方法可以参考此处：&lt;a class="link" href="https://dictionary.cambridge.org/grammar/british-grammar/heads" target="_blank" rel="noopener"
+>Heads - Grammar - Cambridge Dictionary&lt;/a>。&lt;/p>
+&lt;h2 id="head-initial--head-final">Head-initial &amp;amp; Head-final&lt;/h2>
+&lt;p>在一个短语中，如果其 head 位于开头，我们称之为 head-initial，反之则称之为 head-final。这里继续用上面的例子：&lt;/p>
+&lt;ul>
+&lt;li>cute cat 中 cat 位于后面，所以是 head-final&lt;/li>
+&lt;li>eat fish 中 eat 位于前面，所以是 head-final&lt;/li>
+&lt;li>too cute 中 cute 位于后面，所以是 head-final&lt;/li>
+&lt;li>too slowly 中 slowly 位于后面，所以是 head-final&lt;/li>
+&lt;/ul>
+&lt;h2 id="head-directionality-parameter">Head-Directionality Parameter&lt;/h2>
+&lt;p>在语言学中，我们按照一个语言是 head-initial 还是 head-final，讲他们进行分类，并将这一参数称之为 head directionality。显然地。如果一个语言是 head-initial，那么以为它是 VO 结构，例如英语；如果是 head-final，则是 OV 结构，例如英语。&lt;/p>
+&lt;p>这时，我猜你可能会很疑惑：如果英语真的是纯粹的 head-initial，那么英语应当出现类似西班牙语的定语后置的现象，但是在英语中，尽管存在后置的定语从句，但是一般的形容词依旧是放在名词前面的，那么这就与 head-initial 相抵触了。&lt;/p>
+&lt;p>事实上，这么想的人不只你一个，我也一样。与其将语言粗暴地分成两个极端，不如在一个 continuum 的两端放上 head-final 和 head-initial，每一个语言都是条上的一点，而其语序越接近哪一个，就越靠近哪一端。浙大的刘海涛教授在2010年利用了 dependency treebank-based 方法，对二十余种语言进行了调查，而这次研究为该观点提供了有力的支持。在这种观念下，诸如英语或是德语将在 continuum 的相对中间的位置，而日语则会被放在靠近 head-final 的一端。&lt;/p>
+&lt;h2 id="beyond-this-article">Beyond this Article&lt;/h2>
+&lt;p>终于知道为什么之前读其他大佬写东西总是中文里掺杂着一堆英文了。自己最近为了写这篇文章，查阅到的资料也基本都是英文文献。一是考虑是翻译的不可靠性，二是考虑到翻译所导致的多余劳动量，简单说就是吃力不讨好，所以干脆还是直接以英文原文为准吧，方便大家也方便自己。&lt;/p></description></item><item><title>有关设计的“人性化”与“反人类”</title><link>https://lomirus.github.io/p/shit-design/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/shit-design/</guid><description>&lt;img src="https://lomirus.github.io/p/shit-design/cover.png" alt="Featured image of post 有关设计的“人性化”与“反人类”" />&lt;p>国外软件最让我让我厌恶的一个设计之一是，当你想查看一个帖子的发布时间、或是一个 Release 的 Publish 日期时，它只给显示了 1 year ago. 然而到底是 365 天前呢，还是 730 天（毕竟还得考虑闰年不是）前呢，那非得让你好好上下求索一番方能找到设计师到底把它藏在了何处。更有甚者，则是索性不给你提供查看原始日期的选项，如此一来其谜底究竟如何你便不得而知了——或者当然，你也可以选择再在原地等待365天来验证，前提是你愿意的话。&lt;/p>
 &lt;p>今日我便深受其害，在一个历史传下来的前端项目中，同时出现了 &lt;code>pacakge-lock.json&lt;/code> 和 &lt;code>yarn.lock&lt;/code>，双份包管理器，或许开发者也能双倍快乐？正所谓：&lt;/p>
 &lt;blockquote>
 &lt;p>天无二日，只能有阁下一个太阳。&lt;/p>
