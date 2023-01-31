@@ -5,7 +5,7 @@ date: 2023-01-28T23:11:00+08:00
 lastmod: 2023-01-30T00:04:00+08:00
 image: "cover.webp"
 categories: ["Language"]
-tags: ["Language", "Lingustics", "Syntax", "Generative Grammar"]
+tags: ["language", "lingustics", "syntax", "generative grammar"]
 slug: "head-directionality-parameter"
 ---
 
