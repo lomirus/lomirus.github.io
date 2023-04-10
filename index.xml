@@ -1,4 +1,1042 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>《降临》影评</title><link>https://lomirus.github.io/p/arrival-review/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/arrival-review/</guid><description>&lt;img src="https://lomirus.github.io/p/arrival-review/cover.jpg" alt="Featured image of post 《降临》影评" />&lt;p>&lt;strong>⚠️警告：本文含有对于《降临》（2016）的部分剧透，请酌情阅读。&lt;/strong>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Ithkuil IV 笔记</title><link>https://lomirus.github.io/p/ithkuil-notes/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/ithkuil-notes/</guid><description>&lt;img src="https://lomirus.github.io/cover.webp" alt="Featured image of post Ithkuil IV 笔记" />&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>Ithkuil 是由 John Quijada 创造的实验性人工语言。其语法高度屈折，并以其高度复杂的语法著称。该语言初版被创造于 1978 年，经过了 45 年的发展， Ithkuil 迄今已经发布了四个版本，本文基于 2023 年最新发布的 Ithkuil IV。&lt;/p>
+&lt;p>为了进一步说明 Ithkuil 的难度，下面请先允许我报个菜名：&lt;/p>
+&lt;p>此语言吸纳了诸多领域的知识，包括但不限于：理论语言学、认知语法、心理语言学、语言习得、语言相对论、语义学、符号学、哲学、模糊集理论、量子物理学等。&lt;/p>
+&lt;p>此语言也借鉴了诸多自然语言，包括但不限于：阿布哈兹动词复合体的形态音位学，某些美洲印第安语言中动词语气，尼日尔-科尔多瓦语的体位系统，巴斯克语和达吉斯坦语的名词格系统，瓦卡山语的附属系统，策尔塔尔语和古古伊米希尔语的位置定位系统、闪族三字词根形态学，以及苏泽特·埃尔金的 Láadan 语言的传闻和所有格范畴。书写系统的逻辑设计借鉴了埃塞俄比亚文和婆罗米文的原则，但采用了独特的词素原则，其文字与希伯来方块脚本和各种克林贡字体有表面上的相似之处。&lt;/p>
+&lt;p>此语言的构词也存在许多复杂的语法形态，包括但不限于：四种详述、两种功能、四种语境、四种系属、二十种构型、六种限域、四种视界、两种本质、九种配价、九种相位、九种效果、九种级别、六种语式、六种格辖、三十六种时体、九种论元格、九种同置格、九种关联格、九种状语格、八种有关格、八种系联格、十六种时空格、九种言据等一系列语法。&lt;/p>
+&lt;p>迄今为止，世界上仍没有人能够流利地说 Ithkuil 语，包括作者 John Quijada 本人。&lt;/p>
+&lt;h2 id="发音">发音&lt;/h2>
+&lt;h3 id="辅音">辅音&lt;/h3>
+&lt;p>辅音排列无规定的固定顺序，为便于排版与展示，此处表格未采取官方文档版本。同一个辅音在正字法允许范围之内存在其他表示方式的，记于圆括号内。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">-&lt;/th>
+&lt;th style="text-align:center">-&lt;/th>
+&lt;th style="text-align:center">-&lt;/th>
+&lt;th style="text-align:center">-&lt;/th>
+&lt;th style="text-align:center">-&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">p: [p]&lt;/td>
+&lt;td style="text-align:center">b: [b]&lt;/td>
+&lt;td style="text-align:center">ph: [p&lt;sub>h&lt;/sub>]&lt;/td>
+&lt;td style="text-align:center">f: [f]&lt;/td>
+&lt;td style="text-align:center">v: [v]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">t: [t̪]&lt;/td>
+&lt;td style="text-align:center">d: [d̪]&lt;/td>
+&lt;td style="text-align:center">th: [t&lt;sub>h&lt;/sub>]&lt;/td>
+&lt;td style="text-align:center">ţ(ṭ/ŧ): [θ]&lt;/td>
+&lt;td style="text-align:center">d͕(ḍ/đ): [ð]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">k: [k]&lt;/td>
+&lt;td style="text-align:center">g: [g]&lt;/td>
+&lt;td style="text-align:center">kh: [k&lt;sub>h&lt;/sub>]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">c: [ʦ]&lt;/td>
+&lt;td style="text-align:center">ẓ: [ʣ]&lt;/td>
+&lt;td style="text-align:center">ch: [ts&lt;sub>h&lt;/sub>]&lt;/td>
+&lt;td style="text-align:center">s: [s]&lt;/td>
+&lt;td style="text-align:center">z: [z]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">č: [ʧ]&lt;/td>
+&lt;td style="text-align:center">j: [ʤ]&lt;/td>
+&lt;td style="text-align:center">čh: [tʃ&lt;sub>h&lt;/sub>]&lt;/td>
+&lt;td style="text-align:center">š: [ʃ]&lt;/td>
+&lt;td style="text-align:center">ž: [ʒ]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">m: [m]&lt;/td>
+&lt;td style="text-align:center">n: [n]&lt;/td>
+&lt;td style="text-align:center">ň(n͕/ṇ): [ŋ]&lt;/td>
+&lt;td style="text-align:center">hm: [m̥]&lt;/td>
+&lt;td style="text-align:center">hn: [n̥]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">ç: [ç]&lt;/td>
+&lt;td style="text-align:center">x: [x] ~ [χ]&lt;/td>
+&lt;td style="text-align:center">h: [h]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">l: [l̪]&lt;/td>
+&lt;td style="text-align:center">l͕(ł/ḷ): [ɬ]&lt;/td>
+&lt;td style="text-align:center">hl: [ɬ]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">r: [ɾ]&lt;/td>
+&lt;td style="text-align:center">rr: [r]&lt;/td>
+&lt;td style="text-align:center">hr: [ɾ̥]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">ř(r͕/ṛ): [ʁ]&lt;/td>
+&lt;td style="text-align:center">řř(r͕r͕/ṛṛ): [ʁ:] / [ʀ]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">y: [j]&lt;/td>
+&lt;td style="text-align:center">w: [w]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">’: [Ɂ]&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="元音">元音&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th colspan="2">前&lt;/th>
+&lt;th colspan="2">中&lt;/th>
+&lt;th colspan="2">后&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td align="center">非圆唇&lt;/td>
+&lt;td align="center">圆唇&lt;/td>
+&lt;td align="center">非圆唇&lt;/td>
+&lt;td align="center">圆唇&lt;/td>
+&lt;td align="center">非圆唇&lt;/td>
+&lt;td align="center">圆唇&lt;/td>
+&lt;tr>
+&lt;td align="center">高&lt;/td>
+&lt;td align="center">i: [i]/[ɪ]&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td align="center">ü: [ʉ]/[y]&lt;/td>
+&lt;td>&lt;/td>
+&lt;td align="center">u: [ʊ]/[u]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">中&lt;/td>
+&lt;td align="center">e: [ɛ]/[e]&lt;/td>
+&lt;td align="center">ö: [œ]/[ø]&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td align="center">ë: [ʌ]/[ə]&lt;/td>
+&lt;td align="center">o: [ɔ]/[o]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">低&lt;/td>
+&lt;td align="center">ä: [æ]&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td align="center">a: [a]&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="重音">重音&lt;/h3>
+&lt;p>重音符号标注规则：&lt;/p>
+&lt;ul>
+&lt;li>a i u e o -&amp;gt; á í ú é ó&lt;/li>
+&lt;li>ä ü ë ö -&amp;gt; â û ê ô&lt;/li>
+&lt;/ul>
+&lt;p>如果没有标注重音符号，则默认倒数第二个音节重读。&lt;/p>
+&lt;h2 id="构词">构词&lt;/h2>
+&lt;p>在 Ithkuil 中，一个单词的构成结构如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Slot&lt;/th>
+&lt;th style="text-align:center">名称&lt;/th>
+&lt;th>简介&lt;/th>
+&lt;th style="text-align:center">是否必选&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">I&lt;/td>
+&lt;td style="text-align:center">C&lt;sub>C&lt;/sub>&lt;/td>
+&lt;td>简写&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">II&lt;/td>
+&lt;td style="text-align:center">V&lt;sub>V&lt;/sub>&lt;/td>
+&lt;td>Version + Stem&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">III&lt;/td>
+&lt;td style="text-align:center">C&lt;sub>R&lt;/sub>&lt;/td>
+&lt;td>词根&lt;/td>
+&lt;td style="text-align:center">✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">IV&lt;/td>
+&lt;td style="text-align:center">V&lt;sub>R&lt;/sub>&lt;/td>
+&lt;td>Function + Specification+ Context&lt;/td>
+&lt;td style="text-align:center">✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">V&lt;/td>
+&lt;td style="text-align:center">C&lt;sub>S&lt;/sub>V&lt;sub>X&lt;/sub>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">VI&lt;/td>
+&lt;td style="text-align:center">C&lt;sub>A&lt;/sub>&lt;/td>
+&lt;td>Affiliation + Configuration + Extension + (Perspective + Essence)&lt;/td>
+&lt;td style="text-align:center">✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">VII&lt;/td>
+&lt;td style="text-align:center">V&lt;sub>x&lt;/sub>C&lt;sub>S&lt;/sub>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">VIII&lt;/td>
+&lt;td style="text-align:center">V&lt;sub>N&lt;/sub>C&lt;sub>N&lt;/sub>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">IX&lt;/td>
+&lt;td style="text-align:center">V&lt;sub>C&lt;/sub> / V&lt;sub>K&lt;/sub>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">X&lt;/td>
+&lt;td style="text-align:center">声调&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>构词时，依照从 I 到 IX 的顺序线性相加而成。&lt;/p>
+&lt;h2 id="slot-iii-csubrsub">Slot III: C&lt;sub>R&lt;/sub>&lt;/h2>
+&lt;p>C&lt;sub>A&lt;/sub> 中的 C 表示此部分由辅音(consonant)构成，R 即 Root。词根是构成一个单词的基础，一般由 1~5 个辅音构成，如猫的词根为 &lt;code>-rr-&lt;/code>.&lt;/p>
+&lt;p>Ithkuil 中不区分动词与名词。&lt;/p>
+&lt;h2 id="slot-ii-vsubvsub">Slot II: V&lt;sub>V&lt;/sub>&lt;/h2>
+&lt;h3 id="stem">Stem&lt;/h3>
+&lt;p>每个词根都有三个对应的 Stem，每个 Stem 对应不同的含义。各个 Stem 的意义之间的关系/区别并没有普适的规定，需要分别自行记忆。&lt;/p>
+&lt;p>以词根 &lt;code>-rr-&lt;/code> （猫）为例：&lt;/p>
+&lt;ul>
+&lt;li>Stem 1: 意为“家猫”&lt;/li>
+&lt;li>Stem 2: 意为“野猫”&lt;/li>
+&lt;li>Stem 3: 意为“豹猫”、”渔猫”、”扁头猫”、”锈斑猫”、”帕拉斯猫”等&lt;/li>
+&lt;/ul>
+&lt;p>此外还有一个特殊的 Stem 0，用于表示涵盖了原始词根的所有概念的“stemless”。&lt;/p>
+&lt;h3 id="version">Version&lt;/h3>
+&lt;p>Version 有两种类型，&lt;strong>PRC&lt;/strong> (Processual) 和 &lt;strong>CPT&lt;/strong> (Completive). 其中，PRC 是指目标导向，而 CPT 是指目标导向，以一些词语为例：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">捕猎&lt;/td>
+&lt;td style="text-align:center">捕获&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">学习&lt;/td>
+&lt;td style="text-align:center">学到&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">争取&lt;/td>
+&lt;td style="text-align:center">实现&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">成长&lt;/td>
+&lt;td style="text-align:center">长大&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">寻找&lt;/td>
+&lt;td style="text-align:center">找到&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">探索&lt;/td>
+&lt;td style="text-align:center">发现&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">减速&lt;/td>
+&lt;td style="text-align:center">停止&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">加速&lt;/td>
+&lt;td style="text-align:center">极速&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">竞争&lt;/td>
+&lt;td style="text-align:center">胜利&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="词缀规则">词缀规则&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">(a)&lt;/td>
+&lt;td style="text-align:center">ä&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">e&lt;/td>
+&lt;td style="text-align:center">i&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">u&lt;/td>
+&lt;td style="text-align:center">ü&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">o&lt;/td>
+&lt;td style="text-align:center">ö&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>以词根 &lt;code>-rr-&lt;/code> （猫）和 &lt;code>-rţt-&lt;/code> (学习) 为例：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-(a)rr-&lt;/code>: 家猫&lt;/li>
+&lt;li>&lt;code>-ärţt-&lt;/code>: 学到&lt;/li>
+&lt;/ul>
+&lt;h2 id="slot-iv-vsubrsub">Slot IV: V&lt;sub>R&lt;/sub>&lt;/h2>
+&lt;h3 id="specification">Specification&lt;/h3>
+&lt;p>Specifications 共有四种: &lt;strong>BSC&lt;/strong> (basic), &lt;strong>CTE&lt;/strong> (contential), &lt;strong>CSV&lt;/strong> (constitutive), and &lt;strong>OBJ&lt;/strong> (objective).&lt;/p>
+&lt;p>以词根 &lt;code>-ly-&lt;/code> 的 Stem 1 形态 &lt;code>-aly-&lt;/code> （艺术作品）为例：&lt;/p>
+&lt;ul>
+&lt;li>BSC: 表示其基础意义，“某艺术作品”&lt;/li>
+&lt;li>CTE: 表示有关其中的抽象内容，“某艺术作品所描绘的”&lt;/li>
+&lt;li>CSV: 表示有关其中的物理构成，”构成某艺术作品的”&lt;/li>
+&lt;li>OBJ: 表示有关其交互的事物，“创造艺术作品的媒介”&lt;/li>
+&lt;/ul>
+&lt;p>下面是另一个以词根 &lt;code>-tx-&lt;/code> 的 Stem 1 形态 &lt;code>-atx-&lt;/code> （饮食）所举的例子：&lt;/p>
+&lt;ul>
+&lt;li>BSC: “饮食、食用、饮用”&lt;/li>
+&lt;li>CTE: “摄取（营养）”&lt;/li>
+&lt;li>CSV: ”进食（食物）”&lt;/li>
+&lt;li>OBJ: “被饮食的食物/饮品”&lt;/li>
+&lt;/ul>
+&lt;h3 id="context">Context&lt;/h3>
+&lt;p>Context 包含四种：&lt;strong>EXS&lt;/strong> (Existential), &lt;strong>FNC&lt;/strong> (Functional), &lt;strong>RPS&lt;/strong> (Representational), &lt;strong>AMG&lt;/strong> (Amalgamative)&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>EXS&lt;/strong>: 单纯描述客观存在&lt;/li>
+&lt;li>&lt;strong>FNC&lt;/strong>: 暗示其可能产生的个人或社会意义&lt;/li>
+&lt;li>&lt;strong>RPS&lt;/strong>: 表示隐喻&lt;/li>
+&lt;li>&lt;strong>AMG&lt;/strong>: 最抽象的、系统的、整体的、哲学的、心理的、超越的&lt;/li>
+&lt;/ul>
+&lt;p>以“狼吃羊”为例，以下是可能成立且相关的一些上下文：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Context&lt;/th>
+&lt;th>上下文&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>EXS&lt;/td>
+&lt;td>狼吃羊。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FNC&lt;/td>
+&lt;td>麻了，我家养了三年的羊被狼给吃了，狼啊你坏事做尽😭&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>RPS&lt;/td>
+&lt;td>像他这种世界冠军，去和一个十几岁的小毛孩比赛，这难道不是“狼吃羊”吗？&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AMG&lt;/td>
+&lt;td>商品的价值是在其生产上耗费的人类劳动的凝结，价值的量用生产该商品的社会必要劳动时间来计量。资本家在市场上购买劳动力，工人按照再生产劳动力——维持生活、养育子女——所必需的生活资料的价值来出售自己的劳动力，其数值要小于劳动力售出后所创造出的价值，两者之差就是剩余价值，为资本家所独占。这就是资本家剥削工人、资本剥削劳动力的过程。受剥削的程度表现为剩余价值率，即剩余劳动与必要劳动之比。在资本主义周而复始的再生产过程中，资本家将所占有的剩余价值用于资本积累，用工人创造的剩余价值来支付工人的工资和购买生产资料。就这样，工人不断被迫为了生活而出卖劳动力，资本家则始终有能力购买劳动力用以致富。资本关系本身因而得以再生产，工人遭受剥削的前提条件就此被永久化。商业利润、利息、地租都来自雇佣工人创造的剩余价值，体现了商业资本家与产业资本家、借贷资本家与职能资本家、土地所有者与租佃资本家共同剥削雇佣工人的关系。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="function">Function&lt;/h3>
+&lt;p>Function 有两种类型，&lt;strong>Stative&lt;/strong> 和 &lt;strong>Dynamic&lt;/strong>.&lt;/p>
+&lt;p>其中，Stative 强调静态，例如：&lt;/p>
+&lt;ul>
+&lt;li>天空 &lt;em>&lt;strong>呈现&lt;/strong>&lt;/em> 橙红色。&lt;/li>
+&lt;li>存在 &lt;em>&lt;strong>即&lt;/strong>&lt;/em> 合理。&lt;/li>
+&lt;li>箱子里 &lt;em>&lt;strong>有&lt;/strong>&lt;/em> 几个钉子。&lt;/li>
+&lt;/ul>
+&lt;p>而 Dynamic 强调动态，例如：&lt;/p>
+&lt;ul>
+&lt;li>（怒号的） &lt;em>&lt;strong>风暴&lt;/strong>&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>两者没有严格的区别，因此更接近于一种语感上的区分。同一个词语，在使用 Stative 或 Dynamic 的时候在语感上会有微妙的不同。例如“猎豹在 &lt;em>&lt;strong>奔跑&lt;/strong>&lt;/em> ”一句，Stative 更倾向与强调猎豹当前的状态，关注其速度与特征；而 Dynamic 可能会更强调它是在追逐猎物、为了到达目的地。&lt;/p>
+&lt;h3 id="词缀规则-1">词缀规则&lt;/h3>
+&lt;p>对于 Stative 来说：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">EXS&lt;/th>
+&lt;th style="text-align:center">FNC&lt;/th>
+&lt;th style="text-align:center">RPS&lt;/th>
+&lt;th style="text-align:center">AMG&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">BSC&lt;/td>
+&lt;td style="text-align:center">a&lt;/td>
+&lt;td style="text-align:center">ai&lt;/td>
+&lt;td style="text-align:center">ia / uä&lt;/td>
+&lt;td style="text-align:center">ao&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">CTE&lt;/td>
+&lt;td style="text-align:center">ä&lt;/td>
+&lt;td style="text-align:center">au&lt;/td>
+&lt;td style="text-align:center">ie / uë&lt;/td>
+&lt;td style="text-align:center">aö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">CSV&lt;/td>
+&lt;td style="text-align:center">e&lt;/td>
+&lt;td style="text-align:center">ei&lt;/td>
+&lt;td style="text-align:center">io / üä&lt;/td>
+&lt;td style="text-align:center">eo&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">OBJ&lt;/td>
+&lt;td style="text-align:center">i&lt;/td>
+&lt;td style="text-align:center">eu&lt;/td>
+&lt;td style="text-align:center">iö / üë&lt;/td>
+&lt;td style="text-align:center">eö&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>其中，对于 RPS 列，当其前面紧跟的是 &lt;code>-y-&lt;/code> 时，则使用后面的替代形式。&lt;/p>
+&lt;p>对于 Dynamic 来说：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">EXS&lt;/th>
+&lt;th style="text-align:center">FNC&lt;/th>
+&lt;th style="text-align:center">RPS&lt;/th>
+&lt;th style="text-align:center">AMG&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">BSC&lt;/td>
+&lt;td style="text-align:center">u&lt;/td>
+&lt;td style="text-align:center">ui&lt;/td>
+&lt;td style="text-align:center">ua / iä&lt;/td>
+&lt;td style="text-align:center">oa&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">CTE&lt;/td>
+&lt;td style="text-align:center">ü&lt;/td>
+&lt;td style="text-align:center">iu&lt;/td>
+&lt;td style="text-align:center">ue / ië&lt;/td>
+&lt;td style="text-align:center">öa&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">CSV&lt;/td>
+&lt;td style="text-align:center">o&lt;/td>
+&lt;td style="text-align:center">oi&lt;/td>
+&lt;td style="text-align:center">uo / öä&lt;/td>
+&lt;td style="text-align:center">oe&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">OBJ&lt;/td>
+&lt;td style="text-align:center">ö&lt;/td>
+&lt;td style="text-align:center">ou&lt;/td>
+&lt;td style="text-align:center">uö / öë&lt;/td>
+&lt;td style="text-align:center">öe&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>其中，对于 RPS 列，当其前面紧跟的是 &lt;code>-w-&lt;/code> 时，则使用后面的替代形式。&lt;/p>
+&lt;h2 id="slot-vi-csubasub">Slot VI: C&lt;sub>A&lt;/sub>&lt;/h2>
+&lt;p>C&lt;sub>A&lt;/sub> 包含以下元素：&lt;/p>
+&lt;ul>
+&lt;li>Affiliation&lt;/li>
+&lt;li>Configuration&lt;/li>
+&lt;li>Extension&lt;/li>
+&lt;li>Perspective&lt;/li>
+&lt;li>Essence&lt;/li>
+&lt;/ul>
+&lt;p>其组合顺序为：Affiliation -&amp;gt; Configuration -&amp;gt; Extension -&amp;gt; Perspective + Essence. 值得注意的是，这里的 Perspective 与 Essence 被放在了一起，因为他们共用一个词缀。&lt;/p>
+&lt;p>下面将依次介绍。&lt;/p>
+&lt;h3 id="affiliation">Affiliation&lt;/h3>
+&lt;p>Configuration 包含四种：&lt;strong>CSL&lt;/strong> (Consolidative), &lt;strong>ASO&lt;/strong> (Associative), &lt;strong>COA&lt;/strong> (Coalescent), &lt;strong>VAR&lt;/strong> (Variative)&lt;/p>
+&lt;ul>
+&lt;li>CSL: 一般隶属关系。无后缀&lt;/li>
+&lt;li>ASO: 相同且目的一致。若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-nļ-&lt;/code>，否则为 &lt;code>-l-&lt;/code>&lt;/li>
+&lt;li>COA: 相异但功能互补。若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-rļ-&lt;/code>，否则为 &lt;code>-r-&lt;/code>&lt;/li>
+&lt;li>VAR: 相异且混乱多样。若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-ň-&lt;/code>，否则为 &lt;code>-ř-&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>一个区分 CSL 和 ASO 的好例子是“一组士兵” v.s. “一个部队”。&lt;/p>
+&lt;p>以下是部分例子：&lt;/p>
+&lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{CSL}$ &lt;code>-aĉve-&lt;/code> (一些工具)&lt;/p>
+&lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{ASO}$ &lt;code>-aĉvel-&lt;/code> (一组/类工具)&lt;/p>
+&lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{COA}$ &lt;code>-aĉver-&lt;/code> (一套工具)&lt;/p>
+&lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{VAR}$ &lt;code>-aĉveř-&lt;/code> (一堆工具)&lt;/p>
+&lt;h3 id="configuration">Configuration&lt;/h3>
+&lt;p>Configuration 包含三个参数：&lt;strong>Plexity&lt;/strong>, &lt;strong>Similarity&lt;/strong>, &lt;strong>Separability&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Plexity
+&lt;ul>
+&lt;li>U (uniplex): 单个的&lt;/li>
+&lt;li>D (duplex): 成对的&lt;/li>
+&lt;li>M (multiplex): 多个的&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Similarity
+&lt;ul>
+&lt;li>S (Similar): 相似的&lt;/li>
+&lt;li>D (Dissimilar): 不相似的&lt;/li>
+&lt;li>F (Fuzzy): 无法确定其相似性的&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Separability
+&lt;ul>
+&lt;li>S (separate): 分离的，无论是在物理、抽象、还是隐喻意义上&lt;/li>
+&lt;li>C (connected): 相连的，无论是在物理、抽象、还是隐喻意义上&lt;/li>
+&lt;li>F (fused): 融合的，无论是在物理、抽象、还是隐喻意义上&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>以上三个参数可以互相搭配组合，但存在部分例外规则：&lt;/p>
+&lt;ul>
+&lt;li>Uniplex 不允许与 Separability 和 Plexity 进行搭配&lt;/li>
+&lt;li>Duplex 可以单独存在&lt;/li>
+&lt;/ul>
+&lt;p>因此，经计算可得共有 $2 \times 3 \times 3 + 1 + 1 = 20$ 种组合。其后缀映射规则如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>缩写&lt;/th>
+&lt;th>对应 Configuration&lt;/th>
+&lt;th>对应后缀&lt;/th>
+&lt;th>缩写&lt;/th>
+&lt;th>对应 Configuration&lt;/th>
+&lt;th>对应后缀&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>UPX&lt;/td>
+&lt;td>单&lt;/td>
+&lt;td>(无)&lt;/td>
+&lt;td>DPX&lt;/td>
+&lt;td>双&lt;/td>
+&lt;td>s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MSS&lt;/td>
+&lt;td>多 - 相似 - 分离&lt;/td>
+&lt;td>t&lt;/td>
+&lt;td>DSS&lt;/td>
+&lt;td>双 - 相似 - 分离&lt;/td>
+&lt;td>c&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MSC&lt;/td>
+&lt;td>多 - 相似 - 相连&lt;/td>
+&lt;td>k&lt;/td>
+&lt;td>DSC&lt;/td>
+&lt;td>双 - 相似 - 相连&lt;/td>
+&lt;td>ks&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MSF&lt;/td>
+&lt;td>多 - 相似 - 融合&lt;/td>
+&lt;td>p&lt;/td>
+&lt;td>DSF&lt;/td>
+&lt;td>双 - 相似 - 融合&lt;/td>
+&lt;td>ps&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MDS&lt;/td>
+&lt;td>多 - 相异 - 分离&lt;/td>
+&lt;td>ţ&lt;/td>
+&lt;td>DDS&lt;/td>
+&lt;td>双 - 相异 - 分离&lt;/td>
+&lt;td>ţs&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MDC&lt;/td>
+&lt;td>多 - 相异 - 相连&lt;/td>
+&lt;td>f&lt;/td>
+&lt;td>DDC&lt;/td>
+&lt;td>双 - 相异 - 相连&lt;/td>
+&lt;td>fs&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MDF&lt;/td>
+&lt;td>多 - 相异 - 融合&lt;/td>
+&lt;td>ç&lt;/td>
+&lt;td>DDF&lt;/td>
+&lt;td>双 - 相异 - 融合&lt;/td>
+&lt;td>š&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MFS&lt;/td>
+&lt;td>多 - 模糊 - 分离&lt;/td>
+&lt;td>z&lt;/td>
+&lt;td>DFS&lt;/td>
+&lt;td>双 - 模糊 - 分离&lt;/td>
+&lt;td>č&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MFC&lt;/td>
+&lt;td>多 - 模糊 - 相连&lt;/td>
+&lt;td>ž&lt;/td>
+&lt;td>DFC&lt;/td>
+&lt;td>双 - 模糊 - 相连&lt;/td>
+&lt;td>kš&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MFF&lt;/td>
+&lt;td>多 - 模糊 - 融合&lt;/td>
+&lt;td>ẓ&lt;/td>
+&lt;td>DFF&lt;/td>
+&lt;td>双 - 模糊 - 融合&lt;/td>
+&lt;td>pš&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>以下面的词根为例：&lt;/p>
+&lt;p>&lt;code>-rr-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-arr-&lt;/code> $\xrightarrow[Specification]{BSC(基础规格)}$ &lt;code>-arra-&lt;/code> $\xrightarrow[Affiliation]{Consolidative}$ &lt;code>-arra-&lt;/code> (猫)&lt;/p>
+&lt;ul>
+&lt;li>UPX (单): &lt;code>-(a)rra-&lt;/code>, 一只猫&lt;/li>
+&lt;li>DPX (双): &lt;code>-(a)rras-&lt;/code>, 一对猫&lt;/li>
+&lt;li>DSS (双 - 相似 - 分离): &lt;code>-(a)rrac-&lt;/code>, 一对相似的猫&lt;/li>
+&lt;li>DDS (双 - 相异 - 分离): &lt;code>-(a)rraţs-&lt;/code>, 一对不同的猫&lt;/li>
+&lt;li>MSS (多 - 相似 - 分离): &lt;code>-(a)rrat-&lt;/code>, 一群相似的猫&lt;/li>
+&lt;li>MDS (多 - 相异 - 分离): &lt;code>-(a)rraţ-&lt;/code>, 一群不同的猫&lt;/li>
+&lt;li>MFS (多 - 模糊 - 分离): &lt;code>-(a)rraz-&lt;/code>, 一群貌似是猫但又不完全是猫的东西&lt;/li>
+&lt;/ul>
+&lt;h3 id="extension">Extension&lt;/h3>
+&lt;p>Extension 包含六种：&lt;strong>DEL&lt;/strong> (Delimitive), &lt;strong>PRX&lt;/strong> (Proximal), &lt;strong>ICP&lt;/strong> (Inceptive), &lt;strong>ATV&lt;/strong> (Attenuative), &lt;strong>GRA&lt;/strong> (Graduative), &lt;strong>DPL&lt;/strong> (Depletive).&lt;/p>
+&lt;ul>
+&lt;li>DEL: 默认的 Extension，无后缀；&lt;/li>
+&lt;li>PRX：表示其中的一部分；若 Configuration 为 UPX，后缀为 &lt;code>-d-&lt;/code>，否则为 &lt;code>-t-&lt;/code>&lt;/li>
+&lt;li>ICP：表示其开头；若 Configuration 为 UPX，后缀为 &lt;code>-g-&lt;/code>，否则为 &lt;code>-k-&lt;/code>&lt;/li>
+&lt;li>ATV：表示其结尾；若 Configuration 为 UPX，后缀为 &lt;code>-b-&lt;/code>，否则为 &lt;code>-p-&lt;/code>&lt;/li>
+&lt;li>GRA：表示其兴起；若 Configuration 为 UPX，后缀为 &lt;code>-gz-&lt;/code>，否则为 &lt;code>-g-&lt;/code>&lt;/li>
+&lt;li>DPL：表示其衰亡；若 Configuration 为 UPX，后缀为 &lt;code>-bz-&lt;/code>，否则为 &lt;code>-b-&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>以下面的词根为例：&lt;/p>
+&lt;p>&lt;code>-lz-&lt;/code> $\xrightarrow[Stem]{Stem \space 2}$
+&lt;code>-elz-&lt;/code> (river) $\xrightarrow[Specification]{CSV(物理构成)}$
+&lt;code>-elze-&lt;/code> $\xrightarrow[Affiliation]{Consolidative}$
+&lt;code>-elze-&lt;/code> $\xrightarrow[Configuration]{UPX}$
+&lt;code>-elze-&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>DEL: &lt;code>-elze-&lt;/code>，意为“一条河流”&lt;/li>
+&lt;li>PRX：&lt;code>-elzed-&lt;/code>，意为“河流的一部分”&lt;/li>
+&lt;li>ICP：&lt;code>-elzeg-&lt;/code>，意为“河流的源头”&lt;/li>
+&lt;li>ATV：&lt;code>-elzeb-&lt;/code>，意为“河流的终点”&lt;/li>
+&lt;li>GRA：&lt;code>-elzegz-&lt;/code>，意为“河源处”&lt;/li>
+&lt;li>DPL：&lt;code>-elzebz-&lt;/code>，意为“河口处”&lt;/li>
+&lt;/ul>
+&lt;h3 id="perspective">Perspective&lt;/h3>
+&lt;p>Perspective 包含四种：&lt;strong>M&lt;/strong> (Monadic), &lt;strong>G&lt;/strong> (Agglomerative), &lt;strong>N&lt;/strong> (Nomic), &lt;strong>A&lt;/strong> (Abstract).&lt;/p>
+&lt;ul>
+&lt;li>M: 表示“一个、单个”；&lt;/li>
+&lt;li>G: 表示“一些、一定量”；&lt;/li>
+&lt;li>N: 表示特指，类似英语中的 the；&lt;/li>
+&lt;li>A: 表示与此词语有关的各种抽象概念；&lt;/li>
+&lt;/ul>
+&lt;p>Perspective 的词缀规则需要涉及到暂未讲到的 Essence，因此有关 Perspective 的词缀规则将在后文再行讲解。&lt;/p>
+&lt;h3 id="essence">Essence&lt;/h3>
+&lt;p>Essence 包含两种：&lt;strong>NRM&lt;/strong> (Normal), &lt;strong>RPV&lt;/strong> (Representative).&lt;/p>
+&lt;p>NRM 表示实际存在的事物或行为，而 RPV 表示假定的、虚拟的事物或行为。例如，“今天中午我想吃番茄炒蛋”，这里的“想吃”即适用于 RPV。除了“想/想象”之外，类似的关键词还有“应该、必须、能”等。&lt;/p>
+&lt;p>词缀规则如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>NRM&lt;/th>
+&lt;th>RPV&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>M&lt;/td>
+&lt;td>若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-l-&lt;/code>，否则无后缀&lt;/td>
+&lt;td>若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-tļ-&lt;/code>，否则后缀为 &lt;code>-l-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>G&lt;/td>
+&lt;td>后缀为 &lt;code>-r-&lt;/code>&lt;/td>
+&lt;td>后缀为 &lt;code>-ř-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>N&lt;/td>
+&lt;td>若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-v-&lt;/code>，否则为 &lt;code>-w-&lt;/code>&lt;/td>
+&lt;td>若前面是辅音字母 + t/p/k，则后缀为 &lt;code>-h-&lt;/code>，否则为 &lt;code>-m-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A&lt;/td>
+&lt;td>若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-j-&lt;/code>，否则为 &lt;code>-y-&lt;/code>&lt;/td>
+&lt;td>若前面是辅音字母 + t/p/k，则后缀为 &lt;code>-ç-&lt;/code>，否则为 &lt;code>-n-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="辅音置换">辅音置换&lt;/h3>
+&lt;p>由于以上辅音后缀的排列组合可能会导致出现一些难以发音的情况，所以实际上，会对这类发音进行置换，规则如下，其中 [C] 表示辅音：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-pp-&lt;/code> -&amp;gt; &lt;code>-mp-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-pb-&lt;/code> -&amp;gt; &lt;code>-mbnk-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-rr-&lt;/code> -&amp;gt; &lt;code>-ns-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-[C]gm-&lt;/code> -&amp;gt; &lt;code>-[C]x-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-[C]bm-&lt;/code> -&amp;gt; &lt;code>-[C]v-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-tt-&lt;/code> -&amp;gt; &lt;code>-nt-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-kg-&lt;/code> -&amp;gt; &lt;code>-ng-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-rř-&lt;/code> -&amp;gt; &lt;code>-nš-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-[C]gn-&lt;/code> -&amp;gt; &lt;code>-[C]ň-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-[C]bn-&lt;/code> -&amp;gt; &lt;code>-[C]ḑ-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-kk-&lt;/code> -&amp;gt; &lt;code>-nk-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-çy-&lt;/code> -&amp;gt; &lt;code>-nd-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-řr-&lt;/code> -&amp;gt; &lt;code>-ňs-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-ngn-&lt;/code> -&amp;gt; &lt;code>-ňn-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-fbm-&lt;/code> -&amp;gt; (&lt;code>-fv-&lt;/code>) -&amp;gt; &lt;code>-vw-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-ll-&lt;/code> -&amp;gt; &lt;code>-pļ-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-řř-&lt;/code> -&amp;gt; &lt;code>-ňš-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-[C]çx-&lt;/code> -&amp;gt; &lt;code>-[C]xw-&lt;/code>&lt;/li>
+&lt;li>&lt;code>-ţbn-&lt;/code> -&amp;gt; (&lt;code>-tḑ-&lt;/code>) -&amp;gt; &lt;code>-ḑy-&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="slot-i-csubcsub">Slot I: C&lt;sub>C&lt;/sub>&lt;/h2>
+&lt;p>C&lt;sub>C&lt;/sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 &lt;a class="link" href="#slot-ii-vsubvsub" >Slot II&lt;/a> 进行变化。&lt;/p>
+&lt;h3 id="规则">规则&lt;/h3>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为默认值时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">a&lt;/td>
+&lt;td style="text-align:center">ä&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">e&lt;/td>
+&lt;td style="text-align:center">i&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">u&lt;/td>
+&lt;td style="text-align:center">ü&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">o&lt;/td>
+&lt;td style="text-align:center">ö&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 PRX Extension 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">a&lt;/td>
+&lt;td style="text-align:center">ä&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">e&lt;/td>
+&lt;td style="text-align:center">i&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">u&lt;/td>
+&lt;td style="text-align:center">ü&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">o&lt;/td>
+&lt;td style="text-align:center">ö&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 G Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">ai&lt;/td>
+&lt;td style="text-align:center">au&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">ei&lt;/td>
+&lt;td style="text-align:center">eu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">ui&lt;/td>
+&lt;td style="text-align:center">iu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">oi&lt;/td>
+&lt;td style="text-align:center">ou&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">ai&lt;/td>
+&lt;td style="text-align:center">au&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">ei&lt;/td>
+&lt;td style="text-align:center">eu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">ui&lt;/td>
+&lt;td style="text-align:center">iu&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">oi&lt;/td>
+&lt;td style="text-align:center">ou&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 N Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">ia&lt;/td>
+&lt;td style="text-align:center">ie&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">io&lt;/td>
+&lt;td style="text-align:center">iö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">ua&lt;/td>
+&lt;td style="text-align:center">ue&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">uo&lt;/td>
+&lt;td style="text-align:center">uö&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 A Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">uä&lt;/td>
+&lt;td style="text-align:center">uë&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">üä&lt;/td>
+&lt;td style="text-align:center">üë&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">iä&lt;/td>
+&lt;td style="text-align:center">ië&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">öä&lt;/td>
+&lt;td style="text-align:center">öë&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 G Perspective + RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">ao&lt;/td>
+&lt;td style="text-align:center">aö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">eo&lt;/td>
+&lt;td style="text-align:center">eö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">oa&lt;/td>
+&lt;td style="text-align:center">öa&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">oe&lt;/td>
+&lt;td style="text-align:center">öe&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 PRX Perspective + RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">PRC&lt;/th>
+&lt;th style="text-align:center">CPT&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">Stem 1&lt;/td>
+&lt;td style="text-align:center">ao&lt;/td>
+&lt;td style="text-align:center">aö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 2&lt;/td>
+&lt;td style="text-align:center">eo&lt;/td>
+&lt;td style="text-align:center">eö&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 3&lt;/td>
+&lt;td style="text-align:center">oa&lt;/td>
+&lt;td style="text-align:center">öa&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">Stem 0&lt;/td>
+&lt;td style="text-align:center">oe&lt;/td>
+&lt;td style="text-align:center">öe&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="示例">示例&lt;/h3>
+&lt;p>以下是两个示例：&lt;/p>
+&lt;p>&lt;code>-dp-&lt;/code> $\xrightarrow[Stem \space + \space Version]{Stem \space 2 \space + \space PRC}$
+&lt;code>-edp-&lt;/code> $\xrightarrow[Function \space + \space Context \space + \space Specification]{Stative \space + \space EXS \space + \space BSC}$
+&lt;code>-edpa-&lt;/code>&lt;/p>
+&lt;p>$\xrightarrow[Affiliation \space + \space Configuration \space + \space Extension \space + \space (Perspective+Essence)]{CSL \space + \space UPX \space + \space PRX \space + \space (M+NRM)}$
+&lt;code>-edpad-&lt;/code> $\xrightarrow[Slot I/II]{C_A \space = \space PRX}$
+&lt;code>-yedp-&lt;/code>&lt;/p>
+&lt;hr>
+&lt;p>&lt;code>-nţd-&lt;/code> $\xrightarrow[Stem \space + \space Version]{Stem \space 2 \space + \space PRC}$
+&lt;code>-enţd-&lt;/code> $\xrightarrow[Function \space + \space Context \space + \space Specification]{Stative \space + \space EXS \space + \space BSC}$
+&lt;code>-enţda-&lt;/code>&lt;/p>
+&lt;p>$\xrightarrow[Affiliation \space + \space Configuration \space + \space Extension \space + \space (Perspective+Essence)]{CSL \space + \space UPX \space + \space PRX \space + \space (G+NRM)}$
+&lt;code>-enţdar-&lt;/code> $\xrightarrow[Slot I/II]{C_A \space = \space G}$
+&lt;code>-weinţd-&lt;/code>&lt;/p>
+&lt;h2 id="slot-ix-vsubcsub--vsubksub">Slot IX: V&lt;sub>C&lt;/sub> / V&lt;sub>K&lt;/sub>&lt;/h2>
+&lt;p>TODO&lt;/p>
+&lt;h3 id="transrelative-cases">Transrelative Cases&lt;/h3>
+&lt;h3 id="appositive-cases">Appositive Cases&lt;/h3>
+&lt;h3 id="associative-cases">Associative Cases&lt;/h3>
+&lt;h3 id="adverbial-cases">Adverbial Cases&lt;/h3>
+&lt;h3 id="relational-cases">Relational Cases&lt;/h3>
+&lt;h3 id="affinitive-cases">Affinitive Cases&lt;/h3>
+&lt;h3 id="spatio-temporal-cases--group-i">Spatio-Temporal Cases — Group I&lt;/h3>
+&lt;h3 id="spatio-temporal-cases--group-ii">Spatio-Temporal Cases — Group II&lt;/h3></description></item><item><title>《降临》影评</title><link>https://lomirus.github.io/p/arrival-review/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/arrival-review/</guid><description>&lt;img src="https://lomirus.github.io/p/arrival-review/cover.jpg" alt="Featured image of post 《降临》影评" />&lt;p>&lt;strong>⚠️警告：本文含有对于《降临》（2016）的部分剧透，请酌情阅读。&lt;/strong>&lt;/p>
 &lt;h2 id="引言">引言&lt;/h2>
 &lt;p>最近我一直在研究语言学。在读到一篇有关 Sapir-Whorf Hypothesis 的文章时，看到作者提到了前几年（2016）上映的电影 Arrival（中文译作《降临》），查了一下感觉主题正好和语言学有关，顿生兴趣。于是抽空花了大约两个小时看完了这场电影。&lt;/p>
 &lt;p>本片改编自美国华裔科幻作家姜峯楠的作品《你一生的故事》，我在观影前没有读过此书，因此本文的分析不会基于本作与原著的对比。&lt;/p>
@@ -1889,16 +2927,20 @@ data-flex-basis="320px"
 &lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item><item><title>About</title><link>https://lomirus.github.io/about/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/about/</guid><description>&lt;ul>
 &lt;li>代码：JavaScript/TypeScript/Rust &lt;span style="opacity: 0.3">&lt;del>没一个是熟练的&lt;/del>&lt;/span>&lt;/li>
 &lt;li>语言：精通中、英、日、韩、俄、意等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
-&lt;li>历史：&lt;span style="opacity: 0.3">&lt;del>控制台上的&lt;/del>&lt;/span> P社玩家&lt;/li>
+&lt;li>美术：Aseprite &amp;amp; Blender &lt;span style="opacity: 0.3">&lt;del>安装之后基本没打开过&lt;/del>&lt;/span>&lt;/li>
+&lt;li>历史：&lt;span style="opacity: 0.3">&lt;del>控制台上的P社玩家&lt;/del>&lt;/span>&lt;/li>
+&lt;li>哲学：&lt;span style="opacity: 0.3">&lt;del>网哲小鬼&lt;/del>&lt;/span>&lt;/li>
 &lt;/ul>
 &lt;h1 id="socials">Socials&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://space.bilibili.com/27590260" target="_blank" rel="noopener"
 >Bilibili&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.reddit.com/user/lomirus" target="_blank" rel="noopener"
+>Reddit&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="mailto:lomirus@qq.com" >lomirus@qq.com&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="mailto:lomirus.dev@protonmail.com" >lomirus.dev@protonmail.com&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Matrix, Mastodon 同名&lt;/p></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零&lt;/h2>
+&lt;p>Matrix, Mastodon, Discord, Spotify 等站同名&lt;/p></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零&lt;/h2>
 &lt;p>做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~&lt;/p>
 &lt;h2 id="永真---出场">永真 - 出场&lt;/h2>
 &lt;blockquote>
