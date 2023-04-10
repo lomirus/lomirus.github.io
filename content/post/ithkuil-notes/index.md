@@ -3,7 +3,7 @@ title: "Ithkuil IV 笔记"
 description: "等我哪天学成归来一定要用 Ithkuil 语写一个 Description"
 date: 2023-03-27T00:00:00+08:00
 lastmod: 2023-03-27T00:00:00+08:00
-image: "cover.webp"
+image: "cover.png"
 categories: ["Language"]
 tags: ["language", "ithkuil"]
 slug: "ithkuil-notes"
