@@ -88,6 +88,8 @@ export HTTPS_proxy="${PROXY_HTTP}"
 
 参考文章：[WSL2 中访问宿主机 Windows 的代理](https://zinglix.xyz/2020/04/18/wsl2-proxy/)
 
+如果遇到代理访问超时的问题，且使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。
+
 ## 环境变量
 
 在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。
