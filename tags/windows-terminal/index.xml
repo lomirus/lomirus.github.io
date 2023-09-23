@@ -46,14 +46,7 @@ alt="2FXjHS.jpg"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTPS_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
 >WSL2 中访问宿主机 Windows 的代理&lt;/a>&lt;/p>
-&lt;p>如果访问超时，可能是：&lt;/p>
-&lt;ol>
-&lt;li>防火墙原因。使用管理员权限打开 Powershell，输入以下命令：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;WSL&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-InterfaceAlias&lt;/span> &lt;span class="s2">&amp;#34;vEthernet (WSL)&amp;#34;&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/li>
-&lt;/ol>
+&lt;p>如果遇到代理访问超时的问题，且使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
 &lt;h2 id="环境变量">环境变量&lt;/h2>
 &lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
 &lt;p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code>/etc/wsl.conf&lt;/code>：&lt;/p>
