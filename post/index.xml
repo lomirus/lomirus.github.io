@@ -3600,6 +3600,7 @@ alt="2FXjHS.jpg"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其余操作可以使用 &lt;code>wsl -h&lt;/code> 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;h2 id="网络代理">网络代理&lt;/h2>
+&lt;h3 id="设置代理">设置代理&lt;/h3>
 &lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">hostip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>cat /etc/resolv.conf &lt;span class="p">|&lt;/span> grep nameserver &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{ print $2 }&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">7890&lt;/span> &lt;span class="c1"># 此处端口可根据个人情况进行更改&lt;/span>
@@ -3613,7 +3614,18 @@ alt="2FXjHS.jpg"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTPS_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
 >WSL2 中访问宿主机 Windows 的代理&lt;/a>&lt;/p>
-&lt;p>如果遇到代理访问超时的问题，且使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
+&lt;h3 id="取消防火墙">取消防火墙&lt;/h3>
+&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
+width="1453"
+height="583"
+srcset="https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="249"
+data-flex-basis="598px"
+>&lt;/p>
+&lt;p>如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
 &lt;h2 id="环境变量">环境变量&lt;/h2>
 &lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
 &lt;p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code>/etc/wsl.conf&lt;/code>：&lt;/p>
