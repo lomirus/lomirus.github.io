@@ -71,6 +71,8 @@ wsl --unregister debian
 
 ## 网络代理
 
+### 设置代理
+
 由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 `127.0.0.1` 修改 WSL 内的网络代理。此时正确的处理方式应该是向 `~/.bashrc` 添加如下内容：
 
 ```sh
@@ -88,7 +90,13 @@ export HTTPS_proxy="${PROXY_HTTP}"
 
 参考文章：[WSL2 中访问宿主机 Windows 的代理](https://zinglix.xyz/2020/04/18/wsl2-proxy/)
 
-如果遇到代理访问超时的问题，且使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。
+### 取消防火墙
+
+Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：
+
+![](firewall.png)
+
+如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。
 
 ## 环境变量
 
