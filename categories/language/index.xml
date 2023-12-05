@@ -738,7 +738,7 @@
 &lt;li>&lt;code>-ţbn-&lt;/code> -&amp;gt; (&lt;code>-tḑ-&lt;/code>) -&amp;gt; &lt;code>-ḑy-&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="slot-i-csubcsub">Slot I: C&lt;sub>C&lt;/sub>&lt;/h2>
-&lt;p>C&lt;sub>C&lt;/sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 &lt;a class="link" href="#slot-ii-vsubvsub" >Slot II&lt;/a> 进行变化。&lt;/p>
+&lt;p>C&lt;sub>C&lt;/sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 &lt;a class="link" href="#slot-ii-vsubvsub" >Slot II&lt;/a> 进行变化，并省略 Slot IV &amp;amp; VI。&lt;/p>
 &lt;h3 id="规则">规则&lt;/h3>
 &lt;ul>
 &lt;li>当 C&lt;sub>A&lt;/sub> 为默认值时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
@@ -775,7 +775,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 PRX Extension 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Extension PRX 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -809,7 +809,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 G Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Perspective G 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -843,7 +843,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Essence RPV 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -877,7 +877,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 N Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Perspective N 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -911,7 +911,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 A Perspective 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Perspective A 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -945,7 +945,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 G Perspective + RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Perspective G + Essence RPV 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
@@ -979,7 +979,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
-&lt;li>当 C&lt;sub>A&lt;/sub> 为 PRX Perspective + RPV Essence 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
+&lt;li>当 C&lt;sub>A&lt;/sub> 为 Extension PRX + Essence RPV 时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-y-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
