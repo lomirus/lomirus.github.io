@@ -413,7 +413,7 @@ NRM 表示实际存在的事物或行为，而 RPV 表示假定的、虚拟的�
 
 ## Slot I: C<sub>C</sub>
 
-C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 [Slot II](#slot-ii-vsubvsub) 进行变化。
+C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 [Slot II](#slot-ii-vsubvsub) 进行变化，并省略 Slot IV & VI。
 
 ### 规则
 
@@ -426,7 +426,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |   u   |   ü   |
 | Stem 0 |   o   |   ö   |
 
-- 当 C<sub>A</sub> 为 PRX Extension 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Extension PRX 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -435,7 +435,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |   u   |   ü   |
 | Stem 0 |   o   |   ö   |
 
-- 当 C<sub>A</sub> 为 G Perspective 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Perspective G 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -444,7 +444,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |  ui   |  iu   |
 | Stem 0 |  oi   |  ou   |
 
-- 当 C<sub>A</sub> 为 RPV Essence 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Essence RPV 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -453,7 +453,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |  ui   |  iu   |
 | Stem 0 |  oi   |  ou   |
 
-- 当 C<sub>A</sub> 为 N Perspective 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Perspective N 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -462,7 +462,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |  ua   |  ue   |
 | Stem 0 |  uo   |  uö   |
 
-- 当 C<sub>A</sub> 为 A Perspective 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Perspective A 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -471,7 +471,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |  iä   |  ië   |
 | Stem 0 |  öä   |  öë   |
 
-- 当 C<sub>A</sub> 为 G Perspective + RPV Essence 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Perspective G + Essence RPV 时，Slot I C<sub>C</sub> 为 `-w-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
@@ -480,7 +480,7 @@ C<sub>C</sub> 不具备语法意义，其作用只是用来简化音节数。该
 | Stem 3 |  oa   |  öa   |
 | Stem 0 |  oe   |  öe   |
 
-- 当 C<sub>A</sub> 为 PRX Perspective + RPV Essence 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
+- 当 C<sub>A</sub> 为 Extension PRX + Essence RPV 时，Slot I C<sub>C</sub> 为 `-y-`，此时 Slot II 规则如下：
 
 |        |  PRC  |  CPT  |
 | :----: | :---: | :---: |
