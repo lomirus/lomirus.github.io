@@ -4,7 +4,7 @@ description: "正直进取协作创造，用户为本科技向善（棒读）"
 date: 2024-08-25T00:00:00+08:00
 lastmod: 2024-09-01T23:59:00+08:00
 image: "cover.jpg"
-categories: ["Other"]
+categories: ["Others"]
 tags: ["Tencent"]
 slug: "tencent-closed-training"
 ---

@@ -4,7 +4,7 @@ date: 2021-03-31T18:25:17+08:00
 lastmod: 2021-06-06T18:25:17+08:00
 image: "cover.jpg"
 description: "It's a long dream, I've had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn."
-categories: ["Other", "Language"]
+categories: ["Others", "Language"]
 slug: "upon-the-mere"
 ---
 

@@ -4,7 +4,7 @@ description: "从山城到鹏城，一趟“赛博朋克”式的旅程"
 date: 2023-09-03T16:44:00+08:00
 lastmod: 2023-09-04T21:17:00+08:00
 image: "cover.jpg"
-categories: ["Other"]
+categories: ["Others"]
 tags: ["Internship", "Tencent"]
 slug: "from-chongqing-to-shenzhen"
 ---

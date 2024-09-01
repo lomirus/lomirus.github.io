@@ -4,7 +4,7 @@ description: "一部基于 Sapir-Whorf Hypothesis 的科幻影片"
 date: 2023-01-31T00:00:00+08:00
 lastmod: 2023-01-31T16:00:00+08:00
 image: "cover.jpg"
-categories: ["Other"]
+categories: ["Others"]
 tags: ["language", "lingustics", "review", "movie"]
 slug: "arrival-review"
 ---
