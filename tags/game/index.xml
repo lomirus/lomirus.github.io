@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game on Lomirus' Site</title><link>https://lomirus.github.io/tags/game/</link><description>Recent content in Game on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 00:19:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/game/index.xml" rel="self" type="application/rss+xml"/><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子&lt;/h2>
-&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game on Lomirus' Site</title><link>https://lomirus.github.io/tags/game/</link><description>Recent content in Game on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 00:19:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/game/index.xml" rel="self" type="application/rss+xml"/><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子
+&lt;/h2>&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
 &lt;p>对于战棋游戏来说，常见的模拟地图的方法，按照地块形状可分为正方形和正六边形，其中后者的主要代表有《文明：VI》等。而即使对于部分大战略类游戏来说，譬如《灰衣主教》，也是采用的六边形地块。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6.jpg"
 width="1459"
 height="972"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu262307392848646429.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu801280443450106330.jpg 1024w"
 loading="lazy"
 alt="文明：IV"
 class="gallery-image"
@@ -17,8 +17,8 @@ data-flex-basis="360px"
 &lt;li>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/li>
 &lt;/ol>
 &lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点。&lt;/p>
-&lt;h2 id="邻角处理">邻角处理&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="邻角处理">邻角处理
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>且与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/p>
 &lt;/blockquote>
@@ -36,15 +36,15 @@ C &amp;amp; D
 \end{vmatrix}
 $$&lt;/p>
 &lt;p>假设某人从 $A$ 点到 $B$ 点，耗时 $1$ 日；那么对应地，我们只需将其从 $A$ 点到 $D$ 点的耗时设为 $\sqrt{2}$ 日即可。&lt;/p>
-&lt;h2 id="平滑边界">平滑边界&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="平滑边界">平滑边界
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/p>
 &lt;/blockquote>
 &lt;p>显然，对于任意多边形，放到地图上看都是有棱有角，锯齿化太过严重。目前对于这个问题，我的想法是存储的时候按地块存起来，但展示的时候用户看到的其实是已经平滑过的曲线。&lt;/p>
 &lt;p>此外，如果再考虑上四个顶点，相邻正方形的连线方向其实有八个，比六边形还多了两个，这样反而能够更好得模拟各种边界线。&lt;/p>
-&lt;h2 id="圆形逼近">圆形逼近&lt;/h2>
-&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
+&lt;h2 id="圆形逼近">圆形逼近
+&lt;/h2>&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
 &lt;p>那么，我们应该怎么使用像素地块来模拟这种情况呢？&lt;/p>
 &lt;p>类似于 &lt;a class="link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener"
 >Conway&amp;rsquo;s Game of Life&lt;/a>，我们可以定义一套规则，例如在下图中，假设其为开始时刻：&lt;/p>
@@ -64,7 +64,7 @@ $$&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -80,7 +80,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2.png"
 width="324"
 height="149"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu10306717362513543383.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu768051798403388390.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="217"
@@ -162,7 +162,7 @@ data-flex-basis="521px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu18377807321199993030.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu770296188258070624.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -181,7 +181,7 @@ data-flex-basis="258px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -194,7 +194,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu17996579582499719131.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu281841312724369037.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -208,12 +208,12 @@ data-flex-basis="258px"
 &lt;li>既然 LT 可以对 T 产生 1 的影响，LT 也可以对 C 产生 $\frac{1}{\sqrt{2}}$ 的影响，那凭什么 LT 就不对 RB 产生 $\frac{1}{2\sqrt{2}}$ 的影响呢？依次类推，一个点可以对图中任意远的点产生影响。正如此刻一只澳大利亚的袋鼠可以对梵蒂冈的教皇产生万有引力，尽管微乎其微，但它确实存在。&lt;/li>
 &lt;li>这个例子从一开始可能就是不恰当的，与其说是人群的迁移，不如比作是信息的传播，因为信息可以无限复制。但这又引入了一个新问题，A 点当前的信息量会对下一刻 A 点本身施加影响吗？&lt;/li>
 &lt;/ul>
-&lt;h2 id="结语">结语&lt;/h2>
-&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
-&lt;h2 id="花絮">花絮&lt;/h2>
-&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
-&lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
-&lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
+&lt;h2 id="结语">结语
+&lt;/h2>&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
+&lt;h2 id="花絮">花絮
+&lt;/h2>&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念
+&lt;/h2>&lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot
+&lt;/h3>&lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
 等著名引擎，然而这些都是商业引擎，且对我来说太过笨重。大一的时候听说了
 Godot，得知它应该是当前世界范围内最完善，也是知名与流行度最广的开源游戏引擎了。而且体积极其精简，只有不过百兆；与其他大型引擎动辄几 GB
 的体积相比，实属一股清流。于是深得我心，我后面也开始学习这款引擎。&lt;/p>
@@ -241,8 +241,8 @@ performance.&lt;/p>
 &lt;p>你就一臭做独游的，还考虑个锤子性能？&lt;/p>
 &lt;/blockquote>
 &lt;p>话虽如此，可有哪个开发者能拒绝对性能的追求呢？再者，开发体验对我来说才是它更大的痛点。&lt;/p>
-&lt;h3 id="从-godot-园到-bevy-书屋">从 Godot 园到 Bevy 书屋&lt;/h3>
-&lt;p>后来，我又不知道在哪看到了 Bevy 这个游戏引擎。一开始没怎么注意它，最近见我加的一个 Godot 游戏开发的群组也时而提到它，但开始对它再次萌生好奇之心。&lt;/p>
+&lt;h3 id="从-godot-园到-bevy-书屋">从 Godot 园到 Bevy 书屋
+&lt;/h3>&lt;p>后来，我又不知道在哪看到了 Bevy 这个游戏引擎。一开始没怎么注意它，最近见我加的一个 Godot 游戏开发的群组也时而提到它，但开始对它再次萌生好奇之心。&lt;/p>
 &lt;p>印象里，Rust 里面之前比较火的开源游戏引擎有两个，一个 &lt;a class="link" href="https://github.com/amethyst/amethyst" target="_blank" rel="noopener"
 >Amethyst&lt;/a>
 和一个 &lt;a class="link" href="https://github.com/bevyengine/bevy" target="_blank" rel="noopener"
@@ -261,8 +261,8 @@ Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一
 &lt;/ul>
 &lt;p>话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧&lt;/p>
 &lt;p>（本文假定你已经有一定的 Rust 语法基础，对其使用上的语法细节不会过多讲解）&lt;/p>
-&lt;h2 id="ecs-架构扫盲">ECS 架构扫盲&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="ecs-架构扫盲">ECS 架构扫盲
+&lt;/h2>&lt;blockquote>
 &lt;p>什么呀，ECS，我知道，不就是阿里云的那个云服务器吗，好像全称是什么弹性计算服务（Elastic Compute Service）？&lt;/p>
 &lt;/blockquote>
 &lt;p>少年，莫急，此 ECS 非彼 ECS，这里的 ECS，指的是：&lt;code>Entity-Component-System&lt;/code>。&lt;/p>
@@ -271,8 +271,8 @@ Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一
 是存储数据的结构类型，不包含任何方法。如果想要更新游戏数据，则需要通过 &lt;code>System&lt;/code> 来完成。&lt;/p>
 &lt;p>如果需要进一步介绍，可自行百度/谷歌。&lt;/p>
 &lt;p>光说不练略显抽象，还是一起来看下面的代码吧：&lt;/p>
-&lt;h2 id="使用-bevy-实现简单的-ecs-架构">使用 Bevy 实现简单的 ECS 架构&lt;/h2>
-&lt;p>Bevy 是一款基于 ECS 架构的游戏引擎，它的官网上就这么写道：&lt;/p>
+&lt;h2 id="使用-bevy-实现简单的-ecs-架构">使用 Bevy 实现简单的 ECS 架构
+&lt;/h2>&lt;p>Bevy 是一款基于 ECS 架构的游戏引擎，它的官网上就这么写道：&lt;/p>
 &lt;blockquote>
 &lt;p>Massively Parallel and Cache-Friendly. The fastest ECS according to some
 benchmarks&lt;/p>
@@ -329,7 +329,7 @@ benchmarks&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着再写一个遍历所有 &lt;code>Entities&lt;/code> 并输出的 &lt;code>System&lt;/code>（函数）：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">print_people&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="n">Person&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">query&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">println!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;{}：{} 歳、{}です&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">job&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">println!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s">：&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s"> 歳、&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s">です&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">job&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来我们就要把这些东西整合起来，也就是添加到 &lt;code>main()&lt;/code> 中的 &lt;code>App&lt;/code> 上。&lt;/p>
@@ -349,14 +349,14 @@ Finished dev [unoptimized + debuginfo] target(s) in 3.03s
 Running `target/debug/rust-demo`
 野獣先輩：24 歳、学生です
 田所浩二：114514 歳、学生です
-&lt;/code>&lt;/pre>&lt;h2 id="bevy-基础开发">Bevy 基础开发&lt;/h2>
-&lt;p>有些小伙伴可能会问了：&lt;/p>
+&lt;/code>&lt;/pre>&lt;h2 id="bevy-基础开发">Bevy 基础开发
+&lt;/h2>&lt;p>有些小伙伴可能会问了：&lt;/p>
 &lt;blockquote>
 &lt;p>正经人谁玩控制台黑框框游戏呀？&lt;/p>
 &lt;/blockquote>
 &lt;p>确实，Bevy 毕竟也不是用来写 CLI 的。所以接下来我们再实现一个简单的图形界面。&lt;/p>
-&lt;h3 id="准备资源">准备资源&lt;/h3>
-&lt;p>首先，在项目目录创建一个 &lt;code>assets&lt;/code> 文件夹，在里面放一张图片。比如我放了一张 &lt;code>image.jpg&lt;/code> 进去，但是这里要注意，bevy 默认是不支持载入
+&lt;h3 id="准备资源">准备资源
+&lt;/h3>&lt;p>首先，在项目目录创建一个 &lt;code>assets&lt;/code> 文件夹，在里面放一张图片。比如我放了一张 &lt;code>image.jpg&lt;/code> 进去，但是这里要注意，bevy 默认是不支持载入
 jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">dependencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bevy&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">git&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/bevyengine/bevy&amp;#34;&lt;/span>
@@ -366,8 +366,8 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就可以支持载入 jpg 格式的图片了。&lt;/p>
 &lt;p>然后，再在 &lt;code>assets&lt;/code> 文件夹下创建一个字体文件。由于我是 Linux 用户，所以直接复制了一份系统自带的
 &lt;code>NotoSansMono-Regular.ttf&lt;/code> 字体。这里你当然也可以选自己喜欢的，记得后面的相应操作改成你的字体名就行。&lt;/p>
-&lt;h3 id="创建窗口">创建窗口&lt;/h3>
-&lt;p>Bevy 的设计是很模块化的，许多功能都被拆成了不同的模块，利用添加插件的形式使用。不过幸好 Bevy 也为我们提供了默认的插件配置。比如我们可以使用：&lt;/p>
+&lt;h3 id="创建窗口">创建窗口
+&lt;/h3>&lt;p>Bevy 的设计是很模块化的，许多功能都被拆成了不同的模块，利用添加插件的形式使用。不过幸好 Bevy 也为我们提供了默认的插件配置。比如我们可以使用：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">init_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -377,15 +377,15 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/1.png"
 width="1373"
 height="797"
-srcset="https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/bevy-tutorial/1_hu8269717862761350290.png 480w, https://lomirus.github.io/p/bevy-tutorial/1_hu5472572338053537176.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="172"
 data-flex-basis="413px"
 >&lt;/p>
 &lt;p>这就说明添加成功了，至于控制台里会出现无限输出的现象，是因为添加 &lt;code>DefaultPlugins&lt;/code> 的时候，同时也引入了 eventloop。&lt;/p>
-&lt;h3 id="载入图片">载入图片&lt;/h3>
-&lt;p>现在我们之前写的函数都可以扬了，再重新创建一个新的 &lt;code>main&lt;/code> 函数：&lt;/p>
+&lt;h3 id="载入图片">载入图片
+&lt;/h3>&lt;p>现在我们之前写的函数都可以扬了，再重新创建一个新的 &lt;code>main&lt;/code> 函数：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -415,14 +415,14 @@ data-flex-basis="413px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/2.png"
 width="1047"
 height="780"
-srcset="https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/bevy-tutorial/2_hu14969832250256100651.png 480w, https://lomirus.github.io/p/bevy-tutorial/2_hu5072311872929974386.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="134"
 data-flex-basis="322px"
 >&lt;/p>
-&lt;h3 id="键盘输入">键盘输入&lt;/h3>
-&lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
+&lt;h3 id="键盘输入">键盘输入
+&lt;/h3>&lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">setup&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -438,8 +438,8 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来运行一下，按下键盘的 &lt;code>A&lt;/code> 和 &lt;code>D&lt;/code> 键，便会看到控制台出现相应的输出。另外此处的 &lt;code>keyboard_input&lt;/code> 常用的方法还有两个 &lt;code>just_pressed()&lt;/code> 和 &lt;code>just_released()&lt;/code>，它们各自具体的用途可以自己分别试一下，看看是什么效果。&lt;/p>
-&lt;h3 id="角色移动">角色移动&lt;/h3>
-&lt;p>为了更加使函数名更加语义化，我们先把 &lt;code>keyboard_input_system()&lt;/code> 改成 &lt;code>move_system()&lt;/code>，然后修改函数：&lt;/p>
+&lt;h3 id="角色移动">角色移动
+&lt;/h3>&lt;p>为了更加使函数名更加语义化，我们先把 &lt;code>keyboard_input_system()&lt;/code> 改成 &lt;code>move_system()&lt;/code>，然后修改函数：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -504,8 +504,8 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。&lt;/p>
-&lt;h3 id="移动优化">移动优化&lt;/h3>
-&lt;p>我们有时候会需要获取并修改多个组件，这里可以通过元组(&lt;code>tuple&lt;/code>)来查询：&lt;/p>
+&lt;h3 id="移动优化">移动优化
+&lt;/h3>&lt;p>我们有时候会需要获取并修改多个组件，这里可以通过元组(&lt;code>tuple&lt;/code>)来查询：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Sprite&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">With&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -521,7 +521,7 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这里通过修改 &lt;code>sprite.flip_x&lt;/code>，使角色图片在移动时随着方向的不同而进行镜面反转。&lt;/p>
-&lt;h2 id="next-steps">Next Steps&lt;/h2>
-&lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
+&lt;h2 id="next-steps">Next Steps
+&lt;/h2>&lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
 >官方示例&lt;/a>&lt;/p>
 &lt;p>至于我自己，除了学习游戏引擎，我觉得也该去先学点画画了😥毕竟我的 Aseprite 都不知道吃灰多久了&lt;/p></description></item></channel></rss>

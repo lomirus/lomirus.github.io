@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dart on Lomirus' Site</title><link>https://lomirus.github.io/tags/dart/</link><description>Recent content in Dart on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Dec 2023 23:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/dart/index.xml" rel="self" type="application/rss+xml"/><item><title>空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势</title><link>https://lomirus.github.io/p/t-nullable-vs-option-t/</link><pubDate>Wed, 06 Dec 2023 23:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/t-nullable-vs-option-t/</guid><description>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/cover.png" alt="Featured image of post 空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势" />&lt;h2 id="背景">背景&lt;/h2>
-&lt;p>今天在写 Enthrirhs（一个 Flutter 项目）时，遇到了这样一个问题：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dart on Lomirus' Site</title><link>https://lomirus.github.io/tags/dart/</link><description>Recent content in Dart on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Dec 2023 23:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/dart/index.xml" rel="self" type="application/rss+xml"/><item><title>空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势</title><link>https://lomirus.github.io/p/t-nullable-vs-option-t/</link><pubDate>Wed, 06 Dec 2023 23:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/t-nullable-vs-option-t/</guid><description>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/cover.png" alt="Featured image of post 空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势" />&lt;h2 id="背景">背景
+&lt;/h2>&lt;p>今天在写 Enthrirhs（一个 Flutter 项目）时，遇到了这样一个问题：&lt;/p>
 &lt;p>首先，我前面声明了一个枚举 &lt;code>Similarity&lt;/code>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">enum&lt;/span> &lt;span class="n">Similarity&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">/// The Similar Similarity
@@ -15,7 +15,7 @@
 &lt;p>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/p1.png"
 width="376"
 height="263"
-srcset="https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hub9b898e2c8de918202fd7e6ab0f4e338_16917_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hub9b898e2c8de918202fd7e6ab0f4e338_16917_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hu2814583561942149004.png 480w, https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hu8203136660681365645.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="142"
@@ -103,8 +103,8 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题一所谓空安全问题">问题一：所谓“空安全问题”&lt;/h3>
-&lt;p>但是在写代码的时候，我就隐约注意到了一点端倪。其实起初，对于这个组件的泛型参数，我写的是 &lt;code>PopupMenuButton&amp;lt;Similarity&amp;gt;&lt;/code>，没有考虑实际上这里的 &lt;code>similarity&lt;/code> 可为空，但是当我对其选项的 &lt;code>value&lt;/code> 属性赋 &lt;code>null&lt;/code> 值时，发现它居然并没有报错：&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题一所谓空安全问题">问题一：所谓“空安全问题”
+&lt;/h3>&lt;p>但是在写代码的时候，我就隐约注意到了一点端倪。其实起初，对于这个组件的泛型参数，我写的是 &lt;code>PopupMenuButton&amp;lt;Similarity&amp;gt;&lt;/code>，没有考虑实际上这里的 &lt;code>similarity&lt;/code> 可为空，但是当我对其选项的 &lt;code>value&lt;/code> 属性赋 &lt;code>null&lt;/code> 值时，发现它居然并没有报错：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">PopupMenuEntry&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Similarity&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PopupMenuItem&lt;/span>&lt;span class="p">(&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">value:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
@@ -124,12 +124,12 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">],&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>但我随后不久就意识到了这个问题，并将其改为了 &lt;code>PopupMenuButton&amp;lt;Similarity?&amp;gt;&lt;/code>，当时只是觉得 Flutter 的开发团队疏忽，导致这个组件没有实现空安全。我对此也没太细想，就继续写我的代码了。&lt;/p>
-&lt;h3 id="问题二无法实现对-null-的选择">问题二：无法实现对 null 的选择&lt;/h3>
-&lt;p>但是在随后的测试中发现，如果选中其中三个任意枚举选项，则 &lt;code>similarity&lt;/code> 可以正常修改，但是当选中 None（&lt;code>null&lt;/code>）时，却不能如同预期那样触发相关数据的更新。简单通过打断点排查之后，发现之所以没有正常更新数据的原因是因为组件的 &lt;code>onSelected()&lt;/code> 并没有被触发。&lt;/p>
+&lt;h3 id="问题二无法实现对-null-的选择">问题二：无法实现对 null 的选择
+&lt;/h3>&lt;p>但是在随后的测试中发现，如果选中其中三个任意枚举选项，则 &lt;code>similarity&lt;/code> 可以正常修改，但是当选中 None（&lt;code>null&lt;/code>）时，却不能如同预期那样触发相关数据的更新。简单通过打断点排查之后，发现之所以没有正常更新数据的原因是因为组件的 &lt;code>onSelected()&lt;/code> 并没有被触发。&lt;/p>
 &lt;p>而这时再考虑到前面所提到的问题一，我于是很难不去猜想这是这个组件本身的 bug。就这样，我去给 Flutter 提了一条 issue：&lt;a class="link" href="https://github.com/flutter/flutter/issues/139663" target="_blank" rel="noopener"
 >https://github.com/flutter/flutter/issues/139663&lt;/a>.&lt;/p>
-&lt;h3 id="问题三null-中-null-的表示">问题三：“null 中 null” 的表示&lt;/h3>
-&lt;p>但是提完 issue 后，我突然联想到了 JavaScript 中的 &lt;code>prompt()&lt;/code> 函数，这个函数被调用时会弹出一个对话框，当你在其中输入一些文字并点击“确认”后，这个函数就会返回你所输入的字符串；如果你只是点击了“取消”，它则会返回 &lt;code>null&lt;/code>。我开始思考：不会 Flutter 中的这个组件也是类似的原理，即如果选中了 &lt;code>null&lt;/code> 就类似于 &lt;code>prompt()&lt;/code> 中点击了“取消”，所以才不会触发 &lt;code>onSelected()&lt;/code> 吧？&lt;/p>
+&lt;h3 id="问题三null-中-null-的表示">问题三：“null 中 null” 的表示
+&lt;/h3>&lt;p>但是提完 issue 后，我突然联想到了 JavaScript 中的 &lt;code>prompt()&lt;/code> 函数，这个函数被调用时会弹出一个对话框，当你在其中输入一些文字并点击“确认”后，这个函数就会返回你所输入的字符串；如果你只是点击了“取消”，它则会返回 &lt;code>null&lt;/code>。我开始思考：不会 Flutter 中的这个组件也是类似的原理，即如果选中了 &lt;code>null&lt;/code> 就类似于 &lt;code>prompt()&lt;/code> 中点击了“取消”，所以才不会触发 &lt;code>onSelected()&lt;/code> 吧？&lt;/p>
 &lt;p>我于是去扒了下 Flutter 中的相关源码：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">PopupMenuButtonState&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">PopupMenuButton&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">showButtonMenu&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
@@ -154,10 +154,10 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>结果发现果真如此，如果选中了 &lt;code>null&lt;/code>，组件就会以为用户没有进行选择，从而触发“取消”事件并跳过“选中”事件。于此同时，前面的问题一也迎刃而解了————与其说这是 bug，不如说是 feature，毕竟是开发者故意为之的操作。&lt;/p>
-&lt;h2 id="如何解决">如何解决？&lt;/h2>
-&lt;p>尽管我已经知道了这里是开发者故意为之，但问题毕竟确实存在着，总归是要解决的。开发者这么做或许是没有考虑到这种使用场景，抑或是不得已而做的妥协。而如果是开发者的妥协，那难道说就没有更好的办法可以解决这个问题了吗？&lt;/p>
-&lt;h3 id="解决不了-null就去解决提出问题的枚举">解决不了 &lt;code>null&lt;/code>，就去解决提出问题的枚举&lt;/h3>
-&lt;p>最直接的方法，为 &lt;code>Similarity&lt;/code> 新增一个属性用来表示 &lt;code>null&lt;/code>，并将此变量由可选改为必选：&lt;/p>
+&lt;h2 id="如何解决">如何解决？
+&lt;/h2>&lt;p>尽管我已经知道了这里是开发者故意为之，但问题毕竟确实存在着，总归是要解决的。开发者这么做或许是没有考虑到这种使用场景，抑或是不得已而做的妥协。而如果是开发者的妥协，那难道说就没有更好的办法可以解决这个问题了吗？&lt;/p>
+&lt;h3 id="解决不了-null就去解决提出问题的枚举">解决不了 &lt;code>null&lt;/code>，就去解决提出问题的枚举
+&lt;/h3>&lt;p>最直接的方法，为 &lt;code>Similarity&lt;/code> 新增一个属性用来表示 &lt;code>null&lt;/code>，并将此变量由可选改为必选：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">enum&lt;/span> &lt;span class="n">Similarity&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">/// The Similar Similarity
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">,&lt;/span>
@@ -173,17 +173,17 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>但是不得不说，这样子实在太不语义化了。我很不喜欢，所以还是想想其他的办法吧。&lt;/p>
 &lt;p>如果我用的是其他语言，我会怎么做呢？&lt;/p>
-&lt;h3 id="双生的-undefined-与-null赘余却可行">双生的 &lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>，赘余却可行&lt;/h3>
-&lt;p>在 JavaScript 中，有两种表示空的基本类型：&lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>。那么很自然地就可以想到，如果说开发者提供的 API 是用 &lt;code>null&lt;/code> 来判别用户是否进行了选择，那我这里用 &lt;code>undefined&lt;/code> 来表示空就可以避开冲突了。&lt;/p>
+&lt;h3 id="双生的-undefined-与-null赘余却可行">双生的 &lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>，赘余却可行
+&lt;/h3>&lt;p>在 JavaScript 中，有两种表示空的基本类型：&lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>。那么很自然地就可以想到，如果说开发者提供的 API 是用 &lt;code>null&lt;/code> 来判别用户是否进行了选择，那我这里用 &lt;code>undefined&lt;/code> 来表示空就可以避开冲突了。&lt;/p>
 &lt;p>这种方法很简单，但很不优雅。而且有这么两个近义词表示空，不得不说实在是太过冗余。再者，如果我需要两个以上表示空的变量怎么办呢？&lt;/p>
-&lt;h3 id="optiont还得是-rust">&lt;code>Option&amp;lt;T&amp;gt;&lt;/code>，还得是 Rust&lt;/h3>
-&lt;p>之前写 Dart 的时候就经常想，这语言真是又丑陋、又啰嗦、又残疾，日夜心心念念地想用 Rust 重构。而对于这个问题，我还真别说，Rust 确实照样管用：&lt;/p>
+&lt;h3 id="optiont还得是-rust">&lt;code>Option&amp;lt;T&amp;gt;&lt;/code>，还得是 Rust
+&lt;/h3>&lt;p>之前写 Dart 的时候就经常想，这语言真是又丑陋、又啰嗦、又残疾，日夜心心念念地想用 Rust 重构。而对于这个问题，我还真别说，Rust 确实照样管用：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">a&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">b&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">None&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">c&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">None&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>我觉得这里已经不言自明了。&lt;/p>
-&lt;p>至于这个项目的解决方案嘛，那就自己用 Dart 实现一个 Option 吧~&lt;/p></description></item><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
+&lt;p>至于这个项目的解决方案嘛，那就自己用 Dart 实现一个 Option 吧~&lt;/p></description></item><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
 &lt;p>总的来说，Flutter 的上手难度在我个人角度看来还算是比较简单的。从从未接触过 Flutter，到独立开发出一个相对完整的 App，中间也不过只有两周左右。另外从一名 Web 前端开发者的视角来看，使用 Flutter 开发界面的难度还是要相对高于传统的 Web 开发的，尤其是在自定义方面，一旦写起样式来各种嵌套又要写一堆了&amp;hellip;但是 Google 默认提供的 Material Design UI 库对于没有视觉要求的指定风格的情况来说还是蛮够用的；另外官方也提供了一套 iOS 风格的 Cupertino UI 库，但是我还没有尝试过这个，不知道实际体验效果如何。至少就此来看，使用 Flutter 来进行一款跨端的小品类应用开发确实是一项不错的选择。至于大型项目，虽然 Flutter 版本已经迭代到了 2.5+，但是相对于其他已经发展了数年的 Native/Web 开发方案来说，还不能说是特别成熟。就比如我在下文中提到的一些坑，至今官方还没有提供相应的瀑布流库。闲鱼对此选择的路线则是自研，不过我种初学者自然是没有人家这种专业团队的实力，于是只能乖乖的在社区里找一些开源库先用着。&lt;/p>
 &lt;p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。&lt;/p>
 &lt;p>下面贴下这个项目的 Github 地址：&lt;a class="link" href="https://github.com/hall-of-fame/hof-flutter-md" target="_blank" rel="noopener"
@@ -191,7 +191,7 @@ data-flex-basis="343px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/screenshot.jpeg"
 width="1080"
 height="2400"
-srcset="https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w"
+srcset="https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu6792707900741384723.jpeg 480w, https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4405944334286156516.jpeg 1024w"
 loading="lazy"
 alt="展示图"
 class="gallery-image"
@@ -199,9 +199,9 @@ data-flex-grow="45"
 data-flex-basis="108px"
 >&lt;/p>
 &lt;p>下面则是讲一下我在使用 Flutter 进行开发的过程中遇到的一些问题：&lt;/p>
-&lt;h2 id="导航栏标签页-keep-alive">导航栏标签页 keep-alive&lt;/h2>
-&lt;h3 id="一般的标签页切换">一般的标签页切换&lt;/h3>
-&lt;p>在 Flutter 中，如果我们想通过 BottomNavigationBar 实现一个简单的标签页切换功能，可以在官方文档对于
+&lt;h2 id="导航栏标签页-keep-alive">导航栏标签页 keep-alive
+&lt;/h2>&lt;h3 id="一般的标签页切换">一般的标签页切换
+&lt;/h3>&lt;p>在 Flutter 中，如果我们想通过 BottomNavigationBar 实现一个简单的标签页切换功能，可以在官方文档对于
 &lt;code>BottomNavigationBar class&lt;/code> 的介绍看到一些简单示例。这里我们以之为基础，再次对其进行简化，可以得到下面一个只有 32 行的简单结构：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">MyStatefulWidget&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">const&lt;/span> &lt;span class="n">MyStatefulWidget&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="n">Key&lt;/span>&lt;span class="o">?&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">})&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="k">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">key:&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">);&lt;/span>
@@ -235,8 +235,8 @@ data-flex-basis="108px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题引入无法保存组件状态">问题引入：无法保存组件状态&lt;/h3>
-&lt;p>事实上，对于上文中的&lt;a class="link" href="#%e6%9c%80%e5%b0%8f%e6%a0%b7%e4%be%8b" >最小样例&lt;/a>，这么写是完全没有问题的。但是随着软件功能的复杂化，一些问题可能就会暴露出来。比如，我们将上文中的 &lt;code>Text&lt;/code>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题引入无法保存组件状态">问题引入：无法保存组件状态
+&lt;/h3>&lt;p>事实上，对于上文中的&lt;a class="link" href="#%e6%9c%80%e5%b0%8f%e6%a0%b7%e4%be%8b" >最小样例&lt;/a>，这么写是完全没有问题的。但是随着软件功能的复杂化，一些问题可能就会暴露出来。比如，我们将上文中的 &lt;code>Text&lt;/code>
 组件换为 &lt;code>TextField&lt;/code> 标签试一下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">MyStatefulWidget&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">const&lt;/span> &lt;span class="n">MyStatefulWidget&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="n">Key&lt;/span>&lt;span class="o">?&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">})&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="k">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">key:&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">);&lt;/span>
@@ -274,8 +274,8 @@ data-flex-basis="108px"
 输入了一段文字，然后点击底部导航栏切换到了另一个标签页，然后再切换回来，你会发现你之前在 &lt;code>TextField&lt;/code> 的内容已经被清空掉了。&lt;/p>
 &lt;p>这是因为，当你切换到另一个标签页时，Flutter 会将原先的标签页的组件给销毁掉，并创建一个新的你所选择的标签页（或者说是组件）。当你返回原来的页面时，也会执行一遍同样的操作，这时，这个页面已经不是原来的那个页面了。&lt;/p>
 &lt;p>如果我们使用是的 React (Native) 或者是 Vue，我们可以简单地通过 &lt;code>&amp;lt;keep-alive&amp;gt;&lt;/code> 标签达到状态保存的目的，但是 Flutter 似乎就没有这么方便了😥。&lt;/p>
-&lt;h3 id="解决方案automatic-keep-alive-client-mixin">解决方案：Automatic Keep Alive Client Mixin&lt;/h3>
-&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
+&lt;h3 id="解决方案automatic-keep-alive-client-mixin">解决方案：Automatic Keep Alive Client Mixin
+&lt;/h3>&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
 >解决方案&lt;/a>。&lt;/p>
 &lt;p>这个方案使用的是 &lt;code>AutomaticKeepAliveClientMixin&lt;/code>，按照它的方法，对上文中的示例代码进行修改后可得：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">RootScreen&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
@@ -321,9 +321,9 @@ data-flex-basis="108px"
 &lt;p>Ref:
 &lt;a class="link" href="https://medium.com/coding-with-flutter/flutter-case-study-multiple-navigators-with-bottomnavigationbar-90eb6caa6dbf" target="_blank" rel="noopener"
 >Flutter Case Study: Multiple Navigators with BottomNavigationBar&lt;/a>&lt;/p>
-&lt;h2 id="瀑布流展示">瀑布流展示&lt;/h2>
-&lt;h3 id="scrollable-view-嵌套">Scrollable View 嵌套&lt;/h3>
-&lt;p>当我们尝试在可滚动 View（如ListView/GridView ）中的 children 中嵌套可滚动 View 时，会出现以下报错：&lt;/p>
+&lt;h2 id="瀑布流展示">瀑布流展示
+&lt;/h2>&lt;h3 id="scrollable-view-嵌套">Scrollable View 嵌套
+&lt;/h3>&lt;p>当我们尝试在可滚动 View（如ListView/GridView ）中的 children 中嵌套可滚动 View 时，会出现以下报错：&lt;/p>
 &lt;pre tabindex="0">&lt;code>════════ Exception caught by rendering library ═════════════════════════════════
 The following assertion was thrown during performResize():
 Vertical viewport was given unbounded height.
@@ -331,8 +331,8 @@ Viewports expand in the scrolling direction to fill their container. In this cas
 If this widget is always nested in a scrollable widget there is no need to use a viewport because there will always be enough vertical space for the children. In this case, consider using a Column instead. Otherwise, consider using the &amp;#34;shrinkWrap&amp;#34; property (or a ShrinkWrappingViewport) to size the height of the viewport to the sum of the heights of its children.
 &lt;/code>&lt;/pre>&lt;p>这时我们在内层的 View 中可以插入 &lt;code>shrinkWrap: true&lt;/code>，即可解决报错。但是此时这个 View 将会无法滚动，我们可以继续在后面插入：
 &lt;code>physics: NeverScrollableScrollPhysics()&lt;/code>，即可完美解决以上问题。&lt;/p>
-&lt;h3 id="flutter_staggered_grid_view-库的简单使用">flutter_staggered_grid_view 库的简单使用&lt;/h3>
-&lt;p>&lt;a class="link" href="https://pub.dev/packages/flutter_staggered_grid_view" target="_blank" rel="noopener"
+&lt;h3 id="flutter_staggered_grid_view-库的简单使用">flutter_staggered_grid_view 库的简单使用
+&lt;/h3>&lt;p>&lt;a class="link" href="https://pub.dev/packages/flutter_staggered_grid_view" target="_blank" rel="noopener"
 >flutter_staggered_grid_view&lt;/a> 是一个可以便捷实现瀑布流布局的 Flutter 库。一般地，要想使用它，我们需要首先导入：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c">### file: pubspec.yaml&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">

@@ -1,5 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Dec 2023 23:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势</title><link>https://lomirus.github.io/p/t-nullable-vs-option-t/</link><pubDate>Wed, 06 Dec 2023 23:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/t-nullable-vs-option-t/</guid><description>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/cover.png" alt="Featured image of post 空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势" />&lt;h2 id="背景">背景&lt;/h2>
-&lt;p>今天在写 Enthrirhs（一个 Flutter 项目）时，遇到了这样一个问题：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lomirus' Site</title><link>https://lomirus.github.io/</link><description>Recent content on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>记录一下公司封培</title><link>https://lomirus.github.io/p/tencent-closed-training/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/tencent-closed-training/</guid><description>&lt;img src="https://lomirus.github.io/p/tencent-closed-training/cover.jpg" alt="Featured image of post 记录一下公司封培" />&lt;h2 id="正文">正文
+&lt;/h2>&lt;p>这周公司有一个校招生的新人培训。起初我对这次封闭培训并没有什么太高的期望，以为就是普通地待在教室里，听着老师照本宣科地讲着PPT，这很自然地使我想起大学时的诸多课程经历，又或者是说，正是大学时长久的这些课程经历，使我对于培训一词产生了这种印象。但直到培训的最后一天，我才意识到，与其将其比作大学，事实上，它反而令我想起了刚进网校时的那段经历。&lt;/p>
+&lt;p>我是在周二从滨海坐上了前往希尔顿酒店的班车的。当天是2024年8月20日，也正是《黑神话：悟空》正式发布的日子，而我也正是因此而在自己的QQ空间调侃了一句“唉，腾讯打压”————毕竟本来预想的是在家里用着高档的主机与屏幕配置畅玩来着，只可惜培训时间就安排在了从820当天开始后的一周，终是无可奈何。&lt;/p>
+&lt;p>在班车上坐的时间还是挺久的，在车上除了和朋友在手机互相聊天，看着车窗外的隧道、山峦变化，也是别有一番风味。我们的路线在我印象中应该是往北行驶的，不过不知为何路上似乎还是看到了海。但不管怎样，这也应该是是我第一次看到海了，虽说算不上是是近距离观看，但多少也依旧是有些震撼的。&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/tencent-closed-training/sea.jpg"
+width="1920"
+height="1440"
+srcset="https://lomirus.github.io/p/tencent-closed-training/sea_hu5949524976756306995.jpg 480w, https://lomirus.github.io/p/tencent-closed-training/sea_hu3193827658587272279.jpg 1024w"
+loading="lazy"
+alt="从车窗中看到的海景"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>培训的第一天，自然是要先有个全体的开业典礼，然后便是班内的活动，包括班主任的自我介绍，与同学们之间的互相结识。当天班主任有说过一句话：“这可能是你们最后一次能以班级的形式所参加的活动了，所以一定要好好珍惜呀”，当时我可能不以为意，后面回想时却感觉记忆犹深。&lt;/p>
+&lt;p>整个培训期间，我都是在酒店度过的，包括上课、休息、就餐。培训期间的作息一般是早上九点上课，晚上六点下课，午休差不多两个小时，可以算是 WLB 的 965 生活了，况且还不需要再考虑通勤的耗时，毕竟衣食住行都只是在酒店内嘛。晚上的自由时间同上班时相比，自然是充裕了许多，但是我却始终难以放松，一是培训期间我还在一直想着 WXG 公益第一课要求我去做的海报传单要去尽快完成，二是课后有些小测试或是其他杂事要做。尽管在这五天的历程中，我实际上并没去制作海报，课后的小测试也并不耗时，但是由于这些琐事的缠身，紧张心态却始终每每地伴随着我的休息时间。培训的第一天晚上我就安装好了《黑神话：悟空》，也自然游玩了一段时间，但当时的游玩心态却还是难以放松。后面和组内的一位朋友聊到，才知他下周就要转正答辩了，还得去做答辩的 PPT，他的压力想必自然是比我的更大吧。不过在最后，我和他其实都一样，都还是选择暂时放弃了这些无用的压力，尝试以更加放松的心态面对这余下的这段时光。&lt;/p>
+&lt;p>培训的第四天晚上，我和几位组内的朋友去玩了桌游。我平常其实是很少有机会能够和朋友一起玩桌游的，只记得上次和朋友玩桌游还是在网校的时候，我忘了当时到底具体是何时，但是我当时好像是被朋友拖过去的，玩的似乎是和什么航海有关的桌游。当记忆再尝试往上追溯，我便发现我似乎没有更多的这种记忆了。网校曾经有过一次“轰趴”，只是当时不巧，我恰逢感冒，于是在大家晚上唱K、观影之际，我便早早地回房休息了，至于当天大家有没有玩什么桌游，我自然是一概不知。不过这对我而言也并非全然坏事，因为彼时的我或许依然难以适应这种群体性的而又嘈杂困倦（因为是在晚上）的活动。而回到今晚，也许是我与人相处的心态在这几年中变得更加坦然了，也可能是不想错过封培的最后一段记忆，我这次几乎是主动地同朋友们去了。虽然游戏本身的游戏性如同你画我猜一般普通，但实际上玩得还是挺开心的。&lt;/p>
+&lt;p>另外还令我想要多提一嘴的是第五日上午的&lt;a class="link" href="https://store.steampowered.com/app/341800/Keep_Talking_and_Nobody_Explodes/" target="_blank" rel="noopener"
+>拆弹专家&lt;/a>游戏，简单来说，是一款类似《胡闹厨房》或者《双人成行》那样的多人合作游戏（当然了，这几款我都没玩过，上次玩这种多人游戏都是小学时和朋友玩 4399 了），我们的游玩方式就是组内8人合作拆弹。但是要详细讲讲的话，好像也没什么好写的，就先介绍到这儿吧。&lt;/p>
+&lt;p>最后一天的结业典礼上，有几位同学上去表演了个舞蹈节目，名叫《去班味儿》，意思是经过了这几天培训，我们都去除了“班味”。这话说得着实不错，尽管只有短短几天的时间，但它让我找回了自己曾经刚刚进入大二时，和朋友们在网校一起工作、游戏、互相商业互吹、调侃的那段时光。自从大三换了工区之后，不少朋友都从网校中半退休了，去往网校的熟悉的身影也变少了。而到了我大四实习归来，我就只是零星地去过几次网校，里面已尽然是些我所不太熟悉的面孔了。&lt;/p>
+&lt;p>我感觉我在实习之后，就已经染上了“班味”了。刚开始上班的那段时间，我依然乐于在下班后为了我所热爱的开源事业或者业余爱好而不知疲倦的工作。但不知是从何时开始，或许是在实习结束前忙着准备答辩的那几周之后吧，我似乎对梦想丧失了动力。我在之前的&lt;a class="link" href="https://lomirus.github.io/p/from-chongqing-to-shenzhen/" target="_blank" rel="noopener"
+>文章&lt;/a>中也应该有提到过，而在此后的整个大四，就我个人而言，似乎没有什么能够特别让我铭记的事情。哦，我好像在这段时间通关了伊苏8，然后呢，我实在想不出来————我似乎是虚度了一年。正式工作后，这种情况依然没有好转，尽管我甚至至今都没用过抖音快手，但我的业余生活却似乎依然是被碎片化的时间所充斥。&lt;/p>
+&lt;p>但不得不承认，这短短的几天，却让我短暂地想起了我那未曾被“班味”所沾染时的状态。自从工作之后，我便觉得时间过得特别快，一周什么正事儿也没做就没了，几个月也是转眼间就过去了。有人说，快乐的时光总是短暂的，痛苦的才是长久的。但我的感受确是与此相反：或许是我的大脑的防御机制会自动为我屏蔽掉那些无聊的时段吧，我反而觉得充实的时光才是深刻而醇久的，沉闷而无趣的时光才是倏然而已。正如这培训的五天，体感上的时长却远胜过我正式工作已来的一个多月。&lt;/p>
+&lt;p>但别误会，我并非想说我会因此而打了鸡血，从此重拾梦想，不忘初心，砥砺前行————毕竟我还是有些自知之明的。实际上，当她们在舞台上展示出那个节目名的时候，我就向着旁边的朋友开玩笑说，“说得确实，不过等下周再回去干几天活儿，我们的班味儿就又回来了”。&lt;/p>
+&lt;p>周五培训完，我们坐上班车回到了滨海大厦。组里的三个人先走了，剩下我们五个，吃了最后一顿饭。席间我们聊了不少，聊了当前工作的一些压力，聊了些未来规划，半开玩笑地说着被“优化”后去找什么着落。我们几位其实年龄差距还挺大的，大多是硕士，还有一位博士，而我则是其中算是少数的本科生。朋友说按我的年龄，将来的选择还有很多。实际上或许确实如此，但我已经懒得再去考研或是留学了，我不觉得这些和工作之间有什么本质的差别，至少工作还能给我发工资。饭后我们就散了，我不知道我们以后还会不会再见。培训期间我们整个班里有许多人互相加了微信，第三日我们畅谈了一晚，有人讲述了自己旅行时车子深陷沙漠、被中东士兵持枪威胁的惊险旅程，有人讲述了自己年少时因游戏而遇到的爱情故事（虽然最后并没有想象中的 GOOD END），也有人讲述了自己的业余爱好，从猫猫狗狗，乃至无线电与飞行模拟，似乎每个人都拥有一个独属于他的小世界。我也加了其他不少人，可是说实话，我觉得我们之间的大多数，除了互相加上微信之外，可能整个余生都没有更多的交集了，想到这里还难免有些遗憾，&lt;span style="opacity: 0.3">&lt;del>尤其是还加了不少妹子的微信&lt;/del>&lt;/span>。但这也难免，毕竟小学五年的朋友，至今不也是没有联系了吗，又何况是五天的泛泛之交呢。释然，也只能释然。&lt;/p>
+&lt;p>&lt;img src="https://lomirus.github.io/p/tencent-closed-training/canteen1.jpg"
+width="1440"
+height="1920"
+srcset="https://lomirus.github.io/p/tencent-closed-training/canteen1_hu10794291899519480753.jpg 480w, https://lomirus.github.io/p/tencent-closed-training/canteen1_hu532698045429291893.jpg 1024w"
+loading="lazy"
+alt="或许是封培刚结束的原因，周六晚上的食堂依旧人满为患"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>
+&lt;img src="https://lomirus.github.io/p/tencent-closed-training/canteen2.jpg"
+width="1440"
+height="1920"
+srcset="https://lomirus.github.io/p/tencent-closed-training/canteen2_hu13900962288480752956.jpg 480w, https://lomirus.github.io/p/tencent-closed-training/canteen2_hu18031425191877070494.jpg 1024w"
+loading="lazy"
+alt="同左图"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>这几天看了一些杨奇当年的采访，我发现我和他当时的心态挺像，都是一种年岁已高而功名为就的遗憾。虽然客观上我的年纪哪怕是在同龄的校招生中都算是年轻的了，但我始终都将这当作是心理安慰。我总是会想起《三国志》中刘备的一句话：&lt;/p>
+&lt;blockquote>
+&lt;p>吾常身不离鞍，髀肉皆消。今不复骑，髀里肉生。日月若驰，老将至矣，而功业不建，是以悲耳。&lt;/p>
+&lt;/blockquote>
+&lt;p>大概就是这种心态吧。&lt;/p>
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>这篇文章本来还是想继续写下去的，但是由于周六晚上才回家，周日也是忙了一天，导致时间太赶，这篇文章只是在周日晚上简单写了写。后面一周都比较忙&lt;span style="opacity: 0.3">&lt;del>着玩黑猴&lt;/del>&lt;/span>，所以就一直没继续写。直到周末又再次有了时间，但是当时的心境也没了，现在又回复到了那种平常的只想摆烂的状态，也算是对我前文的所做的描述完美印证吧，所以仍是没有继续写下去，只是简单加了几张配图。&lt;/p>
+&lt;p>封培期间没留多少照片，本文封面还是用的群友发的，因此基本没啥配图。&lt;/p>
+&lt;p>时间有限，写得比较随便，因此也自然没什么章节目录安排，观者图一乐即可。&lt;/p></description></item><item><title>空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势</title><link>https://lomirus.github.io/p/t-nullable-vs-option-t/</link><pubDate>Wed, 06 Dec 2023 23:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/t-nullable-vs-option-t/</guid><description>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/cover.png" alt="Featured image of post 空安全范式比较：Dart「T?」相对于 Rust「Option&lt;T>」 的劣势" />&lt;h2 id="背景">背景
+&lt;/h2>&lt;p>今天在写 Enthrirhs（一个 Flutter 项目）时，遇到了这样一个问题：&lt;/p>
 &lt;p>首先，我前面声明了一个枚举 &lt;code>Similarity&lt;/code>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">enum&lt;/span> &lt;span class="n">Similarity&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">/// The Similar Similarity
@@ -15,7 +68,7 @@
 &lt;p>&lt;img src="https://lomirus.github.io/p/t-nullable-vs-option-t/p1.png"
 width="376"
 height="263"
-srcset="https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hub9b898e2c8de918202fd7e6ab0f4e338_16917_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hub9b898e2c8de918202fd7e6ab0f4e338_16917_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hu2814583561942149004.png 480w, https://lomirus.github.io/p/t-nullable-vs-option-t/p1_hu8203136660681365645.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="142"
@@ -103,8 +156,8 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题一所谓空安全问题">问题一：所谓“空安全问题”&lt;/h3>
-&lt;p>但是在写代码的时候，我就隐约注意到了一点端倪。其实起初，对于这个组件的泛型参数，我写的是 &lt;code>PopupMenuButton&amp;lt;Similarity&amp;gt;&lt;/code>，没有考虑实际上这里的 &lt;code>similarity&lt;/code> 可为空，但是当我对其选项的 &lt;code>value&lt;/code> 属性赋 &lt;code>null&lt;/code> 值时，发现它居然并没有报错：&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题一所谓空安全问题">问题一：所谓“空安全问题”
+&lt;/h3>&lt;p>但是在写代码的时候，我就隐约注意到了一点端倪。其实起初，对于这个组件的泛型参数，我写的是 &lt;code>PopupMenuButton&amp;lt;Similarity&amp;gt;&lt;/code>，没有考虑实际上这里的 &lt;code>similarity&lt;/code> 可为空，但是当我对其选项的 &lt;code>value&lt;/code> 属性赋 &lt;code>null&lt;/code> 值时，发现它居然并没有报错：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">PopupMenuEntry&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Similarity&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PopupMenuItem&lt;/span>&lt;span class="p">(&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nl">value:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
@@ -124,12 +177,12 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">],&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>但我随后不久就意识到了这个问题，并将其改为了 &lt;code>PopupMenuButton&amp;lt;Similarity?&amp;gt;&lt;/code>，当时只是觉得 Flutter 的开发团队疏忽，导致这个组件没有实现空安全。我对此也没太细想，就继续写我的代码了。&lt;/p>
-&lt;h3 id="问题二无法实现对-null-的选择">问题二：无法实现对 null 的选择&lt;/h3>
-&lt;p>但是在随后的测试中发现，如果选中其中三个任意枚举选项，则 &lt;code>similarity&lt;/code> 可以正常修改，但是当选中 None（&lt;code>null&lt;/code>）时，却不能如同预期那样触发相关数据的更新。简单通过打断点排查之后，发现之所以没有正常更新数据的原因是因为组件的 &lt;code>onSelected()&lt;/code> 并没有被触发。&lt;/p>
+&lt;h3 id="问题二无法实现对-null-的选择">问题二：无法实现对 null 的选择
+&lt;/h3>&lt;p>但是在随后的测试中发现，如果选中其中三个任意枚举选项，则 &lt;code>similarity&lt;/code> 可以正常修改，但是当选中 None（&lt;code>null&lt;/code>）时，却不能如同预期那样触发相关数据的更新。简单通过打断点排查之后，发现之所以没有正常更新数据的原因是因为组件的 &lt;code>onSelected()&lt;/code> 并没有被触发。&lt;/p>
 &lt;p>而这时再考虑到前面所提到的问题一，我于是很难不去猜想这是这个组件本身的 bug。就这样，我去给 Flutter 提了一条 issue：&lt;a class="link" href="https://github.com/flutter/flutter/issues/139663" target="_blank" rel="noopener"
 >https://github.com/flutter/flutter/issues/139663&lt;/a>.&lt;/p>
-&lt;h3 id="问题三null-中-null-的表示">问题三：“null 中 null” 的表示&lt;/h3>
-&lt;p>但是提完 issue 后，我突然联想到了 JavaScript 中的 &lt;code>prompt()&lt;/code> 函数，这个函数被调用时会弹出一个对话框，当你在其中输入一些文字并点击“确认”后，这个函数就会返回你所输入的字符串；如果你只是点击了“取消”，它则会返回 &lt;code>null&lt;/code>。我开始思考：不会 Flutter 中的这个组件也是类似的原理，即如果选中了 &lt;code>null&lt;/code> 就类似于 &lt;code>prompt()&lt;/code> 中点击了“取消”，所以才不会触发 &lt;code>onSelected()&lt;/code> 吧？&lt;/p>
+&lt;h3 id="问题三null-中-null-的表示">问题三：“null 中 null” 的表示
+&lt;/h3>&lt;p>但是提完 issue 后，我突然联想到了 JavaScript 中的 &lt;code>prompt()&lt;/code> 函数，这个函数被调用时会弹出一个对话框，当你在其中输入一些文字并点击“确认”后，这个函数就会返回你所输入的字符串；如果你只是点击了“取消”，它则会返回 &lt;code>null&lt;/code>。我开始思考：不会 Flutter 中的这个组件也是类似的原理，即如果选中了 &lt;code>null&lt;/code> 就类似于 &lt;code>prompt()&lt;/code> 中点击了“取消”，所以才不会触发 &lt;code>onSelected()&lt;/code> 吧？&lt;/p>
 &lt;p>我于是去扒了下 Flutter 中的相关源码：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">PopupMenuButtonState&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">State&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">PopupMenuButton&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">showButtonMenu&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
@@ -154,10 +207,10 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>结果发现果真如此，如果选中了 &lt;code>null&lt;/code>，组件就会以为用户没有进行选择，从而触发“取消”事件并跳过“选中”事件。于此同时，前面的问题一也迎刃而解了————与其说这是 bug，不如说是 feature，毕竟是开发者故意为之的操作。&lt;/p>
-&lt;h2 id="如何解决">如何解决？&lt;/h2>
-&lt;p>尽管我已经知道了这里是开发者故意为之，但问题毕竟确实存在着，总归是要解决的。开发者这么做或许是没有考虑到这种使用场景，抑或是不得已而做的妥协。而如果是开发者的妥协，那难道说就没有更好的办法可以解决这个问题了吗？&lt;/p>
-&lt;h3 id="解决不了-null就去解决提出问题的枚举">解决不了 &lt;code>null&lt;/code>，就去解决提出问题的枚举&lt;/h3>
-&lt;p>最直接的方法，为 &lt;code>Similarity&lt;/code> 新增一个属性用来表示 &lt;code>null&lt;/code>，并将此变量由可选改为必选：&lt;/p>
+&lt;h2 id="如何解决">如何解决？
+&lt;/h2>&lt;p>尽管我已经知道了这里是开发者故意为之，但问题毕竟确实存在着，总归是要解决的。开发者这么做或许是没有考虑到这种使用场景，抑或是不得已而做的妥协。而如果是开发者的妥协，那难道说就没有更好的办法可以解决这个问题了吗？&lt;/p>
+&lt;h3 id="解决不了-null就去解决提出问题的枚举">解决不了 &lt;code>null&lt;/code>，就去解决提出问题的枚举
+&lt;/h3>&lt;p>最直接的方法，为 &lt;code>Similarity&lt;/code> 新增一个属性用来表示 &lt;code>null&lt;/code>，并将此变量由可选改为必选：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">enum&lt;/span> &lt;span class="n">Similarity&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">/// The Similar Similarity
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">,&lt;/span>
@@ -173,21 +226,21 @@ data-flex-basis="343px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>但是不得不说，这样子实在太不语义化了。我很不喜欢，所以还是想想其他的办法吧。&lt;/p>
 &lt;p>如果我用的是其他语言，我会怎么做呢？&lt;/p>
-&lt;h3 id="双生的-undefined-与-null赘余却可行">双生的 &lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>，赘余却可行&lt;/h3>
-&lt;p>在 JavaScript 中，有两种表示空的基本类型：&lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>。那么很自然地就可以想到，如果说开发者提供的 API 是用 &lt;code>null&lt;/code> 来判别用户是否进行了选择，那我这里用 &lt;code>undefined&lt;/code> 来表示空就可以避开冲突了。&lt;/p>
+&lt;h3 id="双生的-undefined-与-null赘余却可行">双生的 &lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>，赘余却可行
+&lt;/h3>&lt;p>在 JavaScript 中，有两种表示空的基本类型：&lt;code>undefined&lt;/code> 与 &lt;code>null&lt;/code>。那么很自然地就可以想到，如果说开发者提供的 API 是用 &lt;code>null&lt;/code> 来判别用户是否进行了选择，那我这里用 &lt;code>undefined&lt;/code> 来表示空就可以避开冲突了。&lt;/p>
 &lt;p>这种方法很简单，但很不优雅。而且有这么两个近义词表示空，不得不说实在是太过冗余。再者，如果我需要两个以上表示空的变量怎么办呢？&lt;/p>
-&lt;h3 id="optiont还得是-rust">&lt;code>Option&amp;lt;T&amp;gt;&lt;/code>，还得是 Rust&lt;/h3>
-&lt;p>之前写 Dart 的时候就经常想，这语言真是又丑陋、又啰嗦、又残疾，日夜心心念念地想用 Rust 重构。而对于这个问题，我还真别说，Rust 确实照样管用：&lt;/p>
+&lt;h3 id="optiont还得是-rust">&lt;code>Option&amp;lt;T&amp;gt;&lt;/code>，还得是 Rust
+&lt;/h3>&lt;p>之前写 Dart 的时候就经常想，这语言真是又丑陋、又啰嗦、又残疾，日夜心心念念地想用 Rust 重构。而对于这个问题，我还真别说，Rust 确实照样管用：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">a&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">b&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">Some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">None&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">c&lt;/span>: &lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nb">Option&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">i32&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">None&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>我觉得这里已经不言自明了。&lt;/p>
-&lt;p>至于这个项目的解决方案嘛，那就自己用 Dart 实现一个 Option 吧~&lt;/p></description></item><item><title>关于重庆与深圳的记忆</title><link>https://lomirus.github.io/p/from-chongqing-to-shenzhen/</link><pubDate>Sun, 03 Sep 2023 16:44:00 +0800</pubDate><guid>https://lomirus.github.io/p/from-chongqing-to-shenzhen/</guid><description>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/cover.jpg" alt="Featured image of post 关于重庆与深圳的记忆" />&lt;h2 id="重庆">重庆&lt;/h2>
-&lt;p>今年四月末，我罕见地外出学校走了走。&lt;/p>
+&lt;p>至于这个项目的解决方案嘛，那就自己用 Dart 实现一个 Option 吧~&lt;/p></description></item><item><title>关于重庆与深圳的记忆</title><link>https://lomirus.github.io/p/from-chongqing-to-shenzhen/</link><pubDate>Sun, 03 Sep 2023 16:44:00 +0800</pubDate><guid>https://lomirus.github.io/p/from-chongqing-to-shenzhen/</guid><description>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/cover.jpg" alt="Featured image of post 关于重庆与深圳的记忆" />&lt;h2 id="重庆">重庆
+&lt;/h2>&lt;p>今年四月末，我罕见地外出学校走了走。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0426.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0426_hu59046b5ca8ba49bf934100f55191d25a_1677671_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0426_hu59046b5ca8ba49bf934100f55191d25a_1677671_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0426_hu4497406572610898426.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0426_hu8063629640698419055.jpg 1024w"
 loading="lazy"
 alt="随手在校园中拍摄的天空"
 class="gallery-image"
@@ -200,7 +253,7 @@ data-flex-basis="323px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042901.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042901_hu3a6aa7c7bb652985eda1c1f3cb168396_4166324_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/042901_hu3a6aa7c7bb652985eda1c1f3cb168396_4166324_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042901_hu13477525416805353121.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/042901_hu10365913074603704348.jpg 1024w"
 loading="lazy"
 alt="学校门前附近施工中的建筑"
 class="gallery-image"
@@ -212,7 +265,7 @@ data-flex-basis="323px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042902.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042902_hud9ce252c7054863c2e9acd7cd015ca67_2699224_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/042902_hud9ce252c7054863c2e9acd7cd015ca67_2699224_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/042902_hu10692164384776610644.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/042902_hu5811345058317784596.jpg 1024w"
 loading="lazy"
 alt="夜景没有拍好，有些炫光"
 class="gallery-image"
@@ -220,14 +273,14 @@ data-flex-grow="134"
 data-flex-basis="323px"
 >&lt;/p>
 &lt;p>这便几乎是我对重庆的最后记忆，随后不久，大概两周之后，我便踏上了前往另一座城市的航班。&lt;/p>
-&lt;h2 id="深圳">深圳&lt;/h2>
-&lt;h3 id="初至">初至&lt;/h3>
-&lt;p>就在前文之后不久，我拿到了腾讯的实习 offer，随后便去往了深圳。&lt;/p>
+&lt;h2 id="深圳">深圳
+&lt;/h2>&lt;h3 id="初至">初至
+&lt;/h3>&lt;p>就在前文之后不久，我拿到了腾讯的实习 offer，随后便去往了深圳。&lt;/p>
 &lt;p>不得不说，公司对于实习生的福利还是挺不错的，租房前，公司先给安排了一周的免费住宿。在我所居住的酒店，其内饰确然富丽堂皇，尤其是当我从房间窗户向外眺望，看到那一片灰白而略显破败的建筑群，其鲜明的对比，将其衬托得尤为显著。彼时望向窗外的我，正在和一位朋友在线上闲聊着。他半开玩笑地说道：“去三和找一下灵感”。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051302.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051302_hu9dac24f5759fe6631f9c783ac1951520_1734996_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/051302_hu9dac24f5759fe6631f9c783ac1951520_1734996_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051302_hu11291213502202048560.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/051302_hu5014996793748731065.jpg 1024w"
 loading="lazy"
 alt="酒店大厅"
 class="gallery-image"
@@ -237,7 +290,7 @@ data-flex-basis="177px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0515.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0515_hu48963cec6f526cd5480603784c634607_4910089_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0515_hu48963cec6f526cd5480603784c634607_4910089_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0515_hu1587068035032350090.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0515_hu3897789460210506207.jpg 1024w"
 loading="lazy"
 alt="酒店房间向外眺望"
 class="gallery-image"
@@ -251,7 +304,7 @@ data-flex-basis="177px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0514.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0514_hu04d1b12a2914ff24fc373a5f4acee07f_3257512_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0514_hu04d1b12a2914ff24fc373a5f4acee07f_3257512_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0514_hu7885521179886226067.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0514_hu13547684815305815151.jpg 1024w"
 loading="lazy"
 alt="在酒店房间内玩着《王国之泪》"
 class="gallery-image"
@@ -261,7 +314,7 @@ data-flex-basis="323px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051301.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051301_hu01a75a74b135449489533ffd6ba3fcc7_1181222_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/051301_hu01a75a74b135449489533ffd6ba3fcc7_1181222_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/051301_hu15010017635223468719.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/051301_hu5012801138972508311.jpg 1024w"
 loading="lazy"
 alt="出租屋"
 class="gallery-image"
@@ -270,44 +323,44 @@ data-flex-basis="177px"
 >&lt;/p>
 &lt;p>嗯&amp;hellip;或许在你看来这出租屋似乎小得离谱，但实际上这只是因为这套户型不是常规的矩形，而这里床恰好又单独占了一角罢了。实际上大概有 20 平米左右吧。再者，我租的也不是这个房间，而是另一个面积似乎稍微更小一点的房间&amp;hellip;&lt;/p>
 &lt;p>不过总之还好，至少是独居。上下班各通勤一个小时，也算差强人意。&lt;/p>
-&lt;h3 id="印象">印象&lt;/h3>
-&lt;h4 id="单车">单车&lt;/h4>
-&lt;p>我在小学时，似乎还没有诞生共享单车这种东西。&lt;/p>
+&lt;h3 id="印象">印象
+&lt;/h3>&lt;h4 id="单车">单车
+&lt;/h4>&lt;p>我在小学时，似乎还没有诞生共享单车这种东西。&lt;/p>
 &lt;p>我在中学时，整日地被禁锢在学校里，印象里，只有在高考后的那次暑假，才第一次亲手摸过共享单车。&lt;/p>
 &lt;p>我在大学的前三年，或许是由于重庆的地形影响，我还从来没在重庆见过一辆共享单车。&lt;/p>
 &lt;p>而到重庆后，终于又见到了阔别已久的平原地带。因此，自然少不了共享单车，回想起上一次骑“洋车”（我们方言中的称谓），估计还是在中学时期吧。不过这么多年没有再碰过自行车，再次上手，居然还能正常地骑出个百来米而不倒，真可谓是惊喜。&lt;/p>
 &lt;p>但是随后，我就不得不开始吐槽深圳的自行车了，刚来的第一天，当我步行在人行道上，就险些因为自行车而出过多次“车祸”，所幸最终都只是擦肩而过，有惊无险。但是依旧不得不感叹，深圳的“节奏”是真的快呀，就连街上的行人与单车也是如此。&lt;/p>
-&lt;h4 id="盲道">盲道&lt;/h4>
-&lt;p>不出意外地，作为我国的一线城市，深圳的盲道依旧是意料之中地烂：&lt;/p>
+&lt;h4 id="盲道">盲道
+&lt;/h4>&lt;p>不出意外地，作为我国的一线城市，深圳的盲道依旧是意料之中地烂：&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0531.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0531_huc9f85a2379126953685e9c824a65459e_2393988_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0531_huc9f85a2379126953685e9c824a65459e_2393988_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0531_hu6730115140564337746.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0531_hu7956889150975678494.jpg 1024w"
 loading="lazy"
 alt="盲道与垃圾桶的重叠"
 class="gallery-image"
 data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/p>
-&lt;h4 id="光污染">光污染&lt;/h4>
-&lt;p>小时候家住农村，供电不好，偶尔村里还会断几次电。那时的光污染还不像现在这么严重，虽然看不到银河，但至少还能看到满天繁星。但是不知从什么时候开始，天空都只是一片雾蒙蒙的黑色。而至于深圳，则更进一步地，夜空被城市的灯光照得如此通亮。&lt;/p>
+&lt;h4 id="光污染">光污染
+&lt;/h4>&lt;p>小时候家住农村，供电不好，偶尔村里还会断几次电。那时的光污染还不像现在这么严重，虽然看不到银河，但至少还能看到满天繁星。但是不知从什么时候开始，天空都只是一片雾蒙蒙的黑色。而至于深圳，则更进一步地，夜空被城市的灯光照得如此通亮。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0804.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0804_hu1d9b36ca89068d62e304ce9ad6575a5e_3811664_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0804_hu1d9b36ca89068d62e304ce9ad6575a5e_3811664_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0804_hu11458955277519033067.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0804_hu9913744072183974646.jpg 1024w"
 loading="lazy"
 alt="将近 21:00 的南山区夜空"
 class="gallery-image"
 data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/p>
-&lt;h4 id="海风">海风&lt;/h4>
-&lt;p>毕竟是沿海城市，每天晚上下班时，一出门，便能在门口感受到迎面而来的海风。海风炎热而湿润，是我未曾在别处体验过的感受。&lt;/p>
+&lt;h4 id="海风">海风
+&lt;/h4>&lt;p>毕竟是沿海城市，每天晚上下班时，一出门，便能在门口感受到迎面而来的海风。海风炎热而湿润，是我未曾在别处体验过的感受。&lt;/p>
 &lt;p>当时还和一位与我同在滨海实习的朋友聊过，他说，海风又潮又热，你不讨厌吗？我嘛，其实倒是觉得还好，反倒是觉得它是一种独特的体验罢了。正如我曾经在上文说过的，我对气候并不是多么在意。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081101.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081101_hu95bb2c106aab8fbd6494abc6e46cfc9f_3591137_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/081101_hu95bb2c106aab8fbd6494abc6e46cfc9f_3591137_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081101_hu3891903746176331894.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/081101_hu1612163011896182379.jpg 1024w"
 loading="lazy"
 alt="滨海大厦门口 - 1"
 class="gallery-image"
@@ -317,19 +370,19 @@ data-flex-basis="177px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081102.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081102_huc0d8140fe299fe8ee58721df02bb1063_5499237_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/081102_huc0d8140fe299fe8ee58721df02bb1063_5499237_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/081102_hu13601316453205317271.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/081102_hu7864606561844141187.jpg 1024w"
 loading="lazy"
 alt="滨海大厦门口 - 2"
 class="gallery-image"
 data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/p>
-&lt;h4 id="奋斗">“奋斗”&lt;/h4>
-&lt;p>深圳之前曾因一段鼓励 996 的广告而“闻名遐迩”。我在深圳的这几个月，虽说暂时未曾见到如此昭然若揭的宣传，但也依旧有不少奋斗相关的广告。&lt;/p>
+&lt;h4 id="奋斗">“奋斗”
+&lt;/h4>&lt;p>深圳之前曾因一段鼓励 996 的广告而“闻名遐迩”。我在深圳的这几个月，虽说暂时未曾见到如此昭然若揭的宣传，但也依旧有不少奋斗相关的广告。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0628.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0628_hudf0581b4e94eb1f9ebbae41838dbc7bb_2362604_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0628_hudf0581b4e94eb1f9ebbae41838dbc7bb_2362604_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0628_hu15020700873497684522.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0628_hu1541035770938720468.jpg 1024w"
 loading="lazy"
 alt="《你的样子》 - 1"
 class="gallery-image"
@@ -339,7 +392,7 @@ data-flex-basis="323px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0815.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0815_huf690f83d579b77bb65be0a0fc576c853_2325354_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0815_huf690f83d579b77bb65be0a0fc576c853_2325354_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0815_hu11735668054459575245.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0815_hu3493313423266345354.jpg 1024w"
 loading="lazy"
 alt="《你的样子》 - 2"
 class="gallery-image"
@@ -347,13 +400,13 @@ data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/p>
 &lt;p>在地铁第一眼看到这幅广告牌时，我差点将其看错成“你的祥子”。&lt;/p>
-&lt;h2 id="腾讯">腾讯&lt;/h2>
-&lt;p>作为深圳此行的目的地，腾讯自然是不可不提的。&lt;/p>
+&lt;h2 id="腾讯">腾讯
+&lt;/h2>&lt;p>作为深圳此行的目的地，腾讯自然是不可不提的。&lt;/p>
 &lt;p>老实说，我当初投简历的时候，还真没想到自己有一天真能迈入腾讯的大楼。毕竟今年就业形势也不好，投了十几份简历，除了腾讯收到面试邀请外，其他几乎全部石沉大海。所以从这方面而言，还是挺感谢腾讯给我的这个机会的。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0516.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0516_hufed37cd4d516ebbff21e1ed0ae3f6cfb_2547355_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0516_hufed37cd4d516ebbff21e1ed0ae3f6cfb_2547355_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0516_hu15164132210545415747.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0516_hu5675082837251257587.jpg 1024w"
 loading="lazy"
 alt="腾讯总部 - 滨海大厦"
 class="gallery-image"
@@ -365,7 +418,7 @@ data-flex-basis="177px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082301.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082301_hu8bfb6f7b230bf586e801f347cc8cc5a3_2607301_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082301_hu8bfb6f7b230bf586e801f347cc8cc5a3_2607301_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082301_hu8954757389833423544.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082301_hu17470544211952045979.jpg 1024w"
 loading="lazy"
 alt="天台仰望 - 1"
 class="gallery-image"
@@ -375,7 +428,7 @@ data-flex-basis="323px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082302.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082302_hu5f359fadb485822e3dd7e00591af1d00_4231688_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082302_hu5f359fadb485822e3dd7e00591af1d00_4231688_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082302_hu4119690864624675964.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082302_hu1214715552377071445.jpg 1024w"
 loading="lazy"
 alt="天台仰望 - 2"
 class="gallery-image"
@@ -385,7 +438,7 @@ data-flex-basis="323px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082303.jpg"
 width="4786"
 height="1706"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082303_hua4e05fd4f838c501db1516f7f3c32753_2743351_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082303_hua4e05fd4f838c501db1516f7f3c32753_2743351_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082303_hu17543436870920865008.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082303_hu14881953216982667242.jpg 1024w"
 loading="lazy"
 alt="天台眺望"
 class="gallery-image"
@@ -397,7 +450,7 @@ data-flex-basis="673px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082304.jpg"
 width="4208"
 height="3120"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082304_hu051aa9b7f1296f3e65c8fd7f3f8f984c_2213754_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082304_hu051aa9b7f1296f3e65c8fd7f3f8f984c_2213754_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082304_hu11376026566293545840.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082304_hu18202018106701292808.jpg 1024w"
 loading="lazy"
 alt="37楼的食堂"
 class="gallery-image"
@@ -405,8 +458,8 @@ data-flex-grow="134"
 data-flex-basis="323px"
 >&lt;/p>
 &lt;p>至于其他的一些地方，譬如室内攀岩、入口大厅、智能电梯、政治宣传等等，我也都多少拍过一些照片。但囿于篇幅所限，这里就不再展示了，毕竟这些地方对我而言，也并未这篇文章所体现的重点。如果只是想简单地晒一些照片，那我还不如去发空间或是 Mastodon。&lt;/p>
-&lt;h2 id="生活">生活&lt;/h2>
-&lt;p>在实习的这段期间，我的作息是，定好每天七点半的闹钟，每五分钟一个，响到七点五十，起床洗漱整理后赶在八点出门，八点十五前赶上班车，在车上补个回笼觉，九点左右在班车的加速度与生物钟的联合作用下醒来，然后进入食堂，基本上每天都差不多是“皮蛋瘦肉粥 * 2 + 酸菜馅饼 * 1 + 牛奶 * 1”，如果饿的话，可能还会再加一个茶叶蛋。当然两碗粥过后剩下的牛奶肯定是喝不掉的，但是我本来也没打算当餐解决，一般都是捎走留到下午喝。就这样，吃完早饭，蹲个坑，差不多就到十点了。然后回到工位，忙到十二点，随后午饭、午休，又到下午两点，忙到六点，随后晚饭，又到七点，日常干到八点半，随后下班。就这样，等到我坐完地铁回到家，就已经九点多了。&lt;/p>
+&lt;h2 id="生活">生活
+&lt;/h2>&lt;p>在实习的这段期间，我的作息是，定好每天七点半的闹钟，每五分钟一个，响到七点五十，起床洗漱整理后赶在八点出门，八点十五前赶上班车，在车上补个回笼觉，九点左右在班车的加速度与生物钟的联合作用下醒来，然后进入食堂，基本上每天都差不多是“皮蛋瘦肉粥 * 2 + 酸菜馅饼 * 1 + 牛奶 * 1”，如果饿的话，可能还会再加一个茶叶蛋。当然两碗粥过后剩下的牛奶肯定是喝不掉的，但是我本来也没打算当餐解决，一般都是捎走留到下午喝。就这样，吃完早饭，蹲个坑，差不多就到十点了。然后回到工位，忙到十二点，随后午饭、午休，又到下午两点，忙到六点，随后晚饭，又到七点，日常干到八点半，随后下班。就这样，等到我坐完地铁回到家，就已经九点多了。&lt;/p>
 &lt;p>这样算下来，每天能待在家的时间，也就不过十个小时。假设每天能有八个小时睡眠，自己可以自由支配的时间也不过两个小时。&lt;/p>
 &lt;p>这对我而言自然是远远不够的。&lt;/p>
 &lt;p>这三个月以来，我自然不可能全身心的将自己投入到工作中，因为我毕竟是人，而非机器：工作以外，我还有很多事情要做。我对语言很感兴趣，当时恰逢深入 New Ithkuil 不久，我于是开始利用空闲时间开发一款有关 New Ithkuil 的 App，命名为 Enthrirth。比较上头的那段期间，我连续好几天每天回家就立马开始开发，周末也是基本不休息全天开发。就这样，在 7 月 9 日，我发布这个 App 的 v0.1 版本，并在 reddit 进行了简单的宣传。&lt;/p>
@@ -415,7 +468,7 @@ data-flex-basis="323px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0519.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0519_hu4c91b83dfbc8ba238a3a6f7632f20409_2309313_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0519_hu4c91b83dfbc8ba238a3a6f7632f20409_2309313_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0519_hu7628267400253618261.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0519_hu18373875835415827871.jpg 1024w"
 loading="lazy"
 alt="嘀嘀嘀~"
 class="gallery-image"
@@ -432,7 +485,7 @@ data-flex-basis="177px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082901.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082901_hu46a87249a15a59f98cfad2cc1dd7bd2f_1996287_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082901_hu46a87249a15a59f98cfad2cc1dd7bd2f_1996287_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082901_hu4547663092857071003.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082901_hu3002072823737657171.jpg 1024w"
 loading="lazy"
 alt="航班延误"
 class="gallery-image"
@@ -442,7 +495,7 @@ data-flex-basis="177px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082902.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082902_hu933f8c1a7260fa242c76b2efc6bb884f_2635920_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082902_hu933f8c1a7260fa242c76b2efc6bb884f_2635920_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/082902_hu12710183489888094907.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/082902_hu13980585283241917977.jpg 1024w"
 loading="lazy"
 alt="候机厅乏累等待着的人群"
 class="gallery-image"
@@ -452,7 +505,7 @@ data-flex-basis="177px"
 &lt;img src="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0830.jpg"
 width="3120"
 height="4208"
-srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0830_hu97ab13414d5baec0ebfc12220f4222ed_3939954_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0830_hu97ab13414d5baec0ebfc12220f4222ed_3939954_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/from-chongqing-to-shenzhen/0830_hu649258504767144556.jpg 480w, https://lomirus.github.io/p/from-chongqing-to-shenzhen/0830_hu12754934354846699882.jpg 1024w"
 loading="lazy"
 alt="凌晨借着打烊的店铺前的桌椅，吃着泡面"
 class="gallery-image"
@@ -462,16 +515,16 @@ data-flex-basis="177px"
 &lt;p>说了这么多，也该结尾了。但我实在想不到什么好的结尾。对于大众作品一般而言，我或许应该在这里来个转折，笔锋一转地用一种超脱的口吻来宣传一种积极向上的正能量。但是我觉得，我已经没有多余的精力去进行这种升华了。&lt;/p>
 &lt;p>如果问这段时间对于我在宏观的人生层面能有什么收获，那么我觉得，或许是借着这三个月中每个失眠的夜晚与空闲时的发呆，我又对我的人生又进行了一次梳理，我又去思考了什么才是我真正想要寻求的。&lt;/p>
 &lt;p>趁着大学的最后一年，读读书，看看剧，趁着两只脚还没完全地踏入职场，做些自己喜欢的事情，把自己的 to-do list 提上日程。或许这些就够了吧。&lt;/p>
-&lt;p>（完）&lt;/p></description></item><item><title>Ithkuil IV 笔记</title><link>https://lomirus.github.io/p/ithkuil-notes/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/ithkuil-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/ithkuil-notes/cover.png" alt="Featured image of post Ithkuil IV 笔记" />&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>Ithkuil 是由 John Quijada 创造的实验性人工语言。其语法高度屈折，并以其高度复杂的语法著称。该语言初版被创造于 1978 年，经过了 45 年的发展， Ithkuil 迄今已经发布了四个版本，本文基于 2023 年最新发布的 Ithkuil IV。&lt;/p>
+&lt;p>（完）&lt;/p></description></item><item><title>Ithkuil IV 笔记</title><link>https://lomirus.github.io/p/ithkuil-notes/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/ithkuil-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/ithkuil-notes/cover.png" alt="Featured image of post Ithkuil IV 笔记" />&lt;h2 id="简介">简介
+&lt;/h2>&lt;p>Ithkuil 是由 John Quijada 创造的实验性人工语言。其语法高度屈折，并以其高度复杂的语法著称。该语言初版被创造于 1978 年，经过了 45 年的发展， Ithkuil 迄今已经发布了四个版本，本文基于 2023 年最新发布的 Ithkuil IV。&lt;/p>
 &lt;p>为了进一步说明 Ithkuil 的难度，下面请先允许我报个菜名：&lt;/p>
 &lt;p>此语言吸纳了诸多领域的知识，包括但不限于：理论语言学、认知语法、心理语言学、语言习得、语言相对论、语义学、符号学、哲学、模糊集理论、量子物理学等。&lt;/p>
 &lt;p>此语言也借鉴了诸多自然语言，包括但不限于：阿布哈兹动词复合体的形态音位学，某些美洲印第安语言中动词语气，尼日尔-科尔多瓦语的体位系统，巴斯克语和达吉斯坦语的名词格系统，瓦卡山语的附属系统，策尔塔尔语和古古伊米希尔语的位置定位系统、闪族三字词根形态学，以及苏泽特·埃尔金的 Láadan 语言的传闻和所有格范畴。书写系统的逻辑设计借鉴了埃塞俄比亚文和婆罗米文的原则，但采用了独特的词素原则，其文字与希伯来方块脚本和各种克林贡字体有表面上的相似之处。&lt;/p>
 &lt;p>此语言的构词也存在许多复杂的语法形态，包括但不限于：四种详述、两种功能、四种语境、四种系属、二十种构型、六种限域、四种视界、两种本质、九种配价、九种相位、九种效果、九种级别、六种语式、六种格辖、三十六种时体、九种论元格、九种同置格、九种关联格、九种状语格、八种有关格、八种系联格、十六种时空格、九种言据等一系列语法。&lt;/p>
 &lt;p>迄今为止，世界上仍没有人能够流利地说 Ithkuil 语，包括作者 John Quijada 本人。&lt;/p>
-&lt;h2 id="发音">发音&lt;/h2>
-&lt;h3 id="辅音">辅音&lt;/h3>
-&lt;p>辅音排列无规定的固定顺序，为便于排版与展示，此处表格未采取官方文档版本。同一个辅音在正字法允许范围之内存在其他表示方式的，记于圆括号内。&lt;/p>
+&lt;h2 id="发音">发音
+&lt;/h2>&lt;h3 id="辅音">辅音
+&lt;/h3>&lt;p>辅音排列无规定的固定顺序，为便于排版与展示，此处表格未采取官方文档版本。同一个辅音在正字法允许范围之内存在其他表示方式的，记于圆括号内。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -569,8 +622,8 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="元音">元音&lt;/h3>
-&lt;table>
+&lt;h3 id="元音">元音
+&lt;/h3>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
@@ -617,15 +670,15 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="重音">重音&lt;/h3>
-&lt;p>重音符号标注规则：&lt;/p>
+&lt;h3 id="重音">重音
+&lt;/h3>&lt;p>重音符号标注规则：&lt;/p>
 &lt;ul>
 &lt;li>a i u e o -&amp;gt; á í ú é ó&lt;/li>
 &lt;li>ä ü ë ö -&amp;gt; â û ê ô&lt;/li>
 &lt;/ul>
 &lt;p>如果没有标注重音符号，则默认倒数第二个音节重读。&lt;/p>
-&lt;h2 id="构词">构词&lt;/h2>
-&lt;p>在 Ithkuil 中，一个单词的构成结构如下：&lt;/p>
+&lt;h2 id="构词">构词
+&lt;/h2>&lt;p>在 Ithkuil 中，一个单词的构成结构如下：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -699,12 +752,12 @@ data-flex-basis="177px"
 &lt;/tbody>
 &lt;/table>
 &lt;p>构词时，依照从 I 到 IX 的顺序线性相加而成。&lt;/p>
-&lt;h2 id="slot-iii-csubrsub">Slot III: C&lt;sub>R&lt;/sub>&lt;/h2>
-&lt;p>C&lt;sub>A&lt;/sub> 中的 C 表示此部分由辅音(consonant)构成，R 即 Root。词根是构成一个单词的基础，一般由 1~5 个辅音构成，如猫的词根为 &lt;code>-rr-&lt;/code>.&lt;/p>
+&lt;h2 id="slot-iii-csubrsub">Slot III: C&lt;sub>R&lt;/sub>
+&lt;/h2>&lt;p>C&lt;sub>A&lt;/sub> 中的 C 表示此部分由辅音(consonant)构成，R 即 Root。词根是构成一个单词的基础，一般由 1~5 个辅音构成，如猫的词根为 &lt;code>-rr-&lt;/code>.&lt;/p>
 &lt;p>Ithkuil 中不区分动词与名词。&lt;/p>
-&lt;h2 id="slot-ii-vsubvsub">Slot II: V&lt;sub>V&lt;/sub>&lt;/h2>
-&lt;h3 id="stem">Stem&lt;/h3>
-&lt;p>每个词根都有三个对应的 Stem，每个 Stem 对应不同的含义。各个 Stem 的意义之间的关系/区别并没有普适的规定，需要分别自行记忆。&lt;/p>
+&lt;h2 id="slot-ii-vsubvsub">Slot II: V&lt;sub>V&lt;/sub>
+&lt;/h2>&lt;h3 id="stem">Stem
+&lt;/h3>&lt;p>每个词根都有三个对应的 Stem，每个 Stem 对应不同的含义。各个 Stem 的意义之间的关系/区别并没有普适的规定，需要分别自行记忆。&lt;/p>
 &lt;p>以词根 &lt;code>-rr-&lt;/code> （猫）为例：&lt;/p>
 &lt;ul>
 &lt;li>Stem 1: 意为“家猫”&lt;/li>
@@ -712,8 +765,8 @@ data-flex-basis="177px"
 &lt;li>Stem 3: 意为“豹猫”、”渔猫”、”扁头猫”、”锈斑猫”、”帕拉斯猫”等&lt;/li>
 &lt;/ul>
 &lt;p>此外还有一个特殊的 Stem 0，用于表示涵盖了原始词根的所有概念的“stemless”。&lt;/p>
-&lt;h3 id="version">Version&lt;/h3>
-&lt;p>Version 有两种类型，&lt;strong>PRC&lt;/strong> (Processual) 和 &lt;strong>CPT&lt;/strong> (Completive). 其中，PRC 是指目标导向，而 CPT 是指目标导向，以一些词语为例：&lt;/p>
+&lt;h3 id="version">Version
+&lt;/h3>&lt;p>Version 有两种类型，&lt;strong>PRC&lt;/strong> (Processual) 和 &lt;strong>CPT&lt;/strong> (Completive). 其中，PRC 是指目标导向，而 CPT 是指目标导向，以一些词语为例：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -760,8 +813,8 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="词缀规则">词缀规则&lt;/h3>
-&lt;table>
+&lt;h3 id="词缀规则">词缀规则
+&lt;/h3>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th style="text-align:center">&lt;/th>
@@ -797,9 +850,9 @@ data-flex-basis="177px"
 &lt;li>&lt;code>-(a)rr-&lt;/code>: 家猫&lt;/li>
 &lt;li>&lt;code>-ärţt-&lt;/code>: 学到&lt;/li>
 &lt;/ul>
-&lt;h2 id="slot-iv-vsubrsub">Slot IV: V&lt;sub>R&lt;/sub>&lt;/h2>
-&lt;h3 id="specification">Specification&lt;/h3>
-&lt;p>Specifications 共有四种: &lt;strong>BSC&lt;/strong> (basic), &lt;strong>CTE&lt;/strong> (contential), &lt;strong>CSV&lt;/strong> (constitutive), and &lt;strong>OBJ&lt;/strong> (objective).&lt;/p>
+&lt;h2 id="slot-iv-vsubrsub">Slot IV: V&lt;sub>R&lt;/sub>
+&lt;/h2>&lt;h3 id="specification">Specification
+&lt;/h3>&lt;p>Specifications 共有四种: &lt;strong>BSC&lt;/strong> (basic), &lt;strong>CTE&lt;/strong> (contential), &lt;strong>CSV&lt;/strong> (constitutive), and &lt;strong>OBJ&lt;/strong> (objective).&lt;/p>
 &lt;p>以词根 &lt;code>-ly-&lt;/code> 的 Stem 1 形态 &lt;code>-aly-&lt;/code> （艺术作品）为例：&lt;/p>
 &lt;ul>
 &lt;li>BSC: 表示其基础意义，“某艺术作品”&lt;/li>
@@ -814,8 +867,8 @@ data-flex-basis="177px"
 &lt;li>CSV: ”进食（食物）”&lt;/li>
 &lt;li>OBJ: “被饮食的食物/饮品”&lt;/li>
 &lt;/ul>
-&lt;h3 id="context">Context&lt;/h3>
-&lt;p>Context 包含四种：&lt;strong>EXS&lt;/strong> (Existential), &lt;strong>FNC&lt;/strong> (Functional), &lt;strong>RPS&lt;/strong> (Representational), &lt;strong>AMG&lt;/strong> (Amalgamative)&lt;/p>
+&lt;h3 id="context">Context
+&lt;/h3>&lt;p>Context 包含四种：&lt;strong>EXS&lt;/strong> (Existential), &lt;strong>FNC&lt;/strong> (Functional), &lt;strong>RPS&lt;/strong> (Representational), &lt;strong>AMG&lt;/strong> (Amalgamative)&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>EXS&lt;/strong>: 单纯描述客观存在&lt;/li>
 &lt;li>&lt;strong>FNC&lt;/strong>: 暗示其可能产生的个人或社会意义&lt;/li>
@@ -849,8 +902,8 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="function">Function&lt;/h3>
-&lt;p>Function 有两种类型，&lt;strong>Stative&lt;/strong> 和 &lt;strong>Dynamic&lt;/strong>.&lt;/p>
+&lt;h3 id="function">Function
+&lt;/h3>&lt;p>Function 有两种类型，&lt;strong>Stative&lt;/strong> 和 &lt;strong>Dynamic&lt;/strong>.&lt;/p>
 &lt;p>其中，Stative 强调静态，例如：&lt;/p>
 &lt;ul>
 &lt;li>天空 &lt;em>&lt;strong>呈现&lt;/strong>&lt;/em> 橙红色。&lt;/li>
@@ -862,8 +915,8 @@ data-flex-basis="177px"
 &lt;li>（怒号的） &lt;em>&lt;strong>风暴&lt;/strong>&lt;/em>&lt;/li>
 &lt;/ul>
 &lt;p>两者没有严格的区别，因此更接近于一种语感上的区分。同一个词语，在使用 Stative 或 Dynamic 的时候在语感上会有微妙的不同。例如“猎豹在 &lt;em>&lt;strong>奔跑&lt;/strong>&lt;/em> ”一句，Stative 更倾向与强调猎豹当前的状态，关注其速度与特征；而 Dynamic 可能会更强调它是在追逐猎物、为了到达目的地。&lt;/p>
-&lt;h3 id="词缀规则-1">词缀规则&lt;/h3>
-&lt;p>对于 Stative 来说：&lt;/p>
+&lt;h3 id="词缀规则-1">词缀规则
+&lt;/h3>&lt;p>对于 Stative 来说：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -949,8 +1002,8 @@ data-flex-basis="177px"
 &lt;/tbody>
 &lt;/table>
 &lt;p>其中，对于 RPS 列，当其前面紧跟的是 &lt;code>-w-&lt;/code> 时，则使用后面的替代形式。&lt;/p>
-&lt;h2 id="slot-vi-csubasub">Slot VI: C&lt;sub>A&lt;/sub>&lt;/h2>
-&lt;p>C&lt;sub>A&lt;/sub> 包含以下元素：&lt;/p>
+&lt;h2 id="slot-vi-csubasub">Slot VI: C&lt;sub>A&lt;/sub>
+&lt;/h2>&lt;p>C&lt;sub>A&lt;/sub> 包含以下元素：&lt;/p>
 &lt;ul>
 &lt;li>Affiliation&lt;/li>
 &lt;li>Configuration&lt;/li>
@@ -960,8 +1013,8 @@ data-flex-basis="177px"
 &lt;/ul>
 &lt;p>其组合顺序为：Affiliation -&amp;gt; Configuration -&amp;gt; Extension -&amp;gt; Perspective + Essence. 值得注意的是，这里的 Perspective 与 Essence 被放在了一起，因为他们共用一个词缀。&lt;/p>
 &lt;p>下面将依次介绍。&lt;/p>
-&lt;h3 id="affiliation">Affiliation&lt;/h3>
-&lt;p>Configuration 包含四种：&lt;strong>CSL&lt;/strong> (Consolidative), &lt;strong>ASO&lt;/strong> (Associative), &lt;strong>COA&lt;/strong> (Coalescent), &lt;strong>VAR&lt;/strong> (Variative)&lt;/p>
+&lt;h3 id="affiliation">Affiliation
+&lt;/h3>&lt;p>Configuration 包含四种：&lt;strong>CSL&lt;/strong> (Consolidative), &lt;strong>ASO&lt;/strong> (Associative), &lt;strong>COA&lt;/strong> (Coalescent), &lt;strong>VAR&lt;/strong> (Variative)&lt;/p>
 &lt;ul>
 &lt;li>CSL: 一般隶属关系。无后缀&lt;/li>
 &lt;li>ASO: 相同且目的一致。若为 C&lt;sub>A&lt;/sub> 唯一后缀，则后缀为 &lt;code>-nļ-&lt;/code>，否则为 &lt;code>-l-&lt;/code>&lt;/li>
@@ -974,8 +1027,8 @@ data-flex-basis="177px"
 &lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{ASO}$ &lt;code>-aĉvel-&lt;/code> (一组/类工具)&lt;/p>
 &lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{COA}$ &lt;code>-aĉver-&lt;/code> (一套工具)&lt;/p>
 &lt;p>&lt;code>-ĉv-&lt;/code> $\xrightarrow[Stem]{Stem \space 1}$ &lt;code>-aĉv-&lt;/code> $\xrightarrow[Specification]{CSV(物理构成)}$ &lt;code>-aĉve-&lt;/code> $\xrightarrow[Affiliation]{VAR}$ &lt;code>-aĉveř-&lt;/code> (一堆工具)&lt;/p>
-&lt;h3 id="configuration">Configuration&lt;/h3>
-&lt;p>Configuration 包含三个参数：&lt;strong>Plexity&lt;/strong>, &lt;strong>Similarity&lt;/strong>, &lt;strong>Separability&lt;/strong>&lt;/p>
+&lt;h3 id="configuration">Configuration
+&lt;/h3>&lt;p>Configuration 包含三个参数：&lt;strong>Plexity&lt;/strong>, &lt;strong>Similarity&lt;/strong>, &lt;strong>Separability&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>Plexity
 &lt;ul>
@@ -1110,8 +1163,8 @@ data-flex-basis="177px"
 &lt;li>MDS (多 - 相异 - 分离): &lt;code>-(a)rraţ-&lt;/code>, 一群不同的猫&lt;/li>
 &lt;li>MFS (多 - 模糊 - 分离): &lt;code>-(a)rraz-&lt;/code>, 一群貌似是猫但又不完全是猫的东西&lt;/li>
 &lt;/ul>
-&lt;h3 id="extension">Extension&lt;/h3>
-&lt;p>Extension 包含六种：&lt;strong>DEL&lt;/strong> (Delimitive), &lt;strong>PRX&lt;/strong> (Proximal), &lt;strong>ICP&lt;/strong> (Inceptive), &lt;strong>ATV&lt;/strong> (Attenuative), &lt;strong>GRA&lt;/strong> (Graduative), &lt;strong>DPL&lt;/strong> (Depletive).&lt;/p>
+&lt;h3 id="extension">Extension
+&lt;/h3>&lt;p>Extension 包含六种：&lt;strong>DEL&lt;/strong> (Delimitive), &lt;strong>PRX&lt;/strong> (Proximal), &lt;strong>ICP&lt;/strong> (Inceptive), &lt;strong>ATV&lt;/strong> (Attenuative), &lt;strong>GRA&lt;/strong> (Graduative), &lt;strong>DPL&lt;/strong> (Depletive).&lt;/p>
 &lt;ul>
 &lt;li>DEL: 默认的 Extension，无后缀；&lt;/li>
 &lt;li>PRX：表示其中的一部分；若 Configuration 为 UPX，后缀为 &lt;code>-d-&lt;/code>，否则为 &lt;code>-t-&lt;/code>&lt;/li>
@@ -1134,8 +1187,8 @@ data-flex-basis="177px"
 &lt;li>GRA：&lt;code>-elzegz-&lt;/code>，意为“河源处”&lt;/li>
 &lt;li>DPL：&lt;code>-elzebz-&lt;/code>，意为“河口处”&lt;/li>
 &lt;/ul>
-&lt;h3 id="perspective">Perspective&lt;/h3>
-&lt;p>Perspective 包含四种：&lt;strong>M&lt;/strong> (Monadic), &lt;strong>G&lt;/strong> (Agglomerative), &lt;strong>N&lt;/strong> (Nomic), &lt;strong>A&lt;/strong> (Abstract).&lt;/p>
+&lt;h3 id="perspective">Perspective
+&lt;/h3>&lt;p>Perspective 包含四种：&lt;strong>M&lt;/strong> (Monadic), &lt;strong>G&lt;/strong> (Agglomerative), &lt;strong>N&lt;/strong> (Nomic), &lt;strong>A&lt;/strong> (Abstract).&lt;/p>
 &lt;ul>
 &lt;li>M: 表示“一个、单个”；&lt;/li>
 &lt;li>G: 表示“一些、一定量”；&lt;/li>
@@ -1143,8 +1196,8 @@ data-flex-basis="177px"
 &lt;li>A: 表示与此词语有关的各种抽象概念；&lt;/li>
 &lt;/ul>
 &lt;p>Perspective 的词缀规则需要涉及到暂未讲到的 Essence，因此有关 Perspective 的词缀规则将在后文再行讲解。&lt;/p>
-&lt;h3 id="essence">Essence&lt;/h3>
-&lt;p>Essence 包含两种：&lt;strong>NRM&lt;/strong> (Normal), &lt;strong>RPV&lt;/strong> (Representative).&lt;/p>
+&lt;h3 id="essence">Essence
+&lt;/h3>&lt;p>Essence 包含两种：&lt;strong>NRM&lt;/strong> (Normal), &lt;strong>RPV&lt;/strong> (Representative).&lt;/p>
 &lt;p>NRM 表示实际存在的事物或行为，而 RPV 表示假定的、虚拟的事物或行为。例如，“今天中午我想吃番茄炒蛋”，这里的“想吃”即适用于 RPV。除了“想/想象”之外，类似的关键词还有“应该、必须、能”等。&lt;/p>
 &lt;p>词缀规则如下：&lt;/p>
 &lt;table>
@@ -1178,8 +1231,8 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="辅音置换">辅音置换&lt;/h3>
-&lt;p>由于以上辅音后缀的排列组合可能会导致出现一些难以发音的情况，所以实际上，会对这类发音进行置换，规则如下，其中 [C] 表示辅音：&lt;/p>
+&lt;h3 id="辅音置换">辅音置换
+&lt;/h3>&lt;p>由于以上辅音后缀的排列组合可能会导致出现一些难以发音的情况，所以实际上，会对这类发音进行置换，规则如下，其中 [C] 表示辅音：&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>-pp-&lt;/code> -&amp;gt; &lt;code>-mp-&lt;/code>&lt;/li>
 &lt;li>&lt;code>-pb-&lt;/code> -&amp;gt; &lt;code>-mbnk-&lt;/code>&lt;/li>
@@ -1201,10 +1254,10 @@ data-flex-basis="177px"
 &lt;li>&lt;code>-[C]çx-&lt;/code> -&amp;gt; &lt;code>-[C]xw-&lt;/code>&lt;/li>
 &lt;li>&lt;code>-ţbn-&lt;/code> -&amp;gt; (&lt;code>-tḑ-&lt;/code>) -&amp;gt; &lt;code>-ḑy-&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;h2 id="slot-i-csubcsub">Slot I: C&lt;sub>C&lt;/sub>&lt;/h2>
-&lt;p>C&lt;sub>C&lt;/sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 &lt;a class="link" href="#slot-ii-vsubvsub" >Slot II&lt;/a> 进行变化，并省略 Slot IV &amp;amp; VI。&lt;/p>
-&lt;h3 id="规则">规则&lt;/h3>
-&lt;ul>
+&lt;h2 id="slot-i-csubcsub">Slot I: C&lt;sub>C&lt;/sub>
+&lt;/h2>&lt;p>C&lt;sub>C&lt;/sub> 不具备语法意义，其作用只是用来简化音节数。该 Slot 是可选的，意即你也可以选择不使用该 Slot 进行简化，而是直接使用原型。同时，当启用 Slot I 时，你也必须同时按照相应的规则对 &lt;a class="link" href="#slot-ii-vsubvsub" >Slot II&lt;/a> 进行变化，并省略 Slot IV &amp;amp; VI。&lt;/p>
+&lt;h3 id="规则">规则
+&lt;/h3>&lt;ul>
 &lt;li>当 C&lt;sub>A&lt;/sub> 为默认值时，Slot I C&lt;sub>C&lt;/sub> 为 &lt;code>-w-&lt;/code>，此时 Slot II 规则如下：&lt;/li>
 &lt;/ul>
 &lt;table>
@@ -1476,8 +1529,8 @@ data-flex-basis="177px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="示例">示例&lt;/h3>
-&lt;p>以下是两个示例：&lt;/p>
+&lt;h3 id="示例">示例
+&lt;/h3>&lt;p>以下是两个示例：&lt;/p>
 &lt;p>&lt;code>-dp-&lt;/code> $\xrightarrow[Stem \space + \space Version]{Stem \space 2 \space + \space PRC}$
 &lt;code>-edp-&lt;/code> $\xrightarrow[Function \space + \space Context \space + \space Specification]{Stative \space + \space EXS \space + \space BSC}$
 &lt;code>-edpa-&lt;/code>&lt;/p>
@@ -1491,33 +1544,34 @@ data-flex-basis="177px"
 &lt;p>$\xrightarrow[Affiliation \space + \space Configuration \space + \space Extension \space + \space (Perspective+Essence)]{CSL \space + \space UPX \space + \space PRX \space + \space (G+NRM)}$
 &lt;code>-enţdar-&lt;/code> $\xrightarrow[Slot I/II]{C_A \space = \space G}$
 &lt;code>-weinţd-&lt;/code>&lt;/p>
-&lt;h2 id="slot-ix-vsubcsub--vsubksub">Slot IX: V&lt;sub>C&lt;/sub> / V&lt;sub>K&lt;/sub>&lt;/h2>
-&lt;p>TODO&lt;/p>
-&lt;h3 id="transrelative-cases">Transrelative Cases&lt;/h3>
-&lt;h3 id="appositive-cases">Appositive Cases&lt;/h3>
-&lt;h3 id="associative-cases">Associative Cases&lt;/h3>
-&lt;h3 id="adverbial-cases">Adverbial Cases&lt;/h3>
-&lt;h3 id="relational-cases">Relational Cases&lt;/h3>
-&lt;h3 id="affinitive-cases">Affinitive Cases&lt;/h3>
-&lt;h3 id="spatio-temporal-cases--group-i">Spatio-Temporal Cases — Group I&lt;/h3>
-&lt;h3 id="spatio-temporal-cases--group-ii">Spatio-Temporal Cases — Group II&lt;/h3></description></item><item><title>《降临》影评</title><link>https://lomirus.github.io/p/arrival-review/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/arrival-review/</guid><description>&lt;img src="https://lomirus.github.io/p/arrival-review/cover.jpg" alt="Featured image of post 《降临》影评" />&lt;p>&lt;strong>⚠️警告：本文含有对于《降临》（2016）的部分剧透，请酌情阅读。&lt;/strong>&lt;/p>
-&lt;h2 id="引言">引言&lt;/h2>
-&lt;p>最近我一直在研究语言学。在读到一篇有关 Sapir-Whorf Hypothesis 的文章时，看到作者提到了前几年（2016）上映的电影 Arrival（中文译作《降临》），查了一下感觉主题正好和语言学有关，顿生兴趣。于是抽空花了大约两个小时看完了这场电影。&lt;/p>
+&lt;h2 id="slot-ix-vsubcsub--vsubksub">Slot IX: V&lt;sub>C&lt;/sub> / V&lt;sub>K&lt;/sub>
+&lt;/h2>&lt;p>TODO&lt;/p>
+&lt;h3 id="transrelative-cases">Transrelative Cases
+&lt;/h3>&lt;h3 id="appositive-cases">Appositive Cases
+&lt;/h3>&lt;h3 id="associative-cases">Associative Cases
+&lt;/h3>&lt;h3 id="adverbial-cases">Adverbial Cases
+&lt;/h3>&lt;h3 id="relational-cases">Relational Cases
+&lt;/h3>&lt;h3 id="affinitive-cases">Affinitive Cases
+&lt;/h3>&lt;h3 id="spatio-temporal-cases--group-i">Spatio-Temporal Cases — Group I
+&lt;/h3>&lt;h3 id="spatio-temporal-cases--group-ii">Spatio-Temporal Cases — Group II
+&lt;/h3></description></item><item><title>《降临》影评</title><link>https://lomirus.github.io/p/arrival-review/</link><pubDate>Tue, 31 Jan 2023 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/arrival-review/</guid><description>&lt;img src="https://lomirus.github.io/p/arrival-review/cover.jpg" alt="Featured image of post 《降临》影评" />&lt;p>&lt;strong>⚠️警告：本文含有对于《降临》（2016）的部分剧透，请酌情阅读。&lt;/strong>&lt;/p>
+&lt;h2 id="引言">引言
+&lt;/h2>&lt;p>最近我一直在研究语言学。在读到一篇有关 Sapir-Whorf Hypothesis 的文章时，看到作者提到了前几年（2016）上映的电影 Arrival（中文译作《降临》），查了一下感觉主题正好和语言学有关，顿生兴趣。于是抽空花了大约两个小时看完了这场电影。&lt;/p>
 &lt;p>本片改编自美国华裔科幻作家姜峯楠的作品《你一生的故事》，我在观影前没有读过此书，因此本文的分析不会基于本作与原著的对比。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/author.jpg"
 width="900"
 height="900"
-srcset="https://lomirus.github.io/p/arrival-review/author_huf2f05ab56713e63bbb4b3a9beabc7088_164268_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/arrival-review/author_huf2f05ab56713e63bbb4b3a9beabc7088_164268_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/author_hu9758975273588899919.jpg 480w, https://lomirus.github.io/p/arrival-review/author_hu3503339965621038065.jpg 1024w"
 loading="lazy"
 alt="姜峯楠"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
 >&lt;/p>
-&lt;h2 id="片段评述">片段评述&lt;/h2>
-&lt;p>我写评价一般都是着重写我要批评的地方，但是这里我还是想先顺便提一它的不少可圈可点的部分。&lt;/p>
-&lt;h3 id="一">一&lt;/h3>
-&lt;p>在叙事结构上，本部影片采用的是单线叙事，中间辅以插叙。影片开头先以女主的倒叙引入，扼要地提到了女主个人未来的生活片段。这种手法，很容易使人联想到著名的《百年孤独》的开头：&lt;/p>
+&lt;h2 id="片段评述">片段评述
+&lt;/h2>&lt;p>我写评价一般都是着重写我要批评的地方，但是这里我还是想先顺便提一它的不少可圈可点的部分。&lt;/p>
+&lt;h3 id="一">一
+&lt;/h3>&lt;p>在叙事结构上，本部影片采用的是单线叙事，中间辅以插叙。影片开头先以女主的倒叙引入，扼要地提到了女主个人未来的生活片段。这种手法，很容易使人联想到著名的《百年孤独》的开头：&lt;/p>
 &lt;blockquote>
 &lt;p>多年以后，面对行刑队，奥雷里亚诺布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午。&lt;/p>
 &lt;/blockquote>
@@ -1525,7 +1579,7 @@ data-flex-basis="240px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/1-1.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/1-1_hud587a28513ea269223959ee65fbcc09b_493105_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/1-1_hud587a28513ea269223959ee65fbcc09b_493105_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/1-1_hu7671286322862075144.png 480w, https://lomirus.github.io/p/arrival-review/1-1_hu13853405570599603486.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1534,29 +1588,29 @@ data-flex-basis="426px"
 &lt;img src="https://lomirus.github.io/p/arrival-review/1-2.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/1-2_hu8a1070b01aef2c3cbf2e58ce690ff4f1_1019901_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/1-2_hu8a1070b01aef2c3cbf2e58ce690ff4f1_1019901_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/1-2_hu6934179908173105277.png 480w, https://lomirus.github.io/p/arrival-review/1-2_hu15178405225738433836.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h3 id="二">二&lt;/h3>
-&lt;p>影片在进入女主授课至与外星飞船接触的这段时间内，影片表现得相当克制，自始至终没有向观众展示飞船的外形。即使是外星人的到来这件事本身，影片甚至也是以侧面描写的方式相关展示：而这个侧面描写的实践在我看来相当精妙。&lt;/p>
+&lt;h3 id="二">二
+&lt;/h3>&lt;p>影片在进入女主授课至与外星飞船接触的这段时间内，影片表现得相当克制，自始至终没有向观众展示飞船的外形。即使是外星人的到来这件事本身，影片甚至也是以侧面描写的方式相关展示：而这个侧面描写的实践在我看来相当精妙。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/2-1.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/2-1_hu584a457f29ec5381b98cf0b57d71e849_979698_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/2-1_hu584a457f29ec5381b98cf0b57d71e849_979698_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/2-1_hu8122718192727845993.png 480w, https://lomirus.github.io/p/arrival-review/2-1_hu16229741294741316221.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h3 id="三">三&lt;/h3>
-&lt;p>这部电影不少镜头的拍摄手法，尤其是在 Louise 等人首次进入外星飞船时的部分，对于飞船内部的拍摄，特别是相机的构图与拍摄方向等，实属优异，不少单帧单就美感而言都是能够拿来做壁纸的程度。&lt;/p>
+&lt;h3 id="三">三
+&lt;/h3>&lt;p>这部电影不少镜头的拍摄手法，尤其是在 Louise 等人首次进入外星飞船时的部分，对于飞船内部的拍摄，特别是相机的构图与拍摄方向等，实属优异，不少单帧单就美感而言都是能够拿来做壁纸的程度。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/3-1.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/3-1_huf96c63acb47d00b5bddf19d66ef96271_510251_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/3-1_huf96c63acb47d00b5bddf19d66ef96271_510251_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/3-1_hu5328365800504697415.png 480w, https://lomirus.github.io/p/arrival-review/3-1_hu13925140115333991901.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1565,7 +1619,7 @@ data-flex-basis="426px"
 &lt;img src="https://lomirus.github.io/p/arrival-review/3-2.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/3-2_hu1ab698e94a2915f713ef7472456f842a_1186575_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/3-2_hu1ab698e94a2915f713ef7472456f842a_1186575_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/3-2_hu9827817041535375119.png 480w, https://lomirus.github.io/p/arrival-review/3-2_hu9091046301444415088.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1574,15 +1628,15 @@ data-flex-basis="426px"
 &lt;img src="https://lomirus.github.io/p/arrival-review/3-3.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/3-3_hu13b01c9c97a0642d8f27ffe4a3849565_878063_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/3-3_hu13b01c9c97a0642d8f27ffe4a3849565_878063_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/3-3_hu12408986967362808461.png 480w, https://lomirus.github.io/p/arrival-review/3-3_hu7901183394051487255.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h2 id="批评">批评&lt;/h2>
-&lt;h3 id="对社会描述的不合理性与传统美式个人英雄主义叙事的批评">对社会描述的不合理性与传统美式个人英雄主义叙事的批评&lt;/h3>
-&lt;p>这个也算是老调重弹了。好莱坞式的电影往往喜欢将政治或军方的领导者刻画得刚愎自用、急功近利，在剧中像是反派一样，沦落为剧情需要的制造者，创造冲突与故事矛盾，反倒起到了阻碍主角的作用，最后由主角收拾烂摊子，拯救世界于危难之中。这部剧中也是如此，女主正要拯救世界的先要关头，长官却以叛国罪威胁女主，并险些将其与其男友一同枪毙。&lt;/p>
+&lt;h2 id="批评">批评
+&lt;/h2>&lt;h3 id="对社会描述的不合理性与传统美式个人英雄主义叙事的批评">对社会描述的不合理性与传统美式个人英雄主义叙事的批评
+&lt;/h3>&lt;p>这个也算是老调重弹了。好莱坞式的电影往往喜欢将政治或军方的领导者刻画得刚愎自用、急功近利，在剧中像是反派一样，沦落为剧情需要的制造者，创造冲突与故事矛盾，反倒起到了阻碍主角的作用，最后由主角收拾烂摊子，拯救世界于危难之中。这部剧中也是如此，女主正要拯救世界的先要关头，长官却以叛国罪威胁女主，并险些将其与其男友一同枪毙。&lt;/p>
 &lt;p>在破解 Heptapod 语言的过程中，起主要作用的基本只有女主。曰：&lt;/p>
 &lt;blockquote>
 &lt;p>天下才有一石，Louise 独占八斗，Ian 得一斗，天下共分一斗。&lt;/p>
@@ -1592,7 +1646,7 @@ data-flex-basis="426px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/ship.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/ship_hue695d39c3894000c787719ae9c3b10c3_843915_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/ship_hue695d39c3894000c787719ae9c3b10c3_843915_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/ship_hu2675056605494193979.png 480w, https://lomirus.github.io/p/arrival-review/ship_hu12896576761730279140.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1602,33 +1656,33 @@ data-flex-basis="426px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/china.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/china_hu585f752cba230d61cfe2a52be8fba409_1297945_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/china_hu585f752cba230d61cfe2a52be8fba409_1297945_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/china_hu15102336747038328435.png 480w, https://lomirus.github.io/p/arrival-review/china_hu5945269893888372862.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h3 id="sapir-whorf-hypothesis-与时间悖论">Sapir-Whorf Hypothesis 与时间悖论&lt;/h3>
-&lt;p>就一般的科幻而言，其科幻设定往往基于物理学定律，比较特殊的有诸如《三体》，基于现实中的博弈论，作者根据原作中假设的宇宙社会学，提出了黑暗按森林假说。而这次 Arrival 同样独辟蹊径，其底层设定，基于的是语言学中著名的 Sapir-Whorf Hypothesis，又名 Linguistic Reletivity。这项学说认为，人类的思考模式受到其使用语言的影响，因而对同一事物时可能会有不同的看法。常见的影响因素有方向、颜色、时间。&lt;/p>
+&lt;h3 id="sapir-whorf-hypothesis-与时间悖论">Sapir-Whorf Hypothesis 与时间悖论
+&lt;/h3>&lt;p>就一般的科幻而言，其科幻设定往往基于物理学定律，比较特殊的有诸如《三体》，基于现实中的博弈论，作者根据原作中假设的宇宙社会学，提出了黑暗按森林假说。而这次 Arrival 同样独辟蹊径，其底层设定，基于的是语言学中著名的 Sapir-Whorf Hypothesis，又名 Linguistic Reletivity。这项学说认为，人类的思考模式受到其使用语言的影响，因而对同一事物时可能会有不同的看法。常见的影响因素有方向、颜色、时间。&lt;/p>
 &lt;p>拿我自己举个例子吧：我是北方人。北方相比南方相比有个特点，那就是多平原，从我家乡下向西方望去，是一望无际的华北平原，其间没有山陵的阻隔，均是大片的田地，几乎能一眼望到地平线。南方则多山多丘陵。这两者地理上的差异也造就了南北对于方向用词上的区别，北方多用东西南北，南方则是前后左右。我大学是在南方上学，一次和朋友外出游玩，谈到路线，发现我们双方用词的差异，他惊诧于我为何执着于绝对方向，并好奇我是否会陌生环境迷失方向；而我则疑惑他是如何高速地计算出说话者相对方向，并随着自身的旋转而不厌其烦的适时调整。事实上，正如他所言，我在当时尚且陌生的城市指认了方向，拿出手机的指南针进行确认，其结果果不其然与我所料一致。另外还记得我在小学时和同学们在操场闲聊，共同困惑于指南针存在的意义，认为方向靠直觉即可辨认，何需另靠他物。尽管在现在看来当时实在过于自负，但这也侧面反应了我们当地人对于方向感的掌握上也确实是相对更强一些的。学界也有许多实验对此进行佐证，此不赘述。&lt;/p>
 &lt;p>本影片中的实际上更像是对 Sapir-Whorf Hypothesis 另一版本 Linguistic Determinism 的科幻式诠释，即语言对于思想有着决定性的影响，可惜的是，这一假说已经基本被当代语言学家所扬弃。因此，对于影片中学会外星语言后就能预知未来，自然是无稽之谈。但就一个科幻文学而言，仍是一个不错的点子。&lt;/p>
 &lt;p>不可避免地，当一部科幻作品中出现时空穿越或是预知未来的设定为，就难免会触碰到时间悖论。此作中，女主为了给商将军打电话，可是却不知道其电话号码，于是预见了一年半后于商将军的会面，席间商将军将电话号码告诉给了女主，女主记下，并在当下拨通了向商将军的电话。然而就电影中的表现来看，一名半后的女主根本不记得自己曾经打过电话这件事，这与事实相悖，违背了基础的因果律。其次，从理性的角度来说，女主既然已经预言到了在未来已经达成和平，为何当下还这么匆匆忙忙呢（除非预言是可以被人为更改的，那这样的话，当许多人都能预言，同时他们也都具有主观能动性，那么预言也就没有意义了，因为它们可以随时改变），观众同样因此被告知了结局，这是否会对悬念的营造产生干扰呢？&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/arrival-review/paradox.png"
 width="1920"
 height="1080"
-srcset="https://lomirus.github.io/p/arrival-review/paradox_hu9fae421527705841c2465d6bad20fbb8_972408_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/arrival-review/paradox_hu9fae421527705841c2465d6bad20fbb8_972408_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/arrival-review/paradox_hu2332464795368316688.png 480w, https://lomirus.github.io/p/arrival-review/paradox_hu6571564294713216475.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
-&lt;h2 id="总评">总评&lt;/h2>
-&lt;p>脱离于传统物理学的新颖的科幻设定，优秀的镜头语言与含蓄的表达手法，语言学相关加分项。科幻设定基础薄弱，理论不自洽，结尾留白叙事把握较差导致意犹未尽等减分项。&lt;/p>
-&lt;p>总评，四星（五星制）。&lt;/p></description></item><item><title>句法学入门：头部方向参数 (Head-Directionality Parameter)</title><link>https://lomirus.github.io/p/head-directionality-parameter/</link><pubDate>Sat, 28 Jan 2023 23:11:00 +0800</pubDate><guid>https://lomirus.github.io/p/head-directionality-parameter/</guid><description>&lt;img src="https://lomirus.github.io/p/head-directionality-parameter/cover.webp" alt="Featured image of post 句法学入门：头部方向参数 (Head-Directionality Parameter)" />&lt;h2 id="background">Background&lt;/h2>
-&lt;p>最近在研究人工语言，特别是语序问题，不由得涉及了头部方向参数、X-bar Theory 等领域的知识，而且也这才意识到了乔姆斯基到底有多强orz。所以后面就着手写一下学习这些东西的一些笔记汇总，希望能帮到后面会用到的人。&lt;/p>
+&lt;h2 id="总评">总评
+&lt;/h2>&lt;p>脱离于传统物理学的新颖的科幻设定，优秀的镜头语言与含蓄的表达手法，语言学相关加分项。科幻设定基础薄弱，理论不自洽，结尾留白叙事把握较差导致意犹未尽等减分项。&lt;/p>
+&lt;p>总评，四星（五星制）。&lt;/p></description></item><item><title>句法学入门：头部方向参数 (Head-Directionality Parameter)</title><link>https://lomirus.github.io/p/head-directionality-parameter/</link><pubDate>Sat, 28 Jan 2023 23:11:00 +0800</pubDate><guid>https://lomirus.github.io/p/head-directionality-parameter/</guid><description>&lt;img src="https://lomirus.github.io/p/head-directionality-parameter/cover.webp" alt="Featured image of post 句法学入门：头部方向参数 (Head-Directionality Parameter)" />&lt;h2 id="background">Background
+&lt;/h2>&lt;p>最近在研究人工语言，特别是语序问题，不由得涉及了头部方向参数、X-bar Theory 等领域的知识，而且也这才意识到了乔姆斯基到底有多强orz。所以后面就着手写一下学习这些东西的一些笔记汇总，希望能帮到后面会用到的人。&lt;/p>
 &lt;p>下面开始正文。&lt;/p>
-&lt;h2 id="syntactic-category">Syntactic Category&lt;/h2>
-&lt;p>在讲 syntactic category 之前，现引入两个新概念，lexical categories 和 phrasal categories。前者 lexical categories 就是我们在中学时学过的单词分类，比如动词，名词，副词等，lexical 即“语素的”之意。而 phrasal categories 在功能上与前者类似，不过针对的不是语素，而是短语，比如名词短语，动词短语等。&lt;/p>
+&lt;h2 id="syntactic-category">Syntactic Category
+&lt;/h2>&lt;p>在讲 syntactic category 之前，现引入两个新概念，lexical categories 和 phrasal categories。前者 lexical categories 就是我们在中学时学过的单词分类，比如动词，名词，副词等，lexical 即“语素的”之意。而 phrasal categories 在功能上与前者类似，不过针对的不是语素，而是短语，比如名词短语，动词短语等。&lt;/p>
 &lt;p>Syntactic category 则是句法理论中所假定的一种句法单元。在 phrase structure grammars 中，syntactic category 包括 lexical categories 和 phrasal categories。但是另一个理论 dependency grammars 中，syntactic category 则不承认 phrasal categories，只包括 lexical categories。本文依照前者为讨论基础。&lt;/p>
 &lt;p>由于在后面的讨论中，主要用到的是其英文及其缩写，所以先简单列举一下常见的词性：&lt;/p>
 &lt;table>
@@ -1672,8 +1726,8 @@ data-flex-basis="426px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="head">Head&lt;/h2>
-&lt;p>在语言学中，对某个短语来说，我们用在这个短语中决定了该短语的 syntactic category 的词语称之为 head.&lt;/p>
+&lt;h2 id="head">Head
+&lt;/h2>&lt;p>在语言学中，对某个短语来说，我们用在这个短语中决定了该短语的 syntactic category 的词语称之为 head.&lt;/p>
 &lt;p>由于汉语本身的语序导致的歧义现象（这也是本系列要讨论的问题之一），所以下面我先用英语举几个例子：&lt;/p>
 &lt;ul>
 &lt;li>cute cat 是一个 noun phrase，因此其 head 是 cat&lt;/li>
@@ -1683,20 +1737,20 @@ data-flex-basis="426px"
 &lt;/ul>
 &lt;p>具体鉴定方法可以参考此处：&lt;a class="link" href="https://dictionary.cambridge.org/grammar/british-grammar/heads" target="_blank" rel="noopener"
 >Heads - Grammar - Cambridge Dictionary&lt;/a>。&lt;/p>
-&lt;h2 id="head-initial--head-final">Head-initial &amp;amp; Head-final&lt;/h2>
-&lt;p>在一个短语中，如果其 head 位于开头，我们称之为 head-initial，反之则称之为 head-final。这里继续用上面的例子：&lt;/p>
+&lt;h2 id="head-initial--head-final">Head-initial &amp;amp; Head-final
+&lt;/h2>&lt;p>在一个短语中，如果其 head 位于开头，我们称之为 head-initial，反之则称之为 head-final。这里继续用上面的例子：&lt;/p>
 &lt;ul>
 &lt;li>cute cat 中 cat 位于后面，所以是 head-final&lt;/li>
 &lt;li>eat fish 中 eat 位于前面，所以是 head-final&lt;/li>
 &lt;li>too cute 中 cute 位于后面，所以是 head-final&lt;/li>
 &lt;li>too slowly 中 slowly 位于后面，所以是 head-final&lt;/li>
 &lt;/ul>
-&lt;h2 id="head-directionality-parameter">Head-Directionality Parameter&lt;/h2>
-&lt;p>在语言学中，我们按照一个语言是 head-initial 还是 head-final，讲他们进行分类，并将这一参数称之为 head directionality。显然地。如果一个语言是 head-initial，那么以为它是 VO 结构，例如英语；如果是 head-final，则是 OV 结构，例如英语。&lt;/p>
+&lt;h2 id="head-directionality-parameter">Head-Directionality Parameter
+&lt;/h2>&lt;p>在语言学中，我们按照一个语言是 head-initial 还是 head-final，讲他们进行分类，并将这一参数称之为 head directionality。显然地。如果一个语言是 head-initial，那么以为它是 VO 结构，例如英语；如果是 head-final，则是 OV 结构，例如英语。&lt;/p>
 &lt;p>这时，我猜你可能会很疑惑：如果英语真的是纯粹的 head-initial，那么英语应当出现类似西班牙语的定语后置的现象，但是在英语中，尽管存在后置的定语从句，但是一般的形容词依旧是放在名词前面的，那么这就与 head-initial 相抵触了。&lt;/p>
 &lt;p>事实上，这么想的人不只你一个，我也一样。与其将语言粗暴地分成两个极端，不如在一个 continuum 的两端放上 head-final 和 head-initial，每一个语言都是条上的一点，而其语序越接近哪一个，就越靠近哪一端。浙大的刘海涛教授在2010年利用了 dependency treebank-based 方法，对二十余种语言进行了调查，而这次研究为该观点提供了有力的支持。在这种观念下，诸如英语或是德语将在 continuum 的相对中间的位置，而日语则会被放在靠近 head-final 的一端。&lt;/p>
-&lt;h2 id="有关语序">有关语序&lt;/h2>
-&lt;p>请看下面这个句子，读一读试试：&lt;/p>
+&lt;h2 id="有关语序">有关语序
+&lt;/h2>&lt;p>请看下面这个句子，读一读试试：&lt;/p>
 &lt;blockquote>
 &lt;p>小明在吃生产于位于世界上最大的大洋太平洋的西岸的日本的鲤鱼。&lt;/p>
 &lt;/blockquote>
@@ -1714,8 +1768,8 @@ data-flex-basis="426px"
 &lt;p>小明は、(世界最大の海である)(太平洋の西海岸に位置する)(日本産の)コイを食べています。&lt;/p>
 &lt;/blockquote>
 &lt;p>发现什么不同了吗？没错，中文的句法结构是嵌套结构，而英语和日语则是并列关系。从头部参数的角度来分析这个问题的话，可以认为，英语是 head-initial，日语是 head-final，两者虽说方向不同，但至少都有统一的方向。而对中文来说，其 head 方向比较杂糅，这也就解释了汉语为什么会在阅读或书写长难句的时候出现这种症状了。&lt;/p>
-&lt;h2 id="beyond-this-article">Beyond this Article&lt;/h2>
-&lt;p>终于知道为什么之前读其他大佬写东西总是中文里掺杂着一堆英文了。自己最近为了写这篇文章，查阅到的资料也基本都是英文文献。一是考虑是翻译的不可靠性，二是考虑到翻译所导致的多余劳动量，简单说就是吃力不讨好，所以干脆还是直接以英文原文为准吧，方便大家也方便自己。&lt;/p></description></item><item><title>有关设计的“人性化”与“反人类”</title><link>https://lomirus.github.io/p/shit-design/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/shit-design/</guid><description>&lt;img src="https://lomirus.github.io/p/shit-design/cover.png" alt="Featured image of post 有关设计的“人性化”与“反人类”" />&lt;p>国外软件最让我让我厌恶的一个设计之一是，当你想查看一个帖子的发布时间、或是一个 Release 的 Publish 日期时，它只给显示了 1 year ago. 然而到底是 365 天前呢，还是 730 天（毕竟还得考虑闰年不是）前呢，那非得让你好好上下求索一番方能找到设计师到底把它藏在了何处。更有甚者，则是索性不给你提供查看原始日期的选项，如此一来其谜底究竟如何你便不得而知了——或者当然，你也可以选择再在原地等待365天来验证，前提是你愿意的话。&lt;/p>
+&lt;h2 id="beyond-this-article">Beyond this Article
+&lt;/h2>&lt;p>终于知道为什么之前读其他大佬写东西总是中文里掺杂着一堆英文了。自己最近为了写这篇文章，查阅到的资料也基本都是英文文献。一是考虑是翻译的不可靠性，二是考虑到翻译所导致的多余劳动量，简单说就是吃力不讨好，所以干脆还是直接以英文原文为准吧，方便大家也方便自己。&lt;/p></description></item><item><title>有关设计的“人性化”与“反人类”</title><link>https://lomirus.github.io/p/shit-design/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/shit-design/</guid><description>&lt;img src="https://lomirus.github.io/p/shit-design/cover.png" alt="Featured image of post 有关设计的“人性化”与“反人类”" />&lt;p>国外软件最让我让我厌恶的一个设计之一是，当你想查看一个帖子的发布时间、或是一个 Release 的 Publish 日期时，它只给显示了 1 year ago. 然而到底是 365 天前呢，还是 730 天（毕竟还得考虑闰年不是）前呢，那非得让你好好上下求索一番方能找到设计师到底把它藏在了何处。更有甚者，则是索性不给你提供查看原始日期的选项，如此一来其谜底究竟如何你便不得而知了——或者当然，你也可以选择再在原地等待365天来验证，前提是你愿意的话。&lt;/p>
 &lt;p>今日我便深受其害，在一个历史传下来的前端项目中，同时出现了 &lt;code>pacakge-lock.json&lt;/code> 和 &lt;code>yarn.lock&lt;/code>，双份包管理器，或许开发者也能双倍快乐？正所谓：&lt;/p>
 &lt;blockquote>
 &lt;p>天无二日，只能有阁下一个太阳。&lt;/p>
@@ -1724,19 +1778,19 @@ data-flex-basis="426px"
 &lt;p>我极其讨厌这种设计师自以为是的人性化设计，据我观察，似乎国外的软件特别喜欢这种愚蠢的设计（这句话并不代表国内的软件对其不喜欢，因为它们只是纯粹的烂）。同样的例子还有诸如操作系统不显示当前时间的秒数，在我目前所使用的系统中：Windows 11、Gnome 43、Android 12 可谓是无一例外。在我看来，一个优秀，或者说是本应只算是正常的设计，应当是在任务栏或是状态栏的时候，只显示时分，而当被点开后，则渐进式地展示给用户更多的信息，比如将这里时间精确到秒。然而它们别说是点开悬浮窗后展示了，哪怕你调出对应的 App 来，作为一个 Clock 应用，它也不会提供给你哪怕“一秒”的信息。不过我也并不是只是针对国外，譬如国内的某些下载类软件，也存在类似的不允许用户“查看详情”，只给一个黑盒，让用户丈八和尚摸不着头脑的问题。比如说一个 2 GB 的文件，显示下载进度是则是只能精确到 1.1 GB。我寻思这也都 2022 年了，提供给用户的精度却只有 1/20，还不如命令行给人的感觉爽快。求求还是赶快学学隔壁的 IDM 吧。&lt;/p>
 &lt;p>论到“自以为是的人性化设计”，其中的佼佼者或者可以说是登峰造极的则必然是微软 Word 了。除此一款软件，我几乎从未使用任何比它要更反直觉的软件了。若不是学校的要求，别说是 Markdown 了，哪怕 HTML 乃至 TXT 都比它强。你打个“abc”它给你纠正成“Abc”，复制时自以为是地给你多选上回车，自以为是地给你增删缩进，字体颜色总是跟随一处不是你所想要的段落。插入个图片和文字相互遮挡，大图一页只能显示一个留下一大段空白，找个恰当的放置图片的位置要找半天&amp;hellip;诸如此类不胜枚举。毕竟，一个死板的、你说什么它就做什么而绝不多做的应用，和一个总是替你多想一步的人工智障，我还是给偏好前者的。后者在某些情况下，或许会为你提供或多或少的方便，但是也会因为在某一刻突然做出的脑残操作而令你气到骂街。前者虽机械，但最重要的是，它也不会令你的血压忽高忽低，而且当你适应了它的操作后，你双手的机械记忆说不定也会使你的效率大幅提高呢（或许类似拼音输入和语音输入之于普通话不好的用户？我基本不用语音输入，不知晓其现在的智能程度，所以不太确定此例子是否恰当）。&lt;/p>
 &lt;p>除去这些“自以为是的人性化设计”类型的设计问题，还有一些其他我甚至都无法理解当时开发者的脑回路的设计。譬如 Gnome 的默认视频播放器，当你前进或是后退时，按键盘右键是前进 10 s，而按键盘左键则是后退 5 s，这简直&amp;hellip;我都没法描述我的心情了。它所造成的用户体验上的强烈的割裂感，最终还是迫使我迁移到了 MPV Player。&lt;/p>
-&lt;p>记得网上有一个专门设计的“反人类登录网站”，上面收集了各种奇葩登录设计（外国人看来还是见得少了，真登录反人类还是得看张小龙）。但登录毕竟还是算用得少的，真正的反人类设计，那必然是要耦合到你的生活里，不断地恶心你的。&lt;/p></description></item><item><title>置身事外的惩戒者与千夫所指的受害者</title><link>https://lomirus.github.io/p/mirus-effect/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/mirus-effect/</guid><description>&lt;img src="https://lomirus.github.io/p/mirus-effect/cover.webp" alt="Featured image of post 置身事外的惩戒者与千夫所指的受害者" />&lt;h2 id="两种奴隶">两种奴隶&lt;/h2>
-&lt;p>记得挺久之前看过一副漫画，漫画的内容被分成两页作为对比。在第一页里，图片里的主人对他的奴隶说，如果自己路边的那条狗再叫下去，就要去打奴隶。奴隶被打后，于是怪罪主人旁边的那条狗。而在另一张图里，奴隶被打后，却终究忍无可忍，于是提手打向他的主人。&lt;/p>
+&lt;p>记得网上有一个专门设计的“反人类登录网站”，上面收集了各种奇葩登录设计（外国人看来还是见得少了，真登录反人类还是得看张小龙）。但登录毕竟还是算用得少的，真正的反人类设计，那必然是要耦合到你的生活里，不断地恶心你的。&lt;/p></description></item><item><title>置身事外的惩戒者与千夫所指的受害者</title><link>https://lomirus.github.io/p/mirus-effect/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/mirus-effect/</guid><description>&lt;img src="https://lomirus.github.io/p/mirus-effect/cover.webp" alt="Featured image of post 置身事外的惩戒者与千夫所指的受害者" />&lt;h2 id="两种奴隶">两种奴隶
+&lt;/h2>&lt;p>记得挺久之前看过一副漫画，漫画的内容被分成两页作为对比。在第一页里，图片里的主人对他的奴隶说，如果自己路边的那条狗再叫下去，就要去打奴隶。奴隶被打后，于是怪罪主人旁边的那条狗。而在另一张图里，奴隶被打后，却终究忍无可忍，于是提手打向他的主人。&lt;/p>
 &lt;p>可惜当时这张图没有保存下来，幸而记得还记得大概的印象。前几天又读到了鲁迅的《聪明人、奴才和傻子》，今天回想起来，于是我尝试着模仿鲁迅的文笔，将漫画里所描述的现象改写成了下面这段文字：&lt;/p>
-&lt;h2 id="行人和老爷">行人和老爷&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="行人和老爷">行人和老爷
+&lt;/h2>&lt;blockquote>
 &lt;p>譬如老爷看到过路的行人，突然对著他的仆人，惨然说：“若是他再这样走下去，我也只好无奈打你两个嘴巴了。”行人听闻后，不管，依旧是向前走著。仆人于是终而至于被打。&lt;/p>
 &lt;p>“混账”，仆人对行人骂道，“倘你听了老爷的话，我哪里会遭打。”&lt;/p>
 &lt;p>“你说甚么？你这奴才&amp;hellip;”，行人回过头，直走过来，也是冲著仆人连打了两个嘴巴，“你的老爷打了你，倒反怪罪到我 ，真不像样&amp;hellip;&amp;hellip;”&lt;/p>
 &lt;p>仆人不开口，想往后退了，于是轮转眼睛去看老爷。&lt;/p>
 &lt;p>老爷看著仆人遭打，却只是发笑。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="一种现象">一种现象&lt;/h2>
-&lt;p>我一直觉得这似乎是一种在生活中很常见的现象。尽管他从逻辑上来看却又极其的荒谬。&lt;/p>
+&lt;h2 id="一种现象">一种现象
+&lt;/h2>&lt;p>我一直觉得这似乎是一种在生活中很常见的现象。尽管他从逻辑上来看却又极其的荒谬。&lt;/p>
 &lt;p>我相信，对于在国内上过学的人，基本都会遇到过这种现象。有时老师会说，如果班里哪个人没有完成作业，全班同学就要受到什么处罚。于是后面，学生就会去怪罪那名没有完成任务的学生，却忽视了这个惩罚是由老师直接决定并实施的。&lt;/p>
 &lt;p>其他类似的例子，大小皆有，此处不一一论述了。&lt;/p>
 &lt;p>归纳成现象阐述的话，可以这么简述：&lt;/p>
@@ -1746,13 +1800,13 @@ data-flex-basis="426px"
 若条件未达成，则使得 B 在主观上将矛盾转移到（甚至同是受害者的） C 上，却忽略了 A 才是惩罚的最终决策者兼实施者。&lt;/p>
 &lt;/blockquote>
 &lt;p>我写完上面那篇故事，拿着去问了我一个朋友，问他这种现象/效应是否有什么命名，可惜最后我们终于还是没有找到。&lt;/p>
-&lt;p>或许可以叫 Mirus Effect / 米莱斯效应？（笑）&lt;/p></description></item><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子&lt;/h2>
-&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
+&lt;p>或许可以叫 Mirus Effect / 米莱斯效应？（笑）&lt;/p></description></item><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子
+&lt;/h2>&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
 &lt;p>对于战棋游戏来说，常见的模拟地图的方法，按照地块形状可分为正方形和正六边形，其中后者的主要代表有《文明：VI》等。而即使对于部分大战略类游戏来说，譬如《灰衣主教》，也是采用的六边形地块。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6.jpg"
 width="1459"
 height="972"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu262307392848646429.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu801280443450106330.jpg 1024w"
 loading="lazy"
 alt="文明：IV"
 class="gallery-image"
@@ -1765,8 +1819,8 @@ data-flex-basis="360px"
 &lt;li>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/li>
 &lt;/ol>
 &lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点。&lt;/p>
-&lt;h2 id="邻角处理">邻角处理&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="邻角处理">邻角处理
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>且与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/p>
 &lt;/blockquote>
@@ -1784,15 +1838,15 @@ C &amp;amp; D
 \end{vmatrix}
 $$&lt;/p>
 &lt;p>假设某人从 $A$ 点到 $B$ 点，耗时 $1$ 日；那么对应地，我们只需将其从 $A$ 点到 $D$ 点的耗时设为 $\sqrt{2}$ 日即可。&lt;/p>
-&lt;h2 id="平滑边界">平滑边界&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="平滑边界">平滑边界
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/p>
 &lt;/blockquote>
 &lt;p>显然，对于任意多边形，放到地图上看都是有棱有角，锯齿化太过严重。目前对于这个问题，我的想法是存储的时候按地块存起来，但展示的时候用户看到的其实是已经平滑过的曲线。&lt;/p>
 &lt;p>此外，如果再考虑上四个顶点，相邻正方形的连线方向其实有八个，比六边形还多了两个，这样反而能够更好得模拟各种边界线。&lt;/p>
-&lt;h2 id="圆形逼近">圆形逼近&lt;/h2>
-&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
+&lt;h2 id="圆形逼近">圆形逼近
+&lt;/h2>&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
 &lt;p>那么，我们应该怎么使用像素地块来模拟这种情况呢？&lt;/p>
 &lt;p>类似于 &lt;a class="link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener"
 >Conway&amp;rsquo;s Game of Life&lt;/a>，我们可以定义一套规则，例如在下图中，假设其为开始时刻：&lt;/p>
@@ -1812,7 +1866,7 @@ $$&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -1828,7 +1882,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2.png"
 width="324"
 height="149"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu10306717362513543383.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu768051798403388390.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="217"
@@ -1910,7 +1964,7 @@ data-flex-basis="521px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu18377807321199993030.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu770296188258070624.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -1929,7 +1983,7 @@ data-flex-basis="258px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -1942,7 +1996,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu17996579582499719131.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu281841312724369037.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -1956,17 +2010,17 @@ data-flex-basis="258px"
 &lt;li>既然 LT 可以对 T 产生 1 的影响，LT 也可以对 C 产生 $\frac{1}{\sqrt{2}}$ 的影响，那凭什么 LT 就不对 RB 产生 $\frac{1}{2\sqrt{2}}$ 的影响呢？依次类推，一个点可以对图中任意远的点产生影响。正如此刻一只澳大利亚的袋鼠可以对梵蒂冈的教皇产生万有引力，尽管微乎其微，但它确实存在。&lt;/li>
 &lt;li>这个例子从一开始可能就是不恰当的，与其说是人群的迁移，不如比作是信息的传播，因为信息可以无限复制。但这又引入了一个新问题，A 点当前的信息量会对下一刻 A 点本身施加影响吗？&lt;/li>
 &lt;/ul>
-&lt;h2 id="结语">结语&lt;/h2>
-&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
-&lt;h2 id="花絮">花絮&lt;/h2>
-&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下典中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
+&lt;h2 id="结语">结语
+&lt;/h2>&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
+&lt;h2 id="花絮">花絮
+&lt;/h2>&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item><item><title>西班牙语入门笔记</title><link>https://lomirus.github.io/p/spanish-getting-started-notes/</link><pubDate>Thu, 21 Apr 2022 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/spanish-getting-started-notes/</guid><description>&lt;img src="https://lomirus.github.io/p/spanish-getting-started-notes/cover.jpg" alt="Featured image of post 西班牙语入门笔记" />&lt;p>自从大一下学期学校放开选课之后，我基本上每学期都要选一门小语种。这主要是因为我本来就对语言比较感兴趣嘛。例如之前，大一下学期是韩语，大二上学期是俄语。而这学期，我则选修了一门西班牙语。不过实际上，之前两门语言学得都比较浅，譬如韩语学完谚文，再学一下典中典的“你好再见谢谢没关系”，以及一些简单的自我介绍基本就结课了；俄语学完字母，也是再学一点简单的语法和自我介绍就 ok 了。这两门课的难度也都不大，反正我上课上得挺乐呵，最后得分也都还是 90+，基本上是我所有科目中最高的了。不过到了现在，韩语忘得只会读谚文，俄语也只是粗略地能认出西里尔字母，至于语法上基本上基本忘得精光。&lt;/p>
 &lt;p>而说回这学期的西班牙语，或许是发音比较简单的原因（除了大舌音），我感觉相对前两门语言我们似乎更早地进入了对于语法的学习。因此，需要记忆的东西也变得更多了。此外，也是为了尽量不在重蹈前两次的覆辙，所以这次我便想去试着做一些笔记，所以也就有了这边文章。写的过程，也权当是复习了。&lt;/p>
-&lt;h2 id="字母">字母&lt;/h2>
-&lt;p>西班牙语相对拉丁字母来说，只是多了一个字母，即 &lt;code>Ñ/ñ&lt;/code>，另外也还有两个比较特殊的字母，即 &lt;code>Ch/ch&lt;/code> 和 &lt;code>Ll/ll&lt;/code>。很明显地，可以看出这俩其实就是两个字母的组合。但是在某些使用西班牙的国家确实是把他们两个作为两个单独的字母来看待的。所以如果要回答西班牙语中到底有多少个字母，答案既可以是27个，也可以是29个。&lt;/p>
+&lt;h2 id="字母">字母
+&lt;/h2>&lt;p>西班牙语相对拉丁字母来说，只是多了一个字母，即 &lt;code>Ñ/ñ&lt;/code>，另外也还有两个比较特殊的字母，即 &lt;code>Ch/ch&lt;/code> 和 &lt;code>Ll/ll&lt;/code>。很明显地，可以看出这俩其实就是两个字母的组合。但是在某些使用西班牙的国家确实是把他们两个作为两个单独的字母来看待的。所以如果要回答西班牙语中到底有多少个字母，答案既可以是27个，也可以是29个。&lt;/p>
 &lt;p>至于发音嘛，建议还是去看维基百科吧，毕竟博客里不方便放音频，而且介绍不同的发音情况也会导致篇幅太长（虽然西班牙语的单词确实可以直接根据单词读出发音）。&lt;/p>
-&lt;h2 id="冠词">冠词&lt;/h2>
-&lt;h3 id="定冠词">定冠词&lt;/h3>
-&lt;p>首先介绍一下最常用的冠词，其中涉及到了复数和阴阳性，这几个知识点会在后面提到。另外先说这个还有就是因为后面为了区分阴阳性，也一般会在单词前加定冠词来表示的。&lt;/p>
+&lt;h2 id="冠词">冠词
+&lt;/h2>&lt;h3 id="定冠词">定冠词
+&lt;/h3>&lt;p>首先介绍一下最常用的冠词，其中涉及到了复数和阴阳性，这几个知识点会在后面提到。另外先说这个还有就是因为后面为了区分阴阳性，也一般会在单词前加定冠词来表示的。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1988,8 +2042,8 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="不定冠词">不定冠词&lt;/h3>
-&lt;table>
+&lt;h3 id="不定冠词">不定冠词
+&lt;/h3>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
@@ -2016,9 +2070,9 @@ data-flex-basis="258px"
 &lt;p>Los niños =&amp;gt; The children&lt;/p>
 &lt;p>Unas niñas =&amp;gt; Some girls&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="基础语法">基础语法&lt;/h2>
-&lt;h3 id="阴阳性">阴阳性&lt;/h3>
-&lt;p>阴阳性可谓是西班牙语的一大特色。首先名词要分阴阳性，其次代词冠词动词等也都要根据对象来变形。所以接下来就说一下判断西班牙语中的名词的印象的规律。&lt;/p>
+&lt;h2 id="基础语法">基础语法
+&lt;/h2>&lt;h3 id="阴阳性">阴阳性
+&lt;/h3>&lt;p>阴阳性可谓是西班牙语的一大特色。首先名词要分阴阳性，其次代词冠词动词等也都要根据对象来变形。所以接下来就说一下判断西班牙语中的名词的印象的规律。&lt;/p>
 &lt;p>第一，也是最常用的规律，o 结尾的，一般是阳性，a 结尾的，一般是阴性。当然这个并不绝对，但是对于大多数名词甚至代词冠词来说都是适用的。&lt;/p>
 &lt;p>e.g.&lt;/p>
 &lt;ul>
@@ -2068,11 +2122,11 @@ data-flex-basis="258px"
 &lt;p>el amigo &amp;lt;-&amp;gt; la amiga&lt;/p>
 &lt;/blockquote>
 &lt;p>其他更复杂的规则可以自行查阅，这里就不再展开了。&lt;/p>
-&lt;h3 id="复数">复数&lt;/h3>
-&lt;p>单复数变化规则相对简单。元音结尾，直接加 -s，辅音结尾，直接加 -es。当然，凡事总有例外，但本文毕竟是入门文章，所以这个也是和前面一样不再继续展开了。&lt;/p>
-&lt;h2 id="代词">代词&lt;/h2>
-&lt;h3 id="人称代词">人称代词&lt;/h3>
-&lt;p>下面为了减少翻译为汉语的歧义，使用特定的规则来表示人称代词：&lt;/p>
+&lt;h3 id="复数">复数
+&lt;/h3>&lt;p>单复数变化规则相对简单。元音结尾，直接加 -s，辅音结尾，直接加 -es。当然，凡事总有例外，但本文毕竟是入门文章，所以这个也是和前面一样不再继续展开了。&lt;/p>
+&lt;h2 id="代词">代词
+&lt;/h2>&lt;h3 id="人称代词">人称代词
+&lt;/h3>&lt;p>下面为了减少翻译为汉语的歧义，使用特定的规则来表示人称代词：&lt;/p>
 &lt;ul>
 &lt;li>1️⃣2️⃣3️⃣: 第几人称，~ 表示同上；&lt;/li>
 &lt;li>🌑🌕: 分别指代阴阳，🌗表示阴阳通用，重复符号表示复数；&lt;/li>
@@ -2175,8 +2229,8 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="物主代词">物主代词&lt;/h3>
-&lt;table>
+&lt;h3 id="物主代词">物主代词
+&lt;/h3>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>人称&lt;/th>
@@ -2302,8 +2356,8 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="反身代词自复代词">反身代词/自复代词&lt;/h3>
-&lt;p>请和下文中的&lt;a class="link" href="#%e8%87%aa%e5%a4%8d%e5%8a%a8%e8%af%8d" >自复动词&lt;/a>搭配使用。（页内跳转点不了的话估计是博客的 bug 吧&amp;hellip;）&lt;/p>
+&lt;h3 id="反身代词自复代词">反身代词/自复代词
+&lt;/h3>&lt;p>请和下文中的&lt;a class="link" href="#%e8%87%aa%e5%a4%8d%e5%8a%a8%e8%af%8d" >自复动词&lt;/a>搭配使用。（页内跳转点不了的话估计是博客的 bug 吧&amp;hellip;）&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2338,23 +2392,23 @@ data-flex-basis="258px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="疑问代词">疑问代词&lt;/h3>
-&lt;h4 id="quién">Quién&lt;/h4>
-&lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
+&lt;h3 id="疑问代词">疑问代词
+&lt;/h3>&lt;h4 id="quién">Quién
+&lt;/h4>&lt;p>意为 &amp;ldquo;Who&amp;rdquo;。&lt;/p>
 &lt;blockquote>
 &lt;p>¿Quién eres? 你是谁？&lt;/p>
 &lt;/blockquote>
-&lt;h4 id="dónde">Dónde&lt;/h4>
-&lt;p>意为 &amp;ldquo;Where&amp;rdquo;。&lt;/p>
+&lt;h4 id="dónde">Dónde
+&lt;/h4>&lt;p>意为 &amp;ldquo;Where&amp;rdquo;。&lt;/p>
 &lt;blockquote>
 &lt;p>¿Dónde estás? =&amp;gt; 你在哪里？&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>¿De dónde eres? =&amp;gt; 你来自哪里？&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="动词">动词&lt;/h2>
-&lt;h3 id="系动词">系动词&lt;/h3>
-&lt;p>西班牙语中系动词有两个：ser 和 estar&lt;/p>
+&lt;h2 id="动词">动词
+&lt;/h2>&lt;h3 id="系动词">系动词
+&lt;/h3>&lt;p>西班牙语中系动词有两个：ser 和 estar&lt;/p>
 &lt;p>先列一下他们的变形，相信看到这儿了你也应该对西班牙语的人称代词比较熟悉了吧，所以下面就直接用人称代词了：&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2402,8 +2456,8 @@ data-flex-basis="258px"
 &lt;li>ser 表达事物或人的固有的、永久性的性质和特点；&lt;/li>
 &lt;li>estar用于表达事物或者人的暂时性、非永恒的状态。&lt;/li>
 &lt;/ul>
-&lt;h3 id="一般动词">一般动词&lt;/h3>
-&lt;p>西班牙语的动词由形式可划分为三种，分别是以 -ar, -er 和 -ir 结尾的动词。&lt;/p>
+&lt;h3 id="一般动词">一般动词
+&lt;/h3>&lt;p>西班牙语的动词由形式可划分为三种，分别是以 -ar, -er 和 -ir 结尾的动词。&lt;/p>
 &lt;p>对于规则的动词来说，它们的变形规则如下：&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2462,8 +2516,8 @@ data-flex-basis="258px"
 &lt;blockquote>
 &lt;p>Do you speak Spanish? =&amp;gt; ¿Hablas español?&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="进行时">进行时&lt;/h3>
-&lt;p>西班牙语的进行时的表示方式为 estar + gerundio（副动词），副动词的变形规则如下：&lt;/p>
+&lt;h3 id="进行时">进行时
+&lt;/h3>&lt;p>西班牙语的进行时的表示方式为 estar + gerundio（副动词），副动词的变形规则如下：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2489,8 +2543,8 @@ data-flex-basis="258px"
 &lt;blockquote>
 &lt;p>Estamos comiendo. =&amp;gt; 我们正在吃饭。&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="自复动词">自复动词&lt;/h3>
-&lt;p>这个语法有点类似日语的他动词，比如自动词 消える 表示主语消失，而他动词 消す 表示主语使宾语消失。变形的直接加 se。比如 llamar 表示“叫喊”，而 llamarse 表示“名字叫”。不过我没见过直接用 llamarse 这种原型的，都要和反身代词搭配使用，而且要去掉 se，比如：&lt;/p>
+&lt;h3 id="自复动词">自复动词
+&lt;/h3>&lt;p>这个语法有点类似日语的他动词，比如自动词 消える 表示主语消失，而他动词 消す 表示主语使宾语消失。变形的直接加 se。比如 llamar 表示“叫喊”，而 llamarse 表示“名字叫”。不过我没见过直接用 llamarse 这种原型的，都要和反身代词搭配使用，而且要去掉 se，比如：&lt;/p>
 &lt;p>Me llamo Sofia. =&amp;gt; 我叫 Sofia.&lt;/p>
 &lt;p>需要注意一点，动词此时要进行元音替换，即把 e 替换为 ie，“我们”和“你们”不变。以 perder（迷失）为例：&lt;/p>
 &lt;table>
@@ -2533,11 +2587,11 @@ data-flex-basis="258px"
 &lt;li>Porque me estoy perdiendo en tu mirada.&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
-&lt;h2 id="后记">后记&lt;/h2>
-&lt;p>这学期西班牙语的期末成绩是91，也算是在期望之内了。不过这片博客从四月份开始，直到期末考试结束后都还没写完。整个暑假也基本没碰过，直到今天（2022/08/27）才补完了剩下的部分。不过说实话感觉现在西班牙语也已经忘得差不多了，看来语言这东西不学不用的话真的是忘得很快呀😮‍💨&lt;/p>
-&lt;p>BTW，我们西班牙语的这个班里也还有很多大佬，譬如在学拉丁语的，还有学过德语和希腊语的，学过韩语和日语的据我所知就有好几个。不过感觉我自己的话对于大多数外语也都还是浅尝辄止吧，看来我还是专心去学好我的日语和英语吧😵‍💫&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念&lt;/h2>
-&lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot&lt;/h3>
-&lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
+&lt;h2 id="后记">后记
+&lt;/h2>&lt;p>这学期西班牙语的期末成绩是91，也算是在期望之内了。不过这片博客从四月份开始，直到期末考试结束后都还没写完。整个暑假也基本没碰过，直到今天（2022/08/27）才补完了剩下的部分。不过说实话感觉现在西班牙语也已经忘得差不多了，看来语言这东西不学不用的话真的是忘得很快呀😮‍💨&lt;/p>
+&lt;p>BTW，我们西班牙语的这个班里也还有很多大佬，譬如在学拉丁语的，还有学过德语和希腊语的，学过韩语和日语的据我所知就有好几个。不过感觉我自己的话对于大多数外语也都还是浅尝辄止吧，看来我还是专心去学好我的日语和英语吧😵‍💫&lt;/p></description></item><item><title>Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）</title><link>https://lomirus.github.io/p/bevy-tutorial/</link><pubDate>Sun, 19 Dec 2021 00:01:05 +0800</pubDate><guid>https://lomirus.github.io/p/bevy-tutorial/</guid><description>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/cover.png" alt="Featured image of post Bevy v0.5~0.6 基础入门（基于 Github bevy/main Dec 18, 21 构建版本）" />&lt;h2 id="一些碎碎念">一些碎碎念
+&lt;/h2>&lt;h3 id="年轻人的第一款开源游戏引擎godot">年轻人的第一款开源游戏引擎：Godot
+&lt;/h3>&lt;p>许久以前就一直有做游戏的想法。中学时或多或少地接触或听说过 CocosCreator、Erget、Unity 和 Unreal
 等著名引擎，然而这些都是商业引擎，且对我来说太过笨重。大一的时候听说了
 Godot，得知它应该是当前世界范围内最完善，也是知名与流行度最广的开源游戏引擎了。而且体积极其精简，只有不过百兆；与其他大型引擎动辄几 GB
 的体积相比，实属一股清流。于是深得我心，我后面也开始学习这款引擎。&lt;/p>
@@ -2565,8 +2619,8 @@ performance.&lt;/p>
 &lt;p>你就一臭做独游的，还考虑个锤子性能？&lt;/p>
 &lt;/blockquote>
 &lt;p>话虽如此，可有哪个开发者能拒绝对性能的追求呢？再者，开发体验对我来说才是它更大的痛点。&lt;/p>
-&lt;h3 id="从-godot-园到-bevy-书屋">从 Godot 园到 Bevy 书屋&lt;/h3>
-&lt;p>后来，我又不知道在哪看到了 Bevy 这个游戏引擎。一开始没怎么注意它，最近见我加的一个 Godot 游戏开发的群组也时而提到它，但开始对它再次萌生好奇之心。&lt;/p>
+&lt;h3 id="从-godot-园到-bevy-书屋">从 Godot 园到 Bevy 书屋
+&lt;/h3>&lt;p>后来，我又不知道在哪看到了 Bevy 这个游戏引擎。一开始没怎么注意它，最近见我加的一个 Godot 游戏开发的群组也时而提到它，但开始对它再次萌生好奇之心。&lt;/p>
 &lt;p>印象里，Rust 里面之前比较火的开源游戏引擎有两个，一个 &lt;a class="link" href="https://github.com/amethyst/amethyst" target="_blank" rel="noopener"
 >Amethyst&lt;/a>
 和一个 &lt;a class="link" href="https://github.com/bevyengine/bevy" target="_blank" rel="noopener"
@@ -2585,8 +2639,8 @@ Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一
 &lt;/ul>
 &lt;p>话不多说，赶紧进入我们今天的正题，Bevy 的基础教程吧&lt;/p>
 &lt;p>（本文假定你已经有一定的 Rust 语法基础，对其使用上的语法细节不会过多讲解）&lt;/p>
-&lt;h2 id="ecs-架构扫盲">ECS 架构扫盲&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="ecs-架构扫盲">ECS 架构扫盲
+&lt;/h2>&lt;blockquote>
 &lt;p>什么呀，ECS，我知道，不就是阿里云的那个云服务器吗，好像全称是什么弹性计算服务（Elastic Compute Service）？&lt;/p>
 &lt;/blockquote>
 &lt;p>少年，莫急，此 ECS 非彼 ECS，这里的 ECS，指的是：&lt;code>Entity-Component-System&lt;/code>。&lt;/p>
@@ -2595,8 +2649,8 @@ Amethyst，发现它已经处于近乎停止维护的状态了；又去翻了一
 是存储数据的结构类型，不包含任何方法。如果想要更新游戏数据，则需要通过 &lt;code>System&lt;/code> 来完成。&lt;/p>
 &lt;p>如果需要进一步介绍，可自行百度/谷歌。&lt;/p>
 &lt;p>光说不练略显抽象，还是一起来看下面的代码吧：&lt;/p>
-&lt;h2 id="使用-bevy-实现简单的-ecs-架构">使用 Bevy 实现简单的 ECS 架构&lt;/h2>
-&lt;p>Bevy 是一款基于 ECS 架构的游戏引擎，它的官网上就这么写道：&lt;/p>
+&lt;h2 id="使用-bevy-实现简单的-ecs-架构">使用 Bevy 实现简单的 ECS 架构
+&lt;/h2>&lt;p>Bevy 是一款基于 ECS 架构的游戏引擎，它的官网上就这么写道：&lt;/p>
 &lt;blockquote>
 &lt;p>Massively Parallel and Cache-Friendly. The fastest ECS according to some
 benchmarks&lt;/p>
@@ -2653,7 +2707,7 @@ benchmarks&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着再写一个遍历所有 &lt;code>Entities&lt;/code> 并输出的 &lt;code>System&lt;/code>（函数）：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">print_people&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="n">Person&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">in&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">query&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">iter&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">println!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;{}：{} 歳、{}です&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">job&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">println!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s">：&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s"> 歳、&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s">です&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">job&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来我们就要把这些东西整合起来，也就是添加到 &lt;code>main()&lt;/code> 中的 &lt;code>App&lt;/code> 上。&lt;/p>
@@ -2673,14 +2727,14 @@ Finished dev [unoptimized + debuginfo] target(s) in 3.03s
 Running `target/debug/rust-demo`
 野獣先輩：24 歳、学生です
 田所浩二：114514 歳、学生です
-&lt;/code>&lt;/pre>&lt;h2 id="bevy-基础开发">Bevy 基础开发&lt;/h2>
-&lt;p>有些小伙伴可能会问了：&lt;/p>
+&lt;/code>&lt;/pre>&lt;h2 id="bevy-基础开发">Bevy 基础开发
+&lt;/h2>&lt;p>有些小伙伴可能会问了：&lt;/p>
 &lt;blockquote>
 &lt;p>正经人谁玩控制台黑框框游戏呀？&lt;/p>
 &lt;/blockquote>
 &lt;p>确实，Bevy 毕竟也不是用来写 CLI 的。所以接下来我们再实现一个简单的图形界面。&lt;/p>
-&lt;h3 id="准备资源">准备资源&lt;/h3>
-&lt;p>首先，在项目目录创建一个 &lt;code>assets&lt;/code> 文件夹，在里面放一张图片。比如我放了一张 &lt;code>image.jpg&lt;/code> 进去，但是这里要注意，bevy 默认是不支持载入
+&lt;h3 id="准备资源">准备资源
+&lt;/h3>&lt;p>首先，在项目目录创建一个 &lt;code>assets&lt;/code> 文件夹，在里面放一张图片。比如我放了一张 &lt;code>image.jpg&lt;/code> 进去，但是这里要注意，bevy 默认是不支持载入
 jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">dependencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bevy&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">git&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://github.com/bevyengine/bevy&amp;#34;&lt;/span>
@@ -2690,8 +2744,8 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就可以支持载入 jpg 格式的图片了。&lt;/p>
 &lt;p>然后，再在 &lt;code>assets&lt;/code> 文件夹下创建一个字体文件。由于我是 Linux 用户，所以直接复制了一份系统自带的
 &lt;code>NotoSansMono-Regular.ttf&lt;/code> 字体。这里你当然也可以选自己喜欢的，记得后面的相应操作改成你的字体名就行。&lt;/p>
-&lt;h3 id="创建窗口">创建窗口&lt;/h3>
-&lt;p>Bevy 的设计是很模块化的，许多功能都被拆成了不同的模块，利用添加插件的形式使用。不过幸好 Bevy 也为我们提供了默认的插件配置。比如我们可以使用：&lt;/p>
+&lt;h3 id="创建窗口">创建窗口
+&lt;/h3>&lt;p>Bevy 的设计是很模块化的，许多功能都被拆成了不同的模块，利用添加插件的形式使用。不过幸好 Bevy 也为我们提供了默认的插件配置。比如我们可以使用：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">init_people&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -2701,15 +2755,15 @@ jpg 格式的图片的，这时需要修改一下 Cargo.toml&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/1.png"
 width="1373"
 height="797"
-srcset="https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/1_hue148111860adebf77525104457fa5750_112513_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/bevy-tutorial/1_hu8269717862761350290.png 480w, https://lomirus.github.io/p/bevy-tutorial/1_hu5472572338053537176.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="172"
 data-flex-basis="413px"
 >&lt;/p>
 &lt;p>这就说明添加成功了，至于控制台里会出现无限输出的现象，是因为添加 &lt;code>DefaultPlugins&lt;/code> 的时候，同时也引入了 eventloop。&lt;/p>
-&lt;h3 id="载入图片">载入图片&lt;/h3>
-&lt;p>现在我们之前写的函数都可以扬了，再重新创建一个新的 &lt;code>main&lt;/code> 函数：&lt;/p>
+&lt;h3 id="载入图片">载入图片
+&lt;/h3>&lt;p>现在我们之前写的函数都可以扬了，再重新创建一个新的 &lt;code>main&lt;/code> 函数：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -2739,14 +2793,14 @@ data-flex-basis="413px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/bevy-tutorial/2.png"
 width="1047"
 height="780"
-srcset="https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/bevy-tutorial/2_hu0a6691a004755614bb9814156d75c6f2_125093_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/bevy-tutorial/2_hu14969832250256100651.png 480w, https://lomirus.github.io/p/bevy-tutorial/2_hu5072311872929974386.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="134"
 data-flex-basis="322px"
 >&lt;/p>
-&lt;h3 id="键盘输入">键盘输入&lt;/h3>
-&lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
+&lt;h3 id="键盘输入">键盘输入
+&lt;/h3>&lt;p>为 &lt;code>App&lt;/code> 增加读取键盘输入的系统：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="n">App&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_plugins&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">DefaultPlugins&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">add_startup_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">setup&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -2762,8 +2816,8 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来运行一下，按下键盘的 &lt;code>A&lt;/code> 和 &lt;code>D&lt;/code> 键，便会看到控制台出现相应的输出。另外此处的 &lt;code>keyboard_input&lt;/code> 常用的方法还有两个 &lt;code>just_pressed()&lt;/code> 和 &lt;code>just_released()&lt;/code>，它们各自具体的用途可以自己分别试一下，看看是什么效果。&lt;/p>
-&lt;h3 id="角色移动">角色移动&lt;/h3>
-&lt;p>为了更加使函数名更加语义化，我们先把 &lt;code>keyboard_input_system()&lt;/code> 改成 &lt;code>move_system()&lt;/code>，然后修改函数：&lt;/p>
+&lt;h3 id="角色移动">角色移动
+&lt;/h3>&lt;p>为了更加使函数名更加语义化，我们先把 &lt;code>keyboard_input_system()&lt;/code> 改成 &lt;code>move_system()&lt;/code>，然后修改函数：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -2828,8 +2882,8 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外的另外，这里除了修改实体外，你也可以把玩家定义为全局唯一的资源类，这里就不再演示了。&lt;/p>
-&lt;h3 id="移动优化">移动优化&lt;/h3>
-&lt;p>我们有时候会需要获取并修改多个组件，这里可以通过元组(&lt;code>tuple&lt;/code>)来查询：&lt;/p>
+&lt;h3 id="移动优化">移动优化
+&lt;/h3>&lt;p>我们有时候会需要获取并修改多个组件，这里可以通过元组(&lt;code>tuple&lt;/code>)来查询：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="k">fn&lt;/span> &lt;span class="nf">move_system&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">keyboard_input&lt;/span>: &lt;span class="nc">Res&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Input&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">KeyCode&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">players&lt;/span>: &lt;span class="nc">Query&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Transform&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="k">mut&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Sprite&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">With&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Player&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -2845,15 +2899,15 @@ data-flex-basis="322px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这里通过修改 &lt;code>sprite.flip_x&lt;/code>，使角色图片在移动时随着方向的不同而进行镜面反转。&lt;/p>
-&lt;h2 id="next-steps">Next Steps&lt;/h2>
-&lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
+&lt;h2 id="next-steps">Next Steps
+&lt;/h2>&lt;p>Bevy 的进一步学习建议阅读&lt;a class="link" href="https://github.com/bevyengine/bevy/tree/latest/examples" target="_blank" rel="noopener"
 >官方示例&lt;/a>&lt;/p>
-&lt;p>至于我自己，除了学习游戏引擎，我觉得也该去先学点画画了😥毕竟我的 Aseprite 都不知道吃灰多久了&lt;/p></description></item><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子&lt;/h2>
-&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
+&lt;p>至于我自己，除了学习游戏引擎，我觉得也该去先学点画画了😥毕竟我的 Aseprite 都不知道吃灰多久了&lt;/p></description></item><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子
+&lt;/h2>&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
 width="1244"
 height="576"
-srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_1024x0_resize_q75_box.jpeg 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu10392481119387403585.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu6592716027353019752.jpeg 1024w"
 loading="lazy"
 alt="MacOS Example"
 class="gallery-image"
@@ -2866,7 +2920,7 @@ data-flex-basis="518px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
 width="1281"
 height="843"
-srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu15276665749177402319.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu3399904356071283472.png 1024w"
 loading="lazy"
 alt="Fildem global menu"
 class="gallery-image"
@@ -2875,9 +2929,9 @@ data-flex-basis="364px"
 >&lt;/p>
 &lt;p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p>
 &lt;p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p>
-&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构&lt;/h2>
-&lt;h3 id="概览">概览&lt;/h3>
-&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
+&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构
+&lt;/h2>&lt;h3 id="概览">概览
+&lt;/h3>&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p>
 &lt;pre tabindex="0">&lt;code>example@shell.gnome.org.zip
@@ -2893,8 +2947,8 @@ metadata.json
 prefs.js
 stylesheet.css
 &lt;/code>&lt;/pre>&lt;p>其中，最重要并且也是唯二 required 的是 &lt;code>metadata.json&lt;/code> 和 &lt;code>extension.js&lt;/code>。&lt;/p>
-&lt;h3 id="metadatajson">metadata.json&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;h3 id="metadatajson">metadata.json
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;uuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;example@shell.gnome.org&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Example&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;This is an example extension.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -2904,8 +2958,8 @@ stylesheet.css
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>一个 &lt;code>metadata.json&lt;/code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
 >metadata.json (Required)&lt;/a>&lt;/p>
-&lt;h3 id="extensionjs">extension.js&lt;/h3>
-&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
+&lt;h3 id="extensionjs">extension.js
+&lt;/h3>&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Extension&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -2946,7 +3000,7 @@ stylesheet.css
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
 width="748"
 height="787"
-srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu6115852997260337803.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu9350567790790996323.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="95"
@@ -2959,8 +3013,8 @@ data-flex-basis="228px"
 &lt;blockquote>
 &lt;p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="后续">后续&lt;/h2>
-&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
+&lt;h2 id="后续">后续
+&lt;/h2>&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">St&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">St&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">GObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">GObject&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Gio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Gio&lt;/span>&lt;span class="p">;&lt;/span>
@@ -3029,8 +3083,8 @@ data-flex-basis="228px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）</title><link>https://lomirus.github.io/p/first-meet-to-flutter/</link><pubDate>Tue, 19 Oct 2021 15:30:00 +0800</pubDate><guid>https://lomirus.github.io/p/first-meet-to-flutter/</guid><description>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/cover.png" alt="Featured image of post 与 Flutter 的初次接触（以及开发 Hall of Fame 的踩坑记录）" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>首先简要介绍一下 &lt;code>Hall of Fame&lt;/code> 吧，这其实就只是我自己开发的一个用于管理、分发我的一些朋友们的聊天记录截图表情包的 App。本来是想着和朋友合作，自己只负责后端开发来着，然而负责 Android 和 Web 客户端开发的那边一直还有其他需求，导致这边的工期一直在鸽。到了后面，我就接手的这个项目的客户端方面的开发，然而上面的其实并不是主要原因。主要还是因为最近我对 Flutter 这种大前端的技术栈比较感兴趣，想要学习一下。而且这个 App 的复杂度又恰到好处，因此就正好使用它来练手了。&lt;/p>
 &lt;p>总的来说，Flutter 的上手难度在我个人角度看来还算是比较简单的。从从未接触过 Flutter，到独立开发出一个相对完整的 App，中间也不过只有两周左右。另外从一名 Web 前端开发者的视角来看，使用 Flutter 开发界面的难度还是要相对高于传统的 Web 开发的，尤其是在自定义方面，一旦写起样式来各种嵌套又要写一堆了&amp;hellip;但是 Google 默认提供的 Material Design UI 库对于没有视觉要求的指定风格的情况来说还是蛮够用的；另外官方也提供了一套 iOS 风格的 Cupertino UI 库，但是我还没有尝试过这个，不知道实际体验效果如何。至少就此来看，使用 Flutter 来进行一款跨端的小品类应用开发确实是一项不错的选择。至于大型项目，虽然 Flutter 版本已经迭代到了 2.5+，但是相对于其他已经发展了数年的 Native/Web 开发方案来说，还不能说是特别成熟。就比如我在下文中提到的一些坑，至今官方还没有提供相应的瀑布流库。闲鱼对此选择的路线则是自研，不过我种初学者自然是没有人家这种专业团队的实力，于是只能乖乖的在社区里找一些开源库先用着。&lt;/p>
 &lt;p>至于性能方面，就我的 Hall of Fame 而言，采用 Release 模式下在 Android 平台上是几乎感受不到与 Native App 的差距的，包括我的做 Android 开发的朋友对此也是赞叹有加。另外说来离谱，在 Linux 环境下，用 C++ 编译成原生 Linux 二进制的可执行程序的动画性能，是肉眼可见地低于在 Linux 平台下 Chrome 上的性能的。Linux 原生程序运行时可以明显的看到掉帧，而在 Windows 和 Chrome 上则比较流畅。&lt;/p>
 &lt;p>下面贴下这个项目的 Github 地址：&lt;a class="link" href="https://github.com/hall-of-fame/hof-flutter-md" target="_blank" rel="noopener"
@@ -3038,7 +3092,7 @@ data-flex-basis="228px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/first-meet-to-flutter/screenshot.jpeg"
 width="1080"
 height="2400"
-srcset="https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4c394e80cc29ab44829d2e73678e69e3_1461556_1024x0_resize_q75_box.jpeg 1024w"
+srcset="https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu6792707900741384723.jpeg 480w, https://lomirus.github.io/p/first-meet-to-flutter/screenshot_hu4405944334286156516.jpeg 1024w"
 loading="lazy"
 alt="展示图"
 class="gallery-image"
@@ -3046,9 +3100,9 @@ data-flex-grow="45"
 data-flex-basis="108px"
 >&lt;/p>
 &lt;p>下面则是讲一下我在使用 Flutter 进行开发的过程中遇到的一些问题：&lt;/p>
-&lt;h2 id="导航栏标签页-keep-alive">导航栏标签页 keep-alive&lt;/h2>
-&lt;h3 id="一般的标签页切换">一般的标签页切换&lt;/h3>
-&lt;p>在 Flutter 中，如果我们想通过 BottomNavigationBar 实现一个简单的标签页切换功能，可以在官方文档对于
+&lt;h2 id="导航栏标签页-keep-alive">导航栏标签页 keep-alive
+&lt;/h2>&lt;h3 id="一般的标签页切换">一般的标签页切换
+&lt;/h3>&lt;p>在 Flutter 中，如果我们想通过 BottomNavigationBar 实现一个简单的标签页切换功能，可以在官方文档对于
 &lt;code>BottomNavigationBar class&lt;/code> 的介绍看到一些简单示例。这里我们以之为基础，再次对其进行简化，可以得到下面一个只有 32 行的简单结构：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">MyStatefulWidget&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">const&lt;/span> &lt;span class="n">MyStatefulWidget&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="n">Key&lt;/span>&lt;span class="o">?&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">})&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="k">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">key:&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">);&lt;/span>
@@ -3082,8 +3136,8 @@ data-flex-basis="108px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题引入无法保存组件状态">问题引入：无法保存组件状态&lt;/h3>
-&lt;p>事实上，对于上文中的&lt;a class="link" href="#%e6%9c%80%e5%b0%8f%e6%a0%b7%e4%be%8b" >最小样例&lt;/a>，这么写是完全没有问题的。但是随着软件功能的复杂化，一些问题可能就会暴露出来。比如，我们将上文中的 &lt;code>Text&lt;/code>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="问题引入无法保存组件状态">问题引入：无法保存组件状态
+&lt;/h3>&lt;p>事实上，对于上文中的&lt;a class="link" href="#%e6%9c%80%e5%b0%8f%e6%a0%b7%e4%be%8b" >最小样例&lt;/a>，这么写是完全没有问题的。但是随着软件功能的复杂化，一些问题可能就会暴露出来。比如，我们将上文中的 &lt;code>Text&lt;/code>
 组件换为 &lt;code>TextField&lt;/code> 标签试一下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">MyStatefulWidget&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">const&lt;/span> &lt;span class="n">MyStatefulWidget&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="n">Key&lt;/span>&lt;span class="o">?&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">})&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="k">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">key:&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">);&lt;/span>
@@ -3121,8 +3175,8 @@ data-flex-basis="108px"
 输入了一段文字，然后点击底部导航栏切换到了另一个标签页，然后再切换回来，你会发现你之前在 &lt;code>TextField&lt;/code> 的内容已经被清空掉了。&lt;/p>
 &lt;p>这是因为，当你切换到另一个标签页时，Flutter 会将原先的标签页的组件给销毁掉，并创建一个新的你所选择的标签页（或者说是组件）。当你返回原来的页面时，也会执行一遍同样的操作，这时，这个页面已经不是原来的那个页面了。&lt;/p>
 &lt;p>如果我们使用是的 React (Native) 或者是 Vue，我们可以简单地通过 &lt;code>&amp;lt;keep-alive&amp;gt;&lt;/code> 标签达到状态保存的目的，但是 Flutter 似乎就没有这么方便了😥。&lt;/p>
-&lt;h3 id="解决方案automatic-keep-alive-client-mixin">解决方案：Automatic Keep Alive Client Mixin&lt;/h3>
-&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
+&lt;h3 id="解决方案automatic-keep-alive-client-mixin">解决方案：Automatic Keep Alive Client Mixin
+&lt;/h3>&lt;p>于是然后我在 Google, StackOverflow, Github 上的一番求索，最终所找到的解决方案，都还是不太完善，比如可能会触发组件多次不必要的重新渲染，使用 Stack &amp;amp; Opacity 隐藏组件导致性能问题等等。最后，反而是在俄语课课间休息摸鱼时在知乎上找到了一个&lt;a class="link" href="https://zhuanlan.zhihu.com/p/61458683" target="_blank" rel="noopener"
 >解决方案&lt;/a>。&lt;/p>
 &lt;p>这个方案使用的是 &lt;code>AutomaticKeepAliveClientMixin&lt;/code>，按照它的方法，对上文中的示例代码进行修改后可得：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">class&lt;/span> &lt;span class="nc">RootScreen&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">StatefulWidget&lt;/span> &lt;span class="p">{&lt;/span>
@@ -3168,9 +3222,9 @@ data-flex-basis="108px"
 &lt;p>Ref:
 &lt;a class="link" href="https://medium.com/coding-with-flutter/flutter-case-study-multiple-navigators-with-bottomnavigationbar-90eb6caa6dbf" target="_blank" rel="noopener"
 >Flutter Case Study: Multiple Navigators with BottomNavigationBar&lt;/a>&lt;/p>
-&lt;h2 id="瀑布流展示">瀑布流展示&lt;/h2>
-&lt;h3 id="scrollable-view-嵌套">Scrollable View 嵌套&lt;/h3>
-&lt;p>当我们尝试在可滚动 View（如ListView/GridView ）中的 children 中嵌套可滚动 View 时，会出现以下报错：&lt;/p>
+&lt;h2 id="瀑布流展示">瀑布流展示
+&lt;/h2>&lt;h3 id="scrollable-view-嵌套">Scrollable View 嵌套
+&lt;/h3>&lt;p>当我们尝试在可滚动 View（如ListView/GridView ）中的 children 中嵌套可滚动 View 时，会出现以下报错：&lt;/p>
 &lt;pre tabindex="0">&lt;code>════════ Exception caught by rendering library ═════════════════════════════════
 The following assertion was thrown during performResize():
 Vertical viewport was given unbounded height.
@@ -3178,8 +3232,8 @@ Viewports expand in the scrolling direction to fill their container. In this cas
 If this widget is always nested in a scrollable widget there is no need to use a viewport because there will always be enough vertical space for the children. In this case, consider using a Column instead. Otherwise, consider using the &amp;#34;shrinkWrap&amp;#34; property (or a ShrinkWrappingViewport) to size the height of the viewport to the sum of the heights of its children.
 &lt;/code>&lt;/pre>&lt;p>这时我们在内层的 View 中可以插入 &lt;code>shrinkWrap: true&lt;/code>，即可解决报错。但是此时这个 View 将会无法滚动，我们可以继续在后面插入：
 &lt;code>physics: NeverScrollableScrollPhysics()&lt;/code>，即可完美解决以上问题。&lt;/p>
-&lt;h3 id="flutter_staggered_grid_view-库的简单使用">flutter_staggered_grid_view 库的简单使用&lt;/h3>
-&lt;p>&lt;a class="link" href="https://pub.dev/packages/flutter_staggered_grid_view" target="_blank" rel="noopener"
+&lt;h3 id="flutter_staggered_grid_view-库的简单使用">flutter_staggered_grid_view 库的简单使用
+&lt;/h3>&lt;p>&lt;a class="link" href="https://pub.dev/packages/flutter_staggered_grid_view" target="_blank" rel="noopener"
 >flutter_staggered_grid_view&lt;/a> 是一个可以便捷实现瀑布流布局的 Flutter 库。一般地，要想使用它，我们需要首先导入：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c">### file: pubspec.yaml&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
@@ -3214,10 +3268,10 @@ If this widget is always nested in a scrollable widget there is no need to use a
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/cover.webp" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" />&lt;h2 id="缘起自动生成狗狗表情包">缘起：自动生成狗狗表情包&lt;/h2>
-&lt;p>前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。&lt;/p>
-&lt;h2 id="废案爬取qq历史头像">废案：爬取QQ历史头像&lt;/h2>
-&lt;p>一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/cover.webp" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" />&lt;h2 id="缘起自动生成狗狗表情包">缘起：自动生成狗狗表情包
+&lt;/h2>&lt;p>前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。&lt;/p>
+&lt;h2 id="废案爬取qq历史头像">废案：爬取QQ历史头像
+&lt;/h2>&lt;p>一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？&lt;/p>
 &lt;p>关于这个思路，我一开始想到的是利用“获取QQ头像”的接口进行轮询，计算当前头像哈希值并与上一次获取到的头像的哈希值作比较，若不同则保存下载。但是轮询的时间间隔实在不太好设定。因为头像的更新时间并不固定，可能一天更新数次，也可能数天更新一次。如果设定轮询间隔时间过短，会导致服务器压力过大，严重的话说不定腾讯会直接把我给
 ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头像大概率是有遗漏的。&lt;/p>
 &lt;p>考虑到更新头像终究是由人类来完成的，因此也需要考虑到利用一些社会工程学信息以对程序进行优化。比如在深夜凌晨的时候，可以适时停止爬虫以降低负载。但是考虑到这个作息规律&amp;hellip;咳咳&amp;hellip;还是算了吧，毕竟昨晚凌晨还刚刚看到钰姐又换了新头像来着。&lt;/p>
@@ -3226,7 +3280,7 @@ ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头�
 &lt;p>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/0.jpg"
 width="163"
 height="191"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6b9ac2b103235a60dc91adad1f518b66_5197_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6b9ac2b103235a60dc91adad1f518b66_5197_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6603999452355322905.jpg 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu14000798242420278099.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="85"
@@ -3235,8 +3289,8 @@ data-flex-basis="204px"
 &lt;p>又考虑到人类是一种优柔寡断的生物，所以每次换完头像后的一段时间内，都有较高的概率再次换个头像。因此在侦测到头像更新后，可以调高在未来一段短时间内的轮询频率。但是这也不能排除在提高轮询频率之前的遗漏情况。&lt;/p>
 &lt;p>况且，这个解决方案所收集到的表情包数量还是及其有限的，如果想要收集到足够数量的头像，估计早过 deadline 了。&lt;/p>
 &lt;p>综上所述，这个方案还是被 pass 掉了。&lt;/p>
-&lt;h2 id="预备从-selenium-到-puppeteer">预备：从 Selenium 到 Puppeteer&lt;/h2>
-&lt;p>上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。&lt;/p>
+&lt;h2 id="预备从-selenium-到-puppeteer">预备：从 Selenium 到 Puppeteer
+&lt;/h2>&lt;p>上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>在知乎上搜索“狗狗表情包”关键字，回答数量最多的问题下也不过只有十几个回答。Pass。&lt;/p>
@@ -3258,8 +3312,8 @@ data-flex-basis="204px"
 &lt;blockquote>
 &lt;p>Puppeteer 是一个 Node 库，它在 DevTools 协议之上提供了高度封装的 API，以用来控制 Chrome 或 Chromium. Puppeteer 会默认运行 headless, 但是可以通过进行配置来运行完整版的 (non-headless) Chrome 或 Chromium.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="正文就硬爪巴">正文：就硬爪巴&lt;/h2>
-&lt;p>首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
+&lt;h2 id="正文就硬爪巴">正文：就硬爪巴
+&lt;/h2>&lt;p>首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;p>接着老三样：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir dog-stickers
@@ -3287,7 +3341,7 @@ data-flex-basis="204px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/example.png"
 width="800"
 height="600"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu4e04f2c2ba688b12e1a8e3f758ae1272_27069_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu4e04f2c2ba688b12e1a8e3f758ae1272_27069_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu16575893567948503935.png 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu3205999207615809175.png 1024w"
 loading="lazy"
 alt="example.png"
 class="gallery-image"
@@ -3358,8 +3412,8 @@ data-flex-basis="320px"
 &lt;p>Puppeteer has event-driven architecture, which removes a lot of potential flakiness. There’s no need for evil “sleep(1000)” calls in puppeteer scripts.&lt;/p>
 &lt;/blockquote>
 &lt;p>感觉我代码里面也没少写 &lt;code>sleep()&lt;/code> 呀😅，也许只是因为我太菜了吧。&lt;/p>
-&lt;h2 id="下载">下载&lt;/h2>
-&lt;p>获取到 &lt;code>images.json&lt;/code> 后就好说了，遍历链接下载即可：&lt;/p>
+&lt;h2 id="下载">下载
+&lt;/h2>&lt;p>获取到 &lt;code>images.json&lt;/code> 后就好说了，遍历链接下载即可：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">download&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;download&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -3387,16 +3441,16 @@ data-flex-basis="320px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})()&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Google Images 的预览图好像都是 &lt;code>jpeg&lt;/code> 格式的，所以这里就全部默认扩展名为 &lt;code>jpeg&lt;/code> 了。&lt;/p>
 &lt;p>下载的图片会保存在项目根目录的 &lt;code>images&lt;/code> 文件夹。&lt;/p>
-&lt;h2 id="总结">总结&lt;/h2>
-&lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item><item><title>About</title><link>https://lomirus.github.io/about/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/about/</guid><description>&lt;ul>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item><item><title>About</title><link>https://lomirus.github.io/about/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/about/</guid><description>&lt;ul>
 &lt;li>代码：JavaScript/TypeScript/Rust &lt;span style="opacity: 0.3">&lt;del>没一个是熟练的&lt;/del>&lt;/span>&lt;/li>
 &lt;li>语言：精通中、英、日、韩、俄、意等多国语言 &lt;span style="opacity: 0.3">&lt;del>的字母&lt;/del>&lt;/span>&lt;/li>
 &lt;li>美术：Aseprite &amp;amp; Blender &lt;span style="opacity: 0.3">&lt;del>安装之后基本没打开过&lt;/del>&lt;/span>&lt;/li>
 &lt;li>历史：&lt;span style="opacity: 0.3">&lt;del>控制台上的P社玩家&lt;/del>&lt;/span>&lt;/li>
 &lt;li>哲学：&lt;span style="opacity: 0.3">&lt;del>网哲小鬼&lt;/del>&lt;/span>&lt;/li>
 &lt;/ul>
-&lt;h1 id="socials">Socials&lt;/h1>
-&lt;ul>
+&lt;h1 id="socials">Socials
+&lt;/h1>&lt;ul>
 &lt;li>&lt;a class="link" href="https://space.bilibili.com/27590260" target="_blank" rel="noopener"
 >Bilibili&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://www.reddit.com/user/lomirus" target="_blank" rel="noopener"
@@ -3404,14 +3458,14 @@ data-flex-basis="320px"
 &lt;li>&lt;a class="link" href="mailto:lomirus@qq.com" >lomirus@qq.com&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="mailto:lomirus.dev@protonmail.com" >lomirus.dev@protonmail.com&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Matrix, Mastodon, Discord, Spotify 等站同名&lt;/p></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零&lt;/h2>
-&lt;p>做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~&lt;/p>
-&lt;h2 id="永真---出场">永真 - 出场&lt;/h2>
-&lt;blockquote>
+&lt;p>Matrix, Mastodon, Discord, Spotify 等站同名&lt;/p></description></item><item><title>『隻狼』名シーンの日本語台詞を書き取りの練習</title><link>https://lomirus.github.io/p/sekiro-dictation/</link><pubDate>Thu, 26 Aug 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/sekiro-dictation/</guid><description>&lt;img src="https://lomirus.github.io/p/sekiro-dictation/cover.png" alt="Featured image of post 『隻狼』名シーンの日本語台詞を書き取りの練習" />&lt;h2 id="零">零
+&lt;/h2>&lt;p>做这个感觉就是我单纯中二病犯了，暑假作业还没写完呢，就来整这个。不过作业毕竟也写不下去，写代码吧也是写不下去，感觉最近几天实在是太颓了。害~&lt;/p>
+&lt;h2 id="永真---出场">永真 - 出场
+&lt;/h2>&lt;blockquote>
 &lt;p>忍びよ、目覚めて下さい。貴方の、主の為に。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="弦一郎---芦苇原">弦一郎 - 芦苇原&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="弦一郎---芦苇原">弦一郎 - 芦苇原
+&lt;/h2>&lt;blockquote>
 &lt;p>久しな、御子よ。（おじゅうん？）の（ぼうぜん？）以来か。&lt;/p>
 &lt;p>久しいな、御子よ。叔父上（おじじょう）の墓前（ぼぜん）以来か。&lt;/p>
 &lt;/blockquote>
@@ -3445,8 +3499,8 @@ data-flex-basis="320px"
 &lt;p>忍びよ、（ヒキ？）事は（ユウマイ？）な。御子は貰って行くぞ。&lt;/p>
 &lt;p>忍びよ、卑怯（ひきょう）とは言うまいな。御子は貰って行くぞ。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="弦一郎---天守阁">弦一郎 - 天守阁&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="弦一郎---天守阁">弦一郎 - 天守阁
+&lt;/h2>&lt;blockquote>
 &lt;p>御爺様の（ごうゆうす？）はどうだ。&lt;/p>
 &lt;p>御祖父様のご様子（ようす）はどうだ。&lt;/p>
 &lt;/blockquote>
@@ -3511,8 +3565,8 @@ data-flex-basis="320px"
 &lt;p>さあ。&lt;/p>
 &lt;p>さらば。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="弦一郎一心---芦苇原">弦一郎、一心 - 芦苇原&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="弦一郎一心---芦苇原">弦一郎、一心 - 芦苇原
+&lt;/h2>&lt;blockquote>
 &lt;p>九郎様。&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
@@ -3554,90 +3608,22 @@ data-flex-basis="320px"
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>さらば。&lt;/p>
-&lt;/blockquote></description></item><item><title>Some Impressions Recently</title><link>https://lomirus.github.io/p/2021-08/</link><pubDate>Thu, 05 Aug 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/2021-08/</guid><description>&lt;h2 id="一">一&lt;/h2>
-&lt;p>自上次期中总结过去也差不多两个月了，期末考试也已经过去了一个月，按说我早该动手这篇文章了，但实际上却迟迟没有动笔。这并不是说我没有时间如何如何，只是我变的愈发懒散了，于是乎便少了份写博客的动力。&lt;/p>
-&lt;p>回忆起我之前每次写博客，无非是想去说什么什么，却无处施展，于是便到自己的博客上胡绉。既然如此，那每次博文的开头便少不了牢骚抱怨。每当自己去浏览自己的旧文，便发觉自己只是一个丧丧的駄目人間，不免心生愧意：将自己如此劣质的文字公诸网路，实属制造垃圾资源。又“于是乎”地，废弃了自己的博客。而这正是我上一个博客的结局。&lt;/p>
-&lt;p>但是，有时候确实有些东西不吐不快。长久地将烦闷郁结在心中，绝然不能称之为一个好习惯。如此向来，将自己的博客作为自己倾吐不快的垃圾场，也算是物尽其用了。&lt;/p>
-&lt;p>而今天之所以动笔，也自然是因为自己心中有所郁结，不得通其道，故述往事，思来者。&lt;/p>
-&lt;h2 id="二">二&lt;/h2>
-&lt;p>从暑假开始计算，我们先是度过了一个毫无意义的军训。哦不对，话其实也不能这么说，因为其一，军训的存在令我厌恶，这也可以算是它的意义；其二，总有一些人居高临下，颐指气使的斥责鄙夷这那些吐槽军训的学生，这样看来，它们想必很热爱军训吧！毕竟军训也是福报不是？&lt;/p>
-&lt;p>军训结束，我们搬迁了宿舍，搬迁宿舍本身没啥，反正我也我待了一年的舍友也没什么感情。另外虽说是“自由组队”，却还是组合到了有至少三个陌生同学的宿舍。&lt;/p>
-&lt;p>然后是大约一周多的自由时间，就用来一边开发项目，一边继续学习 Vue。&lt;/p>
-&lt;p>最后是为期一个月的暑期培训，截至写到本文的此段时，已过五天。这五天，则一直是在忙于开发《学长学姐帮帮忙》了。&lt;/p>
-&lt;p>其间我的一位朋友问过我一个问题，他问，你如何判断一个开发者的能力高低？就拿前端来说，你的能力与开发多年的前端大佬有哪些区别？&lt;/p>
-&lt;p>这个问题确实有点把我问住了。我便凭感觉回答道，可能是对一些框架的掌握和原生API的熟练程度吧。&lt;/p>
-&lt;p>但是他则认为，只会用框架调接口未免太“脚本小子”了。我无法反驳，尽管实际上，大多数开发岗也无非都是做着搬砖的活。&lt;/p>
-&lt;p>这是他的第一次问我这个问题，后面也有第二次提问。&lt;/p>
-&lt;p>不过在他上次提问过后，我回去后其实也并没有进行过多的深入思考。但我还是尝试给出了与上次不同的答案。&lt;/p>
-&lt;p>这次我提到了一个人的知识面的广度，譬如我个人，虽说只是一名切图仔，但是在其他方面也多有涉猎，倘以我们网校的部门举例，我首先是本来就在后端待过半年，在 SRE 也学习过一段时间，开发过一些 Android Apps，甚至还尝试学习像素画（这条还是忽略吧）。我个人以为，在网校范围内，前端本身（特指大前端/全栈）可能是仅次于运维的全栈部门了。&lt;/p>
-&lt;p>不过这样的我其实也有一些问题：接触的挺多，深入的却很少。前端本身各种轮子层出不穷，更新迭代很快。真正喜欢前端的人，也常常痴迷于新技术。最近我在网校讲授了一节前端框架相关的课，讲到 TypeScript 时，顺口提了一下 Deno。而学员里有个同学和一勤奋蜂的前端学长聊天时提到了这个，于是勤奋蜂的那位学长便表示想和我聊一下天。那天，我们聊了许多。他也是喜欢新生技术的人。他说，他想要在 WebGL，WASM，Deno 里面的选择一个去深入学习。说来惭愧，虽然我对这些都早有耳闻，但却没有一个能称得上是比较深入了解的。我们网校的学姐也说过我们，喜欢新技术很好，但不要每次都是写了一个 Hello World 之后就扔一边儿了。而彼时，我也正如其所言，丢掉了刚做完一个 Hello World 的 Tarui。&lt;/p>
-&lt;h2 id="三">三&lt;/h2>
-&lt;p>我感觉自己似乎处在某个瓶颈期，基础知识学得都差不多了，但是每当面对浩如烟海的前端进阶内容，却不知从何学起。也许刚踏入大学时，我还算比较有优势。但是随着时间的推移，我逐渐发现自己的优势正在逐渐消逝，泯然众人。我几乎已经很难说出在某个领域能够完胜其他学员了。&lt;/p>
-&lt;p>但是学长却说，我们这个阶段恰好是最容易提升的时期。&lt;/p>
-&lt;p>仔细想想，其实好像也对，我们现在的能力，也足以支撑我们去学习新的知识、独立开发项目和参与开源社区之类的了。&lt;/p>
-&lt;p>正如狄更斯所言：&lt;/p>
-&lt;blockquote>
-&lt;p>It was the best of times, it was the worst of times.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="四">四&lt;/h2>
-&lt;p>上面大部分都还是技术方面的内容，周期总结也可以算是我的 routine 了。但其实，都并非我我写这篇文章的直接原因。&lt;/p>
-&lt;p>直接原因也很简单，便是见到了某个人，使我回想起了某些事，以及随之而来的一系列巧合，让我再次怀疑世界的真实性。&lt;/p>
-&lt;p>这种感觉，估计得追溯到初中，从我的 depression 开始。&lt;/p>
-&lt;p>我似乎每个寒假都不会有什么好事儿，尽管坏事儿也都不一定是在寒假。&lt;/p>
-&lt;p>有些事我希望它能够从未发生过，例如上次。但也有些事，例如初中的某次寒假，我对它的记忆其实很模糊，因为我曾竭力试图将其忘记，它使得我第一次对世界与自身的存在的意义产生怀疑；但是现在看来，我也很庆幸我有那段经历，它也重塑了我的人生观。&lt;/p>
-&lt;p>但是有些事情实在过与巧合，不过也许只是我的幸存者偏差吧。我不知道这其中是否有什么深意，如果有的话，希望结局是一个 Good Ending.&lt;/p>
-&lt;h2 id="五">五&lt;/h2>
-&lt;p>前几天我妈微信给我打了个电话，当时我没空，没来得及接。不过实际上，我爸妈大多数给我打的电话也都是些嘘寒问暖的话语，即使有空我也是不太愿意接的；但要是不接的话，我爸妈肯定也会不太开心的，所以一般都会回一下。这次也是，待到几天之后我有了空，我便回了一个电话。我妈在电话里说，之前之所以给我打电话，是因为我姥爷生病住院了，想让我和姥爷说说话、聊聊天之类的；不过现在已经出院了，无大碍。&lt;/p>
-&lt;p>结果昨天（八月七日）晚上又给我打了个电话，自然还是少不了问一些像是“今晚饭吃了什么”这种我始终无法理解的毫无意义的话语。后面瞎侃谈到了我姥爷，我妈便吐槽我说之前谈到我姥爷生病时，我也不问问到底他是得了什么病。我便反驳说问了又能如何。&lt;/p>
-&lt;p>她说，倒也确实，不过不知道我寒假回来的时候还能不能见着我姥爷。&lt;/p>
-&lt;p>自然，从她的话语中，很明显能听出发生了什么样的事。但我依然没有多问。正如前文所说，问了又能如何。无非是被告知人至晚年，患了何病，大寿将至。&lt;/p>
-&lt;p>说到这个，突然又想到，去年，我的奶奶也去世了，应该是在那一年的秋天吧。我其实是到了寒假才知道的：当时我正从机场出来，见我父亲等在门口，这是我第一次离开家乡，以异乡人的身外，离家近半年。父亲看到我急忙招手，和一同来的一位大叔帮我递过了行李。上车后，我爸提了一句我奶奶的事，很平静，甚至有一丝唠家常开玩笑的戏谑意。我的回复也只是一声简单的“哦”。我自然事前是不知道的，自然没去做什么心理准备。但是一切似乎如此稀松平常，我不知为何并没有太多的心理波动。我爸问我，你不说点什么吗。我反问，说些什么好呢。&lt;/p>
-&lt;p>如果说非要找一些理由，以证明我尽管对祖母的去世无甚反应，却仍不是一个失掉人情味的人的话，或许我可以说，可能正是许久的不见，所造成的疏离与陌生感吧。&lt;/p>
-&lt;p>我的奶奶自我在高中时，便一直卧病在床。从一开始的腿脚不便、到后来的下肢瘫痪、甚至是阿尔兹海默症，直至去世，中间其实也不过两三年。我的爷爷奶奶与我和我爸妈三口，平常并不是住在同一座房子里的。但实际上，我们两家的两座房子正门的直线距离，其实也不过几十步，所以我们家一般都是会聚在一起吃饭的。不过我奶奶自打生病，自然就不断地缺席一场又一场的每日小聚。加之我高中学业繁重，一个月回家不过二三日，与她的见面机会，便只有待短暂放假时偶尔家中做了什么佳肴，家中令我去为她送饭时了。一年所见次数不过寥寥几次，所言亦不多，自然，她的去世也并没有使我如何震撼。仿佛她的身影是逐渐褪色模糊的，而非骤然与世长辞。对于一个卧病在床者，这确实算不上什么稀奇事。&lt;/p>
-&lt;p>而似乎也是去年，还是前年来着，我的老奶奶去世了。我其实并不知道“老奶奶”这个称呼的指代关系到底是什么。我对这种中国的辈份关系向来弄不清，更何况是带有方言的辈份称呼。至于她是我母亲的姥姥，还是父亲的奶奶，无论是至她的离世，还是至今，我都一直没弄清楚。&lt;/p>
-&lt;p>她去世时，家人央我同去参加她的葬礼。虽然我知道，她肯定是挺爱我这个作为曾孙辈的人的，但是反过来，我其实对她并没有什么特别的感情。但毕竟是亲人离世，葬礼一人一生也不过一次，我便随去参加了。自然，他们还邀请了附近十里八乡我毫不认识的陌生面孔。礼节上，行一些跪拜礼、号哭礼（姑且这么叫吧，至少我无法理解他们对这啼笑的转变仪式是为何如此熟练），抬棺，烧纸，喊一些我听不懂的如同咒语般的长丧音的话语，最后入土。&lt;/p>
-&lt;p>说实话，我其实对这类生老病死没什么太大的心理波动。人老而死本自然常理，非遇横祸，寿终正寝。却仍要活人披麻戴孝，摆席宴客，我实在接受不来。死了埋掉，或者烧掉。生者各有其事，各去忙自己的生活就好，何必如此。&lt;/p>
-&lt;p>人死，无魂灵。却仍要造墓建碑。岂不也是浪费土地？抑或是烧香供物，号而通灵者，看了着实讽刺。&lt;/p>
-&lt;p>但是，不如此，却也似乎是少了什么。人终究是感性的动物，无神论者在有实证之前，自然是不相信灵魂的。但人与人的纽带也并非会随着肉体腐烂，感情仍在，物是人非，便只好编造一些谎言，假装他们还在，还在听着我们说话。尽管最终却也还是没有什么回应就是了&amp;hellip;&lt;/p>
-&lt;p>何况我本身也不善言辞，感情也都一直藏在心中，自然不喜欢这种暴露感情的仪式。时间久了，连父母都说我是冷血动物了。不过如果我真的是冷血动物，我恐怕甚至不会给予他们回应吧。&lt;/p>
-&lt;p>————幸而我不是，我仍旧只是一只哺乳动物罢了。&lt;/p>
-&lt;h2 id="六">六&lt;/h2>
-&lt;p>今晚上摸鱼时看到了 StackOverflow 的 2021 年的年度调查。感觉很有意思的，于是就去看了一下。&lt;/p>
-&lt;p>一开始是国籍，自然，没有那个国家。&lt;/p>
-&lt;p>接下来是编程开始的年龄，结果调查显示，有超过 50% 的受访者是在他们 11 - 17 岁时敲下了他们的第一行代码。即使是 5 - 10 岁的，也占到了 14.08%。果然感觉自己实在太弱小了。曾经每当见到各种年少的编程大佬，往往自我安慰他们只是少数，不过现在看来，少数派们也已高达半数了。&lt;/p>
-&lt;p>再往下面翻，发现居然还有对性取向和是否为跨性别者的调查结果，顿时想起了那个最大同性交友平台 Github 的哏。实在没想到调查结果居然还会包括这个，于是饶有兴趣地看了一下，发现非 LGBTQ 人群似乎占的还不算少。他们人数的总和甚至比女性程序员的人数还要多。&lt;/p>
-&lt;p>再往下看，则出现了残障人士，看到这里我似乎顿感严肃了起来。说来汗颜，其实我做前端页面时，很少考虑去为一些视觉障碍者适配。倘是盲人的话，单是浏览网页的话，已实属不易，何况开发。&lt;/p>
-&lt;p>真的是很难想象这类人的生活，假如是我，恐怕肯定接受不了这种痛苦吧。不过也想起了“太可怕了”王子的故事，然而这也是后话了。&lt;/p>
-&lt;p>再后面，似乎还有提到程序员的心理问题的，差不多有 10% 的人都有心理焦虑等一系列的问题，也不知我能否算得上他们当中的一员。&lt;/p>
-&lt;h2 id="七">七&lt;/h2>
-&lt;p>最近我的一位朋友向我推荐了一首出自 &lt;em>To the Moon&lt;/em> 的音乐 &lt;em>Born a Stranger&lt;/em>。当时身边没有耳机，没有来得及去听。今天傍晚时戴上耳机，点开了这首歌。&lt;/p>
-&lt;p>播放这首歌时，我正在学校的路上。在歌曲大约播放到一半时，我刚好走到了楼梯高处，看到西面的夕阳余晖躲在校园的高楼后面，虽然歌曲描述的是 &lt;em>To the Moon&lt;/em>，但当时，那副黄昏的景象也着实令我的内心深受震撼。&lt;/p>
-&lt;p>不知道为什么，感觉最近的故事也似乎都充满了巧合呢。&lt;/p>
-&lt;h2 id="八">八&lt;/h2>
-&lt;p>最近心情一直不太好，虽然是一直待在网校里，但是也写不下去代码。&lt;/p>
-&lt;p>于是早上我打开了《荒野大镖客：救赎 II》，想打游戏来放松一下。尽管嘴上和朋友说的是“摸鱼的一天又开始了”，但其实，我在游戏的过程中也并非是多么开心。游戏自然是好游戏，但是就这款游戏本身而言，它并不算得上一款适合宣泄的渠道。仿佛是在心情压抑的时候专门去听一些令人忧郁的纯音乐，实属南辕北辙。&lt;/p>
-&lt;p>最近前几天心情压抑时可能会去找一些（好吧就一个😭）朋友摸鱼吹水，倘能恰好聊到互相都感兴趣的话题，便仿佛是遇到知己，打开了话匣子，说了许多一直想说却又未曾与人聊过的内容。&lt;/p>
-&lt;p>但是每天和人家都聊这么久似乎也不太好，也显得我整日无所事事。所以这几天有空时，便经常会一个人去操场的观众席上，坐在那里，独自一个人，发呆，远眺，当然，还有摸鱼。&lt;/p>
-&lt;p>一开始，说是要找个安静的去处来练习大舌音，不过说实话，练了这么久感觉也只是在原地踏步。后来的几天，我便带着电脑过去，自然，代码是不会写的，而是写点东西，比如说这篇文章。虽然说不出来，但即便只是写，也确实会让心情好受许多。&lt;/p>
-&lt;p>昨天晚上又下了一场雨，当时我在仍在观众席上，躲在遮雨棚下。身后开启了夜灯，灯光下的跑道，雨滴淅淅沥沥的砸在水坑里。我来时，同我一起在观众席上的加上我共三人；我走时，只剩下了一个。我坐在最高处，看着他们，尽管并不知道他们在干什么。&lt;/p>
-&lt;p>这是处暑后的第三日，身着短袖，自不敌入夜后的寒气，只好先行一步离开。&lt;/p>
-&lt;p>离开时，我撑起雨伞，将自己送回了宿舍。&lt;/p>
-&lt;p>（完）&lt;/p></description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
-&lt;h2 id="foreword">Foreword&lt;/h2>
-&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
+&lt;/blockquote></description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
+&lt;h2 id="foreword">Foreword
+&lt;/h2>&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
 &lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
 &lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
 &lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
-&lt;h2 id="customize">Customize&lt;/h2>
-&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
+&lt;h2 id="customize">Customize
+&lt;/h2>&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
 &lt;pre tabindex="0">&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
 # Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 &lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo systemctl disable pamac-mirrorlist.timer
-&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts&lt;/h3>
-&lt;p>Open:&lt;/p>
+&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts
+&lt;/h3>&lt;p>Open:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gnome-control-center
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
 &lt;table>
@@ -3666,8 +3652,8 @@ data-flex-basis="320px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings&lt;/h3>
-&lt;p>You need to installl VSCode before reading this section.&lt;/p>
+&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings
+&lt;/h3>&lt;p>You need to installl VSCode before reading this section.&lt;/p>
 &lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-json5" data-lang="json5">{
 &amp;#34;window.zoomLevel&amp;#34;: 2,
@@ -3676,25 +3662,25 @@ data-flex-basis="320px"
 // Make tab size from 2 to 4
 &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
-&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading&lt;/h3>
-&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
-&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading
+&lt;/h3>&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
+&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages&lt;/h2>
-&lt;h3 id="basic">Basic&lt;/h3>
-&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>&lt;/h4>
-&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages
+&lt;/h2>&lt;h3 id="basic">Basic
+&lt;/h3>&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>
+&lt;/h4>&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
 &lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
 &lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S base-devel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S vim
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S net-tools
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S btop
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S htop
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gnome-terminal-fedora
@@ -3716,26 +3702,26 @@ data-flex-basis="320px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S burpsuite
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S postman-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S scrcpy
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
-&lt;h4 id="nodejs">NodeJS&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment
+&lt;/h3>&lt;h4 id="nodejs">NodeJS
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S yarn
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g nrm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nrm use taobao
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g @vue/cli
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g create-react-app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-rime
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
@@ -3753,20 +3739,20 @@ data-flex-basis="320px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
 &lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
 >thep0y / fcitx5-themes&lt;/a>.&lt;/p>
-&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
+&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S mongodb-tools-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start mongodb.service
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S icalingua
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
->dashboard&lt;/a> for configuration.&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
-&lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
+>dashboard&lt;/a> for configuration.&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因
+&lt;/h2>&lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
 &lt;p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p>
 &lt;ul>
 &lt;li>CMD: 费拉不堪&lt;/li>
@@ -3780,8 +3766,8 @@ alt="2FXjHS.jpg"
 >&lt;/p>
 &lt;p>结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。&lt;/p>
 &lt;p>然后最终选定了 WSL 2 + Windows Terminal + VSCode.&lt;/p>
-&lt;h2 id="安装">安装&lt;/h2>
-&lt;p>如果 Windows 10 OS Version 大于 20262，可通过 &lt;code>wsl --install&lt;/code> 安装。&lt;/p>
+&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>如果 Windows 10 OS Version 大于 20262，可通过 &lt;code>wsl --install&lt;/code> 安装。&lt;/p>
 &lt;p>虽然我有加入 Windows Insider 计划，不过系统还是用的 Stable，所以没有采取上述简化方式进行安装，而是采用的以下内容。&lt;/p>
 &lt;p>首先，以管理员权限打开 Powershell 并输入以下命令：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dism&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">exe&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">online&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-feature&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">featurename&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="nb">Microsoft-Windows&lt;/span>&lt;span class="n">-Subsystem-Linux&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">all&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">norestart&lt;/span>
@@ -3799,9 +3785,9 @@ alt="2FXjHS.jpg"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-unregister&lt;/span> &lt;span class="n">debian&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其余操作可以使用 &lt;code>wsl -h&lt;/code> 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
-&lt;h2 id="网络代理">网络代理&lt;/h2>
-&lt;h3 id="设置代理">设置代理&lt;/h3>
-&lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
+&lt;h2 id="网络代理">网络代理
+&lt;/h2>&lt;h3 id="设置代理">设置代理
+&lt;/h3>&lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">hostip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>cat /etc/resolv.conf &lt;span class="p">|&lt;/span> grep nameserver &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{ print $2 }&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">7890&lt;/span> &lt;span class="c1"># 此处端口可根据个人情况进行更改&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -3814,27 +3800,27 @@ alt="2FXjHS.jpg"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTPS_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
 >WSL2 中访问宿主机 Windows 的代理&lt;/a>&lt;/p>
-&lt;h3 id="取消防火墙">取消防火墙&lt;/h3>
-&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
+&lt;h3 id="取消防火墙">取消防火墙
+&lt;/h3>&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
 width="1453"
 height="583"
-srcset="https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/wsl2/firewall_hu8538415115603147363.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu4888066774129771792.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="249"
 data-flex-basis="598px"
 >&lt;/p>
 &lt;p>如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
-&lt;h2 id="环境变量">环境变量&lt;/h2>
-&lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
+&lt;h2 id="环境变量">环境变量
+&lt;/h2>&lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
 &lt;p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code>/etc/wsl.conf&lt;/code>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch /etc/wsl.conf
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后修改其内容为：&lt;/p>
 &lt;pre tabindex="0">&lt;code>[interop]
 appendWindowsPath = false
-&lt;/code>&lt;/pre>&lt;h2 id="常用软件的安装">常用软件的安装&lt;/h2>
-&lt;p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p>
+&lt;/code>&lt;/pre>&lt;h2 id="常用软件的安装">常用软件的安装
+&lt;/h2>&lt;p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p>
 &lt;p>首先更新软件源：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后安装：&lt;/p>
@@ -3856,12 +3842,12 @@ appendWindowsPath = false
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## rust&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 建议选择 `default toolchain` 为 `nightly`&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他坑先占位">其他坑（先占位）&lt;/h2>
-&lt;p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p>
-&lt;p>更新：解决方案：卸载 VirtualBox, 安装VMWare.&lt;/p></description></item><item><title>Vue &amp; Vite 项目搭建入门</title><link>https://lomirus.github.io/p/vue-vite-start/</link><pubDate>Sat, 22 May 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/vue-vite-start/</guid><description>&lt;img src="https://lomirus.github.io/p/vue-vite-start/cover.png" alt="Featured image of post Vue &amp; Vite 项目搭建入门" />&lt;h1 id="学习-vue-与-vite-项目搭建的踩坑记录">学习 Vue 与 Vite 项目搭建的踩坑记录&lt;/h1>
-&lt;h2 id="vue-20--webpack">Vue 2.0 + Webpack&lt;/h2>
-&lt;h3 id="installation">Installation&lt;/h3>
-&lt;p>虽然 Vue 的最新版已经是 3.0，而且 Vite 也似乎是大势所趋，不过我还是选择了先从 Vue 2.0 + Webpack 这种比较传统的方式开始学习。主要是因为这几个方面：&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他坑先占位">其他坑（先占位）
+&lt;/h2>&lt;p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p>
+&lt;p>更新：解决方案：卸载 VirtualBox, 安装VMWare.&lt;/p></description></item><item><title>Vue &amp; Vite 项目搭建入门</title><link>https://lomirus.github.io/p/vue-vite-start/</link><pubDate>Sat, 22 May 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/vue-vite-start/</guid><description>&lt;img src="https://lomirus.github.io/p/vue-vite-start/cover.png" alt="Featured image of post Vue &amp; Vite 项目搭建入门" />&lt;h1 id="学习-vue-与-vite-项目搭建的踩坑记录">学习 Vue 与 Vite 项目搭建的踩坑记录
+&lt;/h1>&lt;h2 id="vue-20--webpack">Vue 2.0 + Webpack
+&lt;/h2>&lt;h3 id="installation">Installation
+&lt;/h3>&lt;p>虽然 Vue 的最新版已经是 3.0，而且 Vite 也似乎是大势所趋，不过我还是选择了先从 Vue 2.0 + Webpack 这种比较传统的方式开始学习。主要是因为这几个方面：&lt;/p>
 &lt;ul>
 &lt;li>现在仍有许多项目没有从 Vue 2.0 迁移到 3.0，使用 Vue 2.0 进行开发在实际生产中还是比较常见的，所以以后还可能会用到 2.0；&lt;/li>
 &lt;li>Vue 2.0 的资料相对比较多，踩坑时更容易查到资料；&lt;/li>
@@ -3913,8 +3899,8 @@ appendWindowsPath = false
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">app&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Vue&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>打包之后可以看到 &lt;code>dist/main.js&lt;/code> 中已经引入了 Vue 的 runtime。&lt;/p>
-&lt;h3 id="runtime--compiler-vs-runtime-only">Runtime + Compiler vs. Runtime-only&lt;/h3>
-&lt;p>按照官网文档中的第一个例子，修改 &lt;code>index.html&lt;/code> 的 &lt;code>body&lt;/code> 为：&lt;/p>
+&lt;h3 id="runtime--compiler-vs-runtime-only">Runtime + Compiler vs. Runtime-only
+&lt;/h3>&lt;p>按照官网文档中的第一个例子，修改 &lt;code>index.html&lt;/code> 的 &lt;code>body&lt;/code> 为：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;app&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ message }}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -3946,8 +3932,8 @@ appendWindowsPath = false
 &lt;li>&lt;a class="link" href="https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only" target="_blank" rel="noopener"
 >https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h3 id="single-file-components">Single File Components&lt;/h3>
-&lt;p>接下来介绍一下单文件组件，这也是我比较推崇的方式。之前我写 React 时，就是采取了 CSS in JS 的方案，而不是 SCSS 或者是 Less；因为如果将&lt;code>.less&lt;/code> 和 &lt;code>.jsx&lt;/code> 分割开来的话，后期维护就会变得非常难受了。而单文件组件不仅目录结构看起来更舒服，在可维护性上也更加友好。不过 Vue 的单文件组件相比非单文件组件来说，并不仅仅是以上这些方面，比如说原生的 JavaScript 并不支持 jsx 语法，用模板字符串就显得丑了吧唧的等等。具体可参考&lt;a class="link" href="https://vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener"
+&lt;h3 id="single-file-components">Single File Components
+&lt;/h3>&lt;p>接下来介绍一下单文件组件，这也是我比较推崇的方式。之前我写 React 时，就是采取了 CSS in JS 的方案，而不是 SCSS 或者是 Less；因为如果将&lt;code>.less&lt;/code> 和 &lt;code>.jsx&lt;/code> 分割开来的话，后期维护就会变得非常难受了。而单文件组件不仅目录结构看起来更舒服，在可维护性上也更加友好。不过 Vue 的单文件组件相比非单文件组件来说，并不仅仅是以上这些方面，比如说原生的 JavaScript 并不支持 jsx 语法，用模板字符串就显得丑了吧唧的等等。具体可参考&lt;a class="link" href="https://vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener"
 >官方文档&lt;/a>，这里就不赘述了。&lt;/p>
 &lt;p>然后正式开始，首先安装 &lt;code>vue-loader&lt;/code> 和 &lt;code>vue-template-compiler&lt;/code>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm install -D vue-loader vue-template-compiler
@@ -4005,17 +3991,17 @@ appendWindowsPath = false
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">2&lt;/span> directories, &lt;span class="m">6&lt;/span> files
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>完成。&lt;/p>
-&lt;h2 id="vue-30--vite">Vue 3.0 + Vite&lt;/h2>
-&lt;h3 id="creation">Creation&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm init @vitejs/app
+&lt;h2 id="vue-30--vite">Vue 3.0 + Vite
+&lt;/h2>&lt;h3 id="creation">Creation
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ npm init @vitejs/app
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">√ Project name: · vite-project
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">√ Select a framework: · vue
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">√ Select a variant: · JavaScript
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ &lt;span class="nb">cd&lt;/span> vite-project
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ npm install
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装就这么完成了，没啥好说的。&lt;/p>
-&lt;h3 id="simplification">Simplification&lt;/h3>
-&lt;p>如果正在阅读这篇文章的你是一名初学者的话，可能对这复杂（或许？）的目录结构毫无头绪，而且事实上它也确实用到了许多高级/新特性。所以我们可以试着将它简化并还原一下。&lt;/p>
+&lt;h3 id="simplification">Simplification
+&lt;/h3>&lt;p>如果正在阅读这篇文章的你是一名初学者的话，可能对这复杂（或许？）的目录结构毫无头绪，而且事实上它也确实用到了许多高级/新特性。所以我们可以试着将它简化并还原一下。&lt;/p>
 &lt;p>简化后：&lt;/p>
 &lt;p>&lt;code>src/components/HelloWorld.vue&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-vue" data-lang="vue">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">template&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -4032,17 +4018,17 @@ appendWindowsPath = false
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">components&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">HelloWorld&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="next">Next&lt;/h2>
-&lt;p>既然基础的项目搭建学会了，接下来就可以直接⏩到实战了（雾）。而且我最近正好要参加一个学校组织的叫什么什么数据库的比赛，或许可以考虑用比赛项目的前端部分来给 Vue 练手一下（）。那么接下来，就继续学习 Vue &amp;amp; Vite 吧！&lt;/p></description></item><item><title>大一第二学期中期总结与反思 (2021-05)</title><link>https://lomirus.github.io/p/2021-05/</link><pubDate>Sun, 09 May 2021 01:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/2021-05/</guid><description>&lt;h2 id="我这半学期学了什么">我这半学期学了什么&lt;/h2>
-&lt;p>寒假的时候我一直在写考核作业。但有一说一，虽说我肝得挺厉害（至少自我感觉是），但实际上我感觉我并没学到什么太多的新东西。当然，倒不是说一点也没有，只是感觉太少了。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="next">Next
+&lt;/h2>&lt;p>既然基础的项目搭建学会了，接下来就可以直接⏩到实战了（雾）。而且我最近正好要参加一个学校组织的叫什么什么数据库的比赛，或许可以考虑用比赛项目的前端部分来给 Vue 练手一下（）。那么接下来，就继续学习 Vue &amp;amp; Vite 吧！&lt;/p></description></item><item><title>大一第二学期中期总结与反思 (2021-05)</title><link>https://lomirus.github.io/p/2021-05/</link><pubDate>Sun, 09 May 2021 01:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/2021-05/</guid><description>&lt;h2 id="我这半学期学了什么">我这半学期学了什么
+&lt;/h2>&lt;p>寒假的时候我一直在写考核作业。但有一说一，虽说我肝得挺厉害（至少自我感觉是），但实际上我感觉我并没学到什么太多的新东西。当然，倒不是说一点也没有，只是感觉太少了。&lt;/p>
 &lt;p>寒假的时候一直想学下 Webpack 和 React 的相关知识，但苦于没时间，而到了开学之后反倒是有时间了（离谱）。于是乎我便先学习了这两个比较基础且常用的。我之所以将首选框架选为 React 而不是 Vue，主要是因为我跨平台开发框架很感兴趣，而 Flutter 对我这个前端还算比较比较遥远，因此考虑到 React Native 就先学了 React。&lt;/p>
 &lt;h3 id="counter-trainer-deprecatedhttpsgithubcomlomiruscounter-trainer-deprecated">&lt;a class="link" href="https://github.com/lomirus/counter-trainer-deprecated" target="_blank" rel="noopener"
->counter-trainer-deprecated&lt;/a>&lt;/h3>
-&lt;p>我第一有关 React 的项目是 counter-trainer （现在更名为 &lt;a class="link" href="https://github.com/lomirus/counter-trainer-deprecated" target="_blank" rel="noopener"
+>counter-trainer-deprecated&lt;/a>
+&lt;/h3>&lt;p>我第一有关 React 的项目是 counter-trainer （现在更名为 &lt;a class="link" href="https://github.com/lomirus/counter-trainer-deprecated" target="_blank" rel="noopener"
 >counter-trainer-deprecated&lt;/a>），里面还顺便用到了 Less。这个项目算我前端工程化的开荒，更多的还是为了练习。开发初期的规划是想通过自适应以兼容各种分辨率，结果发现远比自己想象的复杂，加之当时对于组件间通信不甚熟悉，以及审美堪忧，最终导致代码堆成屎山，因此终止了开发。&lt;/p>
 &lt;h3 id="counter-trainerhttpsgithubcomlomiruscounter-trainer">&lt;a class="link" href="https://github.com/lomirus/counter-trainer" target="_blank" rel="noopener"
->counter-trainer&lt;/a>&lt;/h3>
-&lt;p>紧接着不久我就开始了第二个项目，同时也是前者的续作，也叫做 &lt;a class="link" href="https://github.com/lomirus/counter-trainer" target="_blank" rel="noopener"
+>counter-trainer&lt;/a>
+&lt;/h3>&lt;p>紧接着不久我就开始了第二个项目，同时也是前者的续作，也叫做 &lt;a class="link" href="https://github.com/lomirus/counter-trainer" target="_blank" rel="noopener"
 >counter-trainer&lt;/a>。吸取了上一次的教训，这次只针对了移动平台进行适配，因此我选择了使用 React Native 进行开发。我从这这个项目中学习到的主要有这么几方面：&lt;/p>
 &lt;ol>
 &lt;li>学习了 Redux，了解了组件间通信、生命周期、Context、Fragment 等相对进阶的内容；&lt;/li>
@@ -4052,8 +4038,8 @@ appendWindowsPath = false
 &lt;li>（了解了语义化版本？）&lt;/li>
 &lt;/ol>
 &lt;h3 id="sekiro-symbols-generatorhttpsgithubcomlomirussekiro-symbols-generator">&lt;a class="link" href="https://github.com/lomirus/sekiro-symbols-generator" target="_blank" rel="noopener"
->sekiro-symbols-generator&lt;/a>&lt;/h3>
-&lt;p>这个项目应该是我最近的项目中完成度最高，也是唯一没有弃坑且最终按照原计划圆满完成了的。最终代码量约1000行。下面说一下我从这个项目中学到的东西（或者是这个项目的一些 features）：&lt;/p>
+>sekiro-symbols-generator&lt;/a>
+&lt;/h3>&lt;p>这个项目应该是我最近的项目中完成度最高，也是唯一没有弃坑且最终按照原计划圆满完成了的。最终代码量约1000行。下面说一下我从这个项目中学到的东西（或者是这个项目的一些 features）：&lt;/p>
 &lt;ol>
 &lt;li>React Hooks：该项目全部使用函数式组件；同时在组件间通信方案的选择上废弃了 Redux ，改为了使用 React 原生 hooks；&lt;/li>
 &lt;li>Typescript：该项目全部使用 Typescript；&lt;/li>
@@ -4063,36 +4049,36 @@ appendWindowsPath = false
 &lt;li>Github Actions：自己写了个脚本自动部署并发布网站；&lt;/li>
 &lt;li>Other: 如 &lt;code>React automatic runtime&lt;/code>, &lt;code>Forwarding Refs&lt;/code>,&lt;code>.gitattributes&lt;/code> 文件的使用等。&lt;/li>
 &lt;/ol>
-&lt;h3 id="deno">Deno&lt;/h3>
-&lt;p>学了点 Deno，不过生态还是太匮乏，暂时还没什么卵用。&lt;/p>
+&lt;h3 id="deno">Deno
+&lt;/h3>&lt;p>学了点 Deno，不过生态还是太匮乏，暂时还没什么卵用。&lt;/p>
 &lt;p>有个叫 &lt;code>Aleph&lt;/code> 的框架可以用 &lt;code>React&lt;/code>， 不过是 &lt;code>SSR&lt;/code>, 不太符合我口味。&lt;/p>
-&lt;h3 id="rust">Rust&lt;/h3>
-&lt;p>这学期还学习了一门新语言，那就是 Rust. 打老早之前就见到很多人都在吹它，而且后来又看到 Rust 大佬 @ahabhgk 的身体力行，以及 Rust 在 WebAssembly 上无可比拟的优势以及其他各种优秀特性等等。所以就开始学习这门语言了。&lt;/p>
+&lt;h3 id="rust">Rust
+&lt;/h3>&lt;p>这学期还学习了一门新语言，那就是 Rust. 打老早之前就见到很多人都在吹它，而且后来又看到 Rust 大佬 @ahabhgk 的身体力行，以及 Rust 在 WebAssembly 上无可比拟的优势以及其他各种优秀特性等等。所以就开始学习这门语言了。&lt;/p>
 &lt;p>目前基础语法方面已经学完了，最近在学一些智能指针、并发等相关操作。而且开发的过程中甚至遇到了一些语言本身的 &amp;ldquo;feature&amp;rdquo;，以至于我还专门跑去官方仓库的 Issues 寻找解决方案，官方则表示只能暂时使用 unstable 的 nightly 特性作为临时解决方案，说明 Rust 还是挺早期的，还有很多坑都没填&amp;hellip;&lt;/p>
-&lt;h3 id="vue">Vue&lt;/h3>
-&lt;p>今天才刚刚开始学 Vue/Vite，所以暂时还没什么好说的。&lt;/p>
+&lt;h3 id="vue">Vue
+&lt;/h3>&lt;p>今天才刚刚开始学 Vue/Vite，所以暂时还没什么好说的。&lt;/p>
 &lt;p>&lt;del>（不过我还是要吐槽一下 Vue 文档辣鸡（小声））&lt;/del>&lt;/p>
-&lt;h2 id="接下来要做什么">接下来要做什么&lt;/h2>
-&lt;p>&lt;del>😅说了这么多，还是得先把课内各种 damn courses 给解决掉，虽然有些水课设立就是为了恶心人的，但是我们也无可奈何。&lt;/del>&lt;/p>
+&lt;h2 id="接下来要做什么">接下来要做什么
+&lt;/h2>&lt;p>&lt;del>😅说了这么多，还是得先把课内各种 damn courses 给解决掉，虽然有些水课设立就是为了恶心人的，但是我们也无可奈何。&lt;/del>&lt;/p>
 &lt;p>立几个 flag，不过不要求要在本学期内完成，也不一定完全按照它执行，只是当作一个 Todo List 而已：&lt;/p>
-&lt;h3 id="web">Web&lt;/h3>
-&lt;ul>
+&lt;h3 id="web">Web
+&lt;/h3>&lt;ul>
 &lt;li>Vue &amp;amp; Vite；&lt;/li>
 &lt;li>React/Vue Router；&lt;/li>
 &lt;li>WebAssembly;&lt;/li>
 &lt;li>Next.js (SSR);&lt;/li>
 &lt;li>WebRTC&lt;/li>
 &lt;/ul>
-&lt;h3 id="hybrid">Hybrid&lt;/h3>
-&lt;ul>
+&lt;h3 id="hybrid">Hybrid
+&lt;/h3>&lt;ul>
 &lt;li>Dart &amp;amp; Flutter&lt;/li>
 &lt;/ul>
-&lt;h3 id="game">Game&lt;/h3>
-&lt;ul>
+&lt;h3 id="game">Game
+&lt;/h3>&lt;ul>
 &lt;li>Bevy/Godot;&lt;/li>
 &lt;/ul>
-&lt;h3 id="other">Other&lt;/h3>
-&lt;ul>
+&lt;h3 id="other">Other
+&lt;/h3>&lt;ul>
 &lt;li>Decentralization, Blockchain&lt;/li>
 &lt;/ul></description></item><item><title>Writing Blogs in Github Issues</title><link>https://lomirus.github.io/p/start-writing-blogs/</link><pubDate>Sun, 09 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/start-writing-blogs/</guid><description>&lt;p>我写前端至今也已有五六年了，不过这数字其实很水，前五年的大部分时间也都并没有将主要精力放在开发上，不过自己好歹也多多少少做过地做过一些项目。我第一个大型（或许？）前端项目就是一个简单的网站，有留言，还有井字棋什么的几个小游戏。再后来学过后端后，我又用 Golang 做后端，原生 JS 做前端，徒手撸了一个博客。&lt;/p>
 &lt;p>我向来是没有什么写博客的习惯的，因为感觉其枯燥且无用。上次写博客主要是因为隔壁运维作业要求搭建一个博客，而我又懒得学习什么 Hexo, Wordpress 这类东西，所以就自己先简单写了一个原型，后续又不断完善，时而不时水几篇文章，然后就有了这个博客。&lt;/p>
@@ -4101,18 +4087,18 @@ appendWindowsPath = false
 &lt;p>为防止自己继续写一些水文来占版面，所以这次可能更新频率会降低。不过有时可能受外力影响要求比如每周上交至少一篇博文，emmm，以后再具体看情况办吧。&lt;/p>
 &lt;p>先写到这。&lt;/p></description></item><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" />&lt;p>（顺带一提，标题&lt;del>抄袭&lt;/del>引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
 >TypeScript with Babel: A Beautiful Marriage&lt;/a>）&lt;/p>
-&lt;h2 id="origin">Origin&lt;/h2>
-&lt;p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p>
+&lt;h2 id="origin">Origin
+&lt;/h2>&lt;p>看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p>
 &lt;p>对于题目中的五个工具，除去 ESlint之外，其实其他的都多多少少用过一段时间。特别是 Webpack Babel React 这三个，用的时间也算是比较久了。TypeScript 倒是用过，但是感觉 JS 加上类型限制后写起来就不那么自由了，所以尝试用它写了一个模块之后就将它卸载了。但是这些这个工具终究还是太常用，早晚逃不了还是得学，所以就试着用它们做个简单的小项目练练手。毕竟当初我学 Webpack 时也是学得很憋屈，一直不知道这玩意儿打个包为啥还非得用 js 文件做入口，直到后来学了 React 才豁然开朗，所以我至今认为如果是要做跑在浏览器的网页而且不用什么框架的话 Webpack 还真没什么卵用。当然，有了之后自然用处就大了。&lt;/p>
 &lt;p>不过说了这么多好像有点跑题，先回到正题：让我们来讨论一下究竟怎么把这五个架子给支楞到一块儿去。&lt;/p>
-&lt;h2 id="introductions-of-the-packages">Introductions of the packages&lt;/h2>
-&lt;p>这种东西还用得着在这介绍？官网文档，维基百科，请~&lt;/p>
-&lt;h2 id="tsc-or-babel-its-a-question">TSC or Babel, it&amp;rsquo;s a question.&lt;/h2>
-&lt;p>老实说，单是在两个之间进行选择就够让我想半天了。但是实际上，摆在我面前的包括但不限于：&lt;code>ts-loader&lt;/code>,&lt;code>awesome-typescript-loader&lt;/code>, &lt;code>babel-loader&lt;/code>等一堆loaders/packages。而且由于我开始参考了过时的中文文档，所以先下载了&lt;code>awesome-typescript-loader&lt;/code>，后来才意识到被坑（😅）。而在剩余的两者之间，参考&lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+&lt;h2 id="introductions-of-the-packages">Introductions of the packages
+&lt;/h2>&lt;p>这种东西还用得着在这介绍？官网文档，维基百科，请~&lt;/p>
+&lt;h2 id="tsc-or-babel-its-a-question">TSC or Babel, it&amp;rsquo;s a question.
+&lt;/h2>&lt;p>老实说，单是在两个之间进行选择就够让我想半天了。但是实际上，摆在我面前的包括但不限于：&lt;code>ts-loader&lt;/code>,&lt;code>awesome-typescript-loader&lt;/code>, &lt;code>babel-loader&lt;/code>等一堆loaders/packages。而且由于我开始参考了过时的中文文档，所以先下载了&lt;code>awesome-typescript-loader&lt;/code>，后来才意识到被坑（😅）。而在剩余的两者之间，参考&lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
 >TypeScript with Babel: A Beautiful Marriage&lt;/a>后，决定选择了后者。&lt;/p>
 &lt;p>安装好之后，我又顺着我的思路捋了一遍，发现整个过程中编译是&lt;code>babel&lt;/code>做的，根本没用到&lt;code>typescript&lt;/code>什么事儿呀。我于是就想，把它卸载之后会怎么样呢？接着神奇的现象发生了，我卸载了&lt;code>typescipt&lt;/code>，删除了它的配置文件&lt;code>tsconfig.json&lt;/code>，结果发现我的用&lt;code>typescript&lt;/code>写的项目居然还能正常编译并运行（谢谢有被震惊到）。我就想既然如此那我还用ts干啥呀，赶紧卸了得了，可别再让我见着你了（😅）。&lt;/p>
-&lt;h2 id="anti-human-eslint">Anti-human ESLint&lt;/h2>
-&lt;p>听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。&lt;/p>
+&lt;h2 id="anti-human-eslint">Anti-human ESLint
+&lt;/h2>&lt;p>听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。&lt;/p>
 &lt;p>安装过程中被问了几个问题，回答之后他给我推荐了几个插件。行，听您的。选择 YES，进行安装。看起来一切顺利，然后&amp;hellip;果不其然，报错了。报啥呢：&lt;/p>
 &lt;pre tabindex="0">&lt;code>Oops! Something went wrong! :(
 ESLint: 7.24.0
@@ -4123,8 +4109,8 @@ Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &a
 &lt;pre tabindex="0">&lt;code>Does your project use TypeScript? · No / Yes
 &lt;/code>&lt;/pre>&lt;p>唔，我要用 TypeScript 倒是没错，不过这和我安没安装 TypeScript 的 package 也没什么必然的联系吧。&lt;/p>
 &lt;p>然后经过摸滚带爬的上下求索，终于意识到 typescript 貌似还是有点儿用的，再加上后面用到的 &lt;code>@types/react&lt;/code>，&lt;code>@types/react-dom&lt;/code>，感觉是在类型推断和自动补全方面有些作用（应该）&lt;/p>
-&lt;h2 id="module-or-commonjs-its-a-question">Module or CommonJS, it&amp;rsquo;s a question.&lt;/h2>
-&lt;p>刚才 ESLint 问我用的是 &lt;code>Module&lt;/code> 还是 &lt;code>CommonJS&lt;/code>，秉着“啥新用啥，用嘛嘛新”的原则，我当然选择的ES6的&lt;code>Module&lt;/code>。&lt;/p>
+&lt;h2 id="module-or-commonjs-its-a-question">Module or CommonJS, it&amp;rsquo;s a question.
+&lt;/h2>&lt;p>刚才 ESLint 问我用的是 &lt;code>Module&lt;/code> 还是 &lt;code>CommonJS&lt;/code>，秉着“啥新用啥，用嘛嘛新”的原则，我当然选择的ES6的&lt;code>Module&lt;/code>。&lt;/p>
 &lt;p>然后由于我的&lt;code>webpack.config.js&lt;/code>用到了&lt;code>module.exports = {}&lt;/code>，所以 ESLint报错了。&lt;/p>
 &lt;pre tabindex="0">&lt;code>&amp;#39;require&amp;#39; is not defined. eslint(no-undef)
 &amp;#39;module&amp;#39; is not defined. eslint(no-undef)
@@ -4141,8 +4127,8 @@ Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &a
 &amp;#39;module&amp;#39; is not defined. eslint(no-undef)
 &lt;/code>&lt;/pre>&lt;p>（闹着玩是吧？😅）&lt;/p>
 &lt;p>然后在&lt;code>.eslintrc.js&lt;/code>的&lt;code>&amp;quot;env&amp;quot;&lt;/code>中加了行&lt;code>&amp;quot;node&amp;quot;: true&lt;/code>，行，终于，不报错了。&lt;/p>
-&lt;h2 id="eslint-comes-again">ESLint Comes Again&lt;/h2>
-&lt;p>&lt;code>App.js&lt;/code>里有这么一段：&lt;/p>
+&lt;h2 id="eslint-comes-again">ESLint Comes Again
+&lt;/h2>&lt;p>&lt;code>App.js&lt;/code>里有这么一段：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;{&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">}&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -4181,8 +4167,8 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;/code>&lt;/pre>&lt;p>查了下资料，发现除了&lt;code>ReactElement&lt;/code>之外原来还有&lt;code>ReactNode&lt;/code>和&lt;code>JSX.Element&lt;/code>（参考 &lt;a class="link" href="https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement" target="_blank" rel="noopener"
 >When to use JSX.Element vs ReactNode vs ReactElement?&lt;/a>）。&lt;/p>
 &lt;p>简单总结下，原因：拉胯TS的历史遗留问题；解决方法：将&lt;code>children&lt;/code>类型改成&lt;code>ReactNode&lt;/code>&lt;/p>
-&lt;h2 id="react-jsx">&lt;code>react-jsx&lt;/code>&lt;/h2>
-&lt;p>在上面的 StackOverflow 里看到了 &lt;code>create-react-app&lt;/code>，这才想到可以去参考一下它的代码，话不多说，开始安装。&lt;/p>
+&lt;h2 id="react-jsx">&lt;code>react-jsx&lt;/code>
+&lt;/h2>&lt;p>在上面的 StackOverflow 里看到了 &lt;code>create-react-app&lt;/code>，这才想到可以去参考一下它的代码，话不多说，开始安装。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm init -y
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm install create-react-app
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx create-react-app ts --template typescript
@@ -4234,8 +4220,8 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;li>This is a fiction that was written as my assignment of the Comprehensive English during my freshman in CQUPT.&lt;/li>
 &lt;li>The bold fonts here are used to mark the new words of this semester as my teacher requested.&lt;/li>
 &lt;/ul>
-&lt;h1 id="upon-the-mere">Upon the Mere&lt;/h1>
-&lt;p>It&amp;rsquo;s a long dream, I&amp;rsquo;ve had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn. It&amp;rsquo;s a quiet place, reeds growing around it and a river soaked the nearby earth. A lake branched out from the river was just behind the village. I had never been a regular there since my childhood, because I was still so young on those days, that even the &lt;strong>reeds&lt;/strong> could cover upon my head and make me drowned. Sometimes I would stare at the surface of the lake absent-mindedly or wondered if there was a monster &lt;strong>lurking&lt;/strong> in the bottom of the lake. Though honestly, this lake was not so big, probably no more than twenty meters wide. But I can still remembered the story that my grandma once told me with a serious expression: &amp;ldquo;Once upon a time, there was an old man who was living alone near the lake. But one day he vanished, and his body was never found after that. No one knew where he&amp;rsquo;d gone&amp;rdquo;&lt;/p>
+&lt;h1 id="upon-the-mere">Upon the Mere
+&lt;/h1>&lt;p>It&amp;rsquo;s a long dream, I&amp;rsquo;ve had, for the whole night, at the cramped cabin, in a village, my old home, from dusk to dawn. It&amp;rsquo;s a quiet place, reeds growing around it and a river soaked the nearby earth. A lake branched out from the river was just behind the village. I had never been a regular there since my childhood, because I was still so young on those days, that even the &lt;strong>reeds&lt;/strong> could cover upon my head and make me drowned. Sometimes I would stare at the surface of the lake absent-mindedly or wondered if there was a monster &lt;strong>lurking&lt;/strong> in the bottom of the lake. Though honestly, this lake was not so big, probably no more than twenty meters wide. But I can still remembered the story that my grandma once told me with a serious expression: &amp;ldquo;Once upon a time, there was an old man who was living alone near the lake. But one day he vanished, and his body was never found after that. No one knew where he&amp;rsquo;d gone&amp;rdquo;&lt;/p>
 &lt;p>&amp;ldquo;So have you tried to search for him?&amp;rdquo; I asked.&lt;/p>
 &lt;p>&amp;ldquo;Perhaps, I am not sure,&amp;rdquo; she answered. &amp;ldquo;He&amp;rsquo;s an odd man, and seldom went out from his house. So we just didn&amp;rsquo;t notice any &lt;strong>anomalies&lt;/strong> for his disappearance at the first days. &amp;quot;&lt;/p>
 &lt;p>&amp;ldquo;But when we realized,&amp;rdquo; she added, &amp;ldquo;at least in my opinion, it&amp;rsquo;s been too late.&amp;rdquo;&lt;/p>
@@ -4284,4 +4270,4 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;p>It&amp;rsquo;s been many years since my last time came here. Things were not, and so were the people. Air smelt damp, which made me a little bit chill in addition to the evening breeze. And just like an arranged coincidence, it started to sprinkle after a while, soaked my body and extinguished the flaring flames under the lake surface. Raindrop wrinkled the lake surface, just like the origami folding the ripples. The chirp of cicada was also silenced at that night. Moon shed its lights from lake bottom, &lt;strong>scattering&lt;/strong> into beams of light. I was trying to flying to the sky, and finally touched the ceil, only to find that I had already been there, and someone was smiling to me.&lt;/p>
 &lt;p>&amp;ldquo;It&amp;rsquo;s getting late. Now go home and have a rest.&amp;rdquo;&lt;/p>
 &lt;p>So I was trying to go back and have a rest. Though I haven&amp;rsquo;t been a regular there for the recent years, I still managed to find my way to that old house following the reeds, and then slept by following his words, and therefore then I awoke——&lt;/p>
-&lt;p>From a long dream, I&amp;rsquo;ve had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk&amp;hellip;&lt;/p></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Code</title><link>https://lomirus.github.io/categories/code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/code/</guid><description>&lt;img src="https://lomirus.github.io/categories/code/cover.webp" alt="Featured image of post Code" /></description></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends&amp;rsquo; Links, mostly in Redrock.&lt;/p></description></item><item><title>Game</title><link>https://lomirus.github.io/categories/game/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/game/</guid><description>&lt;img src="https://lomirus.github.io/categories/game/cover.jpg" alt="Featured image of post Game" /></description></item><item><title>Language</title><link>https://lomirus.github.io/categories/language/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/language/</guid><description>&lt;img src="https://lomirus.github.io/categories/language/cover.jpg" alt="Featured image of post Language" /></description></item><item><title>Others</title><link>https://lomirus.github.io/categories/others/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/categories/others/</guid><description>&lt;img src="https://lomirus.github.io/categories/others/cover.jpg" alt="Featured image of post Others" /></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item></channel></rss>
+&lt;p>From a long dream, I&amp;rsquo;ve had, for the whole day, at the cramped cabin, in a village, my old home, from dawn to dusk&amp;hellip;&lt;/p></description></item><item><title>Archives</title><link>https://lomirus.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/archives/</guid><description/></item><item><title>Friends</title><link>https://lomirus.github.io/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/friends/</guid><description>&lt;p>Friends&amp;rsquo; Links, mostly in Redrock.&lt;/p></description></item><item><title>Search</title><link>https://lomirus.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lomirus.github.io/search/</guid><description/></item></channel></rss>

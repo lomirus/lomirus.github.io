@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Lomirus' Site</title><link>https://lomirus.github.io/tags/algorithm/</link><description>Recent content in Algorithm on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 00:19:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子&lt;/h2>
-&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Lomirus' Site</title><link>https://lomirus.github.io/tags/algorithm/</link><description>Recent content in Algorithm on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 00:19:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>如何利用正方形地块扩散逼近圆形</title><link>https://lomirus.github.io/p/approximate-circle-with-pixels/</link><pubDate>Fri, 26 Aug 2022 00:19:00 +0800</pubDate><guid>https://lomirus.github.io/p/approximate-circle-with-pixels/</guid><description>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/cover.jpg" alt="Featured image of post 如何利用正方形地块扩散逼近圆形" />&lt;h2 id="引子">引子
+&lt;/h2>&lt;p>好久之间就有想设计一款类似P社类型的战略游戏，最近想了起来，于是便去思索一些基础的设计。其中就遇到了一个有关地块的问题。&lt;/p>
 &lt;p>对于战棋游戏来说，常见的模拟地图的方法，按照地块形状可分为正方形和正六边形，其中后者的主要代表有《文明：VI》等。而即使对于部分大战略类游戏来说，譬如《灰衣主教》，也是采用的六边形地块。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6.jpg"
 width="1459"
 height="972"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu5445dc2e2e37e8a8d40a49bd25b54456_373266_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu262307392848646429.jpg 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/civilization-6_hu801280443450106330.jpg 1024w"
 loading="lazy"
 alt="文明：IV"
 class="gallery-image"
@@ -17,8 +17,8 @@ data-flex-basis="360px"
 &lt;li>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/li>
 &lt;/ol>
 &lt;p>相应地，六边形地块也存在着一些问题，其几何形状的内角度数为120°，与平面直角坐标系难以兼容，计算复杂且不直观。所以，我想，能否使用正方形来代替六边形的同时，尽量避免一些本身的缺点。&lt;/p>
-&lt;h2 id="邻角处理">邻角处理&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="邻角处理">邻角处理
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>且与周围的所有地块均以边相邻，不会出现使用正方形时要纠结顶点相邻的左上角到底如何处理的问题。&lt;/p>
 &lt;/blockquote>
@@ -36,15 +36,15 @@ C &amp;amp; D
 \end{vmatrix}
 $$&lt;/p>
 &lt;p>假设某人从 $A$ 点到 $B$ 点，耗时 $1$ 日；那么对应地，我们只需将其从 $A$ 点到 $D$ 点的耗时设为 $\sqrt{2}$ 日即可。&lt;/p>
-&lt;h2 id="平滑边界">平滑边界&lt;/h2>
-&lt;p>对于上文中所说的&lt;/p>
+&lt;h2 id="平滑边界">平滑边界
+&lt;/h2>&lt;p>对于上文中所说的&lt;/p>
 &lt;blockquote>
 &lt;p>六边形是能密铺于平面的最多边形，更加接近圆形；&lt;/p>
 &lt;/blockquote>
 &lt;p>显然，对于任意多边形，放到地图上看都是有棱有角，锯齿化太过严重。目前对于这个问题，我的想法是存储的时候按地块存起来，但展示的时候用户看到的其实是已经平滑过的曲线。&lt;/p>
 &lt;p>此外，如果再考虑上四个顶点，相邻正方形的连线方向其实有八个，比六边形还多了两个，这样反而能够更好得模拟各种边界线。&lt;/p>
-&lt;h2 id="圆形逼近">圆形逼近&lt;/h2>
-&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
+&lt;h2 id="圆形逼近">圆形逼近
+&lt;/h2>&lt;p>设想这样一个理想场景：在我们的地图中央有一个国家，记为C。C国人口无限多，但由于某些原因人人想润，而同一时间段内各个方向允许居住的人数有限且相同。如果放开了让他们一直这样润下去，最后他们的居住地的扩散方向，毫无疑问会是一个圆形。&lt;/p>
 &lt;p>那么，我们应该怎么使用像素地块来模拟这种情况呢？&lt;/p>
 &lt;p>类似于 &lt;a class="link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener"
 >Conway&amp;rsquo;s Game of Life&lt;/a>，我们可以定义一套规则，例如在下图中，假设其为开始时刻：&lt;/p>
@@ -64,7 +64,7 @@ $$&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -80,7 +80,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2.png"
 width="324"
 height="149"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_huc2b0e8e869160706e4c423dfbbb46cf5_612_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu10306717362513543383.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-2_hu768051798403388390.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="217"
@@ -162,7 +162,7 @@ data-flex-basis="521px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu519097731cd717eacaf8326e8294e28a_16312_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu18377807321199993030.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-1_hu770296188258070624.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -181,7 +181,7 @@ data-flex-basis="258px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1.png"
 width="353"
 height="305"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_huf7daabb7a32c8954aef991be1ef8e938_1074_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu11164119648476074451.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/graph-1_hu10467288065542762373.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="115"
@@ -194,7 +194,7 @@ data-flex-basis="277px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2.png"
 width="808"
 height="751"
-srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu46c88bb2e663aae2ec2a1bbcc704d26b_19530_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu17996579582499719131.png 480w, https://lomirus.github.io/p/approximate-circle-with-pixels/result-2_hu281841312724369037.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -208,7 +208,7 @@ data-flex-basis="258px"
 &lt;li>既然 LT 可以对 T 产生 1 的影响，LT 也可以对 C 产生 $\frac{1}{\sqrt{2}}$ 的影响，那凭什么 LT 就不对 RB 产生 $\frac{1}{2\sqrt{2}}$ 的影响呢？依次类推，一个点可以对图中任意远的点产生影响。正如此刻一只澳大利亚的袋鼠可以对梵蒂冈的教皇产生万有引力，尽管微乎其微，但它确实存在。&lt;/li>
 &lt;li>这个例子从一开始可能就是不恰当的，与其说是人群的迁移，不如比作是信息的传播，因为信息可以无限复制。但这又引入了一个新问题，A 点当前的信息量会对下一刻 A 点本身施加影响吗？&lt;/li>
 &lt;/ul>
-&lt;h2 id="结语">结语&lt;/h2>
-&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
-&lt;h2 id="花絮">花絮&lt;/h2>
-&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item></channel></rss>
+&lt;h2 id="结语">结语
+&lt;/h2>&lt;p>今晚文章写了这么多，就先写到这儿吧，毕竟最近网校还有项目要做。上面四条算是给自己挖了一个坑，不知道还这篇文章还会不会有后续（希望能有）。如果有的话，但愿到时候能解决这几个问题。&lt;/p>
+&lt;h2 id="花絮">花絮
+&lt;/h2>&lt;p>刚才写着写着突然又想到了一个正方形地块的优点，就是它恰好能够与一些由于殖民等历史原因而划分的区域的横平竖直的边界线相符合，比如埃及西部国境线和美国各州等（虽然说有点瞎猫碰到死耗子的感觉😂）&lt;/p></description></item></channel></rss>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL2 on Lomirus' Site</title><link>https://lomirus.github.io/tags/wsl2/</link><description>Recent content in WSL2 on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 May 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/wsl2/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因&lt;/h2>
-&lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL2 on Lomirus' Site</title><link>https://lomirus.github.io/tags/wsl2/</link><description>Recent content in WSL2 on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 May 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/wsl2/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因
+&lt;/h2>&lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
 &lt;p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p>
 &lt;ul>
 &lt;li>CMD: 费拉不堪&lt;/li>
@@ -13,8 +13,8 @@ alt="2FXjHS.jpg"
 >&lt;/p>
 &lt;p>结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。&lt;/p>
 &lt;p>然后最终选定了 WSL 2 + Windows Terminal + VSCode.&lt;/p>
-&lt;h2 id="安装">安装&lt;/h2>
-&lt;p>如果 Windows 10 OS Version 大于 20262，可通过 &lt;code>wsl --install&lt;/code> 安装。&lt;/p>
+&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>如果 Windows 10 OS Version 大于 20262，可通过 &lt;code>wsl --install&lt;/code> 安装。&lt;/p>
 &lt;p>虽然我有加入 Windows Insider 计划，不过系统还是用的 Stable，所以没有采取上述简化方式进行安装，而是采用的以下内容。&lt;/p>
 &lt;p>首先，以管理员权限打开 Powershell 并输入以下命令：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dism&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">exe&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">online&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-feature&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">featurename&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="nb">Microsoft-Windows&lt;/span>&lt;span class="n">-Subsystem-Linux&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">all&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">norestart&lt;/span>
@@ -32,9 +32,9 @@ alt="2FXjHS.jpg"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-unregister&lt;/span> &lt;span class="n">debian&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其余操作可以使用 &lt;code>wsl -h&lt;/code> 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
-&lt;h2 id="网络代理">网络代理&lt;/h2>
-&lt;h3 id="设置代理">设置代理&lt;/h3>
-&lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
+&lt;h2 id="网络代理">网络代理
+&lt;/h2>&lt;h3 id="设置代理">设置代理
+&lt;/h3>&lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">hostip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>cat /etc/resolv.conf &lt;span class="p">|&lt;/span> grep nameserver &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{ print $2 }&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">7890&lt;/span> &lt;span class="c1"># 此处端口可根据个人情况进行更改&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -47,27 +47,27 @@ alt="2FXjHS.jpg"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTPS_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
 >WSL2 中访问宿主机 Windows 的代理&lt;/a>&lt;/p>
-&lt;h3 id="取消防火墙">取消防火墙&lt;/h3>
-&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
+&lt;h3 id="取消防火墙">取消防火墙
+&lt;/h3>&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
 width="1453"
 height="583"
-srcset="https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu5cf1009eed176ded9be388d578d1415c_93250_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/wsl2/firewall_hu8538415115603147363.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu4888066774129771792.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="249"
 data-flex-basis="598px"
 >&lt;/p>
 &lt;p>如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
-&lt;h2 id="环境变量">环境变量&lt;/h2>
-&lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
+&lt;h2 id="环境变量">环境变量
+&lt;/h2>&lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
 &lt;p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code>/etc/wsl.conf&lt;/code>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch /etc/wsl.conf
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后修改其内容为：&lt;/p>
 &lt;pre tabindex="0">&lt;code>[interop]
 appendWindowsPath = false
-&lt;/code>&lt;/pre>&lt;h2 id="常用软件的安装">常用软件的安装&lt;/h2>
-&lt;p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p>
+&lt;/code>&lt;/pre>&lt;h2 id="常用软件的安装">常用软件的安装
+&lt;/h2>&lt;p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p>
 &lt;p>首先更新软件源：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后安装：&lt;/p>
@@ -89,6 +89,6 @@ appendWindowsPath = false
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## rust&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 建议选择 `default toolchain` 为 `nightly`&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他坑先占位">其他坑（先占位）&lt;/h2>
-&lt;p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他坑先占位">其他坑（先占位）
+&lt;/h2>&lt;p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p>
 &lt;p>更新：解决方案：卸载 VirtualBox, 安装VMWare.&lt;/p></description></item></channel></rss>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnome on Lomirus' Site</title><link>https://lomirus.github.io/tags/gnome/</link><description>Recent content in Gnome on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 00:16:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子&lt;/h2>
-&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnome on Lomirus' Site</title><link>https://lomirus.github.io/tags/gnome/</link><description>Recent content in Gnome on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 00:16:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子
+&lt;/h2>&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
 width="1244"
 height="576"
-srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_480x0_resize_q75_box.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu3e3fcaedcb84b877bf9c3cac96eadb6c_67992_1024x0_resize_q75_box.jpeg 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu10392481119387403585.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu6592716027353019752.jpeg 1024w"
 loading="lazy"
 alt="MacOS Example"
 class="gallery-image"
@@ -16,7 +16,7 @@ data-flex-basis="518px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
 width="1281"
 height="843"
-srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu8d62c7b626ba29a9774cb52939fb57e7_110903_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu15276665749177402319.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu3399904356071283472.png 1024w"
 loading="lazy"
 alt="Fildem global menu"
 class="gallery-image"
@@ -25,9 +25,9 @@ data-flex-basis="364px"
 >&lt;/p>
 &lt;p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p>
 &lt;p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p>
-&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构&lt;/h2>
-&lt;h3 id="概览">概览&lt;/h3>
-&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
+&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构
+&lt;/h2>&lt;h3 id="概览">概览
+&lt;/h3>&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p>
 &lt;pre tabindex="0">&lt;code>example@shell.gnome.org.zip
@@ -43,8 +43,8 @@ metadata.json
 prefs.js
 stylesheet.css
 &lt;/code>&lt;/pre>&lt;p>其中，最重要并且也是唯二 required 的是 &lt;code>metadata.json&lt;/code> 和 &lt;code>extension.js&lt;/code>。&lt;/p>
-&lt;h3 id="metadatajson">metadata.json&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;h3 id="metadatajson">metadata.json
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;uuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;example@shell.gnome.org&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Example&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;This is an example extension.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -54,8 +54,8 @@ stylesheet.css
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>一个 &lt;code>metadata.json&lt;/code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
 >metadata.json (Required)&lt;/a>&lt;/p>
-&lt;h3 id="extensionjs">extension.js&lt;/h3>
-&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
+&lt;h3 id="extensionjs">extension.js
+&lt;/h3>&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Extension&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -96,7 +96,7 @@ stylesheet.css
 &lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
 width="748"
 height="787"
-srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu1668c951d5c427d33899b28b8386ca30_117987_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu6115852997260337803.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu9350567790790996323.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="95"
@@ -109,8 +109,8 @@ data-flex-basis="228px"
 &lt;blockquote>
 &lt;p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="后续">后续&lt;/h2>
-&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
+&lt;h2 id="后续">后续
+&lt;/h2>&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">St&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">St&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">GObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">GObject&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Gio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Gio&lt;/span>&lt;span class="p">;&lt;/span>
@@ -180,21 +180,21 @@ data-flex-basis="228px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
-&lt;h2 id="foreword">Foreword&lt;/h2>
-&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
+&lt;h2 id="foreword">Foreword
+&lt;/h2>&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
 &lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
 &lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
 &lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
-&lt;h2 id="customize">Customize&lt;/h2>
-&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
+&lt;h2 id="customize">Customize
+&lt;/h2>&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
 &lt;pre tabindex="0">&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
 # Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
 &lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo systemctl disable pamac-mirrorlist.timer
-&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts&lt;/h3>
-&lt;p>Open:&lt;/p>
+&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts
+&lt;/h3>&lt;p>Open:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gnome-control-center
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
 &lt;table>
@@ -223,8 +223,8 @@ data-flex-basis="228px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings&lt;/h3>
-&lt;p>You need to installl VSCode before reading this section.&lt;/p>
+&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings
+&lt;/h3>&lt;p>You need to installl VSCode before reading this section.&lt;/p>
 &lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-json5" data-lang="json5">{
 &amp;#34;window.zoomLevel&amp;#34;: 2,
@@ -233,25 +233,25 @@ data-flex-basis="228px"
 // Make tab size from 2 to 4
 &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
-&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading&lt;/h3>
-&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
-&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading
+&lt;/h3>&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
+&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages&lt;/h2>
-&lt;h3 id="basic">Basic&lt;/h3>
-&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>&lt;/h4>
-&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages
+&lt;/h2>&lt;h3 id="basic">Basic
+&lt;/h3>&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>
+&lt;/h4>&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
 &lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
 &lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S base-devel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S vim
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S net-tools
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S btop
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S htop
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gnome-terminal-fedora
@@ -273,26 +273,26 @@ data-flex-basis="228px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S burpsuite
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S postman-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S scrcpy
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment&lt;/h3>
-&lt;h4 id="nodejs">NodeJS&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment
+&lt;/h3>&lt;h4 id="nodejs">NodeJS
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S yarn
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g nrm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nrm use taobao
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g @vue/cli
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g create-react-app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-rime
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
@@ -310,14 +310,14 @@ data-flex-basis="228px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
 &lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
 >thep0y / fcitx5-themes&lt;/a>.&lt;/p>
-&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
+&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S mongodb-tools-bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start mongodb.service
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S icalingua
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>

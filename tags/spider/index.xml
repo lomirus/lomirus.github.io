@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>spider on Lomirus' Site</title><link>https://lomirus.github.io/tags/spider/</link><description>Recent content in spider on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Aug 2021 12:42:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/spider/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/cover.webp" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" />&lt;h2 id="缘起自动生成狗狗表情包">缘起：自动生成狗狗表情包&lt;/h2>
-&lt;p>前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。&lt;/p>
-&lt;h2 id="废案爬取qq历史头像">废案：爬取QQ历史头像&lt;/h2>
-&lt;p>一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spider on Lomirus' Site</title><link>https://lomirus.github.io/tags/spider/</link><description>Recent content in Spider on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Aug 2021 12:42:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/spider/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/cover.webp" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" />&lt;h2 id="缘起自动生成狗狗表情包">缘起：自动生成狗狗表情包
+&lt;/h2>&lt;p>前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。&lt;/p>
+&lt;h2 id="废案爬取qq历史头像">废案：爬取QQ历史头像
+&lt;/h2>&lt;p>一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？&lt;/p>
 &lt;p>关于这个思路，我一开始想到的是利用“获取QQ头像”的接口进行轮询，计算当前头像哈希值并与上一次获取到的头像的哈希值作比较，若不同则保存下载。但是轮询的时间间隔实在不太好设定。因为头像的更新时间并不固定，可能一天更新数次，也可能数天更新一次。如果设定轮询间隔时间过短，会导致服务器压力过大，严重的话说不定腾讯会直接把我给
 ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头像大概率是有遗漏的。&lt;/p>
 &lt;p>考虑到更新头像终究是由人类来完成的，因此也需要考虑到利用一些社会工程学信息以对程序进行优化。比如在深夜凌晨的时候，可以适时停止爬虫以降低负载。但是考虑到这个作息规律&amp;hellip;咳咳&amp;hellip;还是算了吧，毕竟昨晚凌晨还刚刚看到钰姐又换了新头像来着。&lt;/p>
@@ -10,7 +10,7 @@ ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头�
 &lt;p>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/0.jpg"
 width="163"
 height="191"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6b9ac2b103235a60dc91adad1f518b66_5197_480x0_resize_q75_box.jpg 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6b9ac2b103235a60dc91adad1f518b66_5197_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu6603999452355322905.jpg 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu14000798242420278099.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="85"
@@ -19,8 +19,8 @@ data-flex-basis="204px"
 &lt;p>又考虑到人类是一种优柔寡断的生物，所以每次换完头像后的一段时间内，都有较高的概率再次换个头像。因此在侦测到头像更新后，可以调高在未来一段短时间内的轮询频率。但是这也不能排除在提高轮询频率之前的遗漏情况。&lt;/p>
 &lt;p>况且，这个解决方案所收集到的表情包数量还是及其有限的，如果想要收集到足够数量的头像，估计早过 deadline 了。&lt;/p>
 &lt;p>综上所述，这个方案还是被 pass 掉了。&lt;/p>
-&lt;h2 id="预备从-selenium-到-puppeteer">预备：从 Selenium 到 Puppeteer&lt;/h2>
-&lt;p>上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。&lt;/p>
+&lt;h2 id="预备从-selenium-到-puppeteer">预备：从 Selenium 到 Puppeteer
+&lt;/h2>&lt;p>上面的方案废弃后，自然便是在网上找一些适合爬取的网站进行爬虫了。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>在知乎上搜索“狗狗表情包”关键字，回答数量最多的问题下也不过只有十几个回答。Pass。&lt;/p>
@@ -42,8 +42,8 @@ data-flex-basis="204px"
 &lt;blockquote>
 &lt;p>Puppeteer 是一个 Node 库，它在 DevTools 协议之上提供了高度封装的 API，以用来控制 Chrome 或 Chromium. Puppeteer 会默认运行 headless, 但是可以通过进行配置来运行完整版的 (non-headless) Chrome 或 Chromium.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="正文就硬爪巴">正文：就硬爪巴&lt;/h2>
-&lt;p>首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
+&lt;h2 id="正文就硬爪巴">正文：就硬爪巴
+&lt;/h2>&lt;p>首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
 >官方文档&lt;/a>。&lt;/p>
 &lt;p>接着老三样：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir dog-stickers
@@ -71,7 +71,7 @@ data-flex-basis="204px"
 &lt;p>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/example.png"
 width="800"
 height="600"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu4e04f2c2ba688b12e1a8e3f758ae1272_27069_480x0_resize_box_3.png 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu4e04f2c2ba688b12e1a8e3f758ae1272_27069_1024x0_resize_box_3.png 1024w"
+srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu16575893567948503935.png 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu3205999207615809175.png 1024w"
 loading="lazy"
 alt="example.png"
 class="gallery-image"
@@ -142,8 +142,8 @@ data-flex-basis="320px"
 &lt;p>Puppeteer has event-driven architecture, which removes a lot of potential flakiness. There’s no need for evil “sleep(1000)” calls in puppeteer scripts.&lt;/p>
 &lt;/blockquote>
 &lt;p>感觉我代码里面也没少写 &lt;code>sleep()&lt;/code> 呀😅，也许只是因为我太菜了吧。&lt;/p>
-&lt;h2 id="下载">下载&lt;/h2>
-&lt;p>获取到 &lt;code>images.json&lt;/code> 后就好说了，遍历链接下载即可：&lt;/p>
+&lt;h2 id="下载">下载
+&lt;/h2>&lt;p>获取到 &lt;code>images.json&lt;/code> 后就好说了，遍历链接下载即可：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="nx">as&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">download&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;download&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -171,5 +171,5 @@ data-flex-basis="320px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})()&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Google Images 的预览图好像都是 &lt;code>jpeg&lt;/code> 格式的，所以这里就全部默认扩展名为 &lt;code>jpeg&lt;/code> 了。&lt;/p>
 &lt;p>下载的图片会保存在项目根目录的 &lt;code>images&lt;/code> 文件夹。&lt;/p>
-&lt;h2 id="总结">总结&lt;/h2>
-&lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item></channel></rss>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>通过这个项目，主要是学习了一点 Puppeteer 的基础使用（真的是非常基础了），尽管自己写的代码并不怎么优雅。不过日后也不知道也不知道还能不能再用到这个库。另外就是感觉自己最近一个月正经项目没怎么写，反倒是各种脚本都写了一堆了😹&lt;/p></description></item></channel></rss>
