@@ -1,0 +1,10 @@
+{
+    "overrides": [
+      {
+        "files": "*.markdown",
+        "options": {
+          "proseWrap": "never"
+        }
+      }
+    ]
+  }
