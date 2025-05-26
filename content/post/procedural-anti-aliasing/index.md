@@ -283,7 +283,7 @@ $$
 其中 $t$ 满足：
 
 $$
-t = clamp(\frac{x-e_0}{e_1-e_0}, 0, 1)
+t = saturate(\frac{x-e_0}{e_1-e_0})
 $$
 
 为便于理解，以下展示 smoothstep 关于 t 的函数图像：
@@ -324,6 +324,31 @@ let intensity_z = line_intensity(world_pos.z);
 let intensity = max(intensity_x, intensity_z);
 ```
 
+实现效果如下：
+
+![Anti-Aliasing Enabled](aa_1.png)
+
+### 调整抗锯齿强度
+
+尽管效果好了不少，但是在远处仍在相对轻微的锯齿问题，对此我们可以新增一个过渡因子的参数，调高它以使得过渡处更加平滑。但是也要注意数值不能取太大，贪多嚼不烂，不然就会像第二张一样模糊了...
+
+```wgsl
+const TRANSITION_FACTOR: f32 = 1.0;
+
+fn line_intensity(coord: f32) -> f32 {
+    /// ...
+
+    let filter_width = fwidth(coord) * TRANSITION_FACTOR;
+
+    /// ...
+}
+```
+
+![TRANSITION_FACTOR = 4](aa_4.png)
+![TRANSITION_FACTOR = 16](aa_16.png)
+
+在个人体感上，TRANSITION_FACTOR = 4 是相对合适的取值。
+
 最终代码如下：
 
 ```wgsl
@@ -335,10 +360,11 @@ let intensity = max(intensity_x, intensity_z);
 
 const LINE_WIDTH: f32 = 0.02;
 const LINE_HALF_WIDTH: f32 = LINE_WIDTH / 2.0;
+const TRANSITION_FACTOR: f32 = 1.0;
 
 fn line_intensity(coord: f32) -> f32 {
     let dist = min(fract(abs(coord)), 1.0 - fract(abs(coord)));
-    let filter_width = fwidth(coord) * 4;
+    let filter_width = fwidth(coord) * TRANSITION_FACTOR;
 
     let edge0 = LINE_HALF_WIDTH - filter_width * 0.5;
     let edge1 = LINE_HALF_WIDTH + filter_width * 0.5;
@@ -373,35 +399,73 @@ fn fragment(
 }
 ```
 
-最终实现效果如下：
-
-![Anti-Aliasing Enabled](aa_1.png)
-
-### 调整抗锯齿强度
-
-尽管效果好了不少，但是在远处仍在相对轻微的锯齿问题，对此我们可以新增一个过渡因子的参数，调高它以使得过渡处更加平滑。但是也要注意数值不能取太大，贪多嚼不烂，不然就会像第二张一样模糊了...
-
-```wgsl
-const TRANSITION_FACTOR: f32 = 1.0;
-
-fn line_intensity(coord: f32) -> f32 {
-    /// ...
-
-    let filter_width = fwidth(coord) * TRANSITION_FACTOR;
-
-    /// ...
-}
-```
-
-![TRANSITION_FACTOR = 4](aa_4.png)
-![TRANSITION_FACTOR = 16](aa_16.png)
-
-在个人体感上，TRANSITION_FACTOR = 4 是相对合适的取值。
-
 ## 收尾
 
 目前抗锯齿效果基本上达到我的要求了，但是也还仍然存在一些小问题，比如远处网框存在摩尔纹的问题。考虑到这个问题的复杂度也比较高，就暂时不在本文继续修改了，以后有空再解决。
 
+后续：发现了 Ben Golus 的一篇关于生成网格材质的文章，写的很好，实现也比我的要好，可惜是用的 Unity Shader 实现了，我将其翻译为 WGSL 贴在下面：
 
+```wgsl
+#import bevy_pbr::{
+    forward_io::{VertexOutput, FragmentOutput},
+    pbr_fragment::pbr_input_from_standard_material,
+    pbr_functions::{apply_pbr_lighting, main_pass_post_lighting_processing},
+}
 
+struct GridMaterial {
+    line_width: f32,
+    square_width: f32,
+}
 
+const LINE_COLOR: vec4f = vec4f(0.0, 0.0, 0.0, 1.0);
+const BACKGROUND_COLOR: vec4f = vec4f(1.0, 1.0, 1.0, 1.0);
+
+@group(2) @binding(100)
+var<uniform> grid_material: GridMaterial;
+
+fn line_intensity(coord: f32, coord_derive: f32) -> f32 {
+    let line_width: f32 = saturate(grid_material.line_width);
+    let invert_line: bool = line_width > 0.5;
+    let target_width = select(line_width, 1.0 - line_width, invert_line);
+    let draw_width: f32 = max(target_width, coord_derive);
+    let line_aa: f32 = max(coord_derive, 0.000001) * 1.5;
+    var dist: f32 = abs(fract(coord) * 2.0 - 1.0);
+    if !invert_line {
+        dist = 1.0 - dist;
+    }
+    var intensity: f32 = smoothstep(draw_width + line_aa, draw_width - line_aa, dist);
+    intensity *= saturate(target_width / draw_width);
+    intensity = mix(intensity, target_width, saturate(coord_derive * 2.0 - 1.0));
+    if invert_line {
+        intensity = 1.0 - intensity;
+    }
+    return intensity;
+}
+
+@fragment
+fn fragment(
+    in: VertexOutput,
+    @builtin(front_facing) is_front: bool,
+) -> FragmentOutput {
+    var pbr_input = pbr_input_from_standard_material(in, is_front);
+
+    let pos: vec2f = in.world_position.xz;
+    let dpos: vec4f = vec4f(dpdx(pos), dpdy(pos));
+    let intensity_x: f32 = line_intensity(pos.x, length(dpos.xz));
+    let intensity_y: f32 = line_intensity(pos.y, length(dpos.yw));
+    let intensity: f32 = mix(intensity_x, 1.0, intensity_y);
+
+    pbr_input.material.base_color = mix(
+        BACKGROUND_COLOR,
+        LINE_COLOR,
+        intensity
+    );
+
+    var out: FragmentOutput;
+
+    out.color = apply_pbr_lighting(pbr_input);
+    out.color = main_pass_post_lighting_processing(pbr_input, out.color);
+
+    return out;
+}
+```
