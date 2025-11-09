@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Lomirus' Site</title><link>https://lomirus.github.io/tags/linux/</link><description>Recent content in Linux on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" />&lt;h2 id="引子">引子
-&lt;/h2>&lt;p>众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p>
-&lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Lomirus' Site</title><link>https://lomirus.github.io/tags/linux/</link><description>Recent content in Linux on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" /&gt;&lt;h2 id="引子"&gt;引子
+&lt;/h2&gt;&lt;p&gt;众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
 width="1244"
 height="576"
-srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu10392481119387403585.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu6592716027353019752.jpeg 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu_6a9ddae15ba0e0ed.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu_38833c00e0819c61.jpeg 1024w"
 loading="lazy"
 alt="MacOS Example"
 class="gallery-image"
 data-flex-grow="215"
 data-flex-basis="518px"
->&lt;/p>
-&lt;p>然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的&lt;a class="link" href="https://extensions.gnome.org/" target="_blank" rel="noopener"
->官方网站&lt;/a>上查找相关的扩展，然后就找到一款叫做 &lt;a class="link" href="https://extensions.gnome.org/extension/4114/fildem-global-menu/" target="_blank" rel="noopener"
->Fildem global menu&lt;/a> 的扩展：&lt;/p>
-&lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
+&gt;&lt;/p&gt;
+&lt;p&gt;然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的&lt;a class="link" href="https://extensions.gnome.org/" target="_blank" rel="noopener"
+&gt;官方网站&lt;/a&gt;上查找相关的扩展，然后就找到一款叫做 &lt;a class="link" href="https://extensions.gnome.org/extension/4114/fildem-global-menu/" target="_blank" rel="noopener"
+&gt;Fildem global menu&lt;/a&gt; 的扩展：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
 width="1281"
 height="843"
-srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu15276665749177402319.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu3399904356071283472.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu_776b887d3cc3b4d1.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu_e130a455ba3b4c72.png 1024w"
 loading="lazy"
 alt="Fildem global menu"
 class="gallery-image"
 data-flex-grow="151"
 data-flex-basis="364px"
->&lt;/p>
-&lt;p>可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p>
-&lt;p>可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p>
-&lt;h2 id="gnome-extension-目录结构">Gnome Extension 目录结构
-&lt;/h2>&lt;h3 id="概览">概览
-&lt;/h3>&lt;p>经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
->官方文档&lt;/a>。&lt;/p>
-&lt;p>下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p>
-&lt;pre tabindex="0">&lt;code>example@shell.gnome.org.zip
+&gt;&lt;/p&gt;
+&lt;p&gt;可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p&gt;
+&lt;p&gt;可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p&gt;
+&lt;h2 id="gnome-extension-目录结构"&gt;Gnome Extension 目录结构
+&lt;/h2&gt;&lt;h3 id="概览"&gt;概览
+&lt;/h3&gt;&lt;p&gt;经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
+&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;example@shell.gnome.org.zip
 locale/
 de/
 LC_MESSAGES/
@@ -42,377 +42,377 @@ extension.js
 metadata.json
 prefs.js
 stylesheet.css
-&lt;/code>&lt;/pre>&lt;p>其中，最重要并且也是唯二 required 的是 &lt;code>metadata.json&lt;/code> 和 &lt;code>extension.js&lt;/code>。&lt;/p>
-&lt;h3 id="metadatajson">metadata.json
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;uuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;example@shell.gnome.org&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Example&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;This is an example extension.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;shell-version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="s2">&amp;#34;3.38&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;40&amp;#34;&lt;/span> &lt;span class="p">],&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://gitlab.gnome.org/World/ShellExtensions/example&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>一个 &lt;code>metadata.json&lt;/code> 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
->metadata.json (Required)&lt;/a>&lt;/p>
-&lt;h3 id="extensionjs">extension.js
-&lt;/h3>&lt;p>这个是扩展的核心文件，里面需要提供三个方法：&lt;code>init()&lt;/code>, &lt;code>enable()&lt;/code>, &lt;code>disable()&lt;/code>。你可以像这样提供：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Extension&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;enabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;disabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`initializing`&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Extension&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>也可以这样：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;enabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;disabled&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`initializing...`&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的&lt;a class="link" href="http://devdocs.baznga.org/" target="_blank" rel="noopener"
->文档地址&lt;/a> 访问返回 502 Bad Gateway，页面右上角的 &lt;a class="link" href="https://gjs-docs.gnome.org/" target="_blank" rel="noopener"
->API References&lt;/a> 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：&lt;/p>
-&lt;blockquote>
-&lt;p>Here are a few links to some commonly used modules.&lt;/p>
-&lt;p>You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.&lt;/p>
-&lt;/blockquote>
-&lt;p>然后下面给了相关链接，其中 &lt;code>js/&lt;/code> 对应的链接是：&lt;a class="link" href="https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/" target="_blank" rel="noopener"
->https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/&lt;/a>，我于是随便翻开了一个页面：&lt;/p>
-&lt;p>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中，最重要并且也是唯二 required 的是 &lt;code&gt;metadata.json&lt;/code&gt; 和 &lt;code&gt;extension.js&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id="metadatajson"&gt;metadata.json
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;uuid&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;example@shell.gnome.org&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Example&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;This is an example extension.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;version&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;shell-version&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;3.38&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;40&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;https://gitlab.gnome.org/World/ShellExtensions/example&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一个 &lt;code&gt;metadata.json&lt;/code&gt; 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
+&gt;metadata.json (Required)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="extensionjs"&gt;extension.js
+&lt;/h3&gt;&lt;p&gt;这个是扩展的核心文件，里面需要提供三个方法：&lt;code&gt;init()&lt;/code&gt;, &lt;code&gt;enable()&lt;/code&gt;, &lt;code&gt;disable()&lt;/code&gt;。你可以像这样提供：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;Extension&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;enable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;enabled&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;disable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;disabled&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`initializing`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Extension&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;enable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;enabled&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;disable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;disabled&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`initializing...`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的&lt;a class="link" href="http://devdocs.baznga.org/" target="_blank" rel="noopener"
+&gt;文档地址&lt;/a&gt; 访问返回 502 Bad Gateway，页面右上角的 &lt;a class="link" href="https://gjs-docs.gnome.org/" target="_blank" rel="noopener"
+&gt;API References&lt;/a&gt; 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here are a few links to some commonly used modules.&lt;/p&gt;
+&lt;p&gt;You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后下面给了相关链接，其中 &lt;code&gt;js/&lt;/code&gt; 对应的链接是：&lt;a class="link" href="https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/" target="_blank" rel="noopener"
+&gt;https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/&lt;/a&gt;，我于是随便翻开了一个页面：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
 width="748"
 height="787"
-srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu6115852997260337803.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu9350567790790996323.png 1024w"
+srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu_34bcd209b603e28d.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu_8cb73fbf18f649a0.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="95"
 data-flex-basis="228px"
->&lt;/p>
-&lt;blockquote>
-&lt;p>我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“&lt;code>/***/function&lt;/code>”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！&lt;/p>
-&lt;/blockquote>
-&lt;p>我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？&lt;/p>
-&lt;blockquote>
-&lt;p>我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="后续">后续
-&lt;/h2>&lt;p>就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">St&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">St&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">GObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">GObject&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Gio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Gio&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Clutter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Clutter&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Shell&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Shell&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">WinTracker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Shell&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">WindowTracker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get_default&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Main&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">main&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">PanelMenu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">panelMenu&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">PopupMenu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ui&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">popupMenu&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Me&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">imports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">misc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">extensionUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getCurrentExtension&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">buttonTexts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;File&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Edit&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Selection&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;View&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Go&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Run&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Terminal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Window&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;Help&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">reverse&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @type {(title: string) =&amp;gt; any}
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">MenuButton&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">GObject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">registerClass&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">class&lt;/span> &lt;span class="nx">PopupClass&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">PanelMenu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Button&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @type {(title: string) =&amp;gt; void}
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">super&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add_child&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">St&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Label&lt;/span>&lt;span class="p">({&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">y_align&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Clutter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ActorAlign&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">CENTER&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}));&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">PopupMenu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">PopupMenuItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Test&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">menu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addMenuItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">enable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">MenuButton&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]));&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Main&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">panel&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addToStatusArea&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">buttonTexts&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;left&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// const focusApp = WinTracker.focus_app;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// if (!focusApp) return;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// const focusWindow = focusApp.get_windows()[0];
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// if (!focusWindow) return;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// const names = [];
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// for (let name in focusWindow) {
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// names.push(name)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// }
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(names)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// global.display.connect(&amp;#39;notify::focus-window&amp;#39;, (e) =&amp;gt; {
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(&amp;#34;focus something&amp;#34;);
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// log(e)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// });
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">disable&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">MenuButtons&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">destroy&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">MenuButtons&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
-&lt;h2 id="foreword">Foreword
-&lt;/h2>&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
-&lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
-&lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
-&lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
-&lt;h2 id="customize">Customize
-&lt;/h2>&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“&lt;code&gt;/***/function&lt;/code&gt;”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="后续"&gt;后续
+&lt;/h2&gt;&lt;p&gt;就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;St&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;St&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;GObject&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GObject&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Gio&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Gio&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Clutter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Clutter&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Shell&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Shell&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;WinTracker&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Shell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;WindowTracker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get_default&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Main&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ui&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;PanelMenu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ui&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;panelMenu&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;PopupMenu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ui&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;popupMenu&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Me&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;misc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extensionUtils&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getCurrentExtension&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;buttonTexts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;File&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Edit&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Selection&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;View&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Go&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Run&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Terminal&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Window&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Help&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @type {(title: string) =&amp;gt; any}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MenuButton&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;GObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;registerClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;PopupClass&lt;/span&gt; &lt;span class="kr"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;PanelMenu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Button&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @type {(title: string) =&amp;gt; void}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;_init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;super&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;_init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;add_child&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;St&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Label&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;y_align&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Clutter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ActorAlign&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;item&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;PopupMenu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;PopupMenuItem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;menu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addMenuItem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;enable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;buttonTexts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MenuButton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;buttonTexts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;panel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addToStatusArea&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;buttonTexts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// const focusApp = WinTracker.focus_app;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// if (!focusApp) return;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// const focusWindow = focusApp.get_windows()[0];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// if (!focusWindow) return;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// const names = [];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// for (let name in focusWindow) {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// names.push(name)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(names)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// global.display.connect(&amp;#39;notify::focus-window&amp;#39;, (e) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(&amp;#34;focus something&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(e)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// });
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;disable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;destroy&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
+&lt;h2 id="foreword"&gt;Foreword
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p&gt;
+&lt;p&gt;About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p&gt;
+&lt;p&gt;But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p&gt;
+&lt;h2 id="customize"&gt;Customize
+&lt;/h2&gt;&lt;h3 id="set-pacman-mirrors"&gt;Set Pacman Mirrors
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo nano /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Delete other unnecessary mirrors and add:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
 # Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
-&lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo systemctl disable pamac-mirrorlist.timer
-&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts
-&lt;/h3>&lt;p>Open:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gnome-control-center
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Command&lt;/th>
-&lt;th>Shortcut&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Launch Terminal&lt;/td>
-&lt;td>&lt;code>gnome-terminal&lt;/code>&lt;/td>
-&lt;td>&lt;code>Super&lt;/code> + &lt;code>T&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Launch Nautilus&lt;/td>
-&lt;td>&lt;code>nautilus&lt;/code>&lt;/td>
-&lt;td>&lt;code>Super&lt;/code> + &lt;code>E&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Delay Screenshot&lt;/td>
-&lt;td>&lt;code>gnome-screenshot --delay 3&lt;/code>&lt;/td>
-&lt;td>&lt;code>Ctrl&lt;/code> + &lt;code>Print&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings
-&lt;/h3>&lt;p>You need to installl VSCode before reading this section.&lt;/p>
-&lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-json5" data-lang="json5">{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Disable mirrorlist automatically refreshing:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;sudo systemctl disable pamac-mirrorlist.timer
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="set-the-keyboard-shortcuts"&gt;Set the keyboard shortcuts
+&lt;/h3&gt;&lt;p&gt;Open:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gnome-control-center
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Go by &lt;code&gt;Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Shortcut&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Launch Terminal&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Launch Nautilus&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Delay Screenshot&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="edit-the-vscode-settings"&gt;Edit the VSCode Settings
+&lt;/h3&gt;&lt;p&gt;You need to installl VSCode before reading this section.&lt;/p&gt;
+&lt;p&gt;Edit &lt;code&gt;~/.config/Code/User/settings.json&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-json5" data-lang="json5"&gt;{
 &amp;#34;window.zoomLevel&amp;#34;: 2,
 // Fix Terminal Font Display
 &amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
 // Make tab size from 2 to 4
 &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
-&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading
-&lt;/h3>&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
-&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages
-&lt;/h2>&lt;h3 id="basic">Basic
-&lt;/h3>&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>
-&lt;/h4>&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
-&lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
-&lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S base-devel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S vim
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S net-tools
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S btop
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S htop
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gnome-terminal-fedora
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S wireshark-qt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S aria2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gpick
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S marktext-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S visual-studio-code-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S obs-studio
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S google-chrome
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S firefox-developer-edition
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S feishu
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S electron-netease-cloud-music
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Or a more beautiful version:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S yesplaymusic
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Emoji Picker&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S emote
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S burpsuite
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S postman-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S scrcpy
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment
-&lt;/h3>&lt;h4 id="nodejs">NodeJS
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S yarn
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g nrm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nrm use taobao
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g @vue/cli
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g create-react-app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-rime
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-mozc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Korean:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-hangul
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.xprofile&lt;/code> for X11 users:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.pam_environment&lt;/code> for Wayland users:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
-&lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
->thep0y / fcitx5-themes&lt;/a>.&lt;/p>
-&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S mongodb-tools-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start mongodb.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S icalingua
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
->dashboard&lt;/a> for configuration.&lt;/p></description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" />&lt;h2 id="起因">起因
-&lt;/h2>&lt;p>最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p>
-&lt;p>我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p>
-&lt;ul>
-&lt;li>CMD: 费拉不堪&lt;/li>
-&lt;li>Powershell：费拉不堪&lt;/li>
-&lt;li>Gitbash: 费拉不堪&lt;/li>
-&lt;/ul>
-&lt;p>由于 Windows 上的 shell 人均费拉不堪，所以问了一位后端朋(dà)友(lǎo)有没有什么推荐：&lt;/p>
-&lt;p>&lt;img src="https://z3.ax1x.com/2021/05/28/2FXjHS.jpg"
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="enable-chrome-parallel-downloading"&gt;Enable Chrome Parallel Downloading
+&lt;/h3&gt;&lt;p&gt;Open &lt;code&gt;chrome://flags/#enable-parallel-downloading&lt;/code&gt;, and switch to &lt;code&gt;Enable&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="fix-multisystem-time-synchronization-problem"&gt;Fix Multisystem time synchronization problem
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;timedatectl set-local-rtc &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to verify:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;timedatectl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-packages"&gt;Install Packages
+&lt;/h2&gt;&lt;h3 id="basic"&gt;Basic
+&lt;/h3&gt;&lt;h4 id="base-devel"&gt;&lt;code&gt;base-devel&lt;/code&gt;
+&lt;/h4&gt;&lt;p&gt;The &lt;code&gt;base-devel&lt;/code&gt; includes these packages:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;autoconf&lt;/code&gt;, &lt;code&gt;automake&lt;/code&gt;, &lt;code&gt;binutils&lt;/code&gt;, &lt;code&gt;bison&lt;/code&gt;, &lt;code&gt;fakeroot&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt;, &lt;code&gt;findutils&lt;/code&gt;, &lt;code&gt;flex&lt;/code&gt;, &lt;code&gt;gawk&lt;/code&gt;, &lt;code&gt;gcc&lt;/code&gt;, &lt;code&gt;gettext&lt;/code&gt;, &lt;code&gt;grep&lt;/code&gt;, &lt;code&gt;groff&lt;/code&gt;, &lt;code&gt;gzip&lt;/code&gt;, &lt;code&gt;libtool&lt;/code&gt;, &lt;code&gt;m4&lt;/code&gt;, &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;pacman&lt;/code&gt;, &lt;code&gt;patch&lt;/code&gt;, &lt;code&gt;pkgconf&lt;/code&gt;, &lt;code&gt;sed&lt;/code&gt;, &lt;code&gt;sudo&lt;/code&gt;, &lt;code&gt;texinfo&lt;/code&gt;, &lt;code&gt;which&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code&gt;ERROR: Cannot find the fakeroot binary.&lt;/code&gt; when using yay. So run the command before you install other packages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S base-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="other-basic-packages"&gt;Other Basic Packages
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S yay
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S net-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="tools"&gt;Tools
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S neofetch
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S btop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S htop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S gnome-terminal-fedora
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S wireshark-qt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S gpick
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S marktext-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S visual-studio-code-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S obs-studio
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S google-chrome
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S firefox-developer-edition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S feishu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# To install Netease Cloud Music (not official), run:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S electron-netease-cloud-music
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Or a more beautiful version:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S yesplaymusic
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Emoji Picker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S emote
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S burpsuite
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S postman-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S scrcpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="developing-environment"&gt;Developing Environment
+&lt;/h3&gt;&lt;h4 id="nodejs"&gt;NodeJS
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S npm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S yarn
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g nrm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nrm use taobao
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g @vue/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g create-react-app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="deno"&gt;Deno
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S deno
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="rust"&gt;Rust
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install Rust&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl --proto &lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt; --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="java"&gt;Java
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S jdk-openjdk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-docker"&gt;Install Docker
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-asia-languages-input-methods"&gt;Install Asia Languages Input Methods
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Chinese:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-rime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Japanese:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-mozc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Korean:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-hangul
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;~/.xprofile&lt;/code&gt; for X11 users:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;~/.pam_environment&lt;/code&gt; for Wayland users:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open &lt;code&gt; fcitx5-configtool&lt;/code&gt; to move the input methods from right that you are going to use to left.&lt;/p&gt;
+&lt;p&gt;To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
+&gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="install-icalinguaelectron-qq"&gt;Install &lt;code&gt;icalingua&lt;/code&gt;(Electron QQ)
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-tools-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; mongodb.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start mongodb.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S icalingua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-clash"&gt;Install &lt;code&gt;clash&lt;/code&gt;
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S clash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Move your &lt;code&gt;config.yaml&lt;/code&gt; to &lt;code&gt;~/.config/clash&lt;/code&gt;. Then:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
+&gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" /&gt;&lt;h2 id="起因"&gt;起因
+&lt;/h2&gt;&lt;p&gt;最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p&gt;
+&lt;p&gt;我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CMD: 费拉不堪&lt;/li&gt;
+&lt;li&gt;Powershell：费拉不堪&lt;/li&gt;
+&lt;li&gt;Gitbash: 费拉不堪&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于 Windows 上的 shell 人均费拉不堪，所以问了一位后端朋(dà)友(lǎo)有没有什么推荐：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://z3.ax1x.com/2021/05/28/2FXjHS.jpg"
 loading="lazy"
 alt="2FXjHS.jpg"
->&lt;/p>
-&lt;p>结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。&lt;/p>
-&lt;p>然后最终选定了 WSL 2 + Windows Terminal + VSCode.&lt;/p>
-&lt;h2 id="安装">安装
-&lt;/h2>&lt;p>如果 Windows 10 OS Version 大于 20262，可通过 &lt;code>wsl --install&lt;/code> 安装。&lt;/p>
-&lt;p>虽然我有加入 Windows Insider 计划，不过系统还是用的 Stable，所以没有采取上述简化方式进行安装，而是采用的以下内容。&lt;/p>
-&lt;p>首先，以管理员权限打开 Powershell 并输入以下命令：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dism&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">exe&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">online&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-feature&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">featurename&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="nb">Microsoft-Windows&lt;/span>&lt;span class="n">-Subsystem-Linux&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">all&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">norestart&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输入以下命令启用“虚拟机平台”功能，然后重启：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dism&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">exe&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">online&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-feature&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">featurename&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">VirtualMachinePlatform&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">all&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">norestart&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后下载&lt;a class="link" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" target="_blank" rel="noopener"
->适用于 x64 计算机的 WSL2 Linux 内核更新包&lt;/a>并安装，以将 WSL 1 更新至 WSL 2。&lt;/p>
-&lt;p>安装好后设置 WSL 2 为默认版本：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-set-default-version&lt;/span> &lt;span class="mf">2&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>打开&lt;a class="link" href="https://aka.ms/wslstore" target="_blank" rel="noopener"
->Microsoft Store&lt;/a>，随便选择一种发行版并安装。这里我选的是大众喜闻乐见的 Ubuntu。安装完后启动，执行一些配置就 OK 了。&lt;/p>
-&lt;p>最后可以查看一下已安装的 WSL 发行版的版本信息：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-list&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-verbose&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>顺便说一下，安装新的发行版的操作并不会使你旧的发行版被替换掉。如果你之前安装过 WSL 1 的 Linux 发行版，而又不想将其保留，也可以将其删除掉。比如，如果我想将之前的安装的 WSL 1 Debian 删除掉，可执行以下命令：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-unregister&lt;/span> &lt;span class="n">debian&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其余操作可以使用 &lt;code>wsl -h&lt;/code> 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
->官方文档&lt;/a>。&lt;/p>
-&lt;h2 id="网络代理">网络代理
-&lt;/h2>&lt;h3 id="设置代理">设置代理
-&lt;/h3>&lt;p>由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code>127.0.0.1&lt;/code> 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code>~/.bashrc&lt;/code> 添加如下内容：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">hostip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>cat /etc/resolv.conf &lt;span class="p">|&lt;/span> grep nameserver &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{ print $2 }&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">7890&lt;/span> &lt;span class="c1"># 此处端口可根据个人情况进行更改&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;http://&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">hostip&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">:&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">port&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTP_PROXY&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HTTPS_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">PROXY_HTTP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
->WSL2 中访问宿主机 Windows 的代理&lt;/a>&lt;/p>
-&lt;h3 id="取消防火墙">取消防火墙
-&lt;/h3>&lt;p>Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p>
-&lt;p>&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
+&gt;&lt;/p&gt;
+&lt;p&gt;结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。&lt;/p&gt;
+&lt;p&gt;然后最终选定了 WSL 2 + Windows Terminal + VSCode.&lt;/p&gt;
+&lt;h2 id="安装"&gt;安装
+&lt;/h2&gt;&lt;p&gt;如果 Windows 10 OS Version 大于 20262，可通过 &lt;code&gt;wsl --install&lt;/code&gt; 安装。&lt;/p&gt;
+&lt;p&gt;虽然我有加入 Windows Insider 计划，不过系统还是用的 Stable，所以没有采取上述简化方式进行安装，而是采用的以下内容。&lt;/p&gt;
+&lt;p&gt;首先，以管理员权限打开 Powershell 并输入以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dism&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;exe&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;enable-feature&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;featurename&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;Microsoft-Windows&lt;/span&gt;&lt;span class="n"&gt;-Subsystem-Linux&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;norestart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入以下命令启用“虚拟机平台”功能，然后重启：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dism&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;exe&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;enable-feature&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;featurename&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;VirtualMachinePlatform&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;norestart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后下载&lt;a class="link" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" target="_blank" rel="noopener"
+&gt;适用于 x64 计算机的 WSL2 Linux 内核更新包&lt;/a&gt;并安装，以将 WSL 1 更新至 WSL 2。&lt;/p&gt;
+&lt;p&gt;安装好后设置 WSL 2 为默认版本：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-set-default-version&lt;/span&gt; &lt;span class="mf"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开&lt;a class="link" href="https://aka.ms/wslstore" target="_blank" rel="noopener"
+&gt;Microsoft Store&lt;/a&gt;，随便选择一种发行版并安装。这里我选的是大众喜闻乐见的 Ubuntu。安装完后启动，执行一些配置就 OK 了。&lt;/p&gt;
+&lt;p&gt;最后可以查看一下已安装的 WSL 发行版的版本信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-list&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-verbose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺便说一下，安装新的发行版的操作并不会使你旧的发行版被替换掉。如果你之前安装过 WSL 1 的 Linux 发行版，而又不想将其保留，也可以将其删除掉。比如，如果我想将之前的安装的 WSL 1 Debian 删除掉，可执行以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-unregister&lt;/span&gt; &lt;span class="n"&gt;debian&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其余操作可以使用 &lt;code&gt;wsl -h&lt;/code&gt; 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
+&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id="网络代理"&gt;网络代理
+&lt;/h2&gt;&lt;h3 id="设置代理"&gt;设置代理
+&lt;/h3&gt;&lt;p&gt;由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code&gt;127.0.0.1&lt;/code&gt; 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code&gt;~/.bashrc&lt;/code&gt; 添加如下内容：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;hostip&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;cat /etc/resolv.conf &lt;span class="p"&gt;|&lt;/span&gt; grep nameserver &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;{ print $2 }&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;7890&lt;/span&gt; &lt;span class="c1"&gt;# 此处端口可根据个人情况进行更改&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;http://&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;hostip&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;port&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;http_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;https_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
+&gt;WSL2 中访问宿主机 Windows 的代理&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="取消防火墙"&gt;取消防火墙
+&lt;/h3&gt;&lt;p&gt;Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
 width="1453"
 height="583"
-srcset="https://lomirus.github.io/p/wsl2/firewall_hu8538415115603147363.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu4888066774129771792.png 1024w"
+srcset="https://lomirus.github.io/p/wsl2/firewall_hu_ea730a68d3a937d5.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu_25cc79100cb73522.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="249"
 data-flex-basis="598px"
->&lt;/p>
-&lt;p>如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p>
-&lt;h2 id="环境变量">环境变量
-&lt;/h2>&lt;p>在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p>
-&lt;p>若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code>/etc/wsl.conf&lt;/code>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch /etc/wsl.conf
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后修改其内容为：&lt;/p>
-&lt;pre tabindex="0">&lt;code>[interop]
+&gt;&lt;/p&gt;
+&lt;p&gt;如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p&gt;
+&lt;h2 id="环境变量"&gt;环境变量
+&lt;/h2&gt;&lt;p&gt;在 WSL 2 中默认可获取到宿主机中的环境变量，这可能会导致某些错误，比如获取到一些没有意义的环境变量，导致环境混乱。&lt;/p&gt;
+&lt;p&gt;若要禁止在 WSL 2 中访问 Windows 环境变量，可以先创建&lt;code&gt;/etc/wsl.conf&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;touch /etc/wsl.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后修改其内容为：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;[interop]
 appendWindowsPath = false
-&lt;/code>&lt;/pre>&lt;h2 id="常用软件的安装">常用软件的安装
-&lt;/h2>&lt;p>接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p>
-&lt;p>首先更新软件源：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后安装：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># python&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install python3
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ln -s /usr/bin/python3 /usr/bin/python
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## node/npm&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install nodejs
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install npm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## yarn&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g yarn
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## deno&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install unzip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://deno.land/x/install/install.sh &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## rust&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 建议选择 `default toolchain` 为 `nightly`&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他坑先占位">其他坑（先占位）
-&lt;/h2>&lt;p>由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p>
-&lt;p>更新：解决方案：卸载 VirtualBox, 安装VMWare.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="常用软件的安装"&gt;常用软件的安装
+&lt;/h2&gt;&lt;p&gt;接下来安装几个我常用的软件包，这部分没什么技术含量，仅供以后查阅方面使用。&lt;/p&gt;
+&lt;p&gt;首先更新软件源：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后安装：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install python3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ln -s /usr/bin/python3 /usr/bin/python
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## node/npm&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install nodejs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install npm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## yarn&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g yarn
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## deno&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install unzip
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://deno.land/x/install/install.sh &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## rust&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl --proto &lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt; --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 建议选择 `default toolchain` 为 `nightly`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="其他坑先占位"&gt;其他坑（先占位）
+&lt;/h2&gt;&lt;p&gt;由于 WSL 2 用到了虚拟化平台功能，可能会导致其他虚拟机（如 VirtualBox）无法运行。目前我还没解决这个问题，啥时候用空解决了再更。&lt;/p&gt;
+&lt;p&gt;更新：解决方案：卸载 VirtualBox, 安装VMWare.&lt;/p&gt;</description></item></channel></rss>

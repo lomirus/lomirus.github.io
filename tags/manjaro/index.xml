@@ -1,144 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manjaro on Lomirus' Site</title><link>https://lomirus.github.io/tags/manjaro/</link><description>Recent content in Manjaro on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/manjaro/index.xml" rel="self" type="application/rss+xml"/><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" />&lt;p>When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p>
-&lt;h2 id="foreword">Foreword
-&lt;/h2>&lt;p>I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p>
-&lt;p>About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p>
-&lt;p>But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p>
-&lt;p>And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p>
-&lt;h2 id="customize">Customize
-&lt;/h2>&lt;h3 id="set-pacman-mirrors">Set Pacman Mirrors
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo nano /etc/pacman.d/mirrorlist
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete other unnecessary mirrors and add:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manjaro on Lomirus' Site</title><link>https://lomirus.github.io/tags/manjaro/</link><description>Recent content in Manjaro on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/manjaro/index.xml" rel="self" type="application/rss+xml"/><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
+&lt;h2 id="foreword"&gt;Foreword
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p&gt;
+&lt;p&gt;About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p&gt;
+&lt;p&gt;But just after a month, on Jul 19th, it crashed. (but Windows is worse still I think)&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s why I wrote this article &amp;mdash;- to restore my customized system working environment quickly instead of searching the bug solutions for a whole day for everytime I reinstalled the system.&lt;/p&gt;
+&lt;h2 id="customize"&gt;Customize
+&lt;/h2&gt;&lt;h3 id="set-pacman-mirrors"&gt;Set Pacman Mirrors
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo nano /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Delete other unnecessary mirrors and add:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
 # Server = http://mirrors.redrock.team/manjaro/stable/$repo/$arch
-&lt;/code>&lt;/pre>&lt;p>Disable mirrorlist automatically refreshing:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo systemctl disable pamac-mirrorlist.timer
-&lt;/code>&lt;/pre>&lt;h3 id="set-the-keyboard-shortcuts">Set the keyboard shortcuts
-&lt;/h3>&lt;p>Open:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gnome-control-center
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Go by &lt;code>Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Command&lt;/th>
-&lt;th>Shortcut&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Launch Terminal&lt;/td>
-&lt;td>&lt;code>gnome-terminal&lt;/code>&lt;/td>
-&lt;td>&lt;code>Super&lt;/code> + &lt;code>T&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Launch Nautilus&lt;/td>
-&lt;td>&lt;code>nautilus&lt;/code>&lt;/td>
-&lt;td>&lt;code>Super&lt;/code> + &lt;code>E&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Delay Screenshot&lt;/td>
-&lt;td>&lt;code>gnome-screenshot --delay 3&lt;/code>&lt;/td>
-&lt;td>&lt;code>Ctrl&lt;/code> + &lt;code>Print&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="edit-the-vscode-settings">Edit the VSCode Settings
-&lt;/h3>&lt;p>You need to installl VSCode before reading this section.&lt;/p>
-&lt;p>Edit &lt;code>~/.config/Code/User/settings.json&lt;/code>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-json5" data-lang="json5">{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Disable mirrorlist automatically refreshing:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;sudo systemctl disable pamac-mirrorlist.timer
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="set-the-keyboard-shortcuts"&gt;Set the keyboard shortcuts
+&lt;/h3&gt;&lt;p&gt;Open:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gnome-control-center
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Go by &lt;code&gt;Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Shortcut&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Launch Terminal&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Launch Nautilus&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Delay Screenshot&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="edit-the-vscode-settings"&gt;Edit the VSCode Settings
+&lt;/h3&gt;&lt;p&gt;You need to installl VSCode before reading this section.&lt;/p&gt;
+&lt;p&gt;Edit &lt;code&gt;~/.config/Code/User/settings.json&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-json5" data-lang="json5"&gt;{
 &amp;#34;window.zoomLevel&amp;#34;: 2,
 // Fix Terminal Font Display
 &amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
 // Make tab size from 2 to 4
 &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
-&lt;/code>&lt;/pre>&lt;h3 id="enable-chrome-parallel-downloading">Enable Chrome Parallel Downloading
-&lt;/h3>&lt;p>Open &lt;code>chrome://flags/#enable-parallel-downloading&lt;/code>, and switch to &lt;code>Enable&lt;/code>.&lt;/p>
-&lt;h3 id="fix-multisystem-time-synchronization-problem">Fix Multisystem time synchronization problem
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl set-local-rtc &lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you want to verify:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">timedatectl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-packages">Install Packages
-&lt;/h2>&lt;h3 id="basic">Basic
-&lt;/h3>&lt;h4 id="base-devel">&lt;code>base-devel&lt;/code>
-&lt;/h4>&lt;p>The &lt;code>base-devel&lt;/code> includes these packages:&lt;/p>
-&lt;p>&lt;code>autoconf&lt;/code>, &lt;code>automake&lt;/code>, &lt;code>binutils&lt;/code>, &lt;code>bison&lt;/code>, &lt;code>fakeroot&lt;/code>, &lt;code>file&lt;/code>, &lt;code>findutils&lt;/code>, &lt;code>flex&lt;/code>, &lt;code>gawk&lt;/code>, &lt;code>gcc&lt;/code>, &lt;code>gettext&lt;/code>, &lt;code>grep&lt;/code>, &lt;code>groff&lt;/code>, &lt;code>gzip&lt;/code>, &lt;code>libtool&lt;/code>, &lt;code>m4&lt;/code>, &lt;code>make&lt;/code>, &lt;code>pacman&lt;/code>, &lt;code>patch&lt;/code>, &lt;code>pkgconf&lt;/code>, &lt;code>sed&lt;/code>, &lt;code>sudo&lt;/code>, &lt;code>texinfo&lt;/code>, &lt;code>which&lt;/code>&lt;/p>
-&lt;p>If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code>ERROR: Cannot find the fakeroot binary.&lt;/code> when using yay. So run the command before you install other packages:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S base-devel
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="other-basic-packages">Other Basic Packages
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S yay
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S vim
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S net-tools
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tools">Tools
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S neofetch
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S btop
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S htop
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gnome-terminal-fedora
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S wireshark-qt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S aria2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S gpick
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S marktext-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S visual-studio-code-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S obs-studio
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S google-chrome
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S firefox-developer-edition
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S feishu
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To install Netease Cloud Music (not official), run:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S electron-netease-cloud-music
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Or a more beautiful version:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S yesplaymusic
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Emoji Picker&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S emote
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S burpsuite
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S postman-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S scrcpy
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="developing-environment">Developing Environment
-&lt;/h3>&lt;h4 id="nodejs">NodeJS
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S npm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pacman -S yarn
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g nrm
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nrm use taobao
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g @vue/cli
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo npm install -g create-react-app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="deno">Deno
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S deno
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rust">Rust
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install Rust&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --proto &lt;span class="s1">&amp;#39;=https&amp;#39;&lt;/span> --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="java">Java
-&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S jdk-openjdk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-docker">Install Docker
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-asia-languages-input-methods">Install Asia Languages Input Methods
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Chinese:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-rime
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Japanese:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-mozc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Korean:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S fcitx5-hangul
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.xprofile&lt;/code> for X11 users:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>~/.pam_environment&lt;/code> for Wayland users:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GTK_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">QT_IM_MODULE&lt;/span>&lt;span class="o">=&lt;/span>fcitx5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">XMODIFIERS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;@im=fcitx5&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open &lt;code> fcitx5-configtool&lt;/code> to move the input methods from right that you are going to use to left.&lt;/p>
-&lt;p>To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
->thep0y / fcitx5-themes&lt;/a>.&lt;/p>
-&lt;h3 id="install-icalinguaelectron-qq">Install &lt;code>icalingua&lt;/code>(Electron QQ)
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yay -S mongodb-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S mongodb-tools-bin
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> mongodb.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start mongodb.service
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yay -S icalingua
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-clash">Install &lt;code>clash&lt;/code>
-&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo pacman -S clash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move your &lt;code>config.yaml&lt;/code> to &lt;code>~/.config/clash&lt;/code>. Then:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl &lt;span class="nb">enable&lt;/span> clash@&lt;span class="nv">$USER&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo systemctl start clash@&lt;span class="nv">$USER&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
->dashboard&lt;/a> for configuration.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="enable-chrome-parallel-downloading"&gt;Enable Chrome Parallel Downloading
+&lt;/h3&gt;&lt;p&gt;Open &lt;code&gt;chrome://flags/#enable-parallel-downloading&lt;/code&gt;, and switch to &lt;code&gt;Enable&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="fix-multisystem-time-synchronization-problem"&gt;Fix Multisystem time synchronization problem
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;timedatectl set-local-rtc &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to verify:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;timedatectl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-packages"&gt;Install Packages
+&lt;/h2&gt;&lt;h3 id="basic"&gt;Basic
+&lt;/h3&gt;&lt;h4 id="base-devel"&gt;&lt;code&gt;base-devel&lt;/code&gt;
+&lt;/h4&gt;&lt;p&gt;The &lt;code&gt;base-devel&lt;/code&gt; includes these packages:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;autoconf&lt;/code&gt;, &lt;code&gt;automake&lt;/code&gt;, &lt;code&gt;binutils&lt;/code&gt;, &lt;code&gt;bison&lt;/code&gt;, &lt;code&gt;fakeroot&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt;, &lt;code&gt;findutils&lt;/code&gt;, &lt;code&gt;flex&lt;/code&gt;, &lt;code&gt;gawk&lt;/code&gt;, &lt;code&gt;gcc&lt;/code&gt;, &lt;code&gt;gettext&lt;/code&gt;, &lt;code&gt;grep&lt;/code&gt;, &lt;code&gt;groff&lt;/code&gt;, &lt;code&gt;gzip&lt;/code&gt;, &lt;code&gt;libtool&lt;/code&gt;, &lt;code&gt;m4&lt;/code&gt;, &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;pacman&lt;/code&gt;, &lt;code&gt;patch&lt;/code&gt;, &lt;code&gt;pkgconf&lt;/code&gt;, &lt;code&gt;sed&lt;/code&gt;, &lt;code&gt;sudo&lt;/code&gt;, &lt;code&gt;texinfo&lt;/code&gt;, &lt;code&gt;which&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If it&amp;rsquo;s uninstalled, you may get some errors then like &lt;code&gt;ERROR: Cannot find the fakeroot binary.&lt;/code&gt; when using yay. So run the command before you install other packages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S base-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="other-basic-packages"&gt;Other Basic Packages
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S yay
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S net-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="tools"&gt;Tools
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S neofetch
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S btop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S htop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S gnome-terminal-fedora
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S wireshark-qt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S gpick
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S marktext-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S visual-studio-code-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S obs-studio
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S google-chrome
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S firefox-developer-edition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S feishu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# To install Netease Cloud Music (not official), run:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S electron-netease-cloud-music
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Or a more beautiful version:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S yesplaymusic
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Emoji Picker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S emote
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S burpsuite
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S postman-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S scrcpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="developing-environment"&gt;Developing Environment
+&lt;/h3&gt;&lt;h4 id="nodejs"&gt;NodeJS
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S npm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S yarn
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g nrm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;nrm use taobao
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g @vue/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo npm install -g create-react-app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="deno"&gt;Deno
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S deno
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="rust"&gt;Rust
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install Rust&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl --proto &lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt; --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="java"&gt;Java
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S jdk-openjdk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-docker"&gt;Install Docker
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-asia-languages-input-methods"&gt;Install Asia Languages Input Methods
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Chinese:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-rime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Japanese:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-mozc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Korean:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S fcitx5-hangul
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;~/.xprofile&lt;/code&gt; for X11 users:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;~/.pam_environment&lt;/code&gt; for Wayland users:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open &lt;code&gt; fcitx5-configtool&lt;/code&gt; to move the input methods from right that you are going to use to left.&lt;/p&gt;
+&lt;p&gt;To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
+&gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="install-icalinguaelectron-qq"&gt;Install &lt;code&gt;icalingua&lt;/code&gt;(Electron QQ)
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-tools-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; mongodb.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start mongodb.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S icalingua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="install-clash"&gt;Install &lt;code&gt;clash&lt;/code&gt;
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo pacman -S clash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Move your &lt;code&gt;config.yaml&lt;/code&gt; to &lt;code&gt;~/.config/clash&lt;/code&gt;. Then:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
+&gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item></channel></rss>
