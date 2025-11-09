@@ -1,7 +1,8 @@
 baseurl: https://lomirus.github.io
 languageCode: zh-cn
 theme: hugo-theme-stack
-paginate: 5
+pagination:
+    pagerSize: 5
 title: Lomirus' Site
 
 # Change it to your Disqus shortname before using
