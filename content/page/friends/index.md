@@ -1,8 +1,5 @@
 ---
 title: "Friends"
-outputs:
-    - html
-    - json
 menu:
   main:
     weight: -60
