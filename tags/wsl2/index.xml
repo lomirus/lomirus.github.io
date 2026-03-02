@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL2 on Lomirus' Site</title><link>https://lomirus.github.io/tags/wsl2/</link><description>Recent content in WSL2 on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 02 Jun 2021 18:25:17 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/wsl2/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/p/wsl2/cover.png" alt="Featured image of post WSL 2 入门使用与踩坑记录" /&gt;&lt;h2 id="起因"&gt;起因
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL2 on Lomirus' Site</title><link>https://lomirus.github.io/tags/wsl2/</link><description>Recent content in WSL2 on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 02 Jun 2021 18:25:17 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/wsl2/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 入门使用与踩坑记录</title><link>https://lomirus.github.io/p/wsl2/</link><pubDate>Fri, 28 May 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/wsl2/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post WSL 2 入门使用与踩坑记录" /&gt;&lt;h2 id="起因"&gt;起因
 &lt;/h2&gt;&lt;p&gt;最近我用 rust 写了个 shogi game. 考虑到性能优化及用户体验，控制台采用 raw mode 进行渲染。结果发现兼容性不是很好，在各种 shell/terminal 上表现不尽相同。而在字体渲染上，有一说一，除了 Windows Terminal 其余的都是辣鸡。&lt;/p&gt;
 &lt;p&gt;我（之前）平常最常用的 shell 是 Git Bash，但是正如前文所言，界面着实拉跨；而使用 Windows Terminal 打开 Git Bash 时，按退格键时又会出现闪烁现象。最终忍无可忍，于是把这些 bash/shell 全都拉出来批判一番：&lt;/p&gt;
 &lt;ul&gt;
@@ -7,9 +7,19 @@
 &lt;li&gt;Gitbash: 费拉不堪&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;由于 Windows 上的 shell 人均费拉不堪，所以问了一位后端朋(dà)友(lǎo)有没有什么推荐：&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://z3.ax1x.com/2021/05/28/2FXjHS.jpg"
-loading="lazy"
-alt="2FXjHS.jpg"
+&lt;p&gt;&lt;img src="https://lomirus.github.io/2FXjHS_12120581854733146768.jpg"
+	width="780"
+	height="1571"
+	loading="lazy"
+	
+		alt="2FXjHS.jpg"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="49"
+		data-flex-basis="119px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;结果发现人家对 shell 根本就不像我这么挑剔😂，不过也可能确实是受方向影响。因为毕竟后端首先在 Windows 方面上有成熟的 Goland IDE，确实一般情况下用不到控制台，用到终端的话一般就都是在服务器上了，而服务器则一般都是用的 Linux，所以通常没啥顾虑。而我等苦逼前端菜鸡还是要经常和各种 CLI 打交道的，所以最好还是去找一款优秀的终端软件。&lt;/p&gt;
 &lt;p&gt;然后最终选定了 WSL 2 + Windows Terminal + VSCode.&lt;/p&gt;
@@ -21,17 +31,17 @@ alt="2FXjHS.jpg"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入以下命令启用“虚拟机平台”功能，然后重启：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;dism&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;exe&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;enable-feature&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;featurename&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;VirtualMachinePlatform&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;norestart&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后下载&lt;a class="link" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" target="_blank" rel="noopener"
-&gt;适用于 x64 计算机的 WSL2 Linux 内核更新包&lt;/a&gt;并安装，以将 WSL 1 更新至 WSL 2。&lt;/p&gt;
+ &gt;适用于 x64 计算机的 WSL2 Linux 内核更新包&lt;/a&gt;并安装，以将 WSL 1 更新至 WSL 2。&lt;/p&gt;
 &lt;p&gt;安装好后设置 WSL 2 为默认版本：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-set-default-version&lt;/span&gt; &lt;span class="mf"&gt;2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开&lt;a class="link" href="https://aka.ms/wslstore" target="_blank" rel="noopener"
-&gt;Microsoft Store&lt;/a&gt;，随便选择一种发行版并安装。这里我选的是大众喜闻乐见的 Ubuntu。安装完后启动，执行一些配置就 OK 了。&lt;/p&gt;
+ &gt;Microsoft Store&lt;/a&gt;，随便选择一种发行版并安装。这里我选的是大众喜闻乐见的 Ubuntu。安装完后启动，执行一些配置就 OK 了。&lt;/p&gt;
 &lt;p&gt;最后可以查看一下已安装的 WSL 发行版的版本信息：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-list&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-verbose&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺便说一下，安装新的发行版的操作并不会使你旧的发行版被替换掉。如果你之前安装过 WSL 1 的 Linux 发行版，而又不想将其保留，也可以将其删除掉。比如，如果我想将之前的安装的 WSL 1 Debian 删除掉，可执行以下命令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;wsl&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-unregister&lt;/span&gt; &lt;span class="n"&gt;debian&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其余操作可以使用 &lt;code&gt;wsl -h&lt;/code&gt; 或查看&lt;a class="link" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener"
-&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+ &gt;官方文档&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="网络代理"&gt;网络代理
 &lt;/h2&gt;&lt;h3 id="设置代理"&gt;设置代理
 &lt;/h3&gt;&lt;p&gt;由于 WSL 2 是通过虚拟机的方式实现，所以不能像 WSL 1 时期那样直接使用 &lt;code&gt;127.0.0.1&lt;/code&gt; 修改 WSL 内的网络代理。此时正确的处理方式应该是向 &lt;code&gt;~/.bashrc&lt;/code&gt; 添加如下内容：&lt;/p&gt;
@@ -46,17 +56,20 @@ alt="2FXjHS.jpg"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;https_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PROXY_HTTP&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考文章：&lt;a class="link" href="https://zinglix.xyz/2020/04/18/wsl2-proxy/" target="_blank" rel="noopener"
-&gt;WSL2 中访问宿主机 Windows 的代理&lt;/a&gt;&lt;/p&gt;
+ &gt;WSL2 中访问宿主机 Windows 的代理&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="取消防火墙"&gt;取消防火墙
 &lt;/h3&gt;&lt;p&gt;Windows 与 WSL 之间存在防火墙，请参照以下步骤取消勾选对应选项：&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/wsl2/firewall.png"
-width="1453"
-height="583"
-srcset="https://lomirus.github.io/p/wsl2/firewall_hu_ea730a68d3a937d5.png 480w, https://lomirus.github.io/p/wsl2/firewall_hu_25cc79100cb73522.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="249"
-data-flex-basis="598px"
+	width="1453"
+	height="583"
+	loading="lazy"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="249"
+		data-flex-basis="598px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;如果使用的是 Clash for Windows，请尝试开启 Clash for Windows 中主界面中的 Allow LAN 选项。&lt;/p&gt;
 &lt;h2 id="环境变量"&gt;环境变量

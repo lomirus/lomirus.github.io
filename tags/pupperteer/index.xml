@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pupperteer on Lomirus' Site</title><link>https://lomirus.github.io/tags/pupperteer/</link><description>Recent content in Pupperteer on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/pupperteer/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/cover.webp" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" /&gt;&lt;h2 id="缘起自动生成狗狗表情包"&gt;缘起：自动生成狗狗表情包
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pupperteer on Lomirus' Site</title><link>https://lomirus.github.io/tags/pupperteer/</link><description>Recent content in Pupperteer on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/pupperteer/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Puppeteer 爬取 Google Images 狗狗表情包</title><link>https://lomirus.github.io/p/puppeteer-dog-stickers/</link><pubDate>Sat, 28 Aug 2021 12:42:00 +0800</pubDate><guid>https://lomirus.github.io/p/puppeteer-dog-stickers/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post 使用 Puppeteer 爬取 Google Images 狗狗表情包" /&gt;&lt;h2 id="缘起自动生成狗狗表情包"&gt;缘起：自动生成狗狗表情包
 &lt;/h2&gt;&lt;p&gt;前几天找朋友给我加需求，钰姐便提了个“自动生成狗狗表情包”的需求。不过如果真的按照需求的原意，唯一的解决方案就只有用到人工智能了。然而本人技术力实在过菜，才不匹位，只能退而求其次，找一些其他的解决方案了。&lt;/p&gt;
 &lt;h2 id="废案爬取qq历史头像"&gt;废案：爬取QQ历史头像
 &lt;/h2&gt;&lt;p&gt;一开始想到的解决方案，自然是利用爬虫，这也正是本文的主要内容。后来由于细(xián)致(zhe)入(méi)微(shì)的观察，发现钰姐经常更新一些狗狗头像。于是便有了新思路，能否通过自动定时爬取钰姐的QQ头像，以自动获取狗狗表情包呢？&lt;/p&gt;
@@ -8,13 +8,16 @@ ban 了。而如果设定轮询间隔时间过长，便会导致获取到的头�
 &lt;p&gt;&lt;del&gt;（那既然我能发现别人在熬夜内卷，那岂不是说明我也是在熬夜摸鱼?）&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;（啊这，好像有道理诶😥）&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/0.jpg"
-width="163"
-height="191"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu_7c85ef26fdfed110.jpg 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/0_hu_516c48f95eea6f9b.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="85"
-data-flex-basis="204px"
+	width="163"
+	height="191"
+	loading="lazy"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="85"
+		data-flex-basis="204px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;又考虑到人类是一种优柔寡断的生物，所以每次换完头像后的一段时间内，都有较高的概率再次换个头像。因此在侦测到头像更新后，可以调高在未来一段短时间内的轮询频率。但是这也不能排除在提高轮询频率之前的遗漏情况。&lt;/p&gt;
 &lt;p&gt;况且，这个解决方案所收集到的表情包数量还是及其有限的，如果想要收集到足够数量的头像，估计早过 deadline 了。&lt;/p&gt;
@@ -35,16 +38,20 @@ data-flex-basis="204px"
 &lt;p&gt;于是将目标锁定到了 Google Images.&lt;/p&gt;
 &lt;p&gt;预调试阶段，利用 devtools 的 network 栏发现虽然图片是动态加载，但是并没有使用 Fetch/XHR，而是在发送了一些 Other 类的 imgevent 请求，具体原理我也不清楚。因此这里也不能用普通的 Request 解决了。之前记得听说过一种叫做 Chrome headless 的东西，搜索之后发现了 Selenium，遂开始准备学习 Selenium 进行爬虫。不过文章写到这儿的时候又发现了 Google 搞了个 Puppeteer 东西，貌似对 NodeJS 更加易用一些，然后便又转战 Google Puppeteer 了。&lt;/p&gt;
 &lt;p&gt;Puppeteer 的官方介绍：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol. Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol. Puppeteer runs headless by default, but can be configured to run full (non-headless) Chrome or Chromium.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;自己稍微翻译一下：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Puppeteer 是一个 Node 库，它在 DevTools 协议之上提供了高度封装的 API，以用来控制 Chrome 或 Chromium. Puppeteer 会默认运行 headless, 但是可以通过进行配置来运行完整版的 (non-headless) Chrome 或 Chromium.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Puppeteer 是一个 Node 库，它在 DevTools 协议之上提供了高度封装的 API，以用来控制 Chrome 或 Chromium. Puppeteer 会默认运行 headless, 但是可以通过进行配置来运行完整版的 (non-headless) Chrome 或 Chromium.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;h2 id="正文就硬爪巴"&gt;正文：就硬爪巴
 &lt;/h2&gt;&lt;p&gt;首先看一下 Puppeteer 的&lt;a class="link" href="https://pptr.dev/" target="_blank" rel="noopener"
-&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+ &gt;官方文档&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;接着老三样：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir dog-stickers
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; dog-stickers
@@ -69,14 +76,18 @@ data-flex-basis="204px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后 &lt;code&gt;node index.js&lt;/code&gt;，如果项目根目录下面生成一张截图文件，说明安装成功了。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/puppeteer-dog-stickers/example.png"
-width="800"
-height="600"
-srcset="https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu_1d8354fb6dbac997.png 480w, https://lomirus.github.io/p/puppeteer-dog-stickers/example_hu_4cbc135ca4739e6d.png 1024w"
-loading="lazy"
-alt="example.png"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
+	width="800"
+	height="600"
+	loading="lazy"
+	
+		alt="example.png"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后只要再稍微加几行代码（迫真），我们的程序就完成了：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;promises&lt;/span&gt; &lt;span class="nx"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;fs&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -111,7 +122,7 @@ data-flex-basis="320px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;goto&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://www.google.com.hk/search?q=image&amp;amp;tbm=isch&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 滚（doge
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="cm"&gt;/* 这里 scrollBy 和 waitForTimeout 的参数大小都是经过 N 多次调试确定的，
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="cm"&gt;/* 这里 scrollBy 和 waitForTimeout 的参数大小都是经过 N 多次调试确定的，
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; scrollBy 太大、waitForTimeout 太小会因为滑动过快而导致出现遗漏情况，反之则会导致耗时过长。
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; 这里的参数和运行环境的网速、配置等都有关系，所以在其他 PC 上并不能保证能够完美运行。*/&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -125,22 +136,24 @@ data-flex-basis="320px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 爪巴.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[...&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;querySelector&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.islrc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;children&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;div&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;firstChild&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;firstChild&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;firstChild&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`All: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;\nEmpty: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 拿来吧你.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;writeFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;writeFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 今天的狗狗就看到这儿了.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说几个要注意的点，首先是我使用了 &lt;code&gt;import&lt;/code&gt; 语句，所以需要在 &lt;code&gt;package.json&lt;/code&gt; 中加一行 &lt;code&gt;&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/code&gt;。其他需要注意的点都写在代码注释里面了，这里就不赘述了。&lt;/p&gt;
 &lt;p&gt;程序运行完成之后会在项目根目录创建 &lt;code&gt;images.json&lt;/code&gt; 文件，里面保存图片的 URL 地址。其中有些是图片链接，有些是直接以 base64 的形式储存起来，还有的是 &lt;code&gt;null&lt;/code&gt;。至于为什么会出现 &lt;code&gt;null&lt;/code&gt; 我也懒得去深究了，反正总数还是很少的。&lt;/p&gt;
 &lt;p&gt;对了，Puppeteer 的文档有这样一段话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Puppeteer has event-driven architecture, which removes a lot of potential flakiness. There’s no need for evil “sleep(1000)” calls in puppeteer scripts.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Puppeteer has event-driven architecture, which removes a lot of potential flakiness. There’s no need for evil “sleep(1000)” calls in puppeteer scripts.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;感觉我代码里面也没少写 &lt;code&gt;sleep()&lt;/code&gt; 呀😅，也许只是因为我太菜了吧。&lt;/p&gt;
 &lt;h2 id="下载"&gt;下载
 &lt;/h2&gt;&lt;p&gt;获取到 &lt;code&gt;images.json&lt;/code&gt; 后就好说了，遍历链接下载即可：&lt;/p&gt;

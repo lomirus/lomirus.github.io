@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manjaro on Lomirus' Site</title><link>https://lomirus.github.io/tags/manjaro/</link><description>Recent content in Manjaro on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/manjaro/index.xml" rel="self" type="application/rss+xml"/><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manjaro on Lomirus' Site</title><link>https://lomirus.github.io/tags/manjaro/</link><description>Recent content in Manjaro on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/manjaro/index.xml" rel="self" type="application/rss+xml"/><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
 &lt;h2 id="foreword"&gt;Foreword
 &lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p&gt;
 &lt;p&gt;About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p&gt;
@@ -17,40 +17,40 @@
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gnome-control-center
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Go by &lt;code&gt;Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Command&lt;/th&gt;
-&lt;th&gt;Shortcut&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Launch Terminal&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Launch Nautilus&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Delay Screenshot&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Name&lt;/th&gt;
+ &lt;th&gt;Command&lt;/th&gt;
+ &lt;th&gt;Shortcut&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Launch Terminal&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Launch Nautilus&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Delay Screenshot&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id="edit-the-vscode-settings"&gt;Edit the VSCode Settings
 &lt;/h3&gt;&lt;p&gt;You need to installl VSCode before reading this section.&lt;/p&gt;
 &lt;p&gt;Edit &lt;code&gt;~/.config/Code/User/settings.json&lt;/code&gt;:&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code class="language-json5" data-lang="json5"&gt;{
-&amp;#34;window.zoomLevel&amp;#34;: 2,
-// Fix Terminal Font Display
-&amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
-// Make tab size from 2 to 4
-&amp;#34;vetur.format.options.tabSize&amp;#34;: 4
+ &amp;#34;window.zoomLevel&amp;#34;: 2,
+ // Fix Terminal Font Display
+ &amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
+ // Make tab size from 2 to 4
+ &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id="enable-chrome-parallel-downloading"&gt;Enable Chrome Parallel Downloading
 &lt;/h3&gt;&lt;p&gt;Open &lt;code&gt;chrome://flags/#enable-parallel-downloading&lt;/code&gt;, and switch to &lt;code&gt;Enable&lt;/code&gt;.&lt;/p&gt;
@@ -128,7 +128,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open &lt;code&gt; fcitx5-configtool&lt;/code&gt; to move the input methods from right that you are going to use to left.&lt;/p&gt;
 &lt;p&gt;To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
-&gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
+ &gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="install-icalinguaelectron-qq"&gt;Install &lt;code&gt;icalingua&lt;/code&gt;(Electron QQ)
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-bin
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-tools-bin
@@ -141,4 +141,4 @@
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
-&gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item></channel></rss>
+ &gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item></channel></rss>

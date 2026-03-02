@@ -1,47 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnome on Lomirus' Site</title><link>https://lomirus.github.io/tags/gnome/</link><description>Recent content in Gnome on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/p/gnome-extention-development/cover.jpg" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" /&gt;&lt;h2 id="引子"&gt;引子
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnome on Lomirus' Site</title><link>https://lomirus.github.io/tags/gnome/</link><description>Recent content in Gnome on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>一次失败的尝试开发 Gnome Extension 经历</title><link>https://lomirus.github.io/p/gnome-extention-development/</link><pubDate>Mon, 29 Nov 2021 00:16:00 +0800</pubDate><guid>https://lomirus.github.io/p/gnome-extention-development/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post 一次失败的尝试开发 Gnome Extension 经历" /&gt;&lt;h2 id="引子"&gt;引子
 &lt;/h2&gt;&lt;p&gt;众所周知，MacOS 有一个 global menu bar 的功能。不同于 Windows 会将 menu bar 单独置于每个窗口的 title bar 下面的设计，MacOS 则是将他们统一地放在 panel 上。这样不仅充分利用并节约了空间，也显得更加美观。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/macos_example.jpeg"
-width="1244"
-height="576"
-srcset="https://lomirus.github.io/p/gnome-extention-development/macos_example_hu_6a9ddae15ba0e0ed.jpeg 480w, https://lomirus.github.io/p/gnome-extention-development/macos_example_hu_38833c00e0819c61.jpeg 1024w"
-loading="lazy"
-alt="MacOS Example"
-class="gallery-image"
-data-flex-grow="215"
-data-flex-basis="518px"
+	width="1244"
+	height="576"
+	loading="lazy"
+	
+		alt="MacOS Example"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="215"
+		data-flex-basis="518px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;然而我用的是 Linux，桌面环境是 Gnome，默认自然是没有这种功能的。幸而 Linux 的桌面环境一般可定制化程度都比较高。对于 Gnome 来说，它也有着一套自己的插件体系。因此，我一开始试着在它的&lt;a class="link" href="https://extensions.gnome.org/" target="_blank" rel="noopener"
-&gt;官方网站&lt;/a&gt;上查找相关的扩展，然后就找到一款叫做 &lt;a class="link" href="https://extensions.gnome.org/extension/4114/fildem-global-menu/" target="_blank" rel="noopener"
-&gt;Fildem global menu&lt;/a&gt; 的扩展：&lt;/p&gt;
+ &gt;官方网站&lt;/a&gt;上查找相关的扩展，然后就找到一款叫做 &lt;a class="link" href="https://extensions.gnome.org/extension/4114/fildem-global-menu/" target="_blank" rel="noopener"
+ &gt;Fildem global menu&lt;/a&gt; 的扩展：&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/fildem.png"
-width="1281"
-height="843"
-srcset="https://lomirus.github.io/p/gnome-extention-development/fildem_hu_776b887d3cc3b4d1.png 480w, https://lomirus.github.io/p/gnome-extention-development/fildem_hu_e130a455ba3b4c72.png 1024w"
-loading="lazy"
-alt="Fildem global menu"
-class="gallery-image"
-data-flex-grow="151"
-data-flex-basis="364px"
+	width="1281"
+	height="843"
+	loading="lazy"
+	
+		alt="Fildem global menu"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="364px"
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;可惜的是这个扩展年久失修，并不能完美支持 Gnome40（况且我用的都是 41 了），而且体验也不怎么样。比如有时当你点击 File 目录将其展开后，再将鼠标滑动到旁边的 View 栏，并不能使当前聚焦的目录自动转移过来，导致手感及其生硬。&lt;/p&gt;
 &lt;p&gt;可我心里又始终放不下 MacOS 的 Global Menu Bar（🤤），而既然作为 Linux 用户，自然要有自己动手丰衣足食的觉悟嘛。因此我便尝试开始学习 Gnome Shell 的插件开发。&lt;/p&gt;
 &lt;h2 id="gnome-extension-目录结构"&gt;Gnome Extension 目录结构
 &lt;/h2&gt;&lt;h3 id="概览"&gt;概览
 &lt;/h3&gt;&lt;p&gt;经过简单地 Google 搜索后，我找到了 Gnome Extension 开发的&lt;a class="link" href="https://gjs.guide/" target="_blank" rel="noopener"
-&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
+ &gt;官方文档&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;下面简单介绍一下相关的基础知识。首先，一个扩展的目录下面一般是类似下面这种结构：&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;example@shell.gnome.org.zip
-locale/
-de/
-LC_MESSAGES/
-example.mo
-schemas/
-gschemas.compiled
-org.gnome.shell.extensions.example.gschema.xml
-extension.js
-metadata.json
-prefs.js
-stylesheet.css
+ locale/
+ de/
+ LC_MESSAGES/
+ example.mo
+ schemas/
+ gschemas.compiled
+ org.gnome.shell.extensions.example.gschema.xml
+ extension.js
+ metadata.json
+ prefs.js
+ stylesheet.css
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中，最重要并且也是唯二 required 的是 &lt;code&gt;metadata.json&lt;/code&gt; 和 &lt;code&gt;extension.js&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id="metadatajson"&gt;metadata.json
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -53,7 +61,7 @@ stylesheet.css
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;https://gitlab.gnome.org/World/ShellExtensions/example&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一个 &lt;code&gt;metadata.json&lt;/code&gt; 的结构就类似上面这样，但凡有点开发经验的人都能看出来每条规则代表什么意思，我这里也就不多讲废话了。如果有对哪几项不确定的，建议直接去翻官方文档的介绍：&lt;a class="link" href="https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required" target="_blank" rel="noopener"
-&gt;metadata.json (Required)&lt;/a&gt;&lt;/p&gt;
+ &gt;metadata.json (Required)&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="extensionjs"&gt;extension.js
 &lt;/h3&gt;&lt;p&gt;这个是扩展的核心文件，里面需要提供三个方法：&lt;code&gt;init()&lt;/code&gt;, &lt;code&gt;enable()&lt;/code&gt;, &lt;code&gt;disable()&lt;/code&gt;。你可以像这样提供：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;Extension&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -85,30 +93,39 @@ stylesheet.css
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`initializing...`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后接下来最让我恼火的就来了。首先，开发扩展，必然要调用相关程序提供的 API 接口，因此，我就要去阅读相关文档。然而离谱的是，Gnome Shell 的 API 根本没有文档！！！文档中给的 GNOME APIs 的&lt;a class="link" href="http://devdocs.baznga.org/" target="_blank" rel="noopener"
-&gt;文档地址&lt;/a&gt; 访问返回 502 Bad Gateway，页面右上角的 &lt;a class="link" href="https://gjs-docs.gnome.org/" target="_blank" rel="noopener"
-&gt;API References&lt;/a&gt; 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Here are a few links to some commonly used modules.&lt;/p&gt;
+ &gt;文档地址&lt;/a&gt; 访问返回 502 Bad Gateway，页面右上角的 &lt;a class="link" href="https://gjs-docs.gnome.org/" target="_blank" rel="noopener"
+ &gt;API References&lt;/a&gt; 也根本不是并不是我要的那些。真正的 API 在文中是这么说的：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Here are a few links to some commonly used modules.&lt;/p&gt;
 &lt;p&gt;You can browse around in the js/ui/ folder or any other JavaScript file under js/ for more code to be reused.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;然后下面给了相关链接，其中 &lt;code&gt;js/&lt;/code&gt; 对应的链接是：&lt;a class="link" href="https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/" target="_blank" rel="noopener"
-&gt;https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/&lt;/a&gt;，我于是随便翻开了一个页面：&lt;/p&gt;
+ &gt;https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/js/&lt;/a&gt;，我于是随便翻开了一个页面：&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://lomirus.github.io/p/gnome-extention-development/docs.png"
-width="748"
-height="787"
-srcset="https://lomirus.github.io/p/gnome-extention-development/docs_hu_34bcd209b603e28d.png 480w, https://lomirus.github.io/p/gnome-extention-development/docs_hu_8cb73fbf18f649a0.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="95"
-data-flex-basis="228px"
+	width="748"
+	height="787"
+	loading="lazy"
+	
+ 
+	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="228px"
+	
 &gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“&lt;code&gt;/***/function&lt;/code&gt;”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;我翻开文档一查，这文档没有排版，歪歪斜斜的每叶上都写着“&lt;code&gt;/***/function&lt;/code&gt;”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“源码”！&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;我只能说大受震撼，我不理解，为什么它要让我直接看源码，明明我只要函数名参数返回值加注释就够了，然而加上源码之后翻起来麻烦得离谱，况且有些方法甚至都没有注释。更奇怪的是，源码中还把 private methods 暴露给了我，什么露出Play😅？（你只能眼巴巴地看着私有 API 为了遵守代码规范却又调不了气急败坏的样子真的很好笑呢~🤗）。为什么呀为什么😤？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;我实在我也不是谦虚，我一个调 API 的怎么看源码来了呢？但是呢，gnome-shell 讲“大家已经研究决定了”，所以后来我就唸了两首诗，叫“苟利国家生死以，岂因祸福避趋之”，那么所以我就直接翻源码了&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;h2 id="后续"&gt;后续
 &lt;/h2&gt;&lt;p&gt;就这样，将近过去了两周，这个项目还是没有什么进展。本来还想着能参考着一些其他扩展的源码，照葫芦画瓢，还能大体写出个样子呢。不过可能由于我只是一时兴起，开发文档又极其简陋，所以最终还是这样搁置了下去。目前的进度，倒是写出了目录栏，不过还只是写死的，还需要增加检测到焦点窗口切换时自动更新菜单栏内容的功能。所以先把源码贴一下，万一能帮到什么人呢（不过话说真的会有人接手这个屎山吗？）&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;St&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;gi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;St&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -157,21 +174,21 @@ data-flex-basis="228px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;panel&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addToStatusArea&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;buttonTexts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// const focusApp = WinTracker.focus_app;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// if (!focusApp) return;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// const focusWindow = focusApp.get_windows()[0];
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// if (!focusWindow) return;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// if (!focusApp) return;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// const focusWindow = focusApp.get_windows()[0];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// if (!focusWindow) return;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// const names = [];
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// for (let name in focusWindow) {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// names.push(name)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// }
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(names)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// for (let name in focusWindow) {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// names.push(name)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// log(names)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// global.display.connect(&amp;#39;notify::focus-window&amp;#39;, (e) =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(&amp;#34;focus something&amp;#34;);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// log(e)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="c1"&gt;// });
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// log(&amp;#34;focus something&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// log(e)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// });
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;disable&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -179,7 +196,7 @@ data-flex-basis="228px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;MenuButtons&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/p/customize-manjaro/cover.jpg" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Customize the Manjaro with Gnome</title><link>https://lomirus.github.io/p/customize-manjaro/</link><pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/customize-manjaro/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post Customize the Manjaro with Gnome" /&gt;&lt;p&gt;When I started to write the article, I haven&amp;rsquo;t install the Chinese Input Method, and therefore I just completed it in English.&lt;/p&gt;
 &lt;h2 id="foreword"&gt;Foreword
 &lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve used Windows OS for a long time. I can still remember that time, when I was just a junior high school student. It&amp;rsquo;s 2015. I was still a fan to Microsoft at that time. And it&amp;rsquo;s also in that year, the Windows 10 was released. I was so excited but I didn&amp;rsquo;t have a good PC then that could reach the lowest requirement of Windows 10. But I still tried to recommend one of my friends and helped him install this newly released operation system. At that time, I couldn&amp;rsquo;t understand why there were so many people who did not want to try the new system, but kept the old and already-retired Windows XP. But many years have passed, and now it turns to me that I cannot understand why there are still so many bugs on Windows 10. So I was waiting for Windows 11 coming soon, hoping some breaking changes and improments. However, unfortunately, it is just not as good as what I thought.&lt;/p&gt;
 &lt;p&gt;About a month ago, on Jun 17th, I installed the Manjaro with Gnome.&lt;/p&gt;
@@ -198,40 +215,40 @@ data-flex-basis="228px"
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gnome-control-center
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Go by &lt;code&gt;Keyboard -&amp;gt; Keyboard Shortcuts -&amp;gt; Customize Shortcuts&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Command&lt;/th&gt;
-&lt;th&gt;Shortcut&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Launch Terminal&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Launch Nautilus&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Delay Screenshot&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Name&lt;/th&gt;
+ &lt;th&gt;Command&lt;/th&gt;
+ &lt;th&gt;Shortcut&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Launch Terminal&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;gnome-terminal&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Launch Nautilus&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;nautilus&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Super&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Delay Screenshot&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;gnome-screenshot --delay 3&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Print&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id="edit-the-vscode-settings"&gt;Edit the VSCode Settings
 &lt;/h3&gt;&lt;p&gt;You need to installl VSCode before reading this section.&lt;/p&gt;
 &lt;p&gt;Edit &lt;code&gt;~/.config/Code/User/settings.json&lt;/code&gt;:&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code class="language-json5" data-lang="json5"&gt;{
-&amp;#34;window.zoomLevel&amp;#34;: 2,
-// Fix Terminal Font Display
-&amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
-// Make tab size from 2 to 4
-&amp;#34;vetur.format.options.tabSize&amp;#34;: 4
+ &amp;#34;window.zoomLevel&amp;#34;: 2,
+ // Fix Terminal Font Display
+ &amp;#34;terminal.integrated.fontFamily&amp;#34;: &amp;#34;NotoSansMono Nerd Font&amp;#34;,
+ // Make tab size from 2 to 4
+ &amp;#34;vetur.format.options.tabSize&amp;#34;: 4
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id="enable-chrome-parallel-downloading"&gt;Enable Chrome Parallel Downloading
 &lt;/h3&gt;&lt;p&gt;Open &lt;code&gt;chrome://flags/#enable-parallel-downloading&lt;/code&gt;, and switch to &lt;code&gt;Enable&lt;/code&gt;.&lt;/p&gt;
@@ -309,7 +326,7 @@ data-flex-basis="228px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;@im=fcitx5&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open &lt;code&gt; fcitx5-configtool&lt;/code&gt; to move the input methods from right that you are going to use to left.&lt;/p&gt;
 &lt;p&gt;To beautify the skin of the input methods, refer to &lt;a class="link" href="https://github.com/thep0y/fcitx5-themes" target="_blank" rel="noopener"
-&gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
+ &gt;thep0y / fcitx5-themes&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="install-icalinguaelectron-qq"&gt;Install &lt;code&gt;icalingua&lt;/code&gt;(Electron QQ)
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-bin
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;yay -S mongodb-tools-bin
@@ -322,4 +339,4 @@ data-flex-basis="228px"
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl start clash@&lt;span class="nv"&gt;$USER&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open the &lt;a class="link" href="https://clash.razord.top/" target="_blank" rel="noopener"
-&gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item></channel></rss>
+ &gt;dashboard&lt;/a&gt; for configuration.&lt;/p&gt;</description></item></channel></rss>

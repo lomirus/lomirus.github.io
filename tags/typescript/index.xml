@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on Lomirus' Site</title><link>https://lomirus.github.io/tags/typescript/</link><description>Recent content in Typescript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 May 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/p/not-such-a-beautiful-marriage/cover.png" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" /&gt;&lt;p&gt;（顺带一提，标题&lt;del&gt;抄袭&lt;/del&gt;引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
-&gt;TypeScript with Babel: A Beautiful Marriage&lt;/a&gt;）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on Lomirus' Site</title><link>https://lomirus.github.io/tags/typescript/</link><description>Recent content in Typescript on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 May 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage</title><link>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</link><pubDate>Wed, 14 Apr 2021 00:00:00 +0800</pubDate><guid>https://lomirus.github.io/p/not-such-a-beautiful-marriage/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post TypeScript &amp; Webpack &amp; Babel &amp; Eslint &amp; React: Not Such a Beautiful Marriage" /&gt;&lt;p&gt;（顺带一提，标题&lt;del&gt;抄袭&lt;/del&gt;引用改编自著名博文 &lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
+ &gt;TypeScript with Babel: A Beautiful Marriage&lt;/a&gt;）&lt;/p&gt;
 &lt;h2 id="origin"&gt;Origin
 &lt;/h2&gt;&lt;p&gt;看了下 cqupt-help-mp 的源码，发现里面用了许多库。感觉自己对这些工具还不太熟练，所以想先趁机练习一下。&lt;/p&gt;
 &lt;p&gt;对于题目中的五个工具，除去 ESlint之外，其实其他的都多多少少用过一段时间。特别是 Webpack Babel React 这三个，用的时间也算是比较久了。TypeScript 倒是用过，但是感觉 JS 加上类型限制后写起来就不那么自由了，所以尝试用它写了一个模块之后就将它卸载了。但是这些这个工具终究还是太常用，早晚逃不了还是得学，所以就试着用它们做个简单的小项目练练手。毕竟当初我学 Webpack 时也是学得很憋屈，一直不知道这玩意儿打个包为啥还非得用 js 文件做入口，直到后来学了 React 才豁然开朗，所以我至今认为如果是要做跑在浏览器的网页而且不用什么框架的话 Webpack 还真没什么卵用。当然，有了之后自然用处就大了。&lt;/p&gt;
@@ -8,14 +8,16 @@
 &lt;/h2&gt;&lt;p&gt;这种东西还用得着在这介绍？官网文档，维基百科，请~&lt;/p&gt;
 &lt;h2 id="tsc-or-babel-its-a-question"&gt;TSC or Babel, it&amp;rsquo;s a question.
 &lt;/h2&gt;&lt;p&gt;老实说，单是在两个之间进行选择就够让我想半天了。但是实际上，摆在我面前的包括但不限于：&lt;code&gt;ts-loader&lt;/code&gt;,&lt;code&gt;awesome-typescript-loader&lt;/code&gt;, &lt;code&gt;babel-loader&lt;/code&gt;等一堆loaders/packages。而且由于我开始参考了过时的中文文档，所以先下载了&lt;code&gt;awesome-typescript-loader&lt;/code&gt;，后来才意识到被坑（😅）。而在剩余的两者之间，参考&lt;a class="link" href="https://medium.com/dailyjs/typescript-babel-ce24f724398" target="_blank" rel="noopener"
-&gt;TypeScript with Babel: A Beautiful Marriage&lt;/a&gt;后，决定选择了后者。&lt;/p&gt;
+ &gt;TypeScript with Babel: A Beautiful Marriage&lt;/a&gt;后，决定选择了后者。&lt;/p&gt;
 &lt;p&gt;安装好之后，我又顺着我的思路捋了一遍，发现整个过程中编译是&lt;code&gt;babel&lt;/code&gt;做的，根本没用到&lt;code&gt;typescript&lt;/code&gt;什么事儿呀。我于是就想，把它卸载之后会怎么样呢？接着神奇的现象发生了，我卸载了&lt;code&gt;typescipt&lt;/code&gt;，删除了它的配置文件&lt;code&gt;tsconfig.json&lt;/code&gt;，结果发现我的用&lt;code&gt;typescript&lt;/code&gt;写的项目居然还能正常编译并运行（谢谢有被震惊到）。我就想既然如此那我还用ts干啥呀，赶紧卸了得了，可别再让我见着你了（😅）。&lt;/p&gt;
 &lt;h2 id="anti-human-eslint"&gt;Anti-human ESLint
 &lt;/h2&gt;&lt;p&gt;听说 ESLint 可以用在团队协作中来保证代码风格的一致性？好，名单赶紧安排上，加急。&lt;/p&gt;
 &lt;p&gt;安装过程中被问了几个问题，回答之后他给我推荐了几个插件。行，听您的。选择 YES，进行安装。看起来一切顺利，然后&amp;hellip;果不其然，报错了。报啥呢：&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;Oops! Something went wrong! :(
+
 ESLint: 7.24.0
-Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file
+
+Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file 
 itself may not follow your linting rules.
 Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &amp;#39;BaseConfig&amp;#39;: Cannot find module &amp;#39;typescript&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我心想，这不废话嘛，我又没安装 typescipt 您能到哪儿找模块去？不过话又说回来，刚才，它倒是的确问过我这么一句：&lt;/p&gt;
@@ -52,7 +54,7 @@ Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &a
 &lt;pre tabindex="0"&gt;&lt;code&gt;Missing return type on function. eslint(@typescript-eslint/explicit-module-boundary-types)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接着修改代码为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tsx" data-lang="tsx"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// has imported ReactElement...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Box&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;children&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ReactElement&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;Box&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;children&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ReactElement&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h2&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;{&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h2&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;children&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -64,7 +66,7 @@ Error: Failed to load plugin &amp;#39;@typescript-eslint&amp;#39; declared in &a
 Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#39; type. ts(7031)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接着修改代码为：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tsx" data-lang="tsx"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// has imported ReactElement...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="kr"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;BoxProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;BoxProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;title&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;children&lt;/span&gt;: &lt;span class="kt"&gt;ReactElement&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -78,7 +80,7 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ESLint在这块儿倒是不报错了，不过当其他地方调用&lt;code&gt;Box&lt;/code&gt;又报错了：&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;This JSX tag&amp;#39;s &amp;#39;children&amp;#39; prop expects a single child of type &amp;#39;ReactElement&amp;lt;any, string | JSXElementConstructor&amp;lt;any&amp;gt;&amp;gt;&amp;#39;, but multiple children were provided.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查了下资料，发现除了&lt;code&gt;ReactElement&lt;/code&gt;之外原来还有&lt;code&gt;ReactNode&lt;/code&gt;和&lt;code&gt;JSX.Element&lt;/code&gt;（参考 &lt;a class="link" href="https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement" target="_blank" rel="noopener"
-&gt;When to use JSX.Element vs ReactNode vs ReactElement?&lt;/a&gt;）。&lt;/p&gt;
+ &gt;When to use JSX.Element vs ReactNode vs ReactElement?&lt;/a&gt;）。&lt;/p&gt;
 &lt;p&gt;简单总结下，原因：拉胯TS的历史遗留问题；解决方法：将&lt;code&gt;children&lt;/code&gt;类型改成&lt;code&gt;ReactNode&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id="react-jsx"&gt;&lt;code&gt;react-jsx&lt;/code&gt;
 &lt;/h2&gt;&lt;p&gt;在上面的 StackOverflow 里看到了 &lt;code&gt;create-react-app&lt;/code&gt;，这才想到可以去参考一下它的代码，话不多说，开始安装。&lt;/p&gt;
@@ -86,9 +88,10 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install create-react-app
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npx create-react-app ts --template typescript
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进去之后发现他在&lt;code&gt;tsconfig.json&lt;/code&gt;里的&lt;code&gt;&amp;quot;compilerOptions&amp;quot;&lt;/code&gt;写有&lt;code&gt;&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code&gt;，而我之前一直都是用的&lt;code&gt;&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code&gt;。好奇他们之间的差别，所以去 TypeScript官网文档查了下&lt;a class="link" href="https://www.typescriptlang.org/tsconfig/#jsx" target="_blank" rel="noopener"
-&gt;资料&lt;/a&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.&lt;/p&gt;
+ &gt;资料&lt;/a&gt;：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;react: Emit .js files with JSX changed to the equivalent React.createElement calls&lt;/li&gt;
 &lt;li&gt;react-jsx: Emit .js files with the JSX changed to _jsx calls&lt;/li&gt;
@@ -96,25 +99,28 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;li&gt;preserve: Emit .jsx files with the JSX unchanged&lt;/li&gt;
 &lt;li&gt;react-native: Emit .js files with the JSX unchanged&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;Umm，说实话没看懂，继续往下滑，发现一个&lt;a class="link" href="https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" target="_blank" rel="noopener"
-&gt;链接&lt;/a&gt;，点进去，读了下，发现&lt;code&gt;react-jsx&lt;/code&gt;相对&lt;code&gt;react&lt;/code&gt;有许多优点，例如：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
+ &gt;链接&lt;/a&gt;，点进去，读了下，发现&lt;code&gt;react-jsx&lt;/code&gt;相对&lt;code&gt;react&lt;/code&gt;有许多优点，例如：&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;ul&gt;
 &lt;li&gt;With the new transform, you can &lt;strong&gt;use JSX without importing React&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Depending on your setup, its compiled output may &lt;strong&gt;slightly improve the bundle size&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;It will enable future improvements that &lt;strong&gt;reduce the number of concepts&lt;/strong&gt; you need to learn React.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;继续秉承着“啥新用啥”的信条，我便将&lt;code&gt;tsconfig.json&lt;/code&gt;里的&lt;code&gt;&amp;quot;jsx&amp;quot;: &amp;quot;react-jsx&amp;quot;&lt;/code&gt;改成了&lt;code&gt;&amp;quot;jsx&amp;quot;: &amp;quot;react&amp;quot;&lt;/code&gt;。但是过了会儿突然想起来我使用的&lt;code&gt;babel-loader&lt;/code&gt;编译的，所以写在&lt;code&gt;tsconfig.json&lt;/code&gt;里其实并没有什么卵用&amp;hellip;&lt;/p&gt;
 &lt;p&gt;所以应该修改&lt;code&gt;babel.config.js&lt;/code&gt;的&lt;code&gt;module.exports&lt;/code&gt;，添加以下属性：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;presets&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 	&lt;span class="c1"&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;@babel/preset-react&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;runtime&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;automatic&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 	&lt;span class="c1"&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;runtime&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;automatic&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
@@ -123,9 +129,9 @@ Binding element &amp;#39;children&amp;#39; implicitly has an &amp;#39;any&amp;#3
 &lt;p&gt;修改 ESLint 配置文件：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;rules&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;rules&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ...
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;react/jsx-uses-react&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;off&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;react/jsx-uses-react&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;off&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;react/react-in-jsx-scope&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;off&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on Lomirus' Site</title><link>https://lomirus.github.io/tags/vue/</link><description>Recent content in Vue on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 May 2021 18:25:17 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Vue &amp; Vite 项目搭建入门</title><link>https://lomirus.github.io/p/vue-vite-start/</link><pubDate>Sat, 22 May 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/vue-vite-start/</guid><description>&lt;img src="https://lomirus.github.io/p/vue-vite-start/cover.png" alt="Featured image of post Vue &amp; Vite 项目搭建入门" /&gt;&lt;h1 id="学习-vue-与-vite-项目搭建的踩坑记录"&gt;学习 Vue 与 Vite 项目搭建的踩坑记录
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on Lomirus' Site</title><link>https://lomirus.github.io/tags/vue/</link><description>Recent content in Vue on Lomirus' Site</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 22 May 2021 18:25:17 +0800</lastBuildDate><atom:link href="https://lomirus.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Vue &amp; Vite 项目搭建入门</title><link>https://lomirus.github.io/p/vue-vite-start/</link><pubDate>Sat, 22 May 2021 18:25:17 +0800</pubDate><guid>https://lomirus.github.io/p/vue-vite-start/</guid><description>&lt;img src="https://lomirus.github.io/" alt="Featured image of post Vue &amp; Vite 项目搭建入门" /&gt;&lt;h1 id="学习-vue-与-vite-项目搭建的踩坑记录"&gt;学习 Vue 与 Vite 项目搭建的踩坑记录
 &lt;/h1&gt;&lt;h2 id="vue-20--webpack"&gt;Vue 2.0 + Webpack
 &lt;/h2&gt;&lt;h3 id="installation"&gt;Installation
 &lt;/h3&gt;&lt;p&gt;虽然 Vue 的最新版已经是 3.0，而且 Vite 也似乎是大势所趋，不过我还是选择了先从 Vue 2.0 + Webpack 这种比较传统的方式开始学习。主要是因为这几个方面：&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后基础部分就做完了，接下来开始加入 Vue：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// src/index.js
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;vue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -68,9 +68,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后 &lt;code&gt;npx webpack serve&lt;/code&gt; ，打开 &lt;code&gt;http://127.0.0.1:8080&lt;/code&gt;，发现控制台报错：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;原因是我们导入 Vue 时使用的语句是 &lt;code&gt;import Vue from 'vue';&lt;/code&gt;。这行语句默认会导入 &lt;code&gt;Runtime-only&lt;/code&gt; 版本的 Vue，而这个版本的 Vue 是不含编译器的，因此无法编译像 &lt;code&gt;{{ message }}&lt;/code&gt; 这种模板语句。&lt;/p&gt;
 &lt;p&gt;为了解决这个问题，我们可以修改一下 &lt;code&gt;webpack.config.js&lt;/code&gt; 的内容，向其 &lt;code&gt;module.exports&lt;/code&gt; assign 以下内容&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -84,11 +86,11 @@
 &lt;p&gt;相关参考资料：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only" target="_blank" rel="noopener"
-&gt;https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only&lt;/a&gt;&lt;/li&gt;
+ &gt;https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="single-file-components"&gt;Single File Components
 &lt;/h3&gt;&lt;p&gt;接下来介绍一下单文件组件，这也是我比较推崇的方式。之前我写 React 时，就是采取了 CSS in JS 的方案，而不是 SCSS 或者是 Less；因为如果将&lt;code&gt;.less&lt;/code&gt; 和 &lt;code&gt;.jsx&lt;/code&gt; 分割开来的话，后期维护就会变得非常难受了。而单文件组件不仅目录结构看起来更舒服，在可维护性上也更加友好。不过 Vue 的单文件组件相比非单文件组件来说，并不仅仅是以上这些方面，比如说原生的 JavaScript 并不支持 jsx 语法，用模板字符串就显得丑了吧唧的等等。具体可参考&lt;a class="link" href="https://vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener"
-&gt;官方文档&lt;/a&gt;，这里就不赘述了。&lt;/p&gt;
+ &gt;官方文档&lt;/a&gt;，这里就不赘述了。&lt;/p&gt;
 &lt;p&gt;然后正式开始，首先安装 &lt;code&gt;vue-loader&lt;/code&gt; 和 &lt;code&gt;vue-template-compiler&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ npm install -D vue-loader vue-template-compiler
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改 &lt;code&gt;webpack.config.js&lt;/code&gt;，将以下内容添加到 &lt;code&gt;module.exports&lt;/code&gt;:&lt;/p&gt;
