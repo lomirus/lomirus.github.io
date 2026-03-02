@@ -38,10 +38,7 @@ params:
     sidebar:
         emoji: 🍥
         subtitle: We shall meet in the place where there is no darkness.
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.jpg
+        avatar: img/avatar.jpg
 
     article:
         math: true
